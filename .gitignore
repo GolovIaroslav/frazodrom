@@ -1,0 +1,25 @@
+# deps / build
+node_modules/
+dist/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# pipeline artifacts (raw/interim data is not committed; packs/ IS committed)
+data/
+pipeline/cache.sqlite
+
+# env / secrets — public repo, never commit keys
+.env
+.env.*
+
+# editors / os
+.idea/
+.vscode/
+.DS_Store
+
+# local working notes
+implementation-notes.md
