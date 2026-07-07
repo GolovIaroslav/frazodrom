@@ -470,14 +470,24 @@ frazodrom/
 ```
 show(ru) → input → check (каскад §7)
   ├─ correct/acceptable  → фидбек ✓ (+ «естественнее: …» если есть) → автоозвучка → next
-  ├─ minor_error         → жёлтый фидбек: правка + тег → next (засчитано с пометкой)
+  ├─ minor_error         → жёлтый фидбек: правка + тег → REWRITE → next (засчитано с пометкой)
   └─ wrong               → красный фидбек: краткое «что не так» → input остаётся:
-       retry | hint(L1 формула → L2 пословное открытие: первые буквы → слово целиком) | give up
-       give up → показать en_main → юзер ОБЯЗАН перепечатать его (проверка tier-1) → next
-  любой fail → предложение возвращается в очередь через 2–4 позиции до успеха
+       retry | hint (L1 формула → L2 пословное открытие: первые буквы → слово целиком) |
+       give up | кнопки репетитора §8.5 («Ошибки» / «Разбор» / «Варианты» / «Нюансы»)
+       → как только верный ответ стал видим юзеру (give up, «Ошибки», «Разбор»,
+         corrected/natural от judge) — переход дальше ТОЛЬКО через REWRITE
+
+  REWRITE (закрепление): верный ответ и разбор скрываются, поле очищается →
+       юзер пишет перевод заново с нуля → проверка tier 1–2 → успех → next;
+       fail → ответ показывается снова → снова REWRITE (цикл до успеха)
+
+  любой fail → предложение дополнительно возвращается в очередь через 2–4 позиции
+       и попадает в разминку следующей сессии
 ```
 
-Подсказки и retry не «наказываются» очками — наказание разрушает мотивацию; но предложение с fail попадает в разминку следующей сессии.
+**REWRITE — принципиальное отличие от English Dog**, где после разбора просто идёшь дальше: прочитать правильный ответ ≠ уметь его построить. Пока юзер не воспроизвёл предложение сам по пустому полю, «понял глазами» не превращается в навык (retrieval practice, §2). Цепочка: написал → ошибка → разбор + верный ответ → написал заново сам → (цикл до успеха) → дальше.
+
+Подсказки, retry и REWRITE не «наказываются» очками — наказание разрушает мотивацию; но предложение с fail попадает в разминку следующей сессии.
 
 ### 6.2 Построитель очереди сессии
 
@@ -591,9 +601,14 @@ interface LLMProvider {
 
 Разновидность — **«Мои слова»** (аналог «Мой словарь» в English Dog): юзер вводит список английских слов → приложение (а) находит предложения с этими словами в скачанных паках и (б) при наличии ключа догенеривает дрилл-предложения с ними через generator. Слова тренируются только внутри предложений — отдельных карточек «слово→перевод» не делаем (§1.3).
 
-### 8.5 Репетитор (чат)
+### 8.5 Репетитор: 4 действия + чат
 
-Шторка поверх дрилла, контекст: RU, ответ юзера, эталон, error_tags. Быстрые кнопки: «Почему так?» / «Ещё 2 примера» / «Варианты перевода» / «Нюансы» (когда какой вариант уместен) / «Понял». Максимум 6 ходов, потом мягкое «вернёмся к дриллу». История чата не персистится (экономия и простота), выжимка ошибки — в errorProfile.
+Два слоя:
+
+1. **Действия-кнопки** (как у English Dog): «Ошибки» / «Разбор» / «Варианты» / «Нюансы». Каждая — один одноразовый LLM-вызов со своим промптом (§8.6, блок ACTION_*) на полном контексте: RU, ответ юзера, верный ответ + accepted-варианты, verdict, error_tags, паттерн, уровень. **Кэш**: результаты «Вариантов» и «Нюансов» зависят только от предложения → кэшируются в Dexie per item навсегда (повторные клики и повторные встречи предложения бесплатны); «Ошибки» и «Разбор» зависят от ответа юзера → кэш per (item + hash нормализованного ответа).
+2. **Чат** («Спросить репетитора»): свободные до-вопросы после действий, сократический стиль (TUTOR_SYSTEM), максимум 6 ходов, потом мягкое «вернёмся к дриллу». История чата не персистится (экономия и простота), выжимка ошибки — в errorProfile.
+
+Все вызовы — из бюджета tutor (§8.3). Любое действие, раскрывшее верный ответ («Ошибки», «Разбор», give up), включает обязательный REWRITE (§6.1).
 
 ### 8.6 Промпты (нормативные, английский)
 
@@ -634,6 +649,56 @@ Rules:
 - One concept per reply. Plain words, no linguistics jargon.
 - When the learner gets it, give exactly 2 fresh RU→EN micro-examples of the same pattern.
 - Never drift off the current mistake. Never grade — grading happens elsewhere.
+```
+
+**Действия-кнопки репетитора** (рантайм, role=tutor; §8.5). В начало каждого из четырёх промптов подставляется общий контекст:
+
+```
+CONTEXT
+RU (task): "{RU}"
+LEARNER (their answer): "{USER}"
+CORRECT (main): "{REF}"; also accepted: {REFS}
+VERDICT: {VERDICT}; error_tags: {TAGS}
+PATTERN drilled: "{PATTERN}" (CEFR {LEVEL})
+Write in Russian; English only inside examples. Plain language, no linguistics jargon.
+```
+
+**ACTION_ERRORS** («Ошибки»):
+
+```
+List the learner's mistakes, one by one. For each: quote the wrong fragment → show the fix
+→ explain WHY in one short sentence (rule or usage).
+Max 3 mistakes, most important first; if more remain, add one line "Ещё мелочи: …".
+If the answer is fully correct — say so and name one thing done well.
+Format: numbered list. Under 90 words total.
+```
+
+**ACTION_EXPLAIN** («Разбор»):
+
+```
+Explain how the CORRECT sentence is built, like a tutor at a whiteboard:
+1) skeleton: the word order / pattern formula applied to THIS sentence;
+2) why the key forms are used (tense, auxiliary, article) — only those that matter here;
+3) one memory hook: a mini-rule or analogy the learner can reuse in similar sentences.
+Do not analyse the learner's answer here (that is the Errors button). Under 110 words.
+```
+
+**ACTION_VARIANTS** («Варианты»; кэш per item — ответ юзера в контекст не подставляется):
+
+```
+Give 3-5 natural English translations of RU, from most standard to conversational.
+Label each: (нейтральный) / (разговорный) / (формальный) where relevant.
+After each — max one short line in Russian: when this version fits.
+Only sentences a native speaker would actually say; no invented rare phrasings.
+```
+
+**ACTION_NUANCES** («Нюансы»; кэш per item — ответ юзера в контекст не подставляется):
+
+```
+Point out the subtleties of this sentence that Russian speakers usually miss:
+close synonyms and which one natives prefer here, articles, prepositions, collocations,
+register, false friends. Max 4 bullets, one sentence each. Only nuances REAL for this
+sentence — no generic grammar lecture. If there is a classic RU-speaker trap, start with it.
 ```
 
 **LESSON_GEN_SYSTEM** (рантайм, role=generator):
@@ -822,10 +887,10 @@ idiomatic Russian; en_accepted = 1-3 alternatives; follow this sub-type mix: {MI
 | Слой | Инструмент | Что покрываем |
 |---|---|---|
 | Checker/normalizer | Vitest, табличные тесты **≥120 кейсов** | контракции и ветвление `'s/'d`, BrE/AmE, цифры↔слова, «опечатка vs морфология» (`work/works` — НЕ опечатка), артикли/предлоги → error, кэш-хиты |
-| Drill engine | Vitest | очередь, interleave, requeue, hint ladder, give-up→retype |
+| Drill engine | Vitest | очередь, interleave, requeue, hint ladder, REWRITE-цикл (ответ скрыт → поле пусто → успех) |
 | SRS | Vitest + fake timers | маппинг рейтингов, due-логика, пиявки |
 | LLM-контракты | Vitest + zod + записанные фикстуры | валидные/битые JSON judge/generator, retry-ветка |
-| E2E | Playwright | смоук: онбординг → дрилл → ошибка → подсказка → сдаться → retype → финал; офлайн-режим |
+| E2E | Playwright | смоук: онбординг → дрилл → ошибка → разбор → REWRITE → финал; офлайн-режим |
 | Пайплайн | pytest, golden-тесты | правила теггера (фикстуры на каждый навык), clean-фильтры, level-пороги, `etr validate` |
 | CI | GitHub Actions | eslint+prettier, tsc, vitest, playwright (смоук), ruff+mypy+pytest, `etr validate`, build |
 
@@ -838,7 +903,7 @@ idiomatic Russian; en_accepted = 1-3 alternatives; follow this sub-type mix: {MI
 - [ ] **Ф0. Каркас.** Монорепо §5.1; `app/` (Vite+React+TS+Tailwind+Zustand+Dexie+router, пустые экраны §5.4, тёмная/светлая тема); `pipeline/` (uv-проект, typer CLI `etr` со стабами команд §4.2); CI §15. *AC: `npm run dev` показывает шелл с навигацией; `uv run etr --help` перечисляет команды; CI зелёный.*
 - [ ] **Ф1. Пайплайн MVP → паки A1.** `fetch/clean/tag(rules)/level/curate/emit/validate` для модулей A1-1, A1-2 (10 навыков) на manythings-корпусе, без LLM. Golden-тесты правил. *AC: `etr validate` зелёный; в PR — 30 случайных предложений на ручную проверку; `packs/index.json` корректен.*
 - [ ] **Ф2. Ядро дрилла.** Session engine §6, экран дрилла, каскад проверки tier 1–2 (§7), прогресс в Dexie, карта курса, загрузка паков. *AC: модуль A1-1 проходится целиком офлайн; vitest checker ≥120 кейсов зелёный; время до первого предложения <60 с.*
-- [ ] **Ф3. AI-слой.** Адаптеры Gemini/OpenRouter/Ollama (+proxy для Groq), настройки ключей и роутинга §8, judge (tier 3) + acceptedCache + бюджеты + self-check (tier 4), репетитор-шторка §8.5. *AC: с ключом неверный ответ получает вердикт ≤8 с, повтор того же ответа бьёт в кэш без вызова; без ключа всё работает через tier 4.*
+- [ ] **Ф3. AI-слой.** Адаптеры Gemini/OpenRouter/Ollama (+proxy для Groq), настройки ключей и роутинга §8, judge (tier 3) + acceptedCache + бюджеты + self-check (tier 4), репетитор §8.5: 4 действия («Ошибки»/«Разбор»/«Варианты»/«Нюансы») с кэшем + чат. *AC: с ключом неверный ответ получает вердикт ≤8 с, повтор того же ответа бьёт в кэш без вызова; повторный клик «Варианты» на том же предложении не тратит вызов; без ключа всё работает через tier 4.*
 - [ ] **Ф4. SRS.** ts-fsrs, карточки навыков, пиявки, review-сессии, errorProfile + «охота на ошибки» §10, экран «Сегодня». *AC: due-логика покрыта тестами с fake timers; review мешает ≥2 навыка.*
 - [ ] **Ф5. Аудио + listening.** kokoro-js (ленивая загрузка, выбор голоса US/UK м/ж, скорость), Web Speech fallback, автоозвучка; listening-сессии §9.2. *AC: диктант играется; после кэширования модели TTS работает офлайн; переключение голосов живое.*
 - [ ] **Ф6. Полный курс A1–B1 + экзамены.** LLM-пасс теггера, theory_gen, gapfill дефицита (§4.4–4.7); placement §11.1, скип-тесты, экзамены модулей/уровней. *AC: placement ≤25 предложений выдаёт карту; экзамены гейтят прогресс; `etr validate` зелёный на всех паках A1–B1.*
