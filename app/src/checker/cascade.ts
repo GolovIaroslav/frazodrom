@@ -87,10 +87,9 @@ function tier2Check(
   const userWord = userTokens[idx] as string;
   const refWord = refTokens[idx] as string;
 
-  if (refWord.length < 4) return { ok: false };
   if (!isEditDistanceOne(userWord, refWord)) return { ok: false };
   if (isMorphemeSuffixChange(userWord, refWord)) return { ok: false };
-  if (FUNCTION_WORDS.has(refWord) || FUNCTION_WORDS.has(userWord)) return { ok: false };
+  if (FUNCTION_WORDS.has(userWord)) return { ok: false };
   if (DICTIONARY.has(userWord)) return { ok: false };
 
   return { ok: true, typoWord: userWord };

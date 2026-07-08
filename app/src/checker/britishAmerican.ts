@@ -32,6 +32,8 @@ const SPELLING_PAIRS: readonly [string, string][] = [
   ['realising', 'realizing'],
   ['recognise', 'recognize'],
   ['apologise', 'apologize'],
+  ['apologised', 'apologized'],
+  ['apologising', 'apologizing'],
   ['analyse', 'analyze'],
   ['analysed', 'analyzed'],
   ['criticise', 'criticize'],

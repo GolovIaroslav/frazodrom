@@ -1,16 +1,21 @@
-/** True if `a` can become `b` via exactly one insertion, deletion, or substitution. */
+/** True if `a` can become `b` via exactly one insertion, deletion, substitution, or adjacent-letter transposition. */
 export function isEditDistanceOne(a: string, b: string): boolean {
   if (a === b) return false;
   const lenDiff = Math.abs(a.length - b.length);
   if (lenDiff > 1) return false;
 
   if (a.length === b.length) {
-    let mismatches = 0;
+    const mismatchIndices: number[] = [];
     for (let i = 0; i < a.length; i += 1) {
-      if (a[i] !== b[i]) mismatches += 1;
-      if (mismatches > 1) return false;
+      if (a[i] !== b[i]) mismatchIndices.push(i);
+      if (mismatchIndices.length > 2) return false;
     }
-    return mismatches === 1;
+    if (mismatchIndices.length === 1) return true;
+    if (mismatchIndices.length === 2) {
+      const [i, j] = mismatchIndices;
+      return j === i + 1 && a[i] === b[j] && a[j] === b[i];
+    }
+    return false;
   }
 
   const longer = a.length > b.length ? a : b;
