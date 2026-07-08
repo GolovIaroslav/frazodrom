@@ -49,6 +49,8 @@ export interface AttemptRecord {
   verdict: 'correct' | 'minor_error' | 'wrong';
   verdictSource: VerdictSource;
   errorTags?: string[];
+  /** Which model judged this attempt (§8.8) — undefined for local/cache tiers. */
+  model?: string;
 }
 
 export interface AcceptedCacheRecord {
@@ -87,6 +89,17 @@ export interface ProviderBudgetRecord {
   countsByRole: Record<string, number>;
 }
 
+/** PLAN.md §7.5 — "🚩 I think the AI got this wrong" flag on a judge verdict, logged locally only. */
+export interface JudgeDisputeRecord {
+  id?: number;
+  itemId: string;
+  ru: string;
+  userAnswer: string;
+  verdict: string;
+  model: string;
+  ts: number;
+}
+
 export class FrazodromDB extends Dexie {
   kv!: EntityTable<KvRecord, 'key'>;
   packs!: EntityTable<PackRecord, 'skillId'>;
@@ -98,6 +111,7 @@ export class FrazodromDB extends Dexie {
   sessions!: EntityTable<SessionRecord, 'id'>;
   exams!: EntityTable<ExamRecord, 'id'>;
   providerBudget!: EntityTable<ProviderBudgetRecord, 'key'>;
+  judgeDisputes!: EntityTable<JudgeDisputeRecord, 'id'>;
 
   constructor() {
     super('frazodrom');
@@ -115,6 +129,9 @@ export class FrazodromDB extends Dexie {
       sessions: '++id',
       exams: '++id',
       providerBudget: 'key',
+    });
+    this.version(3).stores({
+      judgeDisputes: '++id, itemId, ts',
     });
   }
 }

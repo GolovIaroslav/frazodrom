@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useI18nStore } from '../i18n/store';
+import { ModelChip } from './ModelChip';
 
 const linkClass = ({ isActive }: { isActive: boolean }): string =>
   [
@@ -13,16 +14,19 @@ export function NavBar(): React.ReactElement {
   const t = useI18nStore((s) => s.t);
 
   return (
-    <nav className="flex gap-2 border-b border-neutral-200 p-3 dark:border-neutral-800">
-      <NavLink to="/" end className={linkClass}>
-        {t('nav.home')}
-      </NavLink>
-      <NavLink to="/course-map" className={linkClass}>
-        {t('nav.courseMap')}
-      </NavLink>
-      <NavLink to="/settings" className={linkClass}>
-        {t('nav.settings')}
-      </NavLink>
+    <nav className="flex items-center justify-between gap-2 border-b border-neutral-200 p-3 dark:border-neutral-800">
+      <div className="flex gap-2">
+        <NavLink to="/" end className={linkClass}>
+          {t('nav.home')}
+        </NavLink>
+        <NavLink to="/course-map" className={linkClass}>
+          {t('nav.courseMap')}
+        </NavLink>
+        <NavLink to="/settings" className={linkClass}>
+          {t('nav.settings')}
+        </NavLink>
+      </div>
+      <ModelChip />
     </nav>
   );
 }

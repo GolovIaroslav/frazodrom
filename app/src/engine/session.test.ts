@@ -87,6 +87,35 @@ describe('DrillEngine — REWRITE cycle', () => {
   });
 });
 
+describe('DrillEngine — applyEscalation (tier 3/4 result after a tier 0-2 wrong, §7.2/§6.1)', () => {
+  it('correct/acceptable from the judge counts as correct and needs a second Enter to advance, no REWRITE', () => {
+    const engine = new DrillEngine([item()]);
+    engine.submitAnswer('gibberish');
+    const outcome = engine.applyEscalation('acceptable');
+    expect(outcome).toEqual({ verdict: 'correct', mustRewrite: false });
+    expect(engine.phase).toBe('answer');
+    expect(engine.isPendingAdvance).toBe(true);
+  });
+
+  it('minor_error from the judge shows the reference and forces REWRITE', () => {
+    const engine = new DrillEngine([item()]);
+    engine.submitAnswer('gibberish');
+    const outcome = engine.applyEscalation('minor_error');
+    expect(outcome).toEqual({ verdict: 'minor_error', mustRewrite: true });
+    expect(engine.phase).toBe('rewrite');
+    expect(engine.isReferenceVisible).toBe(true);
+  });
+
+  it('a final wrong from the judge/self-check does NOT reveal the reference or force REWRITE — retry/hint/give-up stay available (§6.1)', () => {
+    const engine = new DrillEngine([item()]);
+    engine.submitAnswer('gibberish');
+    const outcome = engine.applyEscalation('wrong');
+    expect(outcome).toEqual({ verdict: 'wrong', mustRewrite: false });
+    expect(engine.phase).toBe('answer');
+    expect(engine.isReferenceVisible).toBe(false);
+  });
+});
+
 describe('DrillEngine — hint ladder', () => {
   it('starts at 0 and climbs to L1 then caps at L2', () => {
     const engine = new DrillEngine([item()]);

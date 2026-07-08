@@ -23,6 +23,9 @@ export interface SessionStats {
   correct: number;
 }
 
+/** Outcome of an escalated tier 3 (judge) or tier 4 (self-report) check on a tier 0-2 "wrong" (§7.2). */
+export type EscalationOutcome = 'correct' | 'acceptable' | 'minor_error' | 'wrong';
+
 /**
  * Framework-agnostic drill state machine for a single skill's queue
  * (PLAN.md §6.1). Scope for Ф2: one skill's new sentences only — no
@@ -112,6 +115,41 @@ export class DrillEngine {
 
     if (result.verdict === 'correct' && result.tag === 'spelling') {
       // Minor error: correction is shown, so REWRITE is required (§6.1).
+      this.stats.total += 1;
+      this.stats.correct += 1;
+      this.references = [item.en_main, ...item.en_accepted];
+      this.revealed = true;
+      this.phase = 'rewrite';
+      this.rewriteFailStreak = 0;
+      return { verdict: 'minor_error', mustRewrite: true };
+    }
+
+    this.hadWrongAttempt = true;
+    return { verdict: 'wrong', mustRewrite: false };
+  }
+
+  /**
+   * Finalizes an escalated tier 3/4 check (§7.2) that followed a tier 0-2
+   * "wrong" result. `correct`/`acceptable` count as correct and move on
+   * without forcing REWRITE. `minor_error` shows the correction (a fix was
+   * surfaced, so retrieval is required) and forces REWRITE, same as tier
+   * 2's spelling-typo path. A final `wrong` must NOT reveal the reference
+   * or force REWRITE here (§6.1: wrong -> retry | hint | give up | tutor
+   * actions stay available; REWRITE is only entered once give-up/an action
+   * has actually shown the answer) — same as the plain tier 0-2 wrong path.
+   */
+  applyEscalation(outcome: EscalationOutcome): AnswerResult {
+    const item = this.requireItem();
+
+    if (outcome === 'correct' || outcome === 'acceptable') {
+      this.stats.total += 1;
+      this.stats.correct += 1;
+      this.pendingAdvance = true;
+      this.hadWrongAttempt = false;
+      return { verdict: 'correct', mustRewrite: false };
+    }
+
+    if (outcome === 'minor_error') {
       this.stats.total += 1;
       this.stats.correct += 1;
       this.references = [item.en_main, ...item.en_accepted];

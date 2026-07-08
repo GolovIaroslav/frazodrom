@@ -7,6 +7,16 @@ import { DrillEngine, type Verdict } from '../engine/session';
 import { getHint } from '../engine/hints';
 import type { SkillPack } from '../engine/types';
 import { ensureStoragePersisted, checkStorageQuota } from '../db/storage';
+import { runJudgeTier3, type JudgeVerdict } from '../llm/judge';
+import { addToAcceptedCache, removeFromAcceptedCache } from '../llm/acceptedCache';
+import { db } from '../db/db';
+
+type EscalationPhase = 'none' | 'pending' | 'self';
+
+interface JudgeUiState {
+  verdict: JudgeVerdict;
+  providerId: string;
+}
 
 function wordDiff(userInput: string, reference: string): { text: string; mismatch: boolean }[] {
   const userTokens = userInput.trim().split(/\s+/).filter(Boolean);
@@ -24,7 +34,7 @@ function wordDiff(userInput: string, reference: string): { text: string; mismatc
 
 export function DrillScreen(): React.ReactElement {
   const { skillId } = useParams<{ skillId: string }>();
-  const t = useI18nStore((s) => s.t);
+  const { t, locale } = useI18nStore((s) => ({ t: s.t, locale: s.locale }));
 
   const [pack, setPack] = useState<SkillPack | null>(null);
   const [error, setError] = useState(false);
@@ -41,6 +51,12 @@ export function DrillScreen(): React.ReactElement {
   const [verdict, setVerdict] = useState<Verdict | null>(null);
   const [announcement, setAnnouncement] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const [escalation, setEscalation] = useState<EscalationPhase>('none');
+  const [judgeResult, setJudgeResult] = useState<JudgeUiState | null>(null);
+  const [flagged, setFlagged] = useState(false);
+  const [cacheRemoved, setCacheRemoved] = useState(false);
+  const abortRef = useRef<AbortController | null>(null);
 
   useEffect(() => {
     if (!skillId) return;
@@ -70,6 +86,119 @@ export function DrillScreen(): React.ReactElement {
     });
   }, []);
 
+  const resetEscalationUi = useCallback(() => {
+    setEscalation('none');
+    setJudgeResult(null);
+    setFlagged(false);
+    setCacheRemoved(false);
+  }, []);
+
+  const runEscalation = useCallback(
+    async (userInput: string) => {
+      if (!engine || !pack) return;
+      const item = engine.currentItem;
+      if (!item) return;
+
+      setEscalation('pending');
+      const controller = new AbortController();
+      abortRef.current = controller;
+
+      const result = await runJudgeTier3({
+        ru: item.ru,
+        userAnswer: userInput,
+        refs: [item.en_main, ...item.en_accepted],
+        pattern: pack.skill.pattern,
+        level: pack.skill.cefr,
+        uiLang: locale,
+      }, controller.signal);
+
+      abortRef.current = null;
+
+      if (!result) {
+        setEscalation('self');
+        setAnnouncement(t('drill.selfCheckPrompt'));
+        return;
+      }
+
+      setJudgeResult({ verdict: result.verdict, providerId: result.providerId });
+      if (result.verdict.add_to_accepted) {
+        await addToAcceptedCache(item.ru, userInput, result.providerId);
+      }
+      await db.attempts.add({
+        itemId: item.id,
+        ts: Date.now(),
+        userInput,
+        verdict:
+          result.verdict.verdict === 'acceptable' || result.verdict.verdict === 'correct'
+            ? 'correct'
+            : result.verdict.verdict === 'minor_error'
+              ? 'minor_error'
+              : 'wrong',
+        verdictSource: 'llm',
+        errorTags: result.verdict.error_tags,
+        model: result.providerId,
+      });
+
+      const outcome = engine.applyEscalation(result.verdict.verdict);
+      setEscalation('none');
+      setVerdict(outcome.verdict);
+      setAnnouncement(t(`drill.verdict.${outcome.verdict}`));
+      setInput(outcome.mustRewrite ? '' : input);
+      rerender();
+    },
+    [engine, pack, locale, t, rerender, input],
+  );
+
+  const handleDontWait = useCallback(() => {
+    abortRef.current?.abort();
+  }, []);
+
+  const handleSelfReport = useCallback(
+    async (wasRight: boolean) => {
+      if (!engine) return;
+      const item = engine.currentItem;
+      if (item) {
+        await db.attempts.add({
+          itemId: item.id,
+          ts: Date.now(),
+          userInput: input,
+          verdict: wasRight ? 'correct' : 'wrong',
+          verdictSource: 'self',
+        });
+      }
+      const outcome = engine.applyEscalation(wasRight ? 'correct' : 'wrong');
+      resetEscalationUi();
+      setVerdict(outcome.verdict);
+      setAnnouncement(t(`drill.verdict.${outcome.verdict}`));
+      if (!outcome.mustRewrite) setInput('');
+      rerender();
+    },
+    [engine, input, rerender, t, resetEscalationUi],
+  );
+
+  const handleFlagVerdict = useCallback(async () => {
+    if (!engine) return;
+    const item = engine.currentItem;
+    if (!item || !judgeResult) return;
+    await db.judgeDisputes.add({
+      itemId: item.id,
+      ru: item.ru,
+      userAnswer: input,
+      verdict: judgeResult.verdict.verdict,
+      model: judgeResult.providerId,
+      ts: Date.now(),
+    });
+    setFlagged(true);
+  }, [engine, input, judgeResult]);
+
+  const handleRemoveFromCache = useCallback(async () => {
+    if (!engine) return;
+    const item = engine.currentItem;
+    if (!item) return;
+    await removeFromAcceptedCache(item.ru, input);
+    setCacheRemoved(true);
+  }, [engine, input]);
+
   const handleCheck = useCallback(() => {
     if (!engine) return;
     if (engine.phase === 'answer') {
@@ -77,10 +206,17 @@ export function DrillScreen(): React.ReactElement {
         engine.advance();
         setInput('');
         setVerdict(null);
+        resetEscalationUi();
         rerender();
         return;
       }
       const result = engine.submitAnswer(input);
+      if (result.verdict === 'wrong') {
+        setVerdict(null);
+        void runEscalation(input);
+        rerender();
+        return;
+      }
       setVerdict(result.verdict);
       setAnnouncement(t(`drill.verdict.${result.verdict}`));
       rerender();
@@ -89,10 +225,13 @@ export function DrillScreen(): React.ReactElement {
       setVerdict(result.success ? 'correct' : 'wrong');
       setAnnouncement(t(`drill.verdict.${result.success ? 'correct' : 'wrong'}`));
       setInput('');
-      if (result.success) setVerdict(null);
+      if (result.success) {
+        setVerdict(null);
+        resetEscalationUi();
+      }
       rerender();
     }
-  }, [engine, input, rerender, t]);
+  }, [engine, input, rerender, t, resetEscalationUi, runEscalation]);
 
   const handleHint = useCallback(() => {
     if (!engine || !pack) return;
@@ -105,8 +244,9 @@ export function DrillScreen(): React.ReactElement {
     engine.giveUp();
     setInput('');
     setVerdict(null);
+    resetEscalationUi();
     rerender();
-  }, [engine, rerender]);
+  }, [engine, rerender, resetEscalationUi]);
 
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
@@ -218,6 +358,7 @@ export function DrillScreen(): React.ReactElement {
         value={input}
         onChange={(e) => setInput(e.target.value)}
         placeholder={isRewrite ? t('drill.rewritePlaceholder') : t('drill.inputPlaceholder')}
+        disabled={escalation === 'pending'}
         autoFocus
         autoCorrect="off"
         spellCheck={false}
@@ -230,7 +371,8 @@ export function DrillScreen(): React.ReactElement {
         <button
           type="button"
           onClick={handleCheck}
-          className="rounded bg-neutral-900 px-4 py-2 text-sm font-medium text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 dark:bg-neutral-100 dark:text-neutral-900"
+          disabled={escalation === 'pending'}
+          className="rounded bg-neutral-900 px-4 py-2 text-sm font-medium text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 disabled:opacity-50 dark:bg-neutral-100 dark:text-neutral-900"
         >
           {isRewrite
             ? t('drill.rewriteSubmit')
@@ -274,6 +416,74 @@ export function DrillScreen(): React.ReactElement {
             </span>
           ))}
         </p>
+      )}
+
+      {escalation === 'pending' && (
+        <div className="mt-3 rounded bg-blue-50 p-2 text-sm text-blue-900 dark:bg-blue-950 dark:text-blue-200">
+          <p>{t('drill.askingAI')}</p>
+          <button
+            type="button"
+            onClick={handleDontWait}
+            className="mt-2 rounded border border-blue-400 px-3 py-1 text-xs font-medium"
+          >
+            {t('drill.dontWait')}
+          </button>
+        </div>
+      )}
+
+      {escalation === 'self' && (
+        <div className="mt-3 rounded bg-neutral-100 p-2 text-sm text-neutral-800 dark:bg-neutral-900 dark:text-neutral-200">
+          <p>{t('drill.selfCheckPrompt')}</p>
+          <p className="mt-1">
+            {t('drill.reference')}: <span className="font-medium">{item.en_main}</span>
+          </p>
+          <div className="mt-2 flex gap-2">
+            <button
+              type="button"
+              onClick={() => void handleSelfReport(true)}
+              className="rounded bg-green-700 px-3 py-1 text-xs font-medium text-white"
+            >
+              {t('drill.selfCorrect')}
+            </button>
+            <button
+              type="button"
+              onClick={() => void handleSelfReport(false)}
+              className="rounded bg-red-700 px-3 py-1 text-xs font-medium text-white"
+            >
+              {t('drill.selfWrong')}
+            </button>
+          </div>
+        </div>
+      )}
+
+      {judgeResult && (
+        <div className="mt-3 rounded bg-neutral-100 p-2 text-sm text-neutral-800 dark:bg-neutral-900 dark:text-neutral-200">
+          <p>{judgeResult.verdict.explanation_ru}</p>
+          <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+            {judgeResult.providerId}
+          </p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <button
+              type="button"
+              onClick={() => void handleFlagVerdict()}
+              disabled={flagged}
+              className="rounded border border-neutral-300 px-2 py-1 text-xs disabled:opacity-50 dark:border-neutral-700"
+            >
+              {flagged ? t('drill.flagLogged') : t('drill.flagVerdict')}
+            </button>
+            {(judgeResult.verdict.verdict === 'correct' ||
+              judgeResult.verdict.verdict === 'acceptable') && (
+              <button
+                type="button"
+                onClick={() => void handleRemoveFromCache()}
+                disabled={cacheRemoved}
+                className="rounded border border-neutral-300 px-2 py-1 text-xs disabled:opacity-50 dark:border-neutral-700"
+              >
+                {cacheRemoved ? t('drill.removedFromAccepted') : t('drill.removeFromAccepted')}
+              </button>
+            )}
+          </div>
+        </div>
       )}
 
       {verdict && (

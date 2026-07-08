@@ -11,8 +11,8 @@ afterEach(async () => {
   db.close();
 });
 
-describe('FrazodromDB — schema v2 (PLAN.md §5.3)', () => {
-  it('declares every table from §5.3', () => {
+describe('FrazodromDB — schema v3 (PLAN.md §5.3/§7.5)', () => {
+  it('declares every table from §5.3 plus judgeDisputes (§7.5)', () => {
     const tableNames = db.tables.map((t) => t.name).sort();
     expect(tableNames).toEqual(
       [
@@ -21,6 +21,7 @@ describe('FrazodromDB — schema v2 (PLAN.md §5.3)', () => {
         'errorProfile',
         'exams',
         'itemState',
+        'judgeDisputes',
         'kv',
         'packs',
         'providerBudget',
@@ -28,6 +29,20 @@ describe('FrazodromDB — schema v2 (PLAN.md §5.3)', () => {
         'skillState',
       ].sort(),
     );
+  });
+
+  it('round-trips a judgeDispute record (§7.5 flag button)', async () => {
+    const id = await db.judgeDisputes.add({
+      itemId: 's1',
+      ru: 'Он студент.',
+      userAnswer: 'He are a student.',
+      verdict: 'minor_error',
+      model: 'gemini:flash-lite',
+      ts: Date.now(),
+    });
+    expect(typeof id).toBe('number');
+    const count = await db.judgeDisputes.count();
+    expect(count).toBe(1);
   });
 
   it('round-trips a pack record', async () => {
