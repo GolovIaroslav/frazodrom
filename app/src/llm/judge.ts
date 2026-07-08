@@ -12,6 +12,7 @@ import {
   getRoutingConfig,
 } from './settings';
 import { tryConsumeBudget } from './budget';
+import { emitProviderSwitch } from './switchNotifier';
 
 export const ERROR_TAGS = [
   'word_order',
@@ -205,7 +206,8 @@ export async function runJudgeTier3(
   if (autoSelfCheck) ids = ids.slice(0, 1);
   const providers = await resolveChain(ids);
 
-  for (const provider of providers) {
+  for (let i = 0; i < providers.length; i += 1) {
+    const provider = providers[i];
     if (signal?.aborted) return undefined;
     const configured = await provider.isConfigured();
     if (!configured) continue;
@@ -214,7 +216,20 @@ export async function runJudgeTier3(
     try {
       const verdict = await callJudge(provider, input, signal);
       return { verdict, providerId: provider.id };
-    } catch {
+    } catch (err) {
+      // §8.8 — a 429/quota error triggers the auto-switch toast; other
+      // failures (parse errors, timeouts) still fall through silently.
+      if (err instanceof LLMRateLimitError || err instanceof LLMAuthError) {
+        const next = providers[i + 1];
+        emitProviderSwitch({
+          role,
+          fromProviderId: provider.id,
+          fromLabel: provider.label,
+          toProviderId: next?.id,
+          toLabel: next?.label,
+          reason: err instanceof LLMRateLimitError ? 'rateLimit' : 'authError',
+        });
+      }
       // try next provider in the chain
     }
   }

@@ -7,6 +7,8 @@ import { resolveChain } from './registry';
 import { getBudgetCeilings, getManualOverride, getPromptOverride, getRoutingConfig } from './settings';
 import { tryConsumeBudget } from './budget';
 import type { ChatRequest, Role } from './types';
+import { LLMAuthError, LLMRateLimitError } from './types';
+import { emitProviderSwitch } from './switchNotifier';
 
 export type TutorActionKind = 'errors' | 'explain' | 'variants' | 'nuances';
 
@@ -151,7 +153,8 @@ export async function runTutorAction(
     temperature: 0.7,
   };
 
-  for (const provider of providers) {
+  for (let i = 0; i < providers.length; i += 1) {
+    const provider = providers[i];
     if (signal?.aborted) return undefined;
     const configured = await provider.isConfigured();
     if (!configured) continue;
@@ -162,7 +165,18 @@ export async function runTutorAction(
       if (!text.trim()) continue;
       await db.tutorActionCache.put({ key, action: kind, itemId: input.itemId, response: text, ts: Date.now() });
       return { text, cached: false, providerId: provider.id };
-    } catch {
+    } catch (err) {
+      if (err instanceof LLMRateLimitError || err instanceof LLMAuthError) {
+        const next = providers[i + 1];
+        emitProviderSwitch({
+          role,
+          fromProviderId: provider.id,
+          fromLabel: provider.label,
+          toProviderId: next?.id,
+          toLabel: next?.label,
+          reason: err instanceof LLMRateLimitError ? 'rateLimit' : 'authError',
+        });
+      }
       // try next provider in the chain
     }
   }

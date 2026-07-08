@@ -17,18 +17,33 @@ export interface LocalOpenAIProfile {
 
 export type RoutingConfig = Record<Role, string[]>;
 
+export type AliasProvider = 'gemini' | 'groq' | 'openrouter' | 'gigachat' | 'yandex';
+
 // Model aliases (§8.1) — "one file, updated without touching code".
-export const MODEL_ALIASES: Record<string, { provider: 'gemini'; model: string }> = {
+export const MODEL_ALIASES: Record<string, { provider: AliasProvider; model: string }> = {
   'gemini:flash': { provider: 'gemini', model: 'gemini-3.5-flash' },
   'gemini:flash-lite': { provider: 'gemini', model: 'gemini-3.1-flash-lite' },
+  // §8.2 — Groq's free-tier judge candidate.
+  'groq:llama-8b': { provider: 'groq', model: 'llama-3.1-8b-instant' },
+  // §8.2 — OpenRouter's :free reserve for tutor/generator. The exact free
+  // catalog drifts (OpenRouter's dashboard is the source of truth) — this id
+  // is a reasonable current default, editable here without touching call sites.
+  'openrouter:free': { provider: 'openrouter', model: 'meta-llama/llama-3.2-3b-instruct:free' },
+  // §8.2 — GigaChat/Yandex: additional adapters that widen regional coverage,
+  // deliberately NOT in any default chain below — the user opts in by adding
+  // the id to their own routing config once they hold credentials.
+  'gigachat:pro': { provider: 'gigachat', model: 'GigaChat' },
+  'yandex:yandexgpt-lite': { provider: 'yandex', model: 'yandexgpt-lite' },
 };
 
 // Judge default routing left unset pending the live benchmark (BLOCKERS.md) —
-// an unvalidated model must not become the silent default judge.
+// an unvalidated model must not become the silent default judge. Groq's
+// documented role is judge-only (§8.2), so it stays out of the tutor/generator
+// defaults below, consistent with that same blocker.
 export const DEFAULT_ROUTING: RoutingConfig = {
   judge: [],
-  tutor: ['gemini:flash', 'ollama:default'],
-  generator: ['gemini:flash'],
+  tutor: ['gemini:flash', 'openrouter:free', 'ollama:default'],
+  generator: ['gemini:flash', 'openrouter:free'],
 };
 
 export const DEFAULT_BUDGET_CEILINGS: Record<Role, number> = {
@@ -36,6 +51,17 @@ export const DEFAULT_BUDGET_CEILINGS: Record<Role, number> = {
   tutor: 150,
   generator: 50,
 };
+
+export interface GigaChatCredentials {
+  /** Sber's "Authorization key" — a pre-base64'd client_id:client_secret pair. */
+  authKey: string;
+  scope?: 'GIGACHAT_API_PERS' | 'GIGACHAT_API_B2B' | 'GIGACHAT_API_CORP';
+}
+
+export interface YandexCredentials {
+  apiKey: string;
+  folderId: string;
+}
 
 const KV = {
   geminiApiKey: 'llm.gemini.apiKey',
@@ -46,6 +72,12 @@ const KV = {
   manualOverride: 'llm.manualOverride',
   promptOverride: (name: string) => `llm.prompt.${name}`,
   promptOverrideDefaultHash: (name: string) => `llm.prompt.${name}.defaultHash`,
+  // §8.2/§8.9 — additional cloud providers + the optional CORS proxy (Ф3в).
+  proxyUrl: 'llm.proxyUrl',
+  groqApiKey: 'llm.groq.apiKey',
+  openrouterApiKey: 'llm.openrouter.apiKey',
+  gigachatCredentials: 'llm.gigachat.credentials',
+  yandexCredentials: 'llm.yandex.credentials',
 } as const;
 
 async function getKv<T>(key: string, fallback: T): Promise<T> {
@@ -142,4 +174,50 @@ export async function getPromptOverrideDefaultHash(name: string): Promise<string
 
 export async function setPromptOverrideDefaultHash(name: string, hash: string): Promise<void> {
   await setKv(KV.promptOverrideDefaultHash(name), hash);
+}
+
+/**
+ * §8.2/§5.1 — optional local CORS proxy (`proxy/serve.mjs`, localhost:8787).
+ * Groq/OpenRouter/GigaChat/Yandex adapters route through this URL by default
+ * when set (their direct CORS-from-browser behaviour is unverified/unreliable,
+ * §8.2); empty/unset means "call the provider's API directly".
+ */
+export async function getProxyUrl(): Promise<string | undefined> {
+  return getKv<string | undefined>(KV.proxyUrl, undefined);
+}
+
+export async function setProxyUrl(url: string): Promise<void> {
+  await setKv(KV.proxyUrl, url);
+}
+
+export async function getGroqApiKey(): Promise<string | undefined> {
+  return getKv<string | undefined>(KV.groqApiKey, undefined);
+}
+
+export async function setGroqApiKey(key: string): Promise<void> {
+  await setKv(KV.groqApiKey, key);
+}
+
+export async function getOpenRouterApiKey(): Promise<string | undefined> {
+  return getKv<string | undefined>(KV.openrouterApiKey, undefined);
+}
+
+export async function setOpenRouterApiKey(key: string): Promise<void> {
+  await setKv(KV.openrouterApiKey, key);
+}
+
+export async function getGigaChatCredentials(): Promise<GigaChatCredentials | undefined> {
+  return getKv<GigaChatCredentials | undefined>(KV.gigachatCredentials, undefined);
+}
+
+export async function setGigaChatCredentials(creds: GigaChatCredentials): Promise<void> {
+  await setKv(KV.gigachatCredentials, creds);
+}
+
+export async function getYandexCredentials(): Promise<YandexCredentials | undefined> {
+  return getKv<YandexCredentials | undefined>(KV.yandexCredentials, undefined);
+}
+
+export async function setYandexCredentials(creds: YandexCredentials): Promise<void> {
+  await setKv(KV.yandexCredentials, creds);
 }

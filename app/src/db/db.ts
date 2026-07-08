@@ -115,6 +115,29 @@ export interface TutorActionCacheRecord {
   ts: number;
 }
 
+export interface FreeTalkMessage {
+  role: 'user' | 'assistant';
+  content: string;
+  ts: number;
+}
+
+/**
+ * PLAN.md §8.9 — Free Talk session transcript, persisted until explicitly
+ * finished so a closed tab doesn't lose the conversation (or its eventual
+ * summary/recurring_tags). `finished=false` + no `summaryRu` means the
+ * screen should offer "завершить вчерашний разговор?" on next entry.
+ */
+export interface FreeTalkSessionRecord {
+  id?: number;
+  topic: string;
+  level: string;
+  messages: FreeTalkMessage[];
+  startedAt: number;
+  finished: boolean;
+  summaryRu?: string;
+  recurringTags?: string[];
+}
+
 export class FrazodromDB extends Dexie {
   kv!: EntityTable<KvRecord, 'key'>;
   packs!: EntityTable<PackRecord, 'skillId'>;
@@ -128,6 +151,7 @@ export class FrazodromDB extends Dexie {
   providerBudget!: EntityTable<ProviderBudgetRecord, 'key'>;
   judgeDisputes!: EntityTable<JudgeDisputeRecord, 'id'>;
   tutorActionCache!: EntityTable<TutorActionCacheRecord, 'key'>;
+  freeTalkSessions!: EntityTable<FreeTalkSessionRecord, 'id'>;
 
   constructor() {
     super('frazodrom');
@@ -151,6 +175,9 @@ export class FrazodromDB extends Dexie {
     });
     this.version(4).stores({
       tutorActionCache: 'key, itemId',
+    });
+    this.version(5).stores({
+      freeTalkSessions: '++id, finished, startedAt',
     });
   }
 }

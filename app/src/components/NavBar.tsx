@@ -22,6 +22,9 @@ export function NavBar(): React.ReactElement {
         <NavLink to="/course-map" className={linkClass}>
           {t('nav.courseMap')}
         </NavLink>
+        <NavLink to="/free-talk" className={linkClass}>
+          {t('nav.freeTalk')}
+        </NavLink>
         <NavLink to="/settings" className={linkClass}>
           {t('nav.settings')}
         </NavLink>

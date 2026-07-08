@@ -4,11 +4,21 @@ import { useThemeStore } from '../store/theme';
 import type { Locale } from '../i18n/dictionaries';
 import {
   getGeminiApiKey,
+  getGigaChatCredentials,
+  getGroqApiKey,
   getJudgeAutoSelfCheck,
   getLocalOpenAIProfiles,
+  getOpenRouterApiKey,
+  getProxyUrl,
+  getYandexCredentials,
   setGeminiApiKey,
+  setGigaChatCredentials,
+  setGroqApiKey,
   setJudgeAutoSelfCheck,
   setLocalOpenAIProfiles,
+  setOpenRouterApiKey,
+  setProxyUrl,
+  setYandexCredentials,
 } from '../llm/settings';
 import { GeminiProvider } from '../llm/providers/gemini';
 import { PromptEditor } from '../components/PromptEditor';
@@ -22,6 +32,12 @@ function AiModelsSettings(): React.ReactElement {
   const [localBaseUrl, setLocalBaseUrl] = useState('http://localhost:11434/v1');
   const [localModel, setLocalModel] = useState('');
   const [autoSelfCheck, setAutoSelfCheck] = useState(false);
+  const [proxyUrl, setProxyUrlInput] = useState('');
+  const [groqKey, setGroqKeyInput] = useState('');
+  const [openrouterKey, setOpenrouterKeyInput] = useState('');
+  const [gigachatAuthKey, setGigachatAuthKeyInput] = useState('');
+  const [yandexApiKey, setYandexApiKeyInput] = useState('');
+  const [yandexFolderId, setYandexFolderIdInput] = useState('');
 
   useEffect(() => {
     void getGeminiApiKey().then((k) => k && setGeminiKeyInput(k));
@@ -31,6 +47,16 @@ function AiModelsSettings(): React.ReactElement {
       if (p) {
         setLocalBaseUrl(p.baseUrl);
         setLocalModel(p.model);
+      }
+    });
+    void getProxyUrl().then((v) => v && setProxyUrlInput(v));
+    void getGroqApiKey().then((v) => v && setGroqKeyInput(v));
+    void getOpenRouterApiKey().then((v) => v && setOpenrouterKeyInput(v));
+    void getGigaChatCredentials().then((v) => v && setGigachatAuthKeyInput(v.authKey));
+    void getYandexCredentials().then((v) => {
+      if (v) {
+        setYandexApiKeyInput(v.apiKey);
+        setYandexFolderIdInput(v.folderId);
       }
     });
   }, []);
@@ -130,6 +156,125 @@ function AiModelsSettings(): React.ReactElement {
         <input type="checkbox" checked={autoSelfCheck} onChange={() => void handleToggleAutoSelfCheck()} />
         {t('settings.ai.judgeAutoSelfCheck')}
       </label>
+
+      <div className="mt-4">
+        <label htmlFor="proxy-url" className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+          {t('settings.ai.proxyUrl')}
+        </label>
+        <p className="mt-0.5 text-xs text-neutral-500 dark:text-neutral-400">{t('settings.ai.proxyUrlHint')}</p>
+        <div className="mt-1 flex gap-2">
+          <input
+            id="proxy-url"
+            placeholder="http://localhost:8787"
+            value={proxyUrl}
+            onChange={(e) => setProxyUrlInput(e.target.value)}
+            className="flex-1 rounded border border-neutral-300 p-2 text-sm dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100"
+          />
+          <button
+            type="button"
+            onClick={() => void setProxyUrl(proxyUrl)}
+            className="rounded border border-neutral-300 px-3 py-1.5 text-sm dark:border-neutral-700"
+          >
+            {t('settings.ai.save')}
+          </button>
+        </div>
+      </div>
+
+      <div className="mt-4 grid gap-3 sm:grid-cols-2">
+        <div>
+          <label htmlFor="groq-key" className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+            {t('settings.ai.groqKey')}
+          </label>
+          <div className="mt-1 flex gap-2">
+            <input
+              id="groq-key"
+              type="password"
+              value={groqKey}
+              onChange={(e) => setGroqKeyInput(e.target.value)}
+              className="flex-1 rounded border border-neutral-300 p-2 text-sm dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100"
+            />
+            <button
+              type="button"
+              onClick={() => void setGroqApiKey(groqKey)}
+              className="rounded border border-neutral-300 px-3 py-1.5 text-sm dark:border-neutral-700"
+            >
+              {t('settings.ai.save')}
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <label htmlFor="openrouter-key" className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+            {t('settings.ai.openrouterKey')}
+          </label>
+          <div className="mt-1 flex gap-2">
+            <input
+              id="openrouter-key"
+              type="password"
+              value={openrouterKey}
+              onChange={(e) => setOpenrouterKeyInput(e.target.value)}
+              className="flex-1 rounded border border-neutral-300 p-2 text-sm dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100"
+            />
+            <button
+              type="button"
+              onClick={() => void setOpenRouterApiKey(openrouterKey)}
+              className="rounded border border-neutral-300 px-3 py-1.5 text-sm dark:border-neutral-700"
+            >
+              {t('settings.ai.save')}
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <label htmlFor="gigachat-key" className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+            {t('settings.ai.gigachatAuthKey')}
+          </label>
+          <div className="mt-1 flex gap-2">
+            <input
+              id="gigachat-key"
+              type="password"
+              value={gigachatAuthKey}
+              onChange={(e) => setGigachatAuthKeyInput(e.target.value)}
+              className="flex-1 rounded border border-neutral-300 p-2 text-sm dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100"
+            />
+            <button
+              type="button"
+              onClick={() => void setGigaChatCredentials({ authKey: gigachatAuthKey })}
+              className="rounded border border-neutral-300 px-3 py-1.5 text-sm dark:border-neutral-700"
+            >
+              {t('settings.ai.save')}
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <label htmlFor="yandex-key" className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+            {t('settings.ai.yandexApiKey')}
+          </label>
+          <div className="mt-1 flex gap-2">
+            <input
+              id="yandex-key"
+              type="password"
+              value={yandexApiKey}
+              onChange={(e) => setYandexApiKeyInput(e.target.value)}
+              className="w-1/2 rounded border border-neutral-300 p-2 text-sm dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100"
+            />
+            <input
+              placeholder={t('settings.ai.yandexFolderId')}
+              value={yandexFolderId}
+              onChange={(e) => setYandexFolderIdInput(e.target.value)}
+              className="w-1/2 rounded border border-neutral-300 p-2 text-sm dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100"
+            />
+            <button
+              type="button"
+              onClick={() => void setYandexCredentials({ apiKey: yandexApiKey, folderId: yandexFolderId })}
+              className="rounded border border-neutral-300 px-3 py-1.5 text-sm dark:border-neutral-700"
+            >
+              {t('settings.ai.save')}
+            </button>
+          </div>
+        </div>
+      </div>
 
       <PromptEditor />
     </div>

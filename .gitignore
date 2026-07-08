@@ -18,6 +18,8 @@ pipeline/cache.sqlite
 # env / secrets — public repo, never commit keys
 .env
 .env.*
+!.env.example
+!*/.env.example
 
 # editors / os
 .idea/

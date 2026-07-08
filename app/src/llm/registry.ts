@@ -2,13 +2,30 @@
 // "ollama:default") to a live LLMProvider instance.
 
 import { GeminiProvider } from './providers/gemini';
+import { GigaChatProvider } from './providers/gigachat';
+import { GroqProvider } from './providers/groq';
 import { LocalOpenAIProvider } from './providers/localOpenai';
+import { OpenRouterProvider } from './providers/openrouter';
+import { YandexProvider } from './providers/yandex';
 import { MODEL_ALIASES, getLocalOpenAIProfiles } from './settings';
 import type { LLMProvider } from './types';
 
 export async function resolveProviderById(id: string): Promise<LLMProvider | undefined> {
   const alias = MODEL_ALIASES[id];
-  if (alias) return new GeminiProvider(alias.model);
+  if (alias) {
+    switch (alias.provider) {
+      case 'gemini':
+        return new GeminiProvider(alias.model);
+      case 'groq':
+        return new GroqProvider(alias.model);
+      case 'openrouter':
+        return new OpenRouterProvider(alias.model);
+      case 'gigachat':
+        return new GigaChatProvider(alias.model);
+      case 'yandex':
+        return new YandexProvider(alias.model);
+    }
+  }
 
   const profiles = await getLocalOpenAIProfiles();
   const profile = profiles.find((p) => p.id === id);

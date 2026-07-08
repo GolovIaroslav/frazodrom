@@ -19,3 +19,24 @@ screen once the judge UI exists, and I'll fold the recorded accuracy into PLAN.m
 Until this is resolved, Ф3а's default judge model choice stays unset/flagged, and the
 "reset to default" judge fallback conservatively behaves like tier 4 (self-check) rather
 than silently trusting an unvalidated model.
+
+## Ф3в — GigaChat/Yandex AI Studio adapters are untested against a live account (2026-07-08)
+
+Built both adapters (`app/src/llm/providers/gigachat.ts`, `yandex.ts`) from public REST docs
+(OAuth client-credentials exchange for GigaChat, `foundationModels/v1/completion` shape for
+Yandex), routed through the optional local proxy (`proxy/serve.mjs`) by default per §8.2's
+own "⚠️VERIFY CORS/TLS из браузера — если напрямую нельзя, через proxy/" — but neither has
+been exercised against a real account, so I can't confirm the request/response shapes are
+exactly right, or whether GigaChat's TLS certificate (rooted at a Russian CA not in most
+default trust stores) causes real connection failures. `serve.mjs` has an inline comment
+about a possible `NODE_TLS_REJECT_UNAUTHORIZED=0` workaround for local dev — that is NOT a
+production fix, just a note for whoever first tests this live.
+
+**What's needed from you:** if you want these two providers actually usable, get a GigaChat
+key (freemium, §8.2) and/or a Yandex AI Studio key and test one real call each through
+`proxy/serve.mjs` (`node proxy/serve.mjs`, fill `proxy/.env` from `.env.example`). Report
+back what broke (wrong endpoint, auth shape, TLS) and I'll fix the adapter. Until then,
+treat both as best-effort/unverified — Gemini + local-openai + Groq + OpenRouter remain the
+adapters with any real confidence behind them (Groq/OpenRouter endpoint shapes were verified
+against current public docs, also not against a live key, but their OpenAI-compatible shape
+is much more standardized and lower-risk).
