@@ -1,0 +1,1729 @@
+{
+  "schema_version": 1,
+  "skill": {
+    "id": "a1_pres_simple_i",
+    "cefr": "A1",
+    "module": "a1_m2",
+    "module_title_ru": "Настоящее простое",
+    "title_ru": "Present Simple: I / you / we / they + V1",
+    "pattern": "I/you/we/they + глагол в форме словаря (V1)",
+    "theory_ru": "Present Simple описывает привычные действия и факты: **I live in this city.** С подлежащими I/you/we/they глагол берётся в базовой форме (как в словаре), без окончаний: **I work**, не ~I works~.",
+    "common_errors": [
+      {
+        "tag": "s_ending_extra",
+        "ru": "Лишнее -s: ~I works~ → I **work**."
+      },
+      {
+        "tag": "be_instead_of_verb",
+        "ru": "Лишний am/is/are перед смысловым глаголом: ~I am live~ → I **live**."
+      },
+      {
+        "tag": "ing_instead_of_v1",
+        "ru": "Форма -ing вместо простой: ~I working~ → I **work**."
+      }
+    ],
+    "probe_item_ids": [
+      "s_1556167",
+      "s_1001623",
+      "s_1001623"
+    ],
+    "youglish_query": "I live in this city"
+  },
+  "items": [
+    {
+      "id": "s_1001623",
+      "ru": "Я читала книги.",
+      "en_main": "I read books.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1001623",
+      "attribution": "Nihonkage"
+    },
+    {
+      "id": "s_1001623b",
+      "ru": "Я читаю книги.",
+      "en_main": "I read books.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1001623",
+      "attribution": "Nihonkage"
+    },
+    {
+      "id": "s_10053290",
+      "ru": "Я пишу книги.",
+      "en_main": "I write books.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10053290",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_1011281",
+      "ru": "Хорошо выглядите.",
+      "en_main": "You look good.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1011281",
+      "attribution": "DanaDescalza"
+    },
+    {
+      "id": "s_1011281b",
+      "ru": "Хорошо выглядишь.",
+      "en_main": "You look good.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1011281",
+      "attribution": "DanaDescalza"
+    },
+    {
+      "id": "s_10117032",
+      "ru": "Я люблю компьютеры.",
+      "en_main": "I like computers.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10117032",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10117032b",
+      "ru": "Мне нравятся компьютеры.",
+      "en_main": "I like computers.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10117032",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_1012609",
+      "ru": "Я люблю поезда.",
+      "en_main": "I like trains.",
+      "en_accepted": [
+        "I love trains."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1012609",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1012609b",
+      "ru": "Мне нравятся поезда.",
+      "en_main": "I like trains.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1012609",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_10564898",
+      "ru": "У меня есть опыт.",
+      "en_main": "I have experience.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10564898",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_1082641",
+      "ru": "Мы доверяем ему.",
+      "en_main": "We trust him.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1082641",
+      "attribution": "sacredceltic"
+    },
+    {
+      "id": "s_1082641b",
+      "ru": "Мы ему доверяем.",
+      "en_main": "We trust him.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1082641",
+      "attribution": "sacredceltic"
+    },
+    {
+      "id": "s_1112325",
+      "ru": "А вот и я.",
+      "en_main": "Here I come.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1112325",
+      "attribution": "Scott"
+    },
+    {
+      "id": "s_1112325b",
+      "ru": "А я к вам.",
+      "en_main": "Here I come.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1112325",
+      "attribution": "Scott"
+    },
+    {
+      "id": "s_1114337",
+      "ru": "Я в этом сомневаюсь.",
+      "en_main": "I doubt it.",
+      "en_accepted": [
+        "I doubt that."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1114337",
+      "attribution": "shanghainese"
+    },
+    {
+      "id": "s_1121857",
+      "ru": "Я люблю себя.",
+      "en_main": "I love myself.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1121857",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_11252499",
+      "ru": "Мы там живём.",
+      "en_main": "We live there.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11252499",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_1132072",
+      "ru": "Обожаю это!",
+      "en_main": "I love it!",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1132072",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1148324",
+      "ru": "Я этого хочу.",
+      "en_main": "I want it.",
+      "en_accepted": [
+        "I want that."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1148324",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_11828459",
+      "ru": "Теперь понятно.",
+      "en_main": "Now I see.",
+      "en_accepted": [
+        "Now I get it."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11828459",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_11836538",
+      "ru": "Я ничего не вижу.",
+      "en_main": "I see nothing.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11836538",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_11850650",
+      "ru": "Мне нужны идеи.",
+      "en_main": "I need ideas.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11850650",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_11870513",
+      "ru": "Я торгую рыбой.",
+      "en_main": "I sell fish.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11870513",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_11870513b",
+      "ru": "Я продаю рыбу.",
+      "en_main": "I sell fish.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11870513",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1188207",
+      "ru": "Вы меня понимаете.",
+      "en_main": "You understand me.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1188207",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_11883547",
+      "ru": "Мне нужны книги.",
+      "en_main": "I need books.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11883547",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_11885343",
+      "ru": "Я продаю еду.",
+      "en_main": "I sell food.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11885343",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_11900687",
+      "ru": "Я продаю книги.",
+      "en_main": "I sell books.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11900687",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_11961506",
+      "ru": "Они чувствуют себя потерянными.",
+      "en_main": "They feel lost.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11961506",
+      "attribution": "Fenrir"
+    },
+    {
+      "id": "s_1201509",
+      "ru": "Я слышу голоса.",
+      "en_main": "I hear voices.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1201509",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_12152811",
+      "ru": "Мы оба танцуем.",
+      "en_main": "We both dance.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12152811",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_12250326",
+      "ru": "Я чувствую себя свободным.",
+      "en_main": "I feel free.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12250326",
+      "attribution": "sacredceltic"
+    },
+    {
+      "id": "s_12250326b",
+      "ru": "Я чувствую себя свободной.",
+      "en_main": "I feel free.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12250326",
+      "attribution": "sacredceltic"
+    },
+    {
+      "id": "s_12328184",
+      "ru": "Нам нужно золото.",
+      "en_main": "We need gold.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12328184",
+      "attribution": "Miktsoanit"
+    },
+    {
+      "id": "s_12415644",
+      "ru": "Ненавижу весну.",
+      "en_main": "I hate spring.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12415644",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1258628",
+      "ru": "Я ему доверяю.",
+      "en_main": "I trust him.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1258628",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1305324",
+      "ru": "Я ничего не боюсь.",
+      "en_main": "I fear nothing.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1305324",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1308",
+      "ru": "Мне тебя не хватает.",
+      "en_main": "I miss you.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1308",
+      "attribution": "brauliobezerra"
+    },
+    {
+      "id": "s_1308b",
+      "ru": "Мне Вас не хватает.",
+      "en_main": "I miss you.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1308",
+      "attribution": "brauliobezerra"
+    },
+    {
+      "id": "s_1337519",
+      "ru": "Мне его не хватает.",
+      "en_main": "I miss it.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1337519",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1337519b",
+      "ru": "Мне её не хватает.",
+      "en_main": "I miss it.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1337519",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1342759",
+      "ru": "Ты выглядишь довольным.",
+      "en_main": "You look content.",
+      "en_accepted": [
+        "You look like you're contented."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1342759",
+      "attribution": "Eldad"
+    },
+    {
+      "id": "s_1342760",
+      "ru": "Ты вроде доволен.",
+      "en_main": "You seem content.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1342760",
+      "attribution": "Eldad"
+    },
+    {
+      "id": "s_1342760b",
+      "ru": "Ты вроде довольна.",
+      "en_main": "You seem content.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1342760",
+      "attribution": "Eldad"
+    },
+    {
+      "id": "s_1349222",
+      "ru": "У меня ничего нет.",
+      "en_main": "I have nothing.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1349222",
+      "attribution": "sacredceltic"
+    },
+    {
+      "id": "s_1350804",
+      "ru": "Мы вместе танцуем.",
+      "en_main": "We dance together.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1350804",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1350804b",
+      "ru": "Мы танцуем вместе.",
+      "en_main": "We dance together.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1350804",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_13542144",
+      "ru": "Ты всё помнишь.",
+      "en_main": "You remember everything.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:13542144",
+      "attribution": "rul"
+    },
+    {
+      "id": "s_1356927",
+      "ru": "Я его поддерживаю.",
+      "en_main": "I support him.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1356927",
+      "attribution": "araneo"
+    },
+    {
+      "id": "s_1357405",
+      "ru": "Ты делаешь ему больно.",
+      "en_main": "You hurt him.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1357405",
+      "attribution": "sacredceltic"
+    },
+    {
+      "id": "s_1401292",
+      "ru": "Я ненавижу проигрывать.",
+      "en_main": "I hate losing.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1401292",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1401294",
+      "ru": "Я люблю выигрывать.",
+      "en_main": "I love winning.",
+      "en_accepted": [
+        "I like winning."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1401294",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1401294b",
+      "ru": "Я люблю побеждать.",
+      "en_main": "I love winning.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1401294",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1430734",
+      "ru": "Я чувствую себя старым.",
+      "en_main": "I feel old.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1430734",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1453909",
+      "ru": "Вы сделали мне больно.",
+      "en_main": "You hurt me.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1453909",
+      "attribution": "Eldad"
+    },
+    {
+      "id": "s_1453909b",
+      "ru": "Вы делаете мне больно.",
+      "en_main": "You hurt me.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1453909",
+      "attribution": "Eldad"
+    },
+    {
+      "id": "s_1474622",
+      "ru": "Теперь я припоминаю.",
+      "en_main": "I remember now.",
+      "en_accepted": [
+        "Now I remember."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1474622",
+      "attribution": "Chrikaru"
+    },
+    {
+      "id": "s_1502828",
+      "ru": "У меня есть деньги.",
+      "en_main": "I have money.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1502828",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1502828b",
+      "ru": "Деньги у меня есть.",
+      "en_main": "I have money.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1502828",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1503453",
+      "ru": "Я часто читаю.",
+      "en_main": "I often read.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1503453",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1505462",
+      "ru": "Я ненавижу работу.",
+      "en_main": "I hate working.",
+      "en_accepted": [
+        "I hate work."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1505462",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1529519",
+      "ru": "Тебе это нужно.",
+      "en_main": "You need it.",
+      "en_accepted": [
+        "You need this."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1529519",
+      "attribution": "Cainntear"
+    },
+    {
+      "id": "s_1556167",
+      "ru": "Знаем.",
+      "en_main": "We know.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1556167",
+      "attribution": "shanghainese"
+    },
+    {
+      "id": "s_1556167b",
+      "ru": "Знамо дело.",
+      "en_main": "We know.",
+      "en_accepted": [
+        "I know."
+      ],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1556167",
+      "attribution": "shanghainese"
+    },
+    {
+      "id": "s_1581080",
+      "ru": "Я работаю.",
+      "en_main": "I work.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1581080",
+      "attribution": "olgalu"
+    },
+    {
+      "id": "s_15993",
+      "ru": "Ты много работаешь.",
+      "en_main": "You work hard.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:15993",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_15993b",
+      "ru": "Ты вкалываешь за двоих.",
+      "en_main": "You work hard.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:15993",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1626137",
+      "ru": "Ты выглядишь более молодой.",
+      "en_main": "You look younger.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1626137",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1634981",
+      "ru": "Я ненавижу футбол.",
+      "en_main": "I hate football.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1634981",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_17421",
+      "ru": "Я Вам верю.",
+      "en_main": "I believe you.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:17421",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_17421b",
+      "ru": "Я верю тебе.",
+      "en_main": "I believe you.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:17421",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_17945",
+      "ru": "Иди первая.",
+      "en_main": "You go first.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:17945",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_17945b",
+      "ru": "Сначала ты.",
+      "en_main": "You go first.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:17945",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1815572",
+      "ru": "Я хочу другую.",
+      "en_main": "I want another.",
+      "en_accepted": [
+        "I want the other one."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1815572",
+      "attribution": "inestpereira"
+    },
+    {
+      "id": "s_1815572b",
+      "ru": "Я хочу другой.",
+      "en_main": "I want another.",
+      "en_accepted": [
+        "I want the other one."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1815572",
+      "attribution": "inestpereira"
+    },
+    {
+      "id": "s_1816897",
+      "ru": "Они нам помогают.",
+      "en_main": "They help us.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1816897",
+      "attribution": "Amastan"
+    },
+    {
+      "id": "s_1816897b",
+      "ru": "Они помогают нам.",
+      "en_main": "They help us.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1816897",
+      "attribution": "Amastan"
+    },
+    {
+      "id": "s_1820314",
+      "ru": "Они хотят больше.",
+      "en_main": "They want more.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1820314",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1893672",
+      "ru": "Мы вместе работаем.",
+      "en_main": "We work together.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1893672",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1893706",
+      "ru": "Понимаем.",
+      "en_main": "We understand.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1893706",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1893706b",
+      "ru": "Мы понимаем.",
+      "en_main": "We understand.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1893706",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1893782",
+      "ru": "Мы живём вместе.",
+      "en_main": "We live together.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1893782",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2044398",
+      "ru": "Вы выглядите счастливыми.",
+      "en_main": "You seem happy.",
+      "en_accepted": [
+        "You look happy."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2044398",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2044398b",
+      "ru": "Вы, кажется, счастливы.",
+      "en_main": "You seem happy.",
+      "en_accepted": [
+        "You seem to be happy."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2044398",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_20776",
+      "ru": "Я пробую.",
+      "en_main": "I try.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:20776",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_20776b",
+      "ru": "Я стараюсь.",
+      "en_main": "I try.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:20776",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2100009",
+      "ru": "Я ем всё.",
+      "en_main": "I eat everything.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2100009",
+      "attribution": "AlanF_US"
+    },
+    {
+      "id": "s_2107669",
+      "ru": "Мы помним.",
+      "en_main": "We remember.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2107669",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111383",
+      "ru": "Они согласны.",
+      "en_main": "They agree.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111383",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111796",
+      "ru": "Понятно.",
+      "en_main": "I see.",
+      "en_accepted": [
+        "I understand."
+      ],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111796",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111796b",
+      "ru": "Понимаю.",
+      "en_main": "I see.",
+      "en_accepted": [
+        "I understand.",
+        "I get the idea."
+      ],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111796",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111799",
+      "ru": "Я помню.",
+      "en_main": "I remember.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111799",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2175511",
+      "ru": "Я играю в футбол.",
+      "en_main": "I play football.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2175511",
+      "attribution": "frog1011"
+    },
+    {
+      "id": "s_2241009",
+      "ru": "Все мы меняемся.",
+      "en_main": "We all change.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241009",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241010",
+      "ru": "Мы все умираем.",
+      "en_main": "We all die.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241010",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241010b",
+      "ru": "Все мы умираем.",
+      "en_main": "We all die.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241010",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241027",
+      "ru": "Мы тебе верим.",
+      "en_main": "We believe you.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241027",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241027b",
+      "ru": "Мы вам верим.",
+      "en_main": "We believe you.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241027",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241086",
+      "ru": "Мы едим вместе.",
+      "en_main": "We eat together.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241086",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241086b",
+      "ru": "Мы вместе едим.",
+      "en_main": "We eat together.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241086",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241097",
+      "ru": "Мы едем завтра.",
+      "en_main": "We go tomorrow.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241097",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241142",
+      "ru": "Мы немедленно уезжаем.",
+      "en_main": "We leave immediately.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241142",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241142b",
+      "ru": "Мы немедленно уходим.",
+      "en_main": "We leave immediately.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241142",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241143",
+      "ru": "Мы уезжаем сегодня вечером.",
+      "en_main": "We leave tonight.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241143",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241143b",
+      "ru": "Мы вечером уезжаем.",
+      "en_main": "We leave tonight.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241143",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241434",
+      "ru": "Мы вместе бегаем.",
+      "en_main": "We run together.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241434",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241457",
+      "ru": "Мы учимся вместе.",
+      "en_main": "We study together.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241457",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241466",
+      "ru": "Мы обычно побеждаем.",
+      "en_main": "We usually win.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241466",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241466b",
+      "ru": "Мы обычно выигрываем.",
+      "en_main": "We usually win.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241466",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2243169",
+      "ru": "Они продолжают звонить.",
+      "en_main": "They keep calling.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2243169",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2243169b",
+      "ru": "Они продолжают звать.",
+      "en_main": "They keep calling.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2243169",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2243259",
+      "ru": "Они хотят как лучше.",
+      "en_main": "They mean well.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2243259",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2243284",
+      "ru": "Они хорошо платят.",
+      "en_main": "They pay well.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2243284",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2243345",
+      "ru": "Они доверяют мне.",
+      "en_main": "They trust me.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2243345",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245607",
+      "ru": "Я всегда пытаюсь.",
+      "en_main": "I always try.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245607",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245729",
+      "ru": "Я ем одна.",
+      "en_main": "I eat alone.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245729",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245948",
+      "ru": "Я живу одна.",
+      "en_main": "I live alone.",
+      "en_accepted": [
+        "I live by myself."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245948",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245948b",
+      "ru": "Я живу один.",
+      "en_main": "I live alone.",
+      "en_accepted": [
+        "I live by myself."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245948",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2247425",
+      "ru": "Я путешествую налегке.",
+      "en_main": "I travel light.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2247425",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2254934",
+      "ru": "Вы всегда забываете.",
+      "en_main": "You always forget.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2254934",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2254934b",
+      "ru": "Ты всегда забываешь.",
+      "en_main": "You always forget.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2254934",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2255006",
+      "ru": "Просто отдохни.",
+      "en_main": "You just rest.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2255006",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2255006b",
+      "ru": "Просто отдохните.",
+      "en_main": "You just rest.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2255006",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2255024",
+      "ru": "Вы быстро учитесь.",
+      "en_main": "You learn fast.",
+      "en_accepted": [
+        "You learn quickly."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2255024",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2255024b",
+      "ru": "Ты быстро учишься.",
+      "en_main": "You learn fast.",
+      "en_accepted": [
+        "You learn quickly."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2255024",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2255025",
+      "ru": "Ты всё схватываешь на лету.",
+      "en_main": "You learn quickly.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2255025",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2255244",
+      "ru": "Оставайся на месте.",
+      "en_main": "You stay put.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2255244",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2391",
+      "ru": "Мы спрашиваем себя почему.",
+      "en_main": "We wonder why.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2391",
+      "attribution": "Zifre"
+    },
+    {
+      "id": "s_2391b",
+      "ru": "Интересно почему.",
+      "en_main": "We wonder why.",
+      "en_accepted": [
+        "I wonder why."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2391",
+      "attribution": "Zifre"
+    },
+    {
+      "id": "s_241200",
+      "ru": "Сдаюсь.",
+      "en_main": "I give up.",
+      "en_accepted": [
+        "I give in."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:241200",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_241200b",
+      "ru": "Я сдаюсь.",
+      "en_main": "I give up.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:241200",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_245257",
+      "ru": "Боюсь, что так.",
+      "en_main": "I fear so.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:245257",
+      "attribution": "Zifre"
+    },
+    {
+      "id": "s_2476830",
+      "ru": "Я справляюсь.",
+      "en_main": "I get by.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2476830",
+      "attribution": "arnxy20"
+    },
+    {
+      "id": "s_247742",
+      "ru": "Мы занимаемся музыкой.",
+      "en_main": "We study music.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:247742",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_247763",
+      "ru": "Мы пытаемся.",
+      "en_main": "We try.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:247763",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_248471",
+      "ru": "Мы ни в чём не нуждаемся.",
+      "en_main": "We lack nothing.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:248471",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2549829",
+      "ru": "Ты начинаешь.",
+      "en_main": "You start.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2549829",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2549829b",
+      "ru": "Вы начинаете.",
+      "en_main": "You start.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2549829",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2549830",
+      "ru": "Веди ты.",
+      "en_main": "You drive.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2549830",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2549830b",
+      "ru": "Ты поведёшь.",
+      "en_main": "You drive.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2549830",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_319990",
+      "ru": "Знаю.",
+      "en_main": "I know.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:319990",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_319990b",
+      "ru": "Я знаю.",
+      "en_main": "I know.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:319990",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3255558",
+      "ru": "Нам не всё равно.",
+      "en_main": "We care.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3255558",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_433468",
+      "ru": "Я понимаю.",
+      "en_main": "I understand.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:433468",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_436281",
+      "ru": "Я согласен.",
+      "en_main": "I agree.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:436281",
+      "attribution": "lukaszpp"
+    },
+    {
+      "id": "s_436281b",
+      "ru": "Согласна.",
+      "en_main": "I agree.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:436281",
+      "attribution": "lukaszpp"
+    },
+    {
+      "id": "s_628230",
+      "ru": "Мы согласны.",
+      "en_main": "We agree.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:628230",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_672252",
+      "ru": "Ты бежишь.",
+      "en_main": "You run.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:672252",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_8645635",
+      "ru": "Вы выиграли.",
+      "en_main": "You win.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:8645635",
+      "attribution": "hamsolo474"
+    },
+    {
+      "id": "s_9850637",
+      "ru": "Я пас.",
+      "en_main": "I pass.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:9850637",
+      "attribution": "AlanF_US"
+    }
+  ]
+}

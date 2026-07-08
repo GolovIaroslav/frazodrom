@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "levels": [
+    {
+      "cefr": "A1",
+      "modules": [
+        {
+          "id": "a1_m1",
+          "title_ru": "Быть и указывать",
+          "skills": [
+            {
+              "id": "a1_be_affirm",
+              "title_ru": "Глагол to be: I am / he is / they are",
+              "cefr": "A1",
+              "module": "a1_m1",
+              "count": 150,
+              "checksum": "35e5941e215cc8d0c3b5a1f5e19b934e3a53a124a3c9feb9165652abb5ce10d8"
+            },
+            {
+              "id": "a1_be_neg_quest",
+              "title_ru": "to be: вопросы и отрицания",
+              "cefr": "A1",
+              "module": "a1_m1",
+              "count": 150,
+              "checksum": "3b7450af25d5ad9406456b4dfe09fd26180e954d7e56155d860b1f000ae0e603"
+            },
+            {
+              "id": "a1_pronouns_poss",
+              "title_ru": "Притяжательные местоимения: my / your / his / her",
+              "cefr": "A1",
+              "module": "a1_m1",
+              "count": 150,
+              "checksum": "46a2c2759f09eb87cc1c5f0ef430d60849649aaa02b0dc42157cc4de0e318227"
+            },
+            {
+              "id": "a1_this_that",
+              "title_ru": "this / that / these / those",
+              "cefr": "A1",
+              "module": "a1_m1",
+              "count": 150,
+              "checksum": "4a442605d0778d6aadd6780e107017caca4266ec9871076d746fef86905d39db"
+            },
+            {
+              "id": "a1_there_is",
+              "title_ru": "There is / There are",
+              "cefr": "A1",
+              "module": "a1_m1",
+              "count": 150,
+              "checksum": "0e9dd2c570ac964a228220a37e92c41bac05b74475ed38985ecb91038fb21bf8"
+            }
+          ]
+        },
+        {
+          "id": "a1_m2",
+          "title_ru": "Настоящее простое",
+          "skills": [
+            {
+              "id": "a1_pres_simple_i",
+              "title_ru": "Present Simple: I / you / we / they + V1",
+              "cefr": "A1",
+              "module": "a1_m2",
+              "count": 150,
+              "checksum": "2d942811f5577a3f0119e90298d54934a49a0bfe2e49549e893ff61f8ed51f1b"
+            },
+            {
+              "id": "a1_pres_simple_3rd",
+              "title_ru": "Present Simple: he / she + V-s",
+              "cefr": "A1",
+              "module": "a1_m2",
+              "count": 150,
+              "checksum": "e8172a257d070a69642e5bdbec5bf1a61169dd4119842f74d346cce3c27d102f"
+            },
+            {
+              "id": "a1_do_questions",
+              "title_ru": "Вопросы с Do you…?",
+              "cefr": "A1",
+              "module": "a1_m2",
+              "count": 150,
+              "checksum": "585e0045e331fe405429e9e69967118446039b56a5e028d2ab10e0c594d4dc95"
+            },
+            {
+              "id": "a1_does_questions",
+              "title_ru": "Вопросы с Does he/she…?",
+              "cefr": "A1",
+              "module": "a1_m2",
+              "count": 131,
+              "checksum": "7de371b78a19021274115cd20a8cb5e4ee6265261bea733c354a9f437b0ccb25"
+            },
+            {
+              "id": "a1_dont_doesnt",
+              "title_ru": "Отрицание: don't / doesn't",
+              "cefr": "A1",
+              "module": "a1_m2",
+              "count": 150,
+              "checksum": "d19de87e3fa35e59f538e2be00228e1837584a282d923b75c68b279ae4d67fd4"
+            },
+            {
+              "id": "a1_freq_adverbs",
+              "title_ru": "Наречия частотности: usually / never",
+              "cefr": "A1",
+              "module": "a1_m2",
+              "count": 150,
+              "checksum": "e0074bbdb5af7277eacf5a2457958a272f60c87b6ec91b7bb64c2549a626c11a"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

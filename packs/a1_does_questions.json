@@ -1,0 +1,1512 @@
+{
+  "schema_version": 1,
+  "skill": {
+    "id": "a1_does_questions",
+    "cefr": "A1",
+    "module": "a1_m2",
+    "module_title_ru": "Настоящее простое",
+    "title_ru": "Вопросы с Does he/she…?",
+    "pattern": "Does + he/she/it + V1 …?",
+    "theory_ru": "С he/she/it вопрос строится через **does**, а смысловой глагол теряет окончание -s, потому что does уже «взяло» его на себя: **Does she speak English?** (не ~Does she speaks?~).",
+    "common_errors": [
+      {
+        "tag": "double_s",
+        "ru": "Двойное окончание: ~Does she speaks?~ → Does she **speak**?"
+      },
+      {
+        "tag": "do_instead_of_does",
+        "ru": "~Do he speak?~ → **Does** he speak?"
+      },
+      {
+        "tag": "word_order",
+        "ru": "Порядок слов как в русском: ~She speaks English?~ → **Does** she speak English?"
+      }
+    ],
+    "probe_item_ids": [
+      "s_10009052",
+      "s_10061812",
+      "s_2890162"
+    ],
+    "youglish_query": "does she speak english"
+  },
+  "items": [
+    {
+      "id": "s_10009052",
+      "ru": "Есть ещё кто-нибудь, кому жарко?",
+      "en_main": "Does anybody else feel hot?",
+      "en_accepted": [
+        "Does anyone else feel hot?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10009052",
+      "attribution": "shekitten"
+    },
+    {
+      "id": "s_10061812",
+      "ru": "Кто-нибудь помнит, чья была идея?",
+      "en_main": "Does anybody remember whose idea it was?",
+      "en_accepted": [
+        "Does anyone remember whose idea it was?"
+      ],
+      "sub": "question",
+      "difficulty": 4,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10061812",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_10061812b",
+      "ru": "Кто-нибудь помнит, чья это была идея?",
+      "en_main": "Does anybody remember whose idea it was?",
+      "en_accepted": [
+        "Does anyone remember whose idea it was?"
+      ],
+      "sub": "question",
+      "difficulty": 4,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10061812",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_10109507",
+      "ru": "Все с этим согласны?",
+      "en_main": "Does everybody agree with this?",
+      "en_accepted": [
+        "Does everyone agree with this?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10109507",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_10187494",
+      "ru": "Вас это интересует?",
+      "en_main": "Does that interest you?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10187494",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_1030147",
+      "ru": "Тому нравится Мэри?",
+      "en_main": "Does Tom like Mary?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1030147",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_10604245",
+      "ru": "Кто-нибудь ещё так говорит?",
+      "en_main": "Does anyone still talk like that?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10604245",
+      "attribution": "shekitten"
+    },
+    {
+      "id": "s_10604245b",
+      "ru": "Так ещё кто-нибудь говорит?",
+      "en_main": "Does anyone still talk like that?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10604245",
+      "attribution": "shekitten"
+    },
+    {
+      "id": "s_1064954",
+      "ru": "Есть в этом какой-нибудь смысл?",
+      "en_main": "Does this make sense?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1064954",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1064954b",
+      "ru": "Это имеет смысл?",
+      "en_main": "Does this make sense?",
+      "en_accepted": [
+        "Does that make sense?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1064954",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_10817610",
+      "ru": "Кто-нибудь хочет поехать?",
+      "en_main": "Does anyone want to go?",
+      "en_accepted": [
+        "Does anybody want to go?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10817610",
+      "attribution": "WM3DAS"
+    },
+    {
+      "id": "s_10817610b",
+      "ru": "Кто-нибудь хочет пойти?",
+      "en_main": "Does anyone want to go?",
+      "en_accepted": [
+        "Does anybody want to go?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10817610",
+      "attribution": "WM3DAS"
+    },
+    {
+      "id": "s_11039605",
+      "ru": "Кто-нибудь помнит, как эта штука называется?",
+      "en_main": "Does anybody remember what this thing's called?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 4,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11039605",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1122837",
+      "ru": "Это работает?",
+      "en_main": "Does it work?",
+      "en_accepted": [
+        "Does that work?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1122837",
+      "attribution": "Scott"
+    },
+    {
+      "id": "s_1122837b",
+      "ru": "А так получится?",
+      "en_main": "Does it work?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1122837",
+      "attribution": "Scott"
+    },
+    {
+      "id": "s_1168336",
+      "ru": "Имеет ли правда значение?",
+      "en_main": "Does truth matter?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1168336",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1184635",
+      "ru": "У неё дети есть?",
+      "en_main": "Does she have children?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1184635",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1184635b",
+      "ru": "У неё есть дети?",
+      "en_main": "Does she have children?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1184635",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_11910426",
+      "ru": "Том готовит еду?",
+      "en_main": "Does Tom cook?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11910426",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_11919725",
+      "ru": "Том хорошо танцует?",
+      "en_main": "Does Tom dance well?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11919725",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_11952876",
+      "ru": "Тебе никто не помогает?",
+      "en_main": "Doesn't anyone help you?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11952876",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_11952876b",
+      "ru": "Вам никто не помогает?",
+      "en_main": "Doesn't anyone help you?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11952876",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_11957744",
+      "ru": "Все согласны?",
+      "en_main": "Does everyone agree?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11957744",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_12143455",
+      "ru": "Том любит музыку?",
+      "en_main": "Does Tom like music?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12143455",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_12194773",
+      "ru": "Кому-нибудь нужна помощь?",
+      "en_main": "Does anyone need help?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12194773",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_12210097",
+      "ru": "Это что-то меняет?",
+      "en_main": "Does that change anything?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12210097",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_12253213",
+      "ru": "Том помогает?",
+      "en_main": "Does Tom help?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12253213",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_12561812",
+      "ru": "По-твоему, это звучит естественно?",
+      "en_main": "Does this sound natural to you?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12561812",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_12561812b",
+      "ru": "Как тебе кажется, это звучит естественно?",
+      "en_main": "Does this sound natural to you?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12561812",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_12676521",
+      "ru": "Наличные есть у кого-нибудь?",
+      "en_main": "Does anyone have cash?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12676521",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_1553514",
+      "ru": "Всем понятно?",
+      "en_main": "Does everybody understand?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1553514",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1655469",
+      "ru": "Болит?",
+      "en_main": "Does it hurt?",
+      "en_accepted": [
+        "Does this hurt?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1655469",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1655469b",
+      "ru": "Это больно?",
+      "en_main": "Does it hurt?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1655469",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1743059",
+      "ru": "Все этого хотят?",
+      "en_main": "Does everybody want it?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1743059",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1764790",
+      "ru": "Он сюда приходит?",
+      "en_main": "Does he come here?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1764790",
+      "attribution": "Amastan"
+    },
+    {
+      "id": "s_1801890",
+      "ru": "А разве заметно?",
+      "en_main": "Does it show?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1801890",
+      "attribution": "Tamy"
+    },
+    {
+      "id": "s_1836327",
+      "ru": "Я ему нравлюсь?",
+      "en_main": "Does he like me?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1836327",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1877039",
+      "ru": "Деньги у него есть?",
+      "en_main": "Does he have money?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1877039",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1886029",
+      "ru": "Это имеет значение?",
+      "en_main": "Does it matter?",
+      "en_accepted": [
+        "Does that matter?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1886029",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1931871",
+      "ru": "Твой отец знает?",
+      "en_main": "Does your father know?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1931871",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1931871b",
+      "ru": "Отец знает?",
+      "en_main": "Does your father know?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1931871",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_2011860",
+      "ru": "Кто-нибудь хочет эти?",
+      "en_main": "Does anybody want these?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2011860",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2044564",
+      "ru": "Это делает тебя счастливой?",
+      "en_main": "Does that make you happy?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2044564",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2064674",
+      "ru": "Это что-то значит?",
+      "en_main": "Does that mean something?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2064674",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2092570",
+      "ru": "Меня кто-нибудь слышит?",
+      "en_main": "Does anybody hear me?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2092570",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2092574",
+      "ru": "Кому-нибудь что-нибудь нужно?",
+      "en_main": "Does anybody need anything?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2092574",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2092575",
+      "ru": "Кому-то не всё равно?",
+      "en_main": "Does anyone care?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2092575",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2092580",
+      "ru": "Это никого не волнует?",
+      "en_main": "Doesn't anyone care?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2092580",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2092580b",
+      "ru": "Всем всё равно?",
+      "en_main": "Doesn't anyone care?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2092580",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2214298",
+      "ru": "Мне это идёт?",
+      "en_main": "Does this look good on me?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2214298",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_2214298b",
+      "ru": "Мне идёт?",
+      "en_main": "Does this look good on me?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2214298",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_2220657",
+      "ru": "Кто-нибудь об этом помнит?",
+      "en_main": "Does someone remember it?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2220657",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_2235688",
+      "ru": "Том понимает?",
+      "en_main": "Does Tom understand?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2235688",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245284",
+      "ru": "Все знают?",
+      "en_main": "Does everybody know?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245284",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245286",
+      "ru": "Это помогает?",
+      "en_main": "Does that help?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245286",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245291",
+      "ru": "Никто не слушает?",
+      "en_main": "Doesn't anyone listen?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245291",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245292",
+      "ru": "Это разве не работает?",
+      "en_main": "Doesn't it work?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245292",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2260603",
+      "ru": "Твоя жена работает?",
+      "en_main": "Does your wife work?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2260603",
+      "attribution": "Amastan"
+    },
+    {
+      "id": "s_2275793",
+      "ru": "Разве это не само собой разумеется?",
+      "en_main": "Doesn't that go without saying?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2275793",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2446584",
+      "ru": "Том говорит по-французски?",
+      "en_main": "Does Tom speak French?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2446584",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2600103",
+      "ru": "Вам не кажется, что в этой комнате холодно?",
+      "en_main": "Does the room feel cold to you?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 4,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2600103",
+      "attribution": "sharptoothed"
+    },
+    {
+      "id": "s_2671699",
+      "ru": "Она меня любит?",
+      "en_main": "Does she love me?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2671699",
+      "attribution": "Gulo_Luscus"
+    },
+    {
+      "id": "s_2671699b",
+      "ru": "Она любит меня?",
+      "en_main": "Does she love me?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2671699",
+      "attribution": "Gulo_Luscus"
+    },
+    {
+      "id": "s_2731694",
+      "ru": "Это вас интересует?",
+      "en_main": "Does this interest you?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2731694",
+      "attribution": "sharptoothed"
+    },
+    {
+      "id": "s_2748656",
+      "ru": "Она считает себя смешной?",
+      "en_main": "Does she think she's funny?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2748656",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_2748662",
+      "ru": "Он думает, что он смешной?",
+      "en_main": "Does he think he's funny?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2748662",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_2802528",
+      "ru": "Она здесь живёт?",
+      "en_main": "Does she live here?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2802528",
+      "attribution": "Deerhound"
+    },
+    {
+      "id": "s_2802528b",
+      "ru": "Она тут живёт?",
+      "en_main": "Does she live here?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2802528",
+      "attribution": "Deerhound"
+    },
+    {
+      "id": "s_2819019",
+      "ru": "Это звучит глупо?",
+      "en_main": "Does this sound stupid?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2819019",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_2871635",
+      "ru": "В этом есть смысл?",
+      "en_main": "Does that make sense?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2871635",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_288631",
+      "ru": "Он приходит домой в шесть?",
+      "en_main": "Does he come home at six?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:288631",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2890162",
+      "ru": "Вам это нравится или вы хотите что-нибудь другое?",
+      "en_main": "Does this please you, or do you want something else?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 5,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2890162",
+      "attribution": "sharptoothed"
+    },
+    {
+      "id": "s_2918361",
+      "ru": "Это подходит?",
+      "en_main": "Does this fit?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2918361",
+      "attribution": "j0rd4nkzf"
+    },
+    {
+      "id": "s_2930065",
+      "ru": "Том понимает по-французски?",
+      "en_main": "Does Tom understand French?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2930065",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2930065b",
+      "ru": "Том понимает французский?",
+      "en_main": "Does Tom understand French?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2930065",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_293951",
+      "ru": "Он говорит по-английски?",
+      "en_main": "Does he speak English?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:293951",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2992409",
+      "ru": "Это отвечает на ваш вопрос?",
+      "en_main": "Does that answer your question?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2992409",
+      "attribution": "al_ex_an_der"
+    },
+    {
+      "id": "s_3045851",
+      "ru": "Есть для этой книги какое-нибудь определённое место?",
+      "en_main": "Does this book go in any special place?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 4,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3045851",
+      "attribution": "sharptoothed"
+    },
+    {
+      "id": "s_3069340",
+      "ru": "Ему нравится новая работа?",
+      "en_main": "Does he like his new job?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3069340",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_312125",
+      "ru": "Она говорит по-французски?",
+      "en_main": "Does she speak French?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:312125",
+      "attribution": "mamat"
+    },
+    {
+      "id": "s_312698",
+      "ru": "Она говорит по-английски?",
+      "en_main": "Does she speak English?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:312698",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3129311",
+      "ru": "Такое часто бывает?",
+      "en_main": "Does this happen often?",
+      "en_accepted": [
+        "Does this often happen?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3129311",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3129311b",
+      "ru": "Часто такое бывает?",
+      "en_main": "Does this happen often?",
+      "en_accepted": [
+        "Does this often happen?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3129311",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3200892",
+      "ru": "Тебе это о чём-то говорит?",
+      "en_main": "Does that tell you something?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3200892",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3333932",
+      "ru": "Это хорошо выглядит?",
+      "en_main": "Does it look OK?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3333932",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3393142",
+      "ru": "Это радует тебя?",
+      "en_main": "Does it please you?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3393142",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3393142b",
+      "ru": "Это тебя радует?",
+      "en_main": "Does it please you?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3393142",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3393150",
+      "ru": "Это значит \"да\"?",
+      "en_main": "Does that mean yes?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3393150",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3408845",
+      "ru": "Том этому верит?",
+      "en_main": "Does Tom believe that?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3408845",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3408845b",
+      "ru": "Том в это верит?",
+      "en_main": "Does Tom believe that?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3408845",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3415314",
+      "ru": "Том мне верит?",
+      "en_main": "Does Tom believe me?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3415314",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3444538",
+      "ru": "Это вообще имеет значение?",
+      "en_main": "Does it even matter?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3444538",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3686447",
+      "ru": "Есть такое же другого цвета?",
+      "en_main": "Does this come in any other color?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 4,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3686447",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3731698",
+      "ru": "Кто-нибудь ещё это слышит?",
+      "en_main": "Does anyone else hear that?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3731698",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_394638",
+      "ru": "Разве похоже, будто я влюбился?",
+      "en_main": "Does it sound like I'm in love?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 4,
+      "cefr_lex": "A1",
+      "source": "tatoeba:394638",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4011479",
+      "ru": "Это кажется вам справедливым?",
+      "en_main": "Does that seem fair to you?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4011479",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_42844",
+      "ru": "Налоги включены в стоимость?",
+      "en_main": "Does that price include tax?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:42844",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4496298",
+      "ru": "Кому-то правда есть дело?",
+      "en_main": "Does anybody really care?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4496298",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4497833",
+      "ru": "Их мнение важно?",
+      "en_main": "Does their opinion matter?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4497833",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_45248",
+      "ru": "Здесь всё включено?",
+      "en_main": "Does that include everything?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:45248",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4890432",
+      "ru": "Кто-нибудь видит разницу?",
+      "en_main": "Does anyone see a difference?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4890432",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4890432b",
+      "ru": "Кто-нибудь видит отличие?",
+      "en_main": "Does anyone see a difference?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4890432",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_497731",
+      "ru": "Он здесь живёт?",
+      "en_main": "Does he live here?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:497731",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_497731b",
+      "ru": "Он тут проживает?",
+      "en_main": "Does he live here?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:497731",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_55497",
+      "ru": "Это ранит?",
+      "en_main": "Does this hurt?",
+      "en_accepted": [
+        "Does that hurt?",
+        "Does it hurt?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:55497",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_55497b",
+      "ru": "Больно?",
+      "en_main": "Does this hurt?",
+      "en_accepted": [
+        "Does it hurt?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:55497",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_6040239",
+      "ru": "Тебе это кажется правильным?",
+      "en_main": "Does this seem right to you?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6040239",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_6040239b",
+      "ru": "Вам это кажется правильным?",
+      "en_main": "Does this seem right to you?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6040239",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_6049323",
+      "ru": "Все так делают?",
+      "en_main": "Does everyone do that?",
+      "en_accepted": [
+        "Does everybody do that?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6049323",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_6062414",
+      "ru": "Это всем нужно делать?",
+      "en_main": "Does everybody need to do this?",
+      "en_accepted": [
+        "Does everyone need to do this?"
+      ],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6062414",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_6355433",
+      "ru": "Эта дверь тоже открывается?",
+      "en_main": "Does this door open, too?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6355433",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_6691690",
+      "ru": "У тебя хорошо оплачиваемая работа?",
+      "en_main": "Does your job pay well?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6691690",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_6853945",
+      "ru": "Брат вас часто достаёт?",
+      "en_main": "Does your brother pick on you a lot?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 4,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6853945",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_6853945b",
+      "ru": "Брат тебя часто достаёт?",
+      "en_main": "Does your brother pick on you a lot?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 4,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6853945",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_6853946",
+      "ru": "Сестра тебя часто достаёт?",
+      "en_main": "Does your sister pick on you a lot?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 4,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6853946",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_6853946b",
+      "ru": "Сестра вас часто достаёт?",
+      "en_main": "Does your sister pick on you a lot?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 4,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6853946",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_6931161",
+      "ru": "Это значит \"нет\"?",
+      "en_main": "Does that mean no?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6931161",
+      "attribution": "Eccles17"
+    },
+    {
+      "id": "s_6931161b",
+      "ru": "То есть нет?",
+      "en_main": "Does that mean no?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6931161",
+      "attribution": "Eccles17"
+    },
+    {
+      "id": "s_70620",
+      "ru": "Ваши часы идут правильно?",
+      "en_main": "Does your watch keep good time?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:70620",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_7131992",
+      "ru": "С вами такое когда-нибудь бывает?",
+      "en_main": "Does it ever happen to you?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:7131992",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_7410466",
+      "ru": "Том пьёт?",
+      "en_main": "Does Tom drink?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:7410466",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_8099518",
+      "ru": "Том водит машину?",
+      "en_main": "Does Tom drive?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:8099518",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_8830238",
+      "ru": "Том возражает?",
+      "en_main": "Does Tom mind?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:8830238",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_8830549",
+      "ru": "Том согласен?",
+      "en_main": "Does Tom agree?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:8830549",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_8830575",
+      "ru": "Том танцует?",
+      "en_main": "Does Tom dance?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:8830575",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_884416",
+      "ru": "Ей нравится новая работа?",
+      "en_main": "Does she like her new job?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:884416",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_884416b",
+      "ru": "Ей нравится её новая работа?",
+      "en_main": "Does she like her new job?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:884416",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_884428",
+      "ru": "Он каждую неделю сюда приходит?",
+      "en_main": "Does he come here every week?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:884428",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_8856195",
+      "ru": "Кто-нибудь знает?",
+      "en_main": "Does anyone know?",
+      "en_accepted": [
+        "Does anybody know?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:8856195",
+      "attribution": "moxy"
+    },
+    {
+      "id": "s_9439989",
+      "ru": "Кому-нибудь нужна моя помощь?",
+      "en_main": "Does anyone need my help?",
+      "en_accepted": [
+        "Does anybody need my help?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:9439989",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_9496075",
+      "ru": "Это часто происходит?",
+      "en_main": "Does that happen often?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:9496075",
+      "attribution": "DJ_Saidez"
+    }
+  ]
+}

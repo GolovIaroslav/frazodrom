@@ -1,0 +1,1817 @@
+{
+  "schema_version": 1,
+  "skill": {
+    "id": "a1_be_affirm",
+    "cefr": "A1",
+    "module": "a1_m1",
+    "module_title_ru": "Быть и указывать",
+    "title_ru": "Глагол to be: I am / he is / they are",
+    "pattern": "I am / he (she, it) is / we (you, they) are + …",
+    "theory_ru": "Глагол **to be** («быть») в настоящем времени меняется по лицам: **am** — с I, **is** — с he/she/it, **are** — с we/you/they. В отличие от русского, в английском предложении это слово нельзя пропустить: не ~I student~, а **I am a student**. После to be может идти существительное, прилагательное или место: **She is happy**, **They are at home**.",
+    "common_errors": [
+      {
+        "tag": "be_missing",
+        "ru": "Пропуск глагола: ~I a student~ → I **am** a student."
+      },
+      {
+        "tag": "be_wrong_form",
+        "ru": "Не то лицо: ~He am~ / ~They is~ → He **is**, They **are**."
+      },
+      {
+        "tag": "ru_calc",
+        "ru": "Калька с русского без глагола: ~She happy~ → She **is** happy."
+      }
+    ],
+    "probe_item_ids": [
+      "s_10053270",
+      "s_10053270",
+      "s_10053270"
+    ],
+    "youglish_query": "I am a student"
+  },
+  "items": [
+    {
+      "id": "s_10053270",
+      "ru": "Это любовь.",
+      "en_main": "It's love.",
+      "en_accepted": [
+        "This is love."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10053270",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10128053",
+      "ru": "Мои хуже.",
+      "en_main": "Mine are worse.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10128053",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_1013826",
+      "ru": "Мы квиты.",
+      "en_main": "We're even.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1013826",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_10220085",
+      "ru": "Наше хуже.",
+      "en_main": "Ours is worse.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10220085",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10220085b",
+      "ru": "Наш хуже.",
+      "en_main": "Ours is worse.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10220085",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10225967",
+      "ru": "Жизнь длинная.",
+      "en_main": "Life is long.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10225967",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10248879",
+      "ru": "Она большая.",
+      "en_main": "It's big.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10248879",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10572903",
+      "ru": "Твои лучше.",
+      "en_main": "Yours are better.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10572903",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_10572903b",
+      "ru": "Ваши лучше.",
+      "en_main": "Yours are better.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10572903",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_10774646",
+      "ru": "Это вещдок.",
+      "en_main": "That's evidence.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10774646",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10903768",
+      "ru": "Это естественно.",
+      "en_main": "That's natural.",
+      "en_accepted": [
+        "This is natural."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10903768",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1098328",
+      "ru": "Вот, пожалуйста.",
+      "en_main": "There it is.",
+      "en_accepted": [
+        "Here you are."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1098328",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_1098434",
+      "ru": "Мы здесь.",
+      "en_main": "We are here.",
+      "en_accepted": [
+        "We're here."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1098434",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_1098434b",
+      "ru": "Мы тут.",
+      "en_main": "We are here.",
+      "en_accepted": [
+        "We're here."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1098434",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_11069639",
+      "ru": "Это плохо.",
+      "en_main": "That's bad.",
+      "en_accepted": [
+        "This is bad.",
+        "This is a bad thing."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11069639",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_11069639b",
+      "ru": "Плохо.",
+      "en_main": "That's bad.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11069639",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1107969",
+      "ru": "Это конец.",
+      "en_main": "It's over.",
+      "en_accepted": [
+        "This is the end.",
+        "It's the end."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1107969",
+      "attribution": "Scott"
+    },
+    {
+      "id": "s_1107969b",
+      "ru": "Всё закончилось.",
+      "en_main": "It's over.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1107969",
+      "attribution": "Scott"
+    },
+    {
+      "id": "s_1109958",
+      "ru": "Вы потрясающие.",
+      "en_main": "You're amazing.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1109958",
+      "attribution": "Scott"
+    },
+    {
+      "id": "s_1110057",
+      "ru": "Мы свободны!",
+      "en_main": "We are free!",
+      "en_accepted": [
+        "We're free!"
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1110057",
+      "attribution": "Scott"
+    },
+    {
+      "id": "s_1110424",
+      "ru": "Дела плохи.",
+      "en_main": "This is bad.",
+      "en_accepted": [
+        "It's no good."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1110424",
+      "attribution": "Scott"
+    },
+    {
+      "id": "s_1117347",
+      "ru": "Она сильная.",
+      "en_main": "She is strong.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1117347",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1120755",
+      "ru": "Ты хороший.",
+      "en_main": "You are good.",
+      "en_accepted": [
+        "You're good."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1120755",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_1120755b",
+      "ru": "Ты хорошая.",
+      "en_main": "You are good.",
+      "en_accepted": [
+        "You're good."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1120755",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_1120792",
+      "ru": "Я хорошая.",
+      "en_main": "I am good.",
+      "en_accepted": [
+        "I'm good."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1120792",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_1120792b",
+      "ru": "Я хороший.",
+      "en_main": "I am good.",
+      "en_accepted": [
+        "I'm good."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1120792",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_1120794",
+      "ru": "Ты большая.",
+      "en_main": "You are big.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1120794",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_1120794b",
+      "ru": "Ты большой.",
+      "en_main": "You are big.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1120794",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_1120795",
+      "ru": "Ты важна.",
+      "en_main": "You are important.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1120795",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_1120795b",
+      "ru": "Ты важен.",
+      "en_main": "You are important.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1120795",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_1120811",
+      "ru": "Вода важна.",
+      "en_main": "Water is important.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1120811",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_1120813",
+      "ru": "Я важная.",
+      "en_main": "I'm important.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1120813",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_1120813b",
+      "ru": "Я важный.",
+      "en_main": "I'm important.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1120813",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_1169990",
+      "ru": "Вы не правы.",
+      "en_main": "You're wrong.",
+      "en_accepted": [
+        "You are wrong."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1169990",
+      "attribution": "etoile"
+    },
+    {
+      "id": "s_1169990b",
+      "ru": "Ты ошибаешься.",
+      "en_main": "You're wrong.",
+      "en_accepted": [
+        "You are wrong."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1169990",
+      "attribution": "etoile"
+    },
+    {
+      "id": "s_1179935",
+      "ru": "Я убеждён.",
+      "en_main": "I'm certain.",
+      "en_accepted": [
+        "I'm sure.",
+        "I am sure."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1179935",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1179935b",
+      "ru": "Я уверена.",
+      "en_main": "I'm certain.",
+      "en_accepted": [
+        "I am sure.",
+        "I'm sure."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1179935",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1184258",
+      "ru": "Она француженка.",
+      "en_main": "She is French.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1184258",
+      "attribution": "mookeee"
+    },
+    {
+      "id": "s_11894455",
+      "ru": "Мои лучше.",
+      "en_main": "Mine are better.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11894455",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_12063660",
+      "ru": "Достаточно.",
+      "en_main": "It's enough.",
+      "en_accepted": [
+        "That's enough."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12063660",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_12063660b",
+      "ru": "Хватит.",
+      "en_main": "It's enough.",
+      "en_accepted": [
+        "That's enough."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12063660",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_12065898",
+      "ru": "Это безумие.",
+      "en_main": "It's crazy.",
+      "en_accepted": [
+        "This is crazy.",
+        "That's crazy!"
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12065898",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_12070533",
+      "ru": "Они профессионалы.",
+      "en_main": "They are professionals.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12070533",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_12093334",
+      "ru": "Это бумага.",
+      "en_main": "It's paper.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12093334",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1211442",
+      "ru": "Это лёд.",
+      "en_main": "This is ice.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1211442",
+      "attribution": "alec"
+    },
+    {
+      "id": "s_12116626",
+      "ru": "Это обычное дело.",
+      "en_main": "It's common.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12116626",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_12137507",
+      "ru": "Сегодня холодно.",
+      "en_main": "Today is cold.",
+      "en_accepted": [
+        "It's cold today."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12137507",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_1216015",
+      "ru": "Точно.",
+      "en_main": "That's right.",
+      "en_accepted": [
+        "That's it."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1216015",
+      "attribution": "AlanRominger"
+    },
+    {
+      "id": "s_12748455",
+      "ru": "Слова - это интересно.",
+      "en_main": "Words are interesting.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12748455",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1311787",
+      "ru": "Вы молодая.",
+      "en_main": "You're young.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1311787",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1311787b",
+      "ru": "Ты молодой.",
+      "en_main": "You're young.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1311787",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1335485",
+      "ru": "Она стара.",
+      "en_main": "She is old.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1335485",
+      "attribution": "boscowitch"
+    },
+    {
+      "id": "s_1335485b",
+      "ru": "Она старая.",
+      "en_main": "She is old.",
+      "en_accepted": [
+        "It's old."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1335485",
+      "attribution": "boscowitch"
+    },
+    {
+      "id": "s_1349181",
+      "ru": "Великолепно!",
+      "en_main": "That's great!",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1349181",
+      "attribution": "sacredceltic"
+    },
+    {
+      "id": "s_1421919",
+      "ru": "Они забавные.",
+      "en_main": "They are funny.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1421919",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1437171",
+      "ru": "Она сумасшедшая.",
+      "en_main": "She's crazy.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1437171",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1439471",
+      "ru": "Мы братья.",
+      "en_main": "We are brothers.",
+      "en_accepted": [
+        "We're brothers."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1439471",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1475781",
+      "ru": "Вы особенная.",
+      "en_main": "You're special.",
+      "en_accepted": [
+        "You are special."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1475781",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1475781b",
+      "ru": "Ты особенная.",
+      "en_main": "You're special.",
+      "en_accepted": [
+        "You are special."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1475781",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1475782",
+      "ru": "Вы особенный.",
+      "en_main": "You are special.",
+      "en_accepted": [
+        "You're special."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1475782",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1475782b",
+      "ru": "Вы особенные.",
+      "en_main": "You are special.",
+      "en_accepted": [
+        "You're special."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1475782",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1489175",
+      "ru": "Он британец.",
+      "en_main": "He is British.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1489175",
+      "attribution": "weihaiping"
+    },
+    {
+      "id": "s_1495895",
+      "ru": "У всех всё в порядке.",
+      "en_main": "Everybody is fine.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1495895",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1495895b",
+      "ru": "Всем хорошо.",
+      "en_main": "Everybody is fine.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1495895",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1545447",
+      "ru": "Все довольны.",
+      "en_main": "Everybody's happy.",
+      "en_accepted": [
+        "Everyone is happy."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1545447",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1545447b",
+      "ru": "Все счастливы.",
+      "en_main": "Everybody's happy.",
+      "en_accepted": [
+        "Everyone is happy."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1545447",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1547545",
+      "ru": "Я старый.",
+      "en_main": "I am old.",
+      "en_accepted": [
+        "I'm old."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1547545",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1547545b",
+      "ru": "Я старая.",
+      "en_main": "I am old.",
+      "en_accepted": [
+        "I'm old."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1547545",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1549914",
+      "ru": "Это красиво.",
+      "en_main": "This is beautiful.",
+      "en_accepted": [
+        "That's beautiful.",
+        "It's beautiful."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1549914",
+      "attribution": "miflhanc"
+    },
+    {
+      "id": "s_1551041",
+      "ru": "Мне лучше.",
+      "en_main": "I'm better.",
+      "en_accepted": [
+        "I am better."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1551041",
+      "attribution": "FiRez"
+    },
+    {
+      "id": "s_1568774",
+      "ru": "Это трудно.",
+      "en_main": "It's hard.",
+      "en_accepted": [
+        "This is difficult."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1568774",
+      "attribution": "Sharaf78"
+    },
+    {
+      "id": "s_1606681",
+      "ru": "Никто не совершенен.",
+      "en_main": "Nobody's perfect.",
+      "en_accepted": [
+        "Nobody is perfect.",
+        "No one's perfect."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1606681",
+      "attribution": "Grim_fandango"
+    },
+    {
+      "id": "s_1606681b",
+      "ru": "Никто не идеален.",
+      "en_main": "Nobody's perfect.",
+      "en_accepted": [
+        "Nobody is perfect.",
+        "No one is perfect."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1606681",
+      "attribution": "Grim_fandango"
+    },
+    {
+      "id": "s_1629767",
+      "ru": "Ей жарко.",
+      "en_main": "She's hot.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1629767",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1690592",
+      "ru": "Всё возможно.",
+      "en_main": "Everything is possible.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1690592",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1766545",
+      "ru": "Он молод.",
+      "en_main": "He is young.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1766545",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1766545b",
+      "ru": "Он молодой.",
+      "en_main": "He is young.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1766545",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1766546",
+      "ru": "Она молода.",
+      "en_main": "She is young.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1766546",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1766546b",
+      "ru": "Она юная.",
+      "en_main": "She is young.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1766546",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1767417",
+      "ru": "Это другое.",
+      "en_main": "This is different.",
+      "en_accepted": [
+        "That's different."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1767417",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1790802",
+      "ru": "Он богатый.",
+      "en_main": "He's rich.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1790802",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1790802b",
+      "ru": "Он богат.",
+      "en_main": "He's rich.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1790802",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1817800",
+      "ru": "Любовь - это безумие.",
+      "en_main": "Love is crazy.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1817800",
+      "attribution": "menyo"
+    },
+    {
+      "id": "s_1829",
+      "ru": "Жизнь прекрасна.",
+      "en_main": "Life is beautiful.",
+      "en_accepted": [
+        "Life is sweet."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1829",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1841577",
+      "ru": "Это моё.",
+      "en_main": "That's mine.",
+      "en_accepted": [
+        "This is mine.",
+        "That is mine."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1841577",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1841577b",
+      "ru": "Это принадлежит мне.",
+      "en_main": "That's mine.",
+      "en_accepted": [
+        "That is mine."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1841577",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1841578",
+      "ru": "Это невероятно.",
+      "en_main": "That's amazing.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1841578",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1841578b",
+      "ru": "Это поразительно.",
+      "en_main": "That's amazing.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1841578",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1855193",
+      "ru": "Он хороший.",
+      "en_main": "He's good.",
+      "en_accepted": [
+        "He is nice."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1855193",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1869666",
+      "ru": "Это неправильно.",
+      "en_main": "This is wrong.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1869666",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1872056",
+      "ru": "Я доволен.",
+      "en_main": "I'm happy.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1872056",
+      "attribution": "Eldad"
+    },
+    {
+      "id": "s_1888443",
+      "ru": "Я свободна!",
+      "en_main": "I'm free!",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1888443",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1888443b",
+      "ru": "Я свободен!",
+      "en_main": "I'm free!",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1888443",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1892487",
+      "ru": "Всё нормально.",
+      "en_main": "Everything is normal.",
+      "en_accepted": [
+        "It's OK.",
+        "This is fine."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1892487",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1893653",
+      "ru": "Мы закрыты.",
+      "en_main": "We're closed.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1893653",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1893655",
+      "ru": "Мы одни.",
+      "en_main": "We're alone.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1893655",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1894565",
+      "ru": "Это личное.",
+      "en_main": "It's personal.",
+      "en_accepted": [
+        "That's personal.",
+        "It's sort of personal."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1894565",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1894599",
+      "ru": "Красиво.",
+      "en_main": "It's beautiful.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1894599",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1895603",
+      "ru": "Вы опоздали.",
+      "en_main": "You're late.",
+      "en_accepted": [
+        "You are late.",
+        "You are too late."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1895603",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1895603b",
+      "ru": "Ты опоздал.",
+      "en_main": "You're late.",
+      "en_accepted": [
+        "You are late.",
+        "You are too late."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1895603",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1895615",
+      "ru": "Ты забавный.",
+      "en_main": "You're funny.",
+      "en_accepted": [
+        "You're fun."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1895615",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1895615b",
+      "ru": "Вы забавный.",
+      "en_main": "You're funny.",
+      "en_accepted": [
+        "You're fun."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1895615",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1897784",
+      "ru": "Это здорово.",
+      "en_main": "That's cool.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1897784",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1897784b",
+      "ru": "Это отлично.",
+      "en_main": "That's cool.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1897784",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1897793",
+      "ru": "Интересно.",
+      "en_main": "That's interesting.",
+      "en_accepted": [
+        "It's interesting."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1897793",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1897793b",
+      "ru": "Это интересно.",
+      "en_main": "That's interesting.",
+      "en_accepted": [
+        "This is interesting.",
+        "It's interesting."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1897793",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1897814",
+      "ru": "Это превосходно.",
+      "en_main": "That's perfect.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1897814",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1897820",
+      "ru": "Это глупо.",
+      "en_main": "That's stupid.",
+      "en_accepted": [
+        "This is stupid.",
+        "It's stupid."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1897820",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1898127",
+      "ru": "Они классные.",
+      "en_main": "They're cool.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1898127",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1898127b",
+      "ru": "Они клёвые.",
+      "en_main": "They're cool.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1898127",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1898151",
+      "ru": "Эти красивые.",
+      "en_main": "These are beautiful.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1898151",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1898242",
+      "ru": "Что-то не так.",
+      "en_main": "Something is wrong.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1898242",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1898382",
+      "ru": "Всё готово.",
+      "en_main": "Everything's ready.",
+      "en_accepted": [
+        "Everything is ready."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1898382",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1898400",
+      "ru": "Образование важно.",
+      "en_main": "Education is important.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1898400",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1924560",
+      "ru": "Я стар.",
+      "en_main": "I'm old.",
+      "en_accepted": [
+        "I am old."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1924560",
+      "attribution": "Zaghawa"
+    },
+    {
+      "id": "s_1984602",
+      "ru": "Правила есть правила.",
+      "en_main": "Rules are rules.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1984602",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_20097",
+      "ru": "Вы красивые.",
+      "en_main": "You are beautiful.",
+      "en_accepted": [
+        "You're beautiful."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:20097",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_20097b",
+      "ru": "Ты красива.",
+      "en_main": "You are beautiful.",
+      "en_accepted": [
+        "You're beautiful."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:20097",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2044386",
+      "ru": "Они счастливы.",
+      "en_main": "They're happy.",
+      "en_accepted": [
+        "They are happy."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2044386",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2044394",
+      "ru": "Никто не счастлив.",
+      "en_main": "Nobody's happy.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2044394",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2047350",
+      "ru": "Вы сумасшедшая.",
+      "en_main": "You're crazy.",
+      "en_accepted": [
+        "You are crazy."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2047350",
+      "attribution": "AlanF_US"
+    },
+    {
+      "id": "s_2047350b",
+      "ru": "Вы сумасшедший.",
+      "en_main": "You're crazy.",
+      "en_accepted": [
+        "You are crazy."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2047350",
+      "attribution": "AlanF_US"
+    },
+    {
+      "id": "s_2066291",
+      "ru": "Я сумасшедший.",
+      "en_main": "I'm crazy.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2066291",
+      "attribution": "LanguageExpert"
+    },
+    {
+      "id": "s_2079442",
+      "ru": "Люди смешные.",
+      "en_main": "People are funny.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2079442",
+      "attribution": "halfb1t"
+    },
+    {
+      "id": "s_2094802",
+      "ru": "Все мертвы.",
+      "en_main": "Everybody's dead.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2094802",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2094802b",
+      "ru": "Все умерли.",
+      "en_main": "Everybody's dead.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2094802",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2107341",
+      "ru": "Мы разные.",
+      "en_main": "We're different.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2107341",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2107341b",
+      "ru": "Мы другие.",
+      "en_main": "We're different.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2107341",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2107343",
+      "ru": "Мы рано.",
+      "en_main": "We're early.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2107343",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2107345",
+      "ru": "У нас всё хорошо.",
+      "en_main": "We're fine.",
+      "en_accepted": [
+        "We're all right."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2107345",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2107345b",
+      "ru": "У нас всё отлично.",
+      "en_main": "We're fine.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2107345",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2107346",
+      "ru": "Мы друзья.",
+      "en_main": "We're friends.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2107346",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2107346b",
+      "ru": "Мы дружим.",
+      "en_main": "We're friends.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2107346",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2107352",
+      "ru": "Мы опоздали.",
+      "en_main": "We're late.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2107352",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2107352b",
+      "ru": "Мы опаздываем.",
+      "en_main": "We're late.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2107352",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2107356",
+      "ru": "Мы готовы.",
+      "en_main": "We're ready.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2107356",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2107357",
+      "ru": "Мы в безопасности.",
+      "en_main": "We're safe.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2107357",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2107359",
+      "ru": "Мы серьёзно.",
+      "en_main": "We're serious.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2107359",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2107361",
+      "ru": "Нам жаль.",
+      "en_main": "We're sorry.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2107361",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2107361b",
+      "ru": "Мы сожалеем.",
+      "en_main": "We're sorry.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2107361",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_21110",
+      "ru": "Дело есть дело.",
+      "en_main": "Business is business.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:21110",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_21110b",
+      "ru": "Бизнес есть бизнес.",
+      "en_main": "Business is business.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:21110",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111217",
+      "ru": "Они ошибаются.",
+      "en_main": "They're wrong.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111217",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111217b",
+      "ru": "Они неправы.",
+      "en_main": "They're wrong.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111217",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111238",
+      "ru": "Они студенты.",
+      "en_main": "They're students.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111238",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111238b",
+      "ru": "Они студентки.",
+      "en_main": "They're students.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111238",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111239",
+      "ru": "Они сильны.",
+      "en_main": "They're strong.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111239",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111239b",
+      "ru": "Они сильные.",
+      "en_main": "They're strong.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111239",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111242",
+      "ru": "Они особенные.",
+      "en_main": "They're special.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111242",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111244",
+      "ru": "Они маленькие.",
+      "en_main": "They're small.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111244",
+      "attribution": "CK"
+    }
+  ]
+}

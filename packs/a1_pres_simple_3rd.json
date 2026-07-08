@@ -1,0 +1,1714 @@
+{
+  "schema_version": 1,
+  "skill": {
+    "id": "a1_pres_simple_3rd",
+    "cefr": "A1",
+    "module": "a1_m2",
+    "module_title_ru": "Настоящее простое",
+    "title_ru": "Present Simple: he / she + V-s",
+    "pattern": "he/she/it + глагол + -s/-es",
+    "theory_ru": "С подлежащими he/she/it к глаголу в настоящем простом времени добавляется окончание **-s** (или **-es** после -s/-sh/-ch/-x/-o, и -y → -ies): **He works**, **She watches**, **He goes**. Это окончание легко забыть — самая частая ошибка русскоязычных в Present Simple.",
+    "common_errors": [
+      {
+        "tag": "s_ending_missing",
+        "ru": "Пропуск -s: ~He work~ → He **works**."
+      },
+      {
+        "tag": "es_ending",
+        "ru": "Забыто -es: ~He go~ → He **goes**."
+      },
+      {
+        "tag": "y_to_ies",
+        "ru": "study → studies, а не ~studys~."
+      }
+    ],
+    "probe_item_ids": [
+      "s_1365269",
+      "s_10068609",
+      "s_10068609"
+    ],
+    "youglish_query": "he works in an office"
+  },
+  "items": [
+    {
+      "id": "s_10068609",
+      "ru": "Там никто не живёт.",
+      "en_main": "No one lives there.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10068609",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_10364988",
+      "ru": "Любовь даёт нам надежду.",
+      "en_main": "Love gives us hope.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10364988",
+      "attribution": "Ricardo14"
+    },
+    {
+      "id": "s_1046163",
+      "ru": "У неё две тысячи книг.",
+      "en_main": "She has 2,000 books.",
+      "en_accepted": [
+        "She has two thousand books."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1046163",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1064422",
+      "ru": "Само собой разумеется.",
+      "en_main": "It goes without saying.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1064422",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1076598",
+      "ru": "Деньги правят миром.",
+      "en_main": "Money rules the world.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1076598",
+      "attribution": "sacredceltic"
+    },
+    {
+      "id": "s_11121970",
+      "ru": "Кажется, что это просто.",
+      "en_main": "It seems simple.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11121970",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_1112328",
+      "ru": "Вот она.",
+      "en_main": "Here she comes.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1112328",
+      "attribution": "Scott"
+    },
+    {
+      "id": "s_1112328b",
+      "ru": "Вот она идёт.",
+      "en_main": "Here she comes.",
+      "en_accepted": [
+        "There she comes."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1112328",
+      "attribution": "Scott"
+    },
+    {
+      "id": "s_1112775",
+      "ru": "У неё красивые глаза.",
+      "en_main": "She has pretty eyes.",
+      "en_accepted": [
+        "She has beautiful eyes."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1112775",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_11154681",
+      "ru": "Правда всё ещё имеет значение.",
+      "en_main": "Truth still matters.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11154681",
+      "attribution": "shekitten"
+    },
+    {
+      "id": "s_1127469",
+      "ru": "Жена меня бьёт.",
+      "en_main": "My wife beats me.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1127469",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1127469b",
+      "ru": "Моя жена меня бьёт.",
+      "en_main": "My wife beats me.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1127469",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_11360009",
+      "ru": "Эта работа хорошо оплачивается.",
+      "en_main": "This work pays well.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11360009",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_1147565",
+      "ru": "Она слишком много говорит.",
+      "en_main": "She speaks too much.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1147565",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1176171",
+      "ru": "Он уезжает в восемь.",
+      "en_main": "He leaves at eight.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1176171",
+      "attribution": "paula_guisard"
+    },
+    {
+      "id": "s_1176171b",
+      "ru": "Он уходит в восемь.",
+      "en_main": "He leaves at eight.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1176171",
+      "attribution": "paula_guisard"
+    },
+    {
+      "id": "s_12075951",
+      "ru": "Это делает меня счастливой.",
+      "en_main": "It makes me happy.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12075951",
+      "attribution": "joan_LanguageProcess"
+    },
+    {
+      "id": "s_12146243",
+      "ru": "Нам никто не верит.",
+      "en_main": "No one believes us.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12146243",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_12258516",
+      "ru": "Похоже, дело серьёзное.",
+      "en_main": "It sounds serious.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12258516",
+      "attribution": "Orange"
+    },
+    {
+      "id": "s_1257313",
+      "ru": "Он ходит быстро.",
+      "en_main": "He walks fast.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1257313",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1257313b",
+      "ru": "Он шагает быстро.",
+      "en_main": "He walks fast.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1257313",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1300572",
+      "ru": "Он играет там.",
+      "en_main": "He plays there.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1300572",
+      "attribution": "riccioberto"
+    },
+    {
+      "id": "s_1316125",
+      "ru": "Он любит музыку.",
+      "en_main": "He loves music.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1316125",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1317610",
+      "ru": "Он слишком быстро говорит.",
+      "en_main": "He speaks too fast.",
+      "en_accepted": [
+        "He talks too fast."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1317610",
+      "attribution": "Mutusen"
+    },
+    {
+      "id": "s_1317610b",
+      "ru": "Он говорит слишком быстро.",
+      "en_main": "He speaks too fast.",
+      "en_accepted": [
+        "He talks too fast."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1317610",
+      "attribution": "Mutusen"
+    },
+    {
+      "id": "s_1356760",
+      "ru": "Ему это нужно.",
+      "en_main": "He needs it.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1356760",
+      "attribution": "sacredceltic"
+    },
+    {
+      "id": "s_1356760b",
+      "ru": "Он ему нужен.",
+      "en_main": "He needs it.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1356760",
+      "attribution": "sacredceltic"
+    },
+    {
+      "id": "s_1357239",
+      "ru": "Он быстро учится.",
+      "en_main": "He learns fast.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1357239",
+      "attribution": "sacredceltic"
+    },
+    {
+      "id": "s_1365269",
+      "ru": "Работает.",
+      "en_main": "It works.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1365269",
+      "attribution": "sacredceltic"
+    },
+    {
+      "id": "s_1365269b",
+      "ru": "Это работает.",
+      "en_main": "It works.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1365269",
+      "attribution": "sacredceltic"
+    },
+    {
+      "id": "s_1442079",
+      "ru": "Она рано встаёт.",
+      "en_main": "She gets up early.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1442079",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1442081",
+      "ru": "Он рано встаёт.",
+      "en_main": "He gets up early.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1442081",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1454312",
+      "ru": "Она любит бегать.",
+      "en_main": "She likes running.",
+      "en_accepted": [
+        "She likes to run."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1454312",
+      "attribution": "raghebaraby"
+    },
+    {
+      "id": "s_1460416",
+      "ru": "Она выглядит счастливой.",
+      "en_main": "She seems happy.",
+      "en_accepted": [
+        "She looks happy."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1460416",
+      "attribution": "piksea"
+    },
+    {
+      "id": "s_1460416b",
+      "ru": "Она кажется счастливой.",
+      "en_main": "She seems happy.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1460416",
+      "attribution": "piksea"
+    },
+    {
+      "id": "s_1460417",
+      "ru": "Он выглядит счастливым.",
+      "en_main": "He looks happy.",
+      "en_accepted": [
+        "It seems that he's happy."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1460417",
+      "attribution": "piksea"
+    },
+    {
+      "id": "s_1460417b",
+      "ru": "Он выглядит довольным.",
+      "en_main": "He looks happy.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1460417",
+      "attribution": "piksea"
+    },
+    {
+      "id": "s_1496726",
+      "ru": "Он слишком дорого стоит.",
+      "en_main": "It costs too much.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1496726",
+      "attribution": "orika89"
+    },
+    {
+      "id": "s_1496726b",
+      "ru": "Она слишком дорого стоит.",
+      "en_main": "It costs too much.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1496726",
+      "attribution": "orika89"
+    },
+    {
+      "id": "s_1504448",
+      "ru": "Он меня уважает.",
+      "en_main": "He respects me.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1504448",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1579455",
+      "ru": "Он тебя ещё помнит.",
+      "en_main": "He still remembers you.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1579455",
+      "attribution": "fanty"
+    },
+    {
+      "id": "s_1579455b",
+      "ru": "Он вас ещё помнит.",
+      "en_main": "He still remembers you.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1579455",
+      "attribution": "fanty"
+    },
+    {
+      "id": "s_1590554",
+      "ru": "История продолжается.",
+      "en_main": "The story continues.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1590554",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1633481",
+      "ru": "Она всегда говорит нет.",
+      "en_main": "She always says no.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1633481",
+      "attribution": "GeeZ"
+    },
+    {
+      "id": "s_1637170",
+      "ru": "Становится ещё хуже.",
+      "en_main": "It gets worse.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1637170",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1654049",
+      "ru": "Он делает это быстро.",
+      "en_main": "He does it fast.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1654049",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1655781",
+      "ru": "Он понимает риски.",
+      "en_main": "He understands the risks.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1655781",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1676741",
+      "ru": "Он любит спать.",
+      "en_main": "He likes sleeping.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1676741",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1676742",
+      "ru": "Она любит поспать.",
+      "en_main": "She likes sleeping.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1676742",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1690421",
+      "ru": "Звучит просто.",
+      "en_main": "It sounds easy.",
+      "en_accepted": [
+        "It sounds simple."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1690421",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1690421b",
+      "ru": "Вроде просто.",
+      "en_main": "It sounds easy.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1690421",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1690704",
+      "ru": "Становится лучше.",
+      "en_main": "It gets better.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1690704",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1723957",
+      "ru": "Он хочет ещё.",
+      "en_main": "He wants more.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1723957",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1749480",
+      "ru": "Он хочет одного.",
+      "en_main": "He wants one.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1749480",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1749480b",
+      "ru": "Он хочет одно.",
+      "en_main": "He wants one.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1749480",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1773678",
+      "ru": "Ему никто не верит.",
+      "en_main": "No one believes him.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1773678",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1773680",
+      "ru": "Мне никто не верит.",
+      "en_main": "No one believes me.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1773680",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1773680b",
+      "ru": "Никто мне не верит.",
+      "en_main": "No one believes me.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1773680",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1773913",
+      "ru": "Никому нет до этого дела.",
+      "en_main": "No one cares.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1773913",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1773913b",
+      "ru": "Всем всё равно.",
+      "en_main": "No one cares.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1773913",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1797685",
+      "ru": "Ты ей нужен.",
+      "en_main": "She needs you.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1797685",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1797685b",
+      "ru": "Ты нужен ей.",
+      "en_main": "She needs you.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1797685",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1801843",
+      "ru": "Он сводит меня с ума.",
+      "en_main": "He drives me crazy.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1801843",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1801844",
+      "ru": "Она сводит меня с ума.",
+      "en_main": "She drives me crazy.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1801844",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1804069",
+      "ru": "Он любит деньги.",
+      "en_main": "He likes money.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1804069",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1816823",
+      "ru": "Он нас любит.",
+      "en_main": "He loves us.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1816823",
+      "attribution": "Amastan"
+    },
+    {
+      "id": "s_1816827",
+      "ru": "Она нас любит.",
+      "en_main": "She loves us.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1816827",
+      "attribution": "Amastan"
+    },
+    {
+      "id": "s_1816875",
+      "ru": "Он нам помогает.",
+      "en_main": "He helps us.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1816875",
+      "attribution": "Amastan"
+    },
+    {
+      "id": "s_1816888",
+      "ru": "Она помогает нам.",
+      "en_main": "She helps us.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1816888",
+      "attribution": "Amastan"
+    },
+    {
+      "id": "s_1816888b",
+      "ru": "Она нам помогает.",
+      "en_main": "She helps us.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1816888",
+      "attribution": "Amastan"
+    },
+    {
+      "id": "s_1816970",
+      "ru": "Он рассказывает нам секреты.",
+      "en_main": "He tells us secrets.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1816970",
+      "attribution": "Amastan"
+    },
+    {
+      "id": "s_1816970b",
+      "ru": "Он делится с нами секретами.",
+      "en_main": "He tells us secrets.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1816970",
+      "attribution": "Amastan"
+    },
+    {
+      "id": "s_1817019",
+      "ru": "Он даёт нам деньги.",
+      "en_main": "He gives us money.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1817019",
+      "attribution": "Amastan"
+    },
+    {
+      "id": "s_1817072",
+      "ru": "Он продаёт нам бумагу.",
+      "en_main": "He sells us paper.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1817072",
+      "attribution": "Amastan"
+    },
+    {
+      "id": "s_1867454",
+      "ru": "Он быстро говорит.",
+      "en_main": "He talks fast.",
+      "en_accepted": [
+        "He speaks quickly."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1867454",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1867454b",
+      "ru": "Он говорит быстро.",
+      "en_main": "He talks fast.",
+      "en_accepted": [
+        "He speaks quickly."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1867454",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1876006",
+      "ru": "Он говорит на четырёх языках.",
+      "en_main": "He speaks four languages.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1876006",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_19122",
+      "ru": "Воспитание начинается в семье.",
+      "en_main": "Education starts at home.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:19122",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_19122b",
+      "ru": "Воспитание начинается дома.",
+      "en_main": "Education starts at home.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:19122",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1920731",
+      "ru": "Он любит внимание.",
+      "en_main": "He loves attention.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1920731",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1980102",
+      "ru": "У него есть деньги.",
+      "en_main": "He has money.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1980102",
+      "attribution": "AryKiss"
+    },
+    {
+      "id": "s_1980102b",
+      "ru": "Деньги у него есть.",
+      "en_main": "He has money.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1980102",
+      "attribution": "AryKiss"
+    },
+    {
+      "id": "s_2032690",
+      "ru": "Это действительно работает.",
+      "en_main": "It really works.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2032690",
+      "attribution": "Amastan"
+    },
+    {
+      "id": "s_2091101",
+      "ru": "Так никто не говорит.",
+      "en_main": "No one says that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2091101",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2091101b",
+      "ru": "Никто этого не говорит.",
+      "en_main": "No one says that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2091101",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2110153",
+      "ru": "Выглядит интересно.",
+      "en_main": "It seems interesting.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2110153",
+      "attribution": "lgrande"
+    },
+    {
+      "id": "s_2111603",
+      "ru": "Любовь продолжается.",
+      "en_main": "Love lasts.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111603",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111604",
+      "ru": "Любовь ранит.",
+      "en_main": "Love hurts.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111604",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111604b",
+      "ru": "Любовь зла.",
+      "en_main": "Love hurts.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111604",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2123616",
+      "ru": "Это помогает.",
+      "en_main": "It helps.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2123616",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2123617",
+      "ru": "Это случается.",
+      "en_main": "It happens.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2123617",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2123617b",
+      "ru": "Бывает.",
+      "en_main": "It happens.",
+      "en_accepted": [
+        "Stuff happens."
+      ],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2123617",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2152943",
+      "ru": "Опыт приносит плоды.",
+      "en_main": "Experience pays off.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2152943",
+      "attribution": "freddy1"
+    },
+    {
+      "id": "s_2152943b",
+      "ru": "Опыт приносит свои плоды.",
+      "en_main": "Experience pays off.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2152943",
+      "attribution": "freddy1"
+    },
+    {
+      "id": "s_2206495",
+      "ru": "Она всё знает.",
+      "en_main": "She knows everything.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2206495",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_2247196",
+      "ru": "Защита отказывается от вопросов.",
+      "en_main": "The defense rests.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2247196",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248733",
+      "ru": "Это иногда случается.",
+      "en_main": "It happens sometimes.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248733",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248765",
+      "ru": "Это выглядит восхитительно.",
+      "en_main": "It looks amazing.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248765",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248765b",
+      "ru": "Это выглядит потрясающе.",
+      "en_main": "It looks amazing.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248765",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248798",
+      "ru": "Звучит интересно.",
+      "en_main": "It sounds interesting.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248798",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2253780",
+      "ru": "Завтра это начинается.",
+      "en_main": "Tomorrow it starts.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2253780",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2314023",
+      "ru": "Она быстро говорит.",
+      "en_main": "She talks quickly.",
+      "en_accepted": [
+        "She speaks quickly."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2314023",
+      "attribution": "Gulliver"
+    },
+    {
+      "id": "s_2396245",
+      "ru": "Это важно.",
+      "en_main": "It matters.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2396245",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2396245b",
+      "ru": "Это имеет значение.",
+      "en_main": "It matters.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2396245",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2417807",
+      "ru": "Он водит машину быстро.",
+      "en_main": "He drives fast.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2417807",
+      "attribution": "AlanF_US"
+    },
+    {
+      "id": "s_2609478",
+      "ru": "Еда стоит денег.",
+      "en_main": "Food costs money.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2609478",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_2621690",
+      "ru": "Правда ранит.",
+      "en_main": "The truth hurts.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2621690",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_2649251",
+      "ru": "Больно.",
+      "en_main": "It hurts.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2649251",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_266400",
+      "ru": "С практикой приходит сноровка.",
+      "en_main": "Practice makes perfect.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:266400",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2764276",
+      "ru": "Он быстро бегает.",
+      "en_main": "He runs fast.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2764276",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2764306",
+      "ru": "Она быстро бегает.",
+      "en_main": "She runs fast.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2764306",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_2774787",
+      "ru": "Работает отлично.",
+      "en_main": "It works great.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2774787",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_288254",
+      "ru": "Он действует быстро.",
+      "en_main": "He acts quickly.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:288254",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_293742",
+      "ru": "Он очень старается.",
+      "en_main": "He tries hard.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:293742",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_295702",
+      "ru": "Ему не хватает опыта.",
+      "en_main": "He lacks experience.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:295702",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_296856",
+      "ru": "Он пишет книги.",
+      "en_main": "He writes books.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:296856",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_302031",
+      "ru": "Он движется быстро.",
+      "en_main": "He moves quickly.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:302031",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_311515",
+      "ru": "Она хорошо печатает.",
+      "en_main": "She types well.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:311515",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_312736",
+      "ru": "Она понимает музыку.",
+      "en_main": "She understands music.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:312736",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_314454",
+      "ru": "Она меня знает.",
+      "en_main": "She knows me.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:314454",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_316123",
+      "ru": "Она упорно занимается.",
+      "en_main": "She studies hard.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:316123",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_316925",
+      "ru": "Она ходит.",
+      "en_main": "She walks.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:316925",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_33120",
+      "ru": "Вот он идёт.",
+      "en_main": "Here he comes.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:33120",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_33120b",
+      "ru": "А вот и он.",
+      "en_main": "Here he comes.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:33120",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3346020",
+      "ru": "Женитьба меняет людей.",
+      "en_main": "Marriage changes people.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3346020",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_3346020b",
+      "ru": "Брак меняет людей.",
+      "en_main": "Marriage changes people.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3346020",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_434996",
+      "ru": "Он продаёт машины.",
+      "en_main": "He sells cars.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:434996",
+      "attribution": "lukaszpp"
+    },
+    {
+      "id": "s_434996b",
+      "ru": "Он торгует автомобилями.",
+      "en_main": "He sells cars.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:434996",
+      "attribution": "lukaszpp"
+    },
+    {
+      "id": "s_449023",
+      "ru": "Никто не знает.",
+      "en_main": "No one knows.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:449023",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_477368",
+      "ru": "Жизнь продолжается.",
+      "en_main": "Life goes on.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:477368",
+      "attribution": "BlueLagoon"
+    },
+    {
+      "id": "s_491351",
+      "ru": "Всякое бывает.",
+      "en_main": "Stuff happens.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:491351",
+      "attribution": "saeb"
+    },
+    {
+      "id": "s_5537440",
+      "ru": "Деньги меняют людей.",
+      "en_main": "Money changes people.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:5537440",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_557422b",
+      "ru": "Мой отец идёт.",
+      "en_main": "My father walks.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:557422",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_5758147",
+      "ru": "Это ничего не стоит.",
+      "en_main": "It costs nothing.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:5758147",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_672254",
+      "ru": "Он бегает.",
+      "en_main": "He runs.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:672254",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_672264",
+      "ru": "Она бегает.",
+      "en_main": "She runs.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:672264",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_707527",
+      "ru": "На это нужно время.",
+      "en_main": "It takes time.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:707527",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_707527b",
+      "ru": "Это займёт время.",
+      "en_main": "It takes time.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:707527",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_780836",
+      "ru": "Это имеет смысл.",
+      "en_main": "It makes sense.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:780836",
+      "attribution": "sacredceltic"
+    },
+    {
+      "id": "s_780836b",
+      "ru": "В этом есть смысл.",
+      "en_main": "It makes sense.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:780836",
+      "attribution": "sacredceltic"
+    },
+    {
+      "id": "s_8056721",
+      "ru": "Битва продолжается.",
+      "en_main": "The fight continues.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:8056721",
+      "attribution": "jameslin011"
+    },
+    {
+      "id": "s_811376",
+      "ru": "Он живёт один.",
+      "en_main": "He lives alone.",
+      "en_accepted": [
+        "He lives by himself."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:811376",
+      "attribution": "willhite2"
+    },
+    {
+      "id": "s_860046",
+      "ru": "Она живёт одна.",
+      "en_main": "She lives alone.",
+      "en_accepted": [
+        "She lives on her own."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:860046",
+      "attribution": "piksea"
+    },
+    {
+      "id": "s_8765603",
+      "ru": "Боль меняет людей.",
+      "en_main": "Pain changes people.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:8765603",
+      "attribution": "Smoky"
+    },
+    {
+      "id": "s_887310",
+      "ru": "Она по нему скучает.",
+      "en_main": "She misses him.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:887310",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_887310b",
+      "ru": "Она скучает по нему.",
+      "en_main": "She misses him.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:887310",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_887479",
+      "ru": "Она ему доверяет.",
+      "en_main": "She trusts him.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:887479",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_887480",
+      "ru": "Она его понимает.",
+      "en_main": "She understands him.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:887480",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_887513",
+      "ru": "Она его хочет.",
+      "en_main": "She wants him.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:887513",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_984596",
+      "ru": "Он всё знает.",
+      "en_main": "He knows everything.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:984596",
+      "attribution": "CK"
+    }
+  ]
+}

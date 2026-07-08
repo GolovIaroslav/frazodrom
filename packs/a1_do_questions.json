@@ -1,0 +1,1744 @@
+{
+  "schema_version": 1,
+  "skill": {
+    "id": "a1_do_questions",
+    "cefr": "A1",
+    "module": "a1_m2",
+    "module_title_ru": "Настоящее простое",
+    "title_ru": "Вопросы с Do you…?",
+    "pattern": "Do + I/you/we/they + V1 …?",
+    "theory_ru": "Вопрос в Present Simple строится с помощью вспомогательного **do** — оно выходит на первое место, а смысловой глагол остаётся в базовой форме: **Do you often read?** (не ~Do you read often?~ как ~Read you often?~). Без do построить общий вопрос в этом времени нельзя.",
+    "common_errors": [
+      {
+        "tag": "do_missing",
+        "ru": "Пропуск do: ~You read often?~ → **Do** you read often?"
+      },
+      {
+        "tag": "verb_conjugated",
+        "ru": "Лишнее окончание после do: ~Do you reads?~ → Do you **read**?"
+      },
+      {
+        "tag": "word_order",
+        "ru": "Порядок слов как в русском: ~You read often?~ → **Do** you read often?"
+      }
+    ],
+    "probe_item_ids": [
+      "s_1037890",
+      "s_1037890",
+      "s_1037890"
+    ],
+    "youglish_query": "do you often read"
+  },
+  "items": [
+    {
+      "id": "s_1037890",
+      "ru": "Тебе деньги нужны?",
+      "en_main": "Do you want money?",
+      "en_accepted": [
+        "Do you need some money?",
+        "Do you need any money?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1037890",
+      "attribution": "Scott"
+    },
+    {
+      "id": "s_10625400",
+      "ru": "Ты любишь детей?",
+      "en_main": "Do you like kids?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10625400",
+      "attribution": "DJ_Saidez"
+    },
+    {
+      "id": "s_10625400b",
+      "ru": "Вы любите детей?",
+      "en_main": "Do you like kids?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10625400",
+      "attribution": "DJ_Saidez"
+    },
+    {
+      "id": "s_10745001",
+      "ru": "Ты ешь дома?",
+      "en_main": "Do you eat at home?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10745001",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10791879",
+      "ru": "Вы что-то знаете?",
+      "en_main": "Do you know something?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10791879",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10817307",
+      "ru": "Вы нас ненавидите?",
+      "en_main": "Do you hate us?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10817307",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10817307b",
+      "ru": "Ты ненавидишь нас?",
+      "en_main": "Do you hate us?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10817307",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10817308",
+      "ru": "Вы их ненавидите?",
+      "en_main": "Do you hate them?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10817308",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10817308b",
+      "ru": "Ты их ненавидишь?",
+      "en_main": "Do you hate them?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10817308",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_1098292",
+      "ru": "Тебе нравится школа?",
+      "en_main": "Do you like school?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1098292",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_1098292b",
+      "ru": "Вам нравится школа?",
+      "en_main": "Do you like school?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1098292",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_11327877",
+      "ru": "Вы книг не читаете?",
+      "en_main": "Don't you read books?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11327877",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_11327877b",
+      "ru": "Ты книг не читаешь?",
+      "en_main": "Don't you read books?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11327877",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_11330500",
+      "ru": "Ты пьёшь достаточное количество воды?",
+      "en_main": "Do you drink enough water?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11330500",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_11475869",
+      "ru": "Ты смотришь новости?",
+      "en_main": "Do you watch the news?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11475869",
+      "attribution": "carlosalberto"
+    },
+    {
+      "id": "s_11475869b",
+      "ru": "Вы смотрите новости?",
+      "en_main": "Do you watch the news?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11475869",
+      "attribution": "carlosalberto"
+    },
+    {
+      "id": "s_1222339",
+      "ru": "Вы это помните?",
+      "en_main": "Do you remember it?",
+      "en_accepted": [
+        "Do you remember this?",
+        "Do you remember that?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1222339",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1222339b",
+      "ru": "Ты помнишь это?",
+      "en_main": "Do you remember it?",
+      "en_accepted": [
+        "Do you remember this?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1222339",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1230779",
+      "ru": "Вы по мне скучаете?",
+      "en_main": "Do you miss me?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1230779",
+      "attribution": "alec"
+    },
+    {
+      "id": "s_12432400",
+      "ru": "Вам нужны примеры?",
+      "en_main": "Do you need examples?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12432400",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_1265421",
+      "ru": "У тебя есть дети?",
+      "en_main": "Do you have kids?",
+      "en_accepted": [
+        "Do you have children?",
+        "Do you have any kids?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1265421",
+      "attribution": "yifen238"
+    },
+    {
+      "id": "s_1265421b",
+      "ru": "У тебя дети есть?",
+      "en_main": "Do you have kids?",
+      "en_accepted": [
+        "Do you have children?",
+        "Do you have any kids?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1265421",
+      "attribution": "yifen238"
+    },
+    {
+      "id": "s_12787122",
+      "ru": "У вас есть спички?",
+      "en_main": "Do you have matches?",
+      "en_accepted": [
+        "Do you have a match?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12787122",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_13225760",
+      "ru": "Хотите воды?",
+      "en_main": "Do you want water?",
+      "en_accepted": [
+        "Do you want some water?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:13225760",
+      "attribution": "araneo"
+    },
+    {
+      "id": "s_13225760b",
+      "ru": "Хочешь воды?",
+      "en_main": "Do you want water?",
+      "en_accepted": [
+        "Do you want some water?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:13225760",
+      "attribution": "araneo"
+    },
+    {
+      "id": "s_1369197",
+      "ru": "Вы её понимаете?",
+      "en_main": "Do you understand her?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1369197",
+      "attribution": "sacredceltic"
+    },
+    {
+      "id": "s_1369197b",
+      "ru": "Ты понимаешь её?",
+      "en_main": "Do you understand her?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1369197",
+      "attribution": "sacredceltic"
+    },
+    {
+      "id": "s_1461944",
+      "ru": "Мы знакомы?",
+      "en_main": "Do I know you?",
+      "en_accepted": [
+        "Do you know me?",
+        "Do we know you?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1461944",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1461944b",
+      "ru": "Я Вас знаю?",
+      "en_main": "Do I know you?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1461944",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1522360",
+      "ru": "Рыбы спят?",
+      "en_main": "Do fish sleep?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1522360",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1538886",
+      "ru": "Сечёшь?",
+      "en_main": "Do you get it?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1538886",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1538886b",
+      "ru": "Догоняешь?",
+      "en_main": "Do you get it?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1538886",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1543661",
+      "ru": "Ты работаешь здесь?",
+      "en_main": "Do you work here?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1543661",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1543661b",
+      "ru": "Ты здесь работаешь?",
+      "en_main": "Do you work here?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1543661",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1555502",
+      "ru": "Вы меня понимаете?",
+      "en_main": "Do you get me?",
+      "en_accepted": [
+        "Do you understand me?",
+        "Do you guys understand me?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1555502",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1555502b",
+      "ru": "Ты меня понимаешь?",
+      "en_main": "Do you get me?",
+      "en_accepted": [
+        "Do you understand me?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1555502",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1570620",
+      "ru": "Вы меня видите?",
+      "en_main": "Do you see me?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1570620",
+      "attribution": "fanty"
+    },
+    {
+      "id": "s_1570620b",
+      "ru": "Ты меня видишь?",
+      "en_main": "Do you see me?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1570620",
+      "attribution": "fanty"
+    },
+    {
+      "id": "s_1582119",
+      "ru": "Чего-нибудь хотите?",
+      "en_main": "Do you want something?",
+      "en_accepted": [
+        "Do you want anything?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1582119",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_15882",
+      "ru": "Ты здесь живёшь?",
+      "en_main": "Do you live here?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:15882",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_15882b",
+      "ru": "Вы здесь живёте?",
+      "en_main": "Do you live here?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:15882",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1626139",
+      "ru": "Вы смотрите телевизор?",
+      "en_main": "Do you watch TV?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1626139",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_16547",
+      "ru": "А у тебя есть?",
+      "en_main": "Do you have one?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:16547",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1841725",
+      "ru": "Вы мне доверяете?",
+      "en_main": "Do you trust me?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1841725",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1841725b",
+      "ru": "Ты мне доверяешь?",
+      "en_main": "Do you trust me?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1841725",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1871611",
+      "ru": "Вы меня имеете в виду?",
+      "en_main": "Do you mean me?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1871611",
+      "attribution": "Asma"
+    },
+    {
+      "id": "s_1871611b",
+      "ru": "Ты меня имеешь в виду?",
+      "en_main": "Do you mean me?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1871611",
+      "attribution": "Asma"
+    },
+    {
+      "id": "s_1871977",
+      "ru": "Вы видите это?",
+      "en_main": "Do you see that?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1871977",
+      "attribution": "Asma"
+    },
+    {
+      "id": "s_1871977b",
+      "ru": "Ты это видишь?",
+      "en_main": "Do you see that?",
+      "en_accepted": [
+        "Do you see it?",
+        "Do you see this?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1871977",
+      "attribution": "Asma"
+    },
+    {
+      "id": "s_1886021",
+      "ru": "Тебе всё равно?",
+      "en_main": "Don't you care?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1886021",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1886021b",
+      "ru": "Вам всё равно?",
+      "en_main": "Don't you care?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1886021",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1886071",
+      "ru": "Вам что-нибудь нужно?",
+      "en_main": "Do you need anything?",
+      "en_accepted": [
+        "Do you need something?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1886071",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1886071b",
+      "ru": "Тебе что-нибудь нужно?",
+      "en_main": "Do you need anything?",
+      "en_accepted": [
+        "Do you need something?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1886071",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1886118",
+      "ru": "Я нормально выгляжу?",
+      "en_main": "Do I look OK?",
+      "en_accepted": [
+        "Do I look normal?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1886118",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1989726",
+      "ru": "Вам нравится проигрывать?",
+      "en_main": "Do you enjoy losing?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1989726",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1989726b",
+      "ru": "Тебе нравится проигрывать?",
+      "en_main": "Do you enjoy losing?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1989726",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2053918",
+      "ru": "Вам нужна помощь?",
+      "en_main": "Do you need help?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2053918",
+      "attribution": "halfb1t"
+    },
+    {
+      "id": "s_2092567",
+      "ru": "Вы кому-нибудь доверяете?",
+      "en_main": "Do you trust anyone?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2092567",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2092567b",
+      "ru": "Ты кому-нибудь доверяешь?",
+      "en_main": "Do you trust anyone?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2092567",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2136815",
+      "ru": "Ты не согласен?",
+      "en_main": "Don't you agree?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2136815",
+      "attribution": "GLOBULE38"
+    },
+    {
+      "id": "s_2136815b",
+      "ru": "Вы не согласны?",
+      "en_main": "Don't you agree?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2136815",
+      "attribution": "GLOBULE38"
+    },
+    {
+      "id": "s_21678",
+      "ru": "Вы помните?",
+      "en_main": "Do you remember?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:21678",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_21678b",
+      "ru": "Помните?",
+      "en_main": "Do you remember?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:21678",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245276",
+      "ru": "Они знают?",
+      "en_main": "Do they know?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245276",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245277",
+      "ru": "Тебе не всё равно?",
+      "en_main": "Do you care?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245277",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245277b",
+      "ru": "Вам не всё равно?",
+      "en_main": "Do you care?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245277",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245278",
+      "ru": "Ты танцуешь?",
+      "en_main": "Do you dance?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245278",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245278b",
+      "ru": "Вы танцуете?",
+      "en_main": "Do you dance?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245278",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245279",
+      "ru": "Ты не против?",
+      "en_main": "Do you mind?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245279",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245279b",
+      "ru": "Вы не против?",
+      "en_main": "Do you mind?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245279",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2280277",
+      "ru": "Вы всё ещё танцуете?",
+      "en_main": "Do you still dance?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2280277",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2670275",
+      "ru": "Ты её любишь?",
+      "en_main": "Do you love her?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2670275",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2670275b",
+      "ru": "Вы её любите?",
+      "en_main": "Do you love her?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2670275",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2675441",
+      "ru": "Тебе нравится учиться?",
+      "en_main": "Do you like studying?",
+      "en_accepted": [
+        "Do you enjoy studying?",
+        "Do you like to study?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2675441",
+      "attribution": "Gulliver"
+    },
+    {
+      "id": "s_2675441b",
+      "ru": "Вам нравится учиться?",
+      "en_main": "Do you like studying?",
+      "en_accepted": [
+        "Do you enjoy studying?",
+        "Do you like to study?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2675441",
+      "attribution": "Gulliver"
+    },
+    {
+      "id": "s_268823",
+      "ru": "Ты мне веришь?",
+      "en_main": "Do you believe me?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:268823",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_268823b",
+      "ru": "Вы мне верите?",
+      "en_main": "Do you believe me?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:268823",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2711993",
+      "ru": "Я похож на идиота?",
+      "en_main": "Do I look stupid?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2711993",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2711993b",
+      "ru": "Я глупо выгляжу?",
+      "en_main": "Do I look stupid?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2711993",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2782057",
+      "ru": "Вы пьёте спиртное?",
+      "en_main": "Do you drink?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2782057",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2782057b",
+      "ru": "Ты пьёшь?",
+      "en_main": "Do you drink?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2782057",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2800694",
+      "ru": "Ты работаешь?",
+      "en_main": "Do you work?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2800694",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_2804533",
+      "ru": "Они торгуют книгами?",
+      "en_main": "Do they sell books?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2804533",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_2804533b",
+      "ru": "Они продают книги?",
+      "en_main": "Do they sell books?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2804533",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_2818769",
+      "ru": "Вы его любите?",
+      "en_main": "Do you love him?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2818769",
+      "attribution": "CH"
+    },
+    {
+      "id": "s_2818769b",
+      "ru": "Вы любите его?",
+      "en_main": "Do you love him?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2818769",
+      "attribution": "CH"
+    },
+    {
+      "id": "s_2835781",
+      "ru": "Вы рыбачите?",
+      "en_main": "Do you fish?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2835781",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2835781b",
+      "ru": "Ты ловишь рыбу?",
+      "en_main": "Do you fish?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2835781",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_286067",
+      "ru": "Вы ему верите?",
+      "en_main": "Do you believe him?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:286067",
+      "attribution": "TRANG"
+    },
+    {
+      "id": "s_286067b",
+      "ru": "Ты ему веришь?",
+      "en_main": "Do you believe him?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:286067",
+      "attribution": "TRANG"
+    },
+    {
+      "id": "s_2923164",
+      "ru": "Вы там живёте?",
+      "en_main": "Do you live there?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2923164",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2951647",
+      "ru": "Вам лучше?",
+      "en_main": "Do you feel better?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2951647",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2951647b",
+      "ru": "Тебе лучше?",
+      "en_main": "Do you feel better?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2951647",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3138813",
+      "ru": "Вы едите рыбу?",
+      "en_main": "Do you eat fish?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3138813",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3138813b",
+      "ru": "Ты ешь рыбу?",
+      "en_main": "Do you eat fish?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3138813",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3172270",
+      "ru": "Ты чувствуешь себя старой?",
+      "en_main": "Do you feel old?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3172270",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3172270b",
+      "ru": "Ты чувствуешь себя старым?",
+      "en_main": "Do you feel old?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3172270",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3172292",
+      "ru": "Я выгляжу старым?",
+      "en_main": "Do I look old?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3172292",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3177996",
+      "ru": "Ты вообще спишь когда-нибудь?",
+      "en_main": "Do you ever sleep?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3177996",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3177996b",
+      "ru": "Ты когда-нибудь спишь?",
+      "en_main": "Do you ever sleep?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3177996",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3181119",
+      "ru": "Хочешь поговорить?",
+      "en_main": "Do you wanna talk?",
+      "en_accepted": [
+        "Do you want to talk?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3181119",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3181119b",
+      "ru": "Хотите поговорить?",
+      "en_main": "Do you wanna talk?",
+      "en_accepted": [
+        "Do you want to talk?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3181119",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_319989",
+      "ru": "Ты меня слышишь?",
+      "en_main": "Do you hear me?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:319989",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_319989b",
+      "ru": "Вы меня слышите?",
+      "en_main": "Do you hear me?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:319989",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_319999",
+      "ru": "Ты следишь за моей мыслью?",
+      "en_main": "Do you follow?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:319999",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_319999b",
+      "ru": "Вы следите за моей мыслью?",
+      "en_main": "Do you follow?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:319999",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3333876",
+      "ru": "Ты это о нас?",
+      "en_main": "Do you mean us?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3333876",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3333876b",
+      "ru": "Вы имеете в виду нас?",
+      "en_main": "Do you mean us?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3333876",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3333995",
+      "ru": "Скучаешь по ней?",
+      "en_main": "Do you miss it?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3333995",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3333995b",
+      "ru": "Вам этого не хватает?",
+      "en_main": "Do you miss it?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3333995",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3333997",
+      "ru": "Ты это слышишь?",
+      "en_main": "Do you hear it?",
+      "en_accepted": [
+        "Do you hear that?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3333997",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3333997b",
+      "ru": "Вы это слышите?",
+      "en_main": "Do you hear it?",
+      "en_accepted": [
+        "Do you hear that?",
+        "Do you guys hear that?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3333997",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3449420",
+      "ru": "Ты нравишься детям?",
+      "en_main": "Do kids like you?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3449420",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3449420b",
+      "ru": "Вы нравитесь детям?",
+      "en_main": "Do kids like you?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3449420",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3819483",
+      "ru": "Вы работаете вместе?",
+      "en_main": "Do you work together?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3819483",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3821808",
+      "ru": "Вы часто путешествуете?",
+      "en_main": "Do you travel often?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3821808",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3821808b",
+      "ru": "Ты часто путешествуешь?",
+      "en_main": "Do you travel often?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3821808",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_403063",
+      "ru": "Понимаете?",
+      "en_main": "Do you understand?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:403063",
+      "attribution": "Ramses"
+    },
+    {
+      "id": "s_403063b",
+      "ru": "Понимаешь?",
+      "en_main": "Do you understand?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:403063",
+      "attribution": "Ramses"
+    },
+    {
+      "id": "s_434532",
+      "ru": "Ты согласна?",
+      "en_main": "Do you agree?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:434532",
+      "attribution": "lukaszpp"
+    },
+    {
+      "id": "s_434532b",
+      "ru": "Согласны?",
+      "en_main": "Do you agree?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:434532",
+      "attribution": "lukaszpp"
+    },
+    {
+      "id": "s_4498109",
+      "ru": "Ты когда-нибудь отдыхаешь?",
+      "en_main": "Do you ever rest?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4498109",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4498109b",
+      "ru": "Ты вообще отдыхаешь?",
+      "en_main": "Do you ever rest?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4498109",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4498111",
+      "ru": "Им платят?",
+      "en_main": "Do they get paid?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4498111",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_51063",
+      "ru": "Ты так думаешь?",
+      "en_main": "Do you think so?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:51063",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_51063b",
+      "ru": "Ты так считаешь?",
+      "en_main": "Do you think so?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:51063",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_5576747",
+      "ru": "Вы не против подождать?",
+      "en_main": "Do you mind waiting?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:5576747",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_5576747b",
+      "ru": "Ты не против подождать?",
+      "en_main": "Do you mind waiting?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:5576747",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_5746951",
+      "ru": "Имеют ли мелочи значение?",
+      "en_main": "Do little things matter?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:5746951",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_5746951b",
+      "ru": "Важны ли мелочи?",
+      "en_main": "Do little things matter?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:5746951",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_6274941",
+      "ru": "Вы водите машину?",
+      "en_main": "Do you drive?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6274941",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_6274941b",
+      "ru": "Ты водишь машину?",
+      "en_main": "Do you drive?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6274941",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_6357306",
+      "ru": "Вы пишете письма?",
+      "en_main": "Do you write letters?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6357306",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_6357306b",
+      "ru": "Ты пишешь письма?",
+      "en_main": "Do you write letters?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6357306",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_6718101",
+      "ru": "Вы всегда выигрываете?",
+      "en_main": "Do you always win?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6718101",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_6718101b",
+      "ru": "Ты всегда выигрываешь?",
+      "en_main": "Do you always win?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6718101",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_6767177",
+      "ru": "Вам нравится танцевать?",
+      "en_main": "Do you enjoy dancing?",
+      "en_accepted": [
+        "Do you like to dance?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6767177",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_6767177b",
+      "ru": "Тебе нравится танцевать?",
+      "en_main": "Do you enjoy dancing?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6767177",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_697411",
+      "ru": "Ты один живёшь?",
+      "en_main": "Do you live alone?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:697411",
+      "attribution": "Eldad"
+    },
+    {
+      "id": "s_7814475",
+      "ru": "Ты играешь в футбол?",
+      "en_main": "Do you play football?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:7814475",
+      "attribution": "deniko"
+    },
+    {
+      "id": "s_7814475b",
+      "ru": "Вы играете в футбол?",
+      "en_main": "Do you play football?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:7814475",
+      "attribution": "deniko"
+    },
+    {
+      "id": "s_8598086",
+      "ru": "Рыбы пьют воду?",
+      "en_main": "Do fish drink water?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:8598086",
+      "attribution": "deniko"
+    },
+    {
+      "id": "s_868307",
+      "ru": "Ты много путешествуешь?",
+      "en_main": "Do you travel much?",
+      "en_accepted": [
+        "Do you travel a lot?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:868307",
+      "attribution": "Sonix"
+    },
+    {
+      "id": "s_868307b",
+      "ru": "Вы много путешествуете?",
+      "en_main": "Do you travel much?",
+      "en_accepted": [
+        "Do you travel a lot?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:868307",
+      "attribution": "Sonix"
+    },
+    {
+      "id": "s_8691368",
+      "ru": "Ты в этом сомневаешься?",
+      "en_main": "Do you doubt it?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:8691368",
+      "attribution": "ajje"
+    },
+    {
+      "id": "s_8833775",
+      "ru": "Вы скучаете по дому?",
+      "en_main": "Do you miss home?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:8833775",
+      "attribution": "carlosalberto"
+    },
+    {
+      "id": "s_9226785",
+      "ru": "Ты читаешь книги?",
+      "en_main": "Do you read books?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:9226785",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_9226785b",
+      "ru": "Вы читаете книги?",
+      "en_main": "Do you read books?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:9226785",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_9849601",
+      "ru": "Вы носите линзы?",
+      "en_main": "Do you wear contacts?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:9849601",
+      "attribution": "NurseMeeks"
+    },
+    {
+      "id": "s_9849601b",
+      "ru": "Ты носишь линзы?",
+      "en_main": "Do you wear contacts?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:9849601",
+      "attribution": "NurseMeeks"
+    }
+  ]
+}

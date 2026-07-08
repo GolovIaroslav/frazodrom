@@ -1,0 +1,1780 @@
+{
+  "schema_version": 1,
+  "skill": {
+    "id": "a1_this_that",
+    "cefr": "A1",
+    "module": "a1_m1",
+    "module_title_ru": "Быть и указывать",
+    "title_ru": "this / that / these / those",
+    "pattern": "this/that (ед. ч.) — these/those (мн. ч.)",
+    "theory_ru": "**This/these** — для близких предметов («этот/эти»), **that/those** — для далёких («тот/те»). Число существительного должно совпадать: **this book** (ед. ч.), но **these books** (мн. ч.) — нельзя сказать ~this books~.",
+    "common_errors": [
+      {
+        "tag": "number_mismatch",
+        "ru": "Рассогласование числа: ~this books~ → **these** books."
+      },
+      {
+        "tag": "this_that_distance",
+        "ru": "Путаница близко/далеко: про предмет вдалеке — **that**, не this."
+      },
+      {
+        "tag": "demonstrative_omitted",
+        "ru": "Пропуск слова: ~Is my book~ (указывая на книгу) → **This** is my book."
+      }
+    ],
+    "probe_item_ids": [
+      "s_1098659",
+      "s_10288775",
+      "s_10288775"
+    ],
+    "youglish_query": "these are my friends"
+  },
+  "items": [
+    {
+      "id": "s_10288775",
+      "ru": "Ай! Больно!",
+      "en_main": "Ow! That hurts!",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10288775",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10469723",
+      "ru": "Сделайте сначала это.",
+      "en_main": "Do this first.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10469723",
+      "attribution": "DJ_Saidez"
+    },
+    {
+      "id": "s_10469723b",
+      "ru": "Сначала сделайте это.",
+      "en_main": "Do this first.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10469723",
+      "attribution": "DJ_Saidez"
+    },
+    {
+      "id": "s_10774646b",
+      "ru": "Это вещдок.",
+      "en_main": "That's evidence.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10774646",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_1077602",
+      "ru": "Оставь это там.",
+      "en_main": "Leave that there.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1077602",
+      "attribution": "keira_n"
+    },
+    {
+      "id": "s_1077602b",
+      "ru": "Оставьте это там.",
+      "en_main": "Leave that there.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1077602",
+      "attribution": "keira_n"
+    },
+    {
+      "id": "s_10903768b",
+      "ru": "Это естественно.",
+      "en_main": "That's natural.",
+      "en_accepted": [
+        "This is natural."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10903768",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1097959",
+      "ru": "Мне это приятно.",
+      "en_main": "This pleases me.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1097959",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_1098659",
+      "ru": "Прочтите это.",
+      "en_main": "Read this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1098659",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_1098659b",
+      "ru": "Почитай это.",
+      "en_main": "Read this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1098659",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_11046191",
+      "ru": "Это случилось вчера.",
+      "en_main": "That happened yesterday.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11046191",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_11046191b",
+      "ru": "Это произошло вчера.",
+      "en_main": "That happened yesterday.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11046191",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1110424b",
+      "ru": "Дела плохи.",
+      "en_main": "This is bad.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1110424",
+      "attribution": "Scott"
+    },
+    {
+      "id": "s_1121272",
+      "ru": "Выглядит близко.",
+      "en_main": "That looks close.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1121272",
+      "attribution": "Scotland"
+    },
+    {
+      "id": "s_1121357",
+      "ru": "Мне нравится это.",
+      "en_main": "I like that.",
+      "en_accepted": [
+        "I like this one."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1121357",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_1121357b",
+      "ru": "Мне это нравится.",
+      "en_main": "I like that.",
+      "en_accepted": [
+        "I like this.",
+        "I like this one."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1121357",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_11381023",
+      "ru": "Купите эту книгу.",
+      "en_main": "Buy this book.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11381023",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_11381023b",
+      "ru": "Купи эту книгу.",
+      "en_main": "Buy this book.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11381023",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_1211442b",
+      "ru": "Это лёд.",
+      "en_main": "This is ice.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1211442",
+      "attribution": "alec"
+    },
+    {
+      "id": "s_1214829",
+      "ru": "Принесите это сюда.",
+      "en_main": "Bring that here.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1214829",
+      "attribution": "Chrikaru"
+    },
+    {
+      "id": "s_1214829b",
+      "ru": "Принеси это сюда.",
+      "en_main": "Bring that here.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1214829",
+      "attribution": "Chrikaru"
+    },
+    {
+      "id": "s_1300736",
+      "ru": "Поезжай за той машиной.",
+      "en_main": "Follow that car.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1300736",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1300736b",
+      "ru": "Следуй за той машиной.",
+      "en_main": "Follow that car.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1300736",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1304609",
+      "ru": "Я понимаю это.",
+      "en_main": "I understand that.",
+      "en_accepted": [
+        "I understand this."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1304609",
+      "attribution": "candistyx"
+    },
+    {
+      "id": "s_1304609b",
+      "ru": "Я это понимаю.",
+      "en_main": "I understand that.",
+      "en_accepted": [
+        "I understand this."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1304609",
+      "attribution": "candistyx"
+    },
+    {
+      "id": "s_1356774",
+      "ru": "Я этим пользуюсь.",
+      "en_main": "I use this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1356774",
+      "attribution": "sacredceltic"
+    },
+    {
+      "id": "s_1356774b",
+      "ru": "Я использую это.",
+      "en_main": "I use this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1356774",
+      "attribution": "sacredceltic"
+    },
+    {
+      "id": "s_1356982",
+      "ru": "Оставь это здесь.",
+      "en_main": "Leave this here.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1356982",
+      "attribution": "sacredceltic"
+    },
+    {
+      "id": "s_1356982b",
+      "ru": "Оставьте это здесь.",
+      "en_main": "Leave this here.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1356982",
+      "attribution": "sacredceltic"
+    },
+    {
+      "id": "s_1476456",
+      "ru": "Такое иногда бывает.",
+      "en_main": "That happens sometimes.",
+      "en_accepted": [
+        "Sometimes that happens."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1476456",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1486385",
+      "ru": "Этого так и не произошло.",
+      "en_main": "This never happened.",
+      "en_accepted": [
+        "That never happened."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1486385",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1522185",
+      "ru": "Это всегда помогает.",
+      "en_main": "That always helps.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1522185",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1553387",
+      "ru": "Звучит справедливо.",
+      "en_main": "That sounds fair.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1553387",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1573535",
+      "ru": "Я знал это.",
+      "en_main": "I knew that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1573535",
+      "attribution": "Eldad"
+    },
+    {
+      "id": "s_1573535b",
+      "ru": "Я знал.",
+      "en_main": "I knew that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1573535",
+      "attribution": "Eldad"
+    },
+    {
+      "id": "s_1588644",
+      "ru": "Запомните эти правила.",
+      "en_main": "Remember these rules.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1588644",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1588644b",
+      "ru": "Запомни эти правила.",
+      "en_main": "Remember these rules.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1588644",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1629759",
+      "ru": "Это всё меняет.",
+      "en_main": "This changes everything.",
+      "en_accepted": [
+        "That changes things.",
+        "That changes everything."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1629759",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1655484",
+      "ru": "Кто это продаёт?",
+      "en_main": "Who sells this?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1655484",
+      "attribution": "gleki"
+    },
+    {
+      "id": "s_1671853",
+      "ru": "Это ей понравилось.",
+      "en_main": "She liked that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1671853",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1671853b",
+      "ru": "Ей это понравилось.",
+      "en_main": "She liked that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1671853",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1839561",
+      "ru": "Звучит отлично.",
+      "en_main": "That sounds great.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1839561",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1839561b",
+      "ru": "Это звучит великолепно.",
+      "en_main": "That sounds great.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1839561",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1841179",
+      "ru": "Прочти это сейчас.",
+      "en_main": "Read this now.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1841179",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1841179b",
+      "ru": "Прочтите это сейчас.",
+      "en_main": "Read this now.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1841179",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1841181",
+      "ru": "Повторите.",
+      "en_main": "Say that again.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1841181",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1841181b",
+      "ru": "Скажи это ещё раз.",
+      "en_main": "Say that again.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1841181",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1849364",
+      "ru": "Перестаньте это делать!",
+      "en_main": "Stop doing that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1849364",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1849364b",
+      "ru": "Прекратите это делать!",
+      "en_main": "Stop doing that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1849364",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1871974",
+      "ru": "Это ничего не меняет.",
+      "en_main": "That changes nothing.",
+      "en_accepted": [
+        "This doesn't change anything.",
+        "That doesn't change anything."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1871974",
+      "attribution": "Asma"
+    },
+    {
+      "id": "s_1893758",
+      "ru": "Нам это нужно.",
+      "en_main": "We need this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1893758",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1897759",
+      "ru": "Звучит потрясающе.",
+      "en_main": "That sounds awesome.",
+      "en_accepted": [
+        "That sounds amazing."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1897759",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1898228",
+      "ru": "Спасибо за это.",
+      "en_main": "Thanks for that.",
+      "en_accepted": [
+        "Thanks for this.",
+        "Thank you for this."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1898228",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1898342",
+      "ru": "Послушай это.",
+      "en_main": "Listen to this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1898342",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1916311",
+      "ru": "Попробуй это.",
+      "en_main": "Try this.",
+      "en_accepted": [
+        "Try this one."
+      ],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1916311",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1916311b",
+      "ru": "Попробуйте это.",
+      "en_main": "Try this.",
+      "en_accepted": [
+        "Try this one."
+      ],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1916311",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1917236",
+      "ru": "Это все заметили.",
+      "en_main": "Everyone noticed that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1917236",
+      "attribution": "Eldad"
+    },
+    {
+      "id": "s_1917236b",
+      "ru": "Все это заметили.",
+      "en_main": "Everyone noticed that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1917236",
+      "attribution": "Eldad"
+    },
+    {
+      "id": "s_1936968",
+      "ru": "Кто это говорит?",
+      "en_main": "Who says that?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1936968",
+      "attribution": "Zuriberri"
+    },
+    {
+      "id": "s_1936968b",
+      "ru": "Кто так говорит?",
+      "en_main": "Who says that?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1936968",
+      "attribution": "Zuriberri"
+    },
+    {
+      "id": "s_1937402",
+      "ru": "Взгляните на это!",
+      "en_main": "Look at that!",
+      "en_accepted": [
+        "Take a look at that.",
+        "Take a look at this."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1937402",
+      "attribution": "Beatminister"
+    },
+    {
+      "id": "s_1937402b",
+      "ru": "Посмотрите на это!",
+      "en_main": "Look at that!",
+      "en_accepted": [
+        "Look at this.",
+        "Look at this one."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1937402",
+      "attribution": "Beatminister"
+    },
+    {
+      "id": "s_1954278",
+      "ru": "Воспользуйся этим.",
+      "en_main": "Use this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1954278",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1972645",
+      "ru": "Подержите это.",
+      "en_main": "Hold this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1972645",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1972645b",
+      "ru": "Подержи это.",
+      "en_main": "Hold this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1972645",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2011270",
+      "ru": "Я этого хочу.",
+      "en_main": "I want that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2011270",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2011283",
+      "ru": "Я хотел этого.",
+      "en_main": "I wanted this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2011283",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2011289",
+      "ru": "Хочешь это?",
+      "en_main": "You want this?",
+      "en_accepted": [
+        "Do you want this?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2011289",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2011301",
+      "ru": "Кто этого хочет?",
+      "en_main": "Who wants that?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2011301",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2094824",
+      "ru": "Это знает каждый.",
+      "en_main": "Everyone knows that.",
+      "en_accepted": [
+        "Everybody knows that."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2094824",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2094824b",
+      "ru": "Это все знают.",
+      "en_main": "Everyone knows that.",
+      "en_accepted": [
+        "Everyone knows this.",
+        "Everybody knows that."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2094824",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111205",
+      "ru": "Это сработает.",
+      "en_main": "This'll work.",
+      "en_accepted": [
+        "That'll work.",
+        "This will work."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111205",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111206",
+      "ru": "Это поможет.",
+      "en_main": "This'll help.",
+      "en_accepted": [
+        "That'll help.",
+        "That will help."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111206",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111208",
+      "ru": "Это работает.",
+      "en_main": "This works.",
+      "en_accepted": [
+        "That works.",
+        "Does that work?"
+      ],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111208",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111471",
+      "ru": "Это изменится.",
+      "en_main": "That'll change.",
+      "en_accepted": [
+        "Will that change?"
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111471",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111473",
+      "ru": "Это сработало.",
+      "en_main": "That worked.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111473",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111473b",
+      "ru": "Сработало.",
+      "en_main": "That worked.",
+      "en_accepted": [
+        "Did that work?"
+      ],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111473",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111474",
+      "ru": "Это помогло.",
+      "en_main": "That helped.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111474",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111474b",
+      "ru": "Это было полезно.",
+      "en_main": "That helped.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111474",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111479",
+      "ru": "Возьмите это.",
+      "en_main": "Take this.",
+      "en_accepted": [
+        "Take this one."
+      ],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111479",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111479b",
+      "ru": "Возьми это.",
+      "en_main": "Take this.",
+      "en_accepted": [
+        "Take this one."
+      ],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111479",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111480",
+      "ru": "Возьми эти.",
+      "en_main": "Take these.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111480",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111480b",
+      "ru": "Возьмите эти.",
+      "en_main": "Take these.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111480",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111555",
+      "ru": "Подпишите это.",
+      "en_main": "Sign this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111555",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111555b",
+      "ru": "Подпиши это.",
+      "en_main": "Sign this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111555",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111632",
+      "ru": "Не потеряй.",
+      "en_main": "Keep this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111632",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111632b",
+      "ru": "Держи это.",
+      "en_main": "Keep this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111632",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111634",
+      "ru": "Оставьте это себе.",
+      "en_main": "Keep that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111634",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111634b",
+      "ru": "Оставь это себе.",
+      "en_main": "Keep that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111634",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111837",
+      "ru": "Закончи это.",
+      "en_main": "Finish this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111837",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111936",
+      "ru": "Проверьте это.",
+      "en_main": "Check this.",
+      "en_accepted": [
+        "Check that.",
+        "Check this out."
+      ],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111936",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2111936b",
+      "ru": "Проверь это.",
+      "en_main": "Check this.",
+      "en_accepted": [
+        "Check that.",
+        "Check this out."
+      ],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2111936",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2114574",
+      "ru": "Кто это заказывал?",
+      "en_main": "Who ordered that?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2114574",
+      "attribution": "halfb1t"
+    },
+    {
+      "id": "s_2114574b",
+      "ru": "Кто это заказал?",
+      "en_main": "Who ordered that?",
+      "en_accepted": [
+        "Who ordered this?"
+      ],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2114574",
+      "attribution": "halfb1t"
+    },
+    {
+      "id": "s_2123567",
+      "ru": "Это пройдёт.",
+      "en_main": "That'll pass.",
+      "en_accepted": [
+        "That will pass."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2123567",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2173708",
+      "ru": "Забудь об этом.",
+      "en_main": "Forget about that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2173708",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_2173708b",
+      "ru": "Забудьте об этом.",
+      "en_main": "Forget about that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2173708",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_2182843",
+      "ru": "Женщины это обожают.",
+      "en_main": "Women love that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2182843",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_2182843b",
+      "ru": "Женщины любят это.",
+      "en_main": "Women love that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2182843",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_2198540",
+      "ru": "Это удивительное чувство.",
+      "en_main": "That feels amazing.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2198540",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_2209788",
+      "ru": "Это, кажется, интересно.",
+      "en_main": "That looks interesting.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2209788",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_2230779",
+      "ru": "Иди потуда.",
+      "en_main": "Go that way.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2230779",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2230779b",
+      "ru": "Иди туда.",
+      "en_main": "Go that way.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2230779",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241057",
+      "ru": "Мы приняли во внимание это.",
+      "en_main": "We considered that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241057",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241057b",
+      "ru": "Мы рассмотрели это.",
+      "en_main": "We considered that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241057",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241461",
+      "ru": "Мы пробовали.",
+      "en_main": "We tried that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241461",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241461b",
+      "ru": "Мы это попробовали.",
+      "en_main": "We tried that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241461",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241463",
+      "ru": "Мы это понимаем.",
+      "en_main": "We understand that.",
+      "en_accepted": [
+        "We understand this."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241463",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241463b",
+      "ru": "Мы понимаем это.",
+      "en_main": "We understand that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241463",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2243124",
+      "ru": "Они отыскали это.",
+      "en_main": "They found this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2243124",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2243124b",
+      "ru": "Они нашли это.",
+      "en_main": "They found this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2243124",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2243246",
+      "ru": "Они это любят.",
+      "en_main": "They love that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2243246",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2243273",
+      "ru": "Им это нужно.",
+      "en_main": "They need this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2243273",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245033",
+      "ru": "Позвони по этому номеру.",
+      "en_main": "Call this number.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245033",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245033b",
+      "ru": "Позвоните по этому номеру.",
+      "en_main": "Call this number.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245033",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245041",
+      "ru": "Это может подождать?",
+      "en_main": "Can this wait?",
+      "en_accepted": [
+        "That can wait."
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245041",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245181",
+      "ru": "Закрой ту дверь.",
+      "en_main": "Close that door.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245181",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245181b",
+      "ru": "Закройте ту дверь.",
+      "en_main": "Close that door.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245181",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245255",
+      "ru": "Разберись с этим.",
+      "en_main": "Deal with this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245255",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245255b",
+      "ru": "Разберитесь с этим.",
+      "en_main": "Deal with this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245255",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245287",
+      "ru": "Это обижает?",
+      "en_main": "Does that hurt?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245287",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245287b",
+      "ru": "Это ранит?",
+      "en_main": "Does that hurt?",
+      "en_accepted": [
+        "Does this hurt?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245287",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245288",
+      "ru": "Это играет роль?",
+      "en_main": "Does that matter?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245288",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245288b",
+      "ru": "Это имеет значение?",
+      "en_main": "Does that matter?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245288",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245526",
+      "ru": "Отдай мне это.",
+      "en_main": "Give me that.",
+      "en_accepted": [
+        "Give that back to me."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245526",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245526b",
+      "ru": "Дайте мне это.",
+      "en_main": "Give me that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245526",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245527",
+      "ru": "Дайте мне те.",
+      "en_main": "Give me those.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245527",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245582",
+      "ru": "Запомните, на чём мы остановились.",
+      "en_main": "Hold that thought.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245582",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245582b",
+      "ru": "Запомни, на чём мы остановились.",
+      "en_main": "Hold that thought.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245582",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245657",
+      "ru": "Я это учёл.",
+      "en_main": "I considered that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245657",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245781",
+      "ru": "Я нашёл вот эти.",
+      "en_main": "I found these.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245781",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245781b",
+      "ru": "Я нашёл одни.",
+      "en_main": "I found these.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245781",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245868",
+      "ru": "Ненавижу это.",
+      "en_main": "I hate that.",
+      "en_accepted": [
+        "I hate this."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245868",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245868b",
+      "ru": "Терпеть этого не могу.",
+      "en_main": "I hate that.",
+      "en_accepted": [
+        "I hate this."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245868",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245915",
+      "ru": "Я слышал это.",
+      "en_main": "I heard that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245915",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245915b",
+      "ru": "Я это слышал.",
+      "en_main": "I heard that.",
+      "en_accepted": [
+        "I've heard that."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245915",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2246027",
+      "ru": "Мне это было нужно.",
+      "en_main": "I needed that.",
+      "en_accepted": [
+        "I needed this."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2246027",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2246033",
+      "ru": "Я это заметил.",
+      "en_main": "I noticed that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2246033",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2246033b",
+      "ru": "Я заметил это.",
+      "en_main": "I noticed that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2246033",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2247384",
+      "ru": "Я помню это.",
+      "en_main": "I remember that.",
+      "en_accepted": [
+        "I remember this."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2247384",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2247400",
+      "ru": "Я это видел.",
+      "en_main": "I saw that.",
+      "en_accepted": [
+        "I've seen this.",
+        "I've seen that."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2247400",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2247416",
+      "ru": "Я начал это.",
+      "en_main": "I started that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2247416",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2549825",
+      "ru": "Посмотри на это.",
+      "en_main": "Watch this.",
+      "en_accepted": [
+        "Look at this.",
+        "Look at that!"
+      ],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2549825",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_462526",
+      "ru": "Больно.",
+      "en_main": "That hurts.",
+      "en_accepted": [
+        "Does this hurt?"
+      ],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:462526",
+      "attribution": "lukaszpp"
+    },
+    {
+      "id": "s_651592",
+      "ru": "Прекратите это!",
+      "en_main": "Stop that!",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:651592",
+      "attribution": "orbpic"
+    },
+    {
+      "id": "s_651592b",
+      "ru": "Прекрати!",
+      "en_main": "Stop that!",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:651592",
+      "attribution": "orbpic"
+    },
+    {
+      "id": "s_7422789",
+      "ru": "Выпей это.",
+      "en_main": "Drink this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:7422789",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_7422789b",
+      "ru": "Выпейте это.",
+      "en_main": "Drink this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:7422789",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_9104663",
+      "ru": "Сделай это.",
+      "en_main": "Do this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:9104663",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_9104663b",
+      "ru": "Сделайте это.",
+      "en_main": "Do this.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 1,
+      "cefr_lex": "A1",
+      "source": "tatoeba:9104663",
+      "attribution": "CK"
+    }
+  ]
+}

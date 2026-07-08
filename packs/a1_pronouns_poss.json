@@ -1,0 +1,1718 @@
+{
+  "schema_version": 1,
+  "skill": {
+    "id": "a1_pronouns_poss",
+    "cefr": "A1",
+    "module": "a1_m1",
+    "module_title_ru": "Быть и указывать",
+    "title_ru": "Притяжательные местоимения: my / your / his / her",
+    "pattern": "my / your / his / her / its / our / their + существительное",
+    "theory_ru": "Притяжательные местоимения (**my, your, his, her, its, our, their**) стоят перед существительным и показывают, кому что принадлежит: **This is her book.** Важно не путать **his/her** (зависят от пола ВЛАДЕЛЬЦА, а не предмета) — это частая ошибка у русскоязычных, потому что в русском род определяется иначе.",
+    "common_errors": [
+      {
+        "tag": "his_her_confusion",
+        "ru": "Путаница рода владельца: ~Her book~ о книге брата → **His** book."
+      },
+      {
+        "tag": "poss_pronoun_missing",
+        "ru": "Пропуск местоимения: ~This is book~ → This is **her** book."
+      },
+      {
+        "tag": "its_apostrophe",
+        "ru": "Its (притяж.) vs it's (= it is) — разные слова."
+      }
+    ],
+    "probe_item_ids": [
+      "s_10019590",
+      "s_10019590",
+      "s_10019590"
+    ],
+    "youglish_query": "this is her book"
+  },
+  "items": [
+    {
+      "id": "s_10019590",
+      "ru": "Как мама?",
+      "en_main": "How's your mom?",
+      "en_accepted": [
+        "How is your mother?",
+        "How's your mother?"
+      ],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10019590",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10019590b",
+      "ru": "Как Ваша мама?",
+      "en_main": "How's your mom?",
+      "en_accepted": [
+        "How's your mother?"
+      ],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10019590",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10022145",
+      "ru": "У тебя большой номер?",
+      "en_main": "Is your room big?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10022145",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_10022145b",
+      "ru": "У вас большой номер?",
+      "en_main": "Is your room big?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10022145",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_10029952",
+      "ru": "Мы любим нашего папу.",
+      "en_main": "We love our dad.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10029952",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_10032770",
+      "ru": "Нам нравится наша школа.",
+      "en_main": "We like our school.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10032770",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_10038808",
+      "ru": "Откройте свои сердца.",
+      "en_main": "Open your hearts.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10038808",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10038863",
+      "ru": "Что разбило тебе сердце?",
+      "en_main": "What broke your heart?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10038863",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10042814",
+      "ru": "Запиши свои вопросы.",
+      "en_main": "Write your questions down.",
+      "en_accepted": [
+        "Write down your questions."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10042814",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_10042814b",
+      "ru": "Запишите свои вопросы.",
+      "en_main": "Write your questions down.",
+      "en_accepted": [
+        "Write down your questions."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10042814",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_10064166",
+      "ru": "Я ненавижу вашу семью.",
+      "en_main": "I hate your family.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10064166",
+      "attribution": "espamatics"
+    },
+    {
+      "id": "s_10064166b",
+      "ru": "Я ненавижу твою семью.",
+      "en_main": "I hate your family.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10064166",
+      "attribution": "espamatics"
+    },
+    {
+      "id": "s_10483635",
+      "ru": "Сожми руку.",
+      "en_main": "Close your hand.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10483635",
+      "attribution": "Ooneykcall"
+    },
+    {
+      "id": "s_10483635b",
+      "ru": "Сожми руку в кулак.",
+      "en_main": "Close your hand.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10483635",
+      "attribution": "Ooneykcall"
+    },
+    {
+      "id": "s_10817532",
+      "ru": "Защитите моих друзей.",
+      "en_main": "Protect my friends.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10817532",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10817532b",
+      "ru": "Защити моих друзей.",
+      "en_main": "Protect my friends.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10817532",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_11040335",
+      "ru": "Измени моё мнение.",
+      "en_main": "Change my mind.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11040335",
+      "attribution": "shekitten"
+    },
+    {
+      "id": "s_11119583",
+      "ru": "Забудь свои заботы.",
+      "en_main": "Forget your cares.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11119583",
+      "attribution": "AlanF_US"
+    },
+    {
+      "id": "s_1426694",
+      "ru": "Заряди свой телефон.",
+      "en_main": "Charge your phone.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1426694",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1513328",
+      "ru": "Ешь свою еду.",
+      "en_main": "Eat your food.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1513328",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1513328b",
+      "ru": "Ешьте свою еду.",
+      "en_main": "Eat your food.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1513328",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1552869",
+      "ru": "Подождите своей очереди.",
+      "en_main": "Wait your turn.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1552869",
+      "attribution": "Keder"
+    },
+    {
+      "id": "s_1552869b",
+      "ru": "Ждите своей очереди.",
+      "en_main": "Wait your turn.",
+      "en_accepted": [
+        "Wait until your turn comes."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1552869",
+      "attribution": "Keder"
+    },
+    {
+      "id": "s_1553297",
+      "ru": "Напишите своё имя.",
+      "en_main": "Write your name.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1553297",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_17190",
+      "ru": "Выбери что-нибудь.",
+      "en_main": "Make your choice.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:17190",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_17190b",
+      "ru": "Делай свой выбор.",
+      "en_main": "Make your choice.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:17190",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1730012",
+      "ru": "Позвоните моему мужу.",
+      "en_main": "Call my husband.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1730012",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1730012b",
+      "ru": "Позвони моему мужу.",
+      "en_main": "Call my husband.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1730012",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1841602",
+      "ru": "Говори потише.",
+      "en_main": "Lower your voice.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1841602",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1868481",
+      "ru": "Отвечайте на мой вопрос.",
+      "en_main": "Answer my question.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1868481",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1868481b",
+      "ru": "Ответь мне на вопрос.",
+      "en_main": "Answer my question.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1868481",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1972622",
+      "ru": "Бросай оружие!",
+      "en_main": "Drop your gun!",
+      "en_accepted": [
+        "Drop your guns."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1972622",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1972622b",
+      "ru": "Брось пушку!",
+      "en_main": "Drop your gun!",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1972622",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2006535",
+      "ru": "Приятного пребывания!",
+      "en_main": "Enjoy your stay.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2006535",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_2045346",
+      "ru": "Следуйте своим мечтам.",
+      "en_main": "Follow your dreams.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2045346",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2045346b",
+      "ru": "Следуй за своими мечтами.",
+      "en_main": "Follow your dreams.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2045346",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2076394",
+      "ru": "Наша команда выиграла.",
+      "en_main": "Our team won.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2076394",
+      "attribution": "soweli_Elepanto"
+    },
+    {
+      "id": "s_2076394b",
+      "ru": "Наша команда победила.",
+      "en_main": "Our team won.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2076394",
+      "attribution": "soweli_Elepanto"
+    },
+    {
+      "id": "s_2163054",
+      "ru": "Хорошего тебе дня!",
+      "en_main": "Enjoy your day.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2163054",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_2163054b",
+      "ru": "Удачного тебе дня!",
+      "en_main": "Enjoy your day.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2163054",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_2218328",
+      "ru": "Твой план сработал.",
+      "en_main": "Your plan worked.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2218328",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2218328b",
+      "ru": "Ваш план сработал.",
+      "en_main": "Your plan worked.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2218328",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2230176",
+      "ru": "Позови своих сестёр.",
+      "en_main": "Call your sisters.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2230176",
+      "attribution": "jgauthier"
+    },
+    {
+      "id": "s_2230176b",
+      "ru": "Позвоните своим сёстрам.",
+      "en_main": "Call your sisters.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2230176",
+      "attribution": "jgauthier"
+    },
+    {
+      "id": "s_2244990",
+      "ru": "Спроси у моих друзей.",
+      "en_main": "Ask my friends.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244990",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2244990b",
+      "ru": "Спросите у моих друзей.",
+      "en_main": "Ask my friends.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244990",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245019",
+      "ru": "Приведи своих друзей.",
+      "en_main": "Bring your friends.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245019",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245019b",
+      "ru": "Приведите ваших друзей.",
+      "en_main": "Bring your friends.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245019",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245020",
+      "ru": "Принеси свои деньги.",
+      "en_main": "Bring your money.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245020",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245020b",
+      "ru": "Принесите свои деньги.",
+      "en_main": "Bring your money.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245020",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245174",
+      "ru": "Проверьте ваш список.",
+      "en_main": "Check your list.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245174",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245174b",
+      "ru": "Проверьте свой список.",
+      "en_main": "Check your list.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245174",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245226",
+      "ru": "Свяжитесь с моим сыном.",
+      "en_main": "Contact my son.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245226",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245226b",
+      "ru": "Свяжись с моим сыном.",
+      "en_main": "Contact my son.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245226",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245245",
+      "ru": "Закрой свои глаза.",
+      "en_main": "Cover your eyes.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245245",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245245b",
+      "ru": "Прикройте глаза.",
+      "en_main": "Cover your eyes.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245245",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245282",
+      "ru": "Занимайся своим делом.",
+      "en_main": "Do your job.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245282",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245282b",
+      "ru": "Делай свою работу.",
+      "en_main": "Do your job.",
+      "en_accepted": [
+        "Do your work.",
+        "Do your own job."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245282",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245283",
+      "ru": "Делайте свою работу.",
+      "en_main": "Do your work.",
+      "en_accepted": [
+        "Do your own job."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245283",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245413",
+      "ru": "Бросьте оружие!",
+      "en_main": "Drop your guns!",
+      "en_accepted": [
+        "Put your guns away."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245413",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245498",
+      "ru": "Допивай.",
+      "en_main": "Finish your drink.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245498",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245498b",
+      "ru": "Допивайте.",
+      "en_main": "Finish your drink.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245498",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245500",
+      "ru": "Следуй за своим сердцем.",
+      "en_main": "Follow your heart.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245500",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245500b",
+      "ru": "Следуйте за вашим сердцем.",
+      "en_main": "Follow your heart.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245500",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245521",
+      "ru": "Бери свои ключи.",
+      "en_main": "Get your keys.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245521",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245521b",
+      "ru": "Берите свои ключи.",
+      "en_main": "Get your keys.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245521",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245524",
+      "ru": "Свой надо иметь!",
+      "en_main": "Get your own.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245524",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245524b",
+      "ru": "Возьми себе сам.",
+      "en_main": "Get your own.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245524",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245578",
+      "ru": "Держи мою руку.",
+      "en_main": "Hold my hand.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245578",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245578b",
+      "ru": "Держи меня за руку.",
+      "en_main": "Hold my hand.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245578",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245589",
+      "ru": "Держите позиции!",
+      "en_main": "Hold your positions.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245589",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2249509",
+      "ru": "Сохраняй спокойствие.",
+      "en_main": "Keep your cool.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2249509",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2249517",
+      "ru": "Уходи из моего дома.",
+      "en_main": "Leave my house.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2249517",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2249517b",
+      "ru": "Уходите из моего дома.",
+      "en_main": "Leave my house.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2249517",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2249518",
+      "ru": "Покинь наш дом.",
+      "en_main": "Leave our house.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2249518",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2249518b",
+      "ru": "Уходи из нашего дома!",
+      "en_main": "Leave our house.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2249518",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2249846",
+      "ru": "Читай свою книгу.",
+      "en_main": "Read your book.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2249846",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2249855",
+      "ru": "Экономь силы.",
+      "en_main": "Save your energy.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2249855",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2249855b",
+      "ru": "Побереги свою энергию.",
+      "en_main": "Save your energy.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2249855",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2250055",
+      "ru": "Возьмите мою машину.",
+      "en_main": "Take my car.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2250055",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2250055b",
+      "ru": "Возьми мою машину.",
+      "en_main": "Take my car.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2250055",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2250057",
+      "ru": "Возьми мою руку.",
+      "en_main": "Take my hand.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2250057",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2250057b",
+      "ru": "Возьми меня за руку.",
+      "en_main": "Take my hand.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2250057",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2250079",
+      "ru": "Расскажите своим друзьям.",
+      "en_main": "Tell your friends.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2250079",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2250079b",
+      "ru": "Расскажи своим друзьям.",
+      "en_main": "Tell your friends.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2250079",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2253819",
+      "ru": "Попробуй свой телефон.",
+      "en_main": "Try your phone.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2253819",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2253840",
+      "ru": "Думай своей головой.",
+      "en_main": "Use your head.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2253840",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2253840b",
+      "ru": "Пошевели мозгами.",
+      "en_main": "Use your head.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2253840",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2253841",
+      "ru": "Думай головой.",
+      "en_main": "Use your brain.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2253841",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2253841b",
+      "ru": "Думайте головой.",
+      "en_main": "Use your brain.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2253841",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2253884",
+      "ru": "Голову береги.",
+      "en_main": "Watch your head.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2253884",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_239756",
+      "ru": "Выбирайте выражения.",
+      "en_main": "Watch your language.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:239756",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_239756b",
+      "ru": "Попрошу не выражаться!",
+      "en_main": "Watch your language.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:239756",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_2474814",
+      "ru": "У меня сердце болит.",
+      "en_main": "My heart hurts.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2474814",
+      "attribution": "Opiejay888"
+    },
+    {
+      "id": "s_2474814b",
+      "ru": "У меня болит сердце.",
+      "en_main": "My heart hurts.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2474814",
+      "attribution": "Opiejay888"
+    },
+    {
+      "id": "s_265049",
+      "ru": "Задавайте свой вопрос.",
+      "en_main": "Ask your question.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:265049",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_265049b",
+      "ru": "Задавай свой вопрос.",
+      "en_main": "Ask your question.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:265049",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_265916",
+      "ru": "Покажите свои карты.",
+      "en_main": "Show your cards.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:265916",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_265916b",
+      "ru": "Покажи свои карты.",
+      "en_main": "Show your cards.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:265916",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_2701912",
+      "ru": "Закройте книги.",
+      "en_main": "Close your books.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2701912",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_274491",
+      "ru": "Смотрите под ноги.",
+      "en_main": "Watch your step.",
+      "en_accepted": [
+        "Mind your step."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:274491",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_278526",
+      "ru": "Мой брат так и сделал.",
+      "en_main": "My brother did.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:278526",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_282154",
+      "ru": "Соответствуй возрасту!",
+      "en_main": "Act your age.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:282154",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_282154b",
+      "ru": "Веди себя соответственно возрасту.",
+      "en_main": "Act your age.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:282154",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2836634",
+      "ru": "Откройте ваши книги.",
+      "en_main": "Open your books.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2836634",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2836634b",
+      "ru": "Откройте книги.",
+      "en_main": "Open your books.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2836634",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_29216",
+      "ru": "Наша команда проиграла.",
+      "en_main": "Our team lost.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:29216",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2985531",
+      "ru": "Берегите свой голос.",
+      "en_main": "Save your voice.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2985531",
+      "attribution": "sharptoothed"
+    },
+    {
+      "id": "s_3060744",
+      "ru": "Изложите ваше дело.",
+      "en_main": "State your business.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3060744",
+      "attribution": "sharptoothed"
+    },
+    {
+      "id": "s_323737",
+      "ru": "Их взгляды встретились.",
+      "en_main": "Their eyes met.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:323737",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_323737b",
+      "ru": "Их глаза встретились.",
+      "en_main": "Their eyes met.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:323737",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_323768",
+      "ru": "Откройте глаза.",
+      "en_main": "Open your eyes.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:323768",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3346184",
+      "ru": "У меня телефон сел.",
+      "en_main": "My phone died.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3346184",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3346184b",
+      "ru": "Мой телефон разрядился.",
+      "en_main": "My phone died.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3346184",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_33965",
+      "ru": "Застели свою постель.",
+      "en_main": "Make your bed.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:33965",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_33965b",
+      "ru": "Уберите постель.",
+      "en_main": "Make your bed.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:33965",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3402591",
+      "ru": "Наш план сработал.",
+      "en_main": "Our plan worked.",
+      "en_accepted": [
+        "Our plan has worked."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3402591",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3402592",
+      "ru": "Мой план подействовал.",
+      "en_main": "My plan worked.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3402592",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3636086",
+      "ru": "Смотри под ноги.",
+      "en_main": "Mind your step.",
+      "en_accepted": [
+        "Watch your step."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3636086",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3822909",
+      "ru": "Попытайте счастья.",
+      "en_main": "Try your luck.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3822909",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3822909b",
+      "ru": "Попытай счастья.",
+      "en_main": "Try your luck.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3822909",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_417801",
+      "ru": "У меня глаза болят.",
+      "en_main": "My eyes hurt.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:417801",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_417801b",
+      "ru": "У меня болят глаза.",
+      "en_main": "My eyes hurt.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:417801",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_430073",
+      "ru": "Твоё имя, пожалуйста.",
+      "en_main": "Your name, please.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:430073",
+      "attribution": "witbrock"
+    },
+    {
+      "id": "s_430073b",
+      "ru": "Ваше имя, пожалуйста.",
+      "en_main": "Your name, please.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:430073",
+      "attribution": "witbrock"
+    },
+    {
+      "id": "s_433642",
+      "ru": "Ответь на мои вопросы.",
+      "en_main": "Answer my questions.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:433642",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_433642b",
+      "ru": "Отвечай на мои вопросы.",
+      "en_main": "Answer my questions.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:433642",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_434446",
+      "ru": "Закрывайте глаза.",
+      "en_main": "Close your eyes.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:434446",
+      "attribution": "lukaszpp"
+    },
+    {
+      "id": "s_435774",
+      "ru": "Уберитесь у себя в комнате.",
+      "en_main": "Clean your room.",
+      "en_accepted": [
+        "Clean up your room."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:435774",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_435774b",
+      "ru": "Уберись у себя в комнате.",
+      "en_main": "Clean your room.",
+      "en_accepted": [
+        "Clean up your room."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:435774",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4394835",
+      "ru": "Наши взгляды встретились.",
+      "en_main": "Our eyes met.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4394835",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4394835b",
+      "ru": "Наши глаза встретились.",
+      "en_main": "Our eyes met.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4394835",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4397656",
+      "ru": "Бросайте оружие.",
+      "en_main": "Drop your guns.",
+      "en_accepted": [
+        "Drop your gun!"
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4397656",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4500160",
+      "ru": "У меня слезились глаза.",
+      "en_main": "My eyes watered.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4500160",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4500995",
+      "ru": "Твоё мнение имеет значение.",
+      "en_main": "Your opinion matters.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4500995",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4500995b",
+      "ru": "Ваше мнение важно.",
+      "en_main": "Your opinion matters.",
+      "en_accepted": [
+        "Your opinion is important."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4500995",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4500999",
+      "ru": "Твой голос важен.",
+      "en_main": "Your vote matters.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4500999",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4500999b",
+      "ru": "Ваш голос важен.",
+      "en_main": "Your vote matters.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4500999",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_5323507",
+      "ru": "Заканчивайте работу.",
+      "en_main": "Finish your work.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:5323507",
+      "attribution": "mailohilohi"
+    },
+    {
+      "id": "s_5323507b",
+      "ru": "Заканчивай работу.",
+      "en_main": "Finish your work.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:5323507",
+      "attribution": "mailohilohi"
+    },
+    {
+      "id": "s_557422",
+      "ru": "Мой отец идёт.",
+      "en_main": "My father walks.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:557422",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_5748220",
+      "ru": "Поделись своим опытом.",
+      "en_main": "Share your experience.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:5748220",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_7733949",
+      "ru": "Моя собака умерла.",
+      "en_main": "My dog died.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:7733949",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_8096273",
+      "ru": "Назови свою цену.",
+      "en_main": "Name your price.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:8096273",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_8096273b",
+      "ru": "Назовите свою цену.",
+      "en_main": "Name your price.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:8096273",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_8543346",
+      "ru": "Помогите своим друзьям.",
+      "en_main": "Help your friends.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:8543346",
+      "attribution": "lucasmg123"
+    },
+    {
+      "id": "s_8543346b",
+      "ru": "Помоги своим друзьям.",
+      "en_main": "Help your friends.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:8543346",
+      "attribution": "lucasmg123"
+    },
+    {
+      "id": "s_8575620",
+      "ru": "Скажи моё имя.",
+      "en_main": "Say my name.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:8575620",
+      "attribution": "Heisenberg"
+    },
+    {
+      "id": "s_874943",
+      "ru": "Её отец умер.",
+      "en_main": "Her father died.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:874943",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_8978664",
+      "ru": "Моё сердце остановилось.",
+      "en_main": "My heart stopped.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:8978664",
+      "attribution": "CK"
+    }
+  ]
+}

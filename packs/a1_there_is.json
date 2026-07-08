@@ -1,0 +1,1757 @@
+{
+  "schema_version": 1,
+  "skill": {
+    "id": "a1_there_is",
+    "cefr": "A1",
+    "module": "a1_m1",
+    "module_title_ru": "Быть и указывать",
+    "title_ru": "There is / There are",
+    "pattern": "There is + сущ. в ед. ч. / There are + сущ. во мн. ч.",
+    "theory_ru": "**There is/are** используется, чтобы сказать о существовании чего-либо («есть», «имеется») — в русском часто нет подлежащего вообще: «В комнате два окна» → **There are two windows in the room.** Число глагола зависит от существительного после него: **There is a book** (ед. ч.), **there are books** (мн. ч.).",
+    "common_errors": [
+      {
+        "tag": "there_omitted",
+        "ru": "Пропуск there (калька с русского): ~Is a book~ → **There is** a book."
+      },
+      {
+        "tag": "is_are_agreement",
+        "ru": "Рассогласование: ~There is two windows~ → There **are** two windows."
+      },
+      {
+        "tag": "there_it_confusion",
+        "ru": "Путаница there/it: ~It is a book on the table~ → **There is** a book…"
+      }
+    ],
+    "probe_item_ids": [
+      "s_10090439",
+      "s_10090439",
+      "s_10090439"
+    ],
+    "youglish_query": "there are two windows"
+  },
+  "items": [
+    {
+      "id": "s_10090439",
+      "ru": "Идеальных людей нет.",
+      "en_main": "There are no perfect people.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10090439",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10153504",
+      "ru": "Все на месте.",
+      "en_main": "There are none missing.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10153504",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_10361203",
+      "ru": "Есть какой-то секретный план?",
+      "en_main": "Is there some secret plan?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10361203",
+      "attribution": "kedymera"
+    },
+    {
+      "id": "s_10690885",
+      "ru": "Есть ещё кое-что.",
+      "en_main": "There's something more.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10690885",
+      "attribution": "LB"
+    },
+    {
+      "id": "s_10734201",
+      "ru": "Сколько ещё есть?",
+      "en_main": "How much more is there?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10734201",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10871516",
+      "ru": "Есть свободные номера?",
+      "en_main": "Are there any rooms available?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10871516",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10885197",
+      "ru": "Есть какие-то побочные эффекты?",
+      "en_main": "Are there any side effects?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10885197",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10908690",
+      "ru": "Причин много.",
+      "en_main": "There are many reasons.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10908690",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_11134299",
+      "ru": "Есть ли какие-то правила?",
+      "en_main": "Are there any rules?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11134299",
+      "attribution": "Ooneykcall"
+    },
+    {
+      "id": "s_11134299b",
+      "ru": "Существуют какие-то правила?",
+      "en_main": "Are there any rules?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11134299",
+      "attribution": "Ooneykcall"
+    },
+    {
+      "id": "s_11138936",
+      "ru": "Такой улицы нет.",
+      "en_main": "There is no such street.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11138936",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_11200760",
+      "ru": "Есть только один способ.",
+      "en_main": "There's only one way.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11200760",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1122845",
+      "ru": "Тут кто-то есть.",
+      "en_main": "There's somebody here.",
+      "en_accepted": [
+        "There's someone here.",
+        "There is someone here."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1122845",
+      "attribution": "Scott"
+    },
+    {
+      "id": "s_1122845b",
+      "ru": "Здесь кто-то есть.",
+      "en_main": "There's somebody here.",
+      "en_accepted": [
+        "There is someone here."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1122845",
+      "attribution": "Scott"
+    },
+    {
+      "id": "s_1125538",
+      "ru": "Есть и другой способ.",
+      "en_main": "There is another way.",
+      "en_accepted": [
+        "There is also another way."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1125538",
+      "attribution": "Scott"
+    },
+    {
+      "id": "s_1125538b",
+      "ru": "Есть другой способ.",
+      "en_main": "There is another way.",
+      "en_accepted": [
+        "There's another way."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1125538",
+      "attribution": "Scott"
+    },
+    {
+      "id": "s_1137460",
+      "ru": "Есть какой-нибудь другой размер?",
+      "en_main": "Is there any other size?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1137460",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_11578476",
+      "ru": "Наступают тёмные времена.",
+      "en_main": "There are dark times ahead.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11578476",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_11721154",
+      "ru": "Недостаточно доказательств.",
+      "en_main": "There isn't enough evidence.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11721154",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_11796384",
+      "ru": "Пока новостей нет.",
+      "en_main": "There's no news yet.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11796384",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_11848701",
+      "ru": "Здесь много женщин.",
+      "en_main": "There are many women here.",
+      "en_accepted": [
+        "There are lots of women here.",
+        "There are a lot of women here."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11848701",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_12003298",
+      "ru": "Такой страны нет.",
+      "en_main": "There's no such country.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12003298",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_12200336",
+      "ru": "Там есть колодец.",
+      "en_main": "There's a well there.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12200336",
+      "attribution": "Miktsoanit"
+    },
+    {
+      "id": "s_12208496",
+      "ru": "Есть какие-то проблемы?",
+      "en_main": "Are there any problems?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12208496",
+      "attribution": "Miktsoanit"
+    },
+    {
+      "id": "s_12208496b",
+      "ru": "Какие-то проблемы?",
+      "en_main": "Are there any problems?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12208496",
+      "attribution": "Miktsoanit"
+    },
+    {
+      "id": "s_12312068",
+      "ru": "Ничего не осталось.",
+      "en_main": "There isn't anything left.",
+      "en_accepted": [
+        "There's nothing left."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12312068",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1232222",
+      "ru": "Богов нет.",
+      "en_main": "There are no gods.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1232222",
+      "attribution": "jakov"
+    },
+    {
+      "id": "s_1232222b",
+      "ru": "Нет никаких богов.",
+      "en_main": "There are no gods.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1232222",
+      "attribution": "jakov"
+    },
+    {
+      "id": "s_12368864",
+      "ru": "Есть ещё три книги.",
+      "en_main": "There are three more books.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12368864",
+      "attribution": "Miktsoanit"
+    },
+    {
+      "id": "s_1239182",
+      "ru": "Есть здесь кто-нибудь?",
+      "en_main": "Is there anybody here?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1239182",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_12567313",
+      "ru": "Воды хватает.",
+      "en_main": "There's enough water.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12567313",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_12595839",
+      "ru": "Важные новости есть?",
+      "en_main": "Is there any important news?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12595839",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_12691511",
+      "ru": "Не хватает нескольких монет.",
+      "en_main": "There are several pieces missing.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12691511",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_12691515",
+      "ru": "Там люди ждут.",
+      "en_main": "There are people waiting.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12691515",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1297076",
+      "ru": "Другого выбора нет.",
+      "en_main": "There is no other choice.",
+      "en_accepted": [
+        "There's no other choice."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1297076",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1349700",
+      "ru": "Воды нет.",
+      "en_main": "There's no water.",
+      "en_accepted": [
+        "There is no water."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1349700",
+      "attribution": "Eldad"
+    },
+    {
+      "id": "s_13611146",
+      "ru": "Времени слишком мало.",
+      "en_main": "There's too little time.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:13611146",
+      "attribution": "rul"
+    },
+    {
+      "id": "s_1553537",
+      "ru": "Есть какие-нибудь вопросы?",
+      "en_main": "Are there any questions?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1553537",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1588785",
+      "ru": "Тут ничего нет.",
+      "en_main": "There is nothing here.",
+      "en_accepted": [
+        "There's nothing in here."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1588785",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1598426",
+      "ru": "Воды недостаточно.",
+      "en_main": "There's not enough water.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1598426",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1655387",
+      "ru": "Правил не существует.",
+      "en_main": "There are no rules.",
+      "en_accepted": [
+        "There aren't any rules."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1655387",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1655387b",
+      "ru": "Правил нет.",
+      "en_main": "There are no rules.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1655387",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1669558",
+      "ru": "Есть очень много вариантов.",
+      "en_main": "There are too many choices.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1669558",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1806426",
+      "ru": "Завтра контрольная.",
+      "en_main": "There is a test tomorrow.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1806426",
+      "attribution": "Ameer"
+    },
+    {
+      "id": "s_1807155",
+      "ru": "Здесь есть книги.",
+      "en_main": "There are books here.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1807155",
+      "attribution": "pne"
+    },
+    {
+      "id": "s_1808127",
+      "ru": "Нет глупых вопросов.",
+      "en_main": "There are no stupid questions.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1808127",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1808127b",
+      "ru": "Глупых вопросов не бывает.",
+      "en_main": "There are no stupid questions.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1808127",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1815744",
+      "ru": "Другого способа нет.",
+      "en_main": "There is no other way.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1815744",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1841568",
+      "ru": "Выхода нет.",
+      "en_main": "There's no way out.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1841568",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1841569",
+      "ru": "Там никого нет.",
+      "en_main": "There is no one there.",
+      "en_accepted": [
+        "There's nobody there.",
+        "There's no one there."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1841569",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1898152",
+      "ru": "Время ещё есть.",
+      "en_main": "There's still time.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1898152",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1898181",
+      "ru": "Есть одна проблема.",
+      "en_main": "There is one problem.",
+      "en_accepted": [
+        "There's one problem.",
+        "There is a problem."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1898181",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1898181b",
+      "ru": "Имеется одна проблема.",
+      "en_main": "There is one problem.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1898181",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1935443",
+      "ru": "Надежды нет.",
+      "en_main": "There's no hope.",
+      "en_accepted": [
+        "There isn't any hope."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1935443",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1935443b",
+      "ru": "Нет надежды.",
+      "en_main": "There's no hope.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1935443",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_2062548",
+      "ru": "Чего-то не хватает.",
+      "en_main": "There's something missing.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2062548",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2064669",
+      "ru": "Что-то здесь не так.",
+      "en_main": "There's something wrong.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2064669",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2064669b",
+      "ru": "Здесь что-то не так.",
+      "en_main": "There's something wrong.",
+      "en_accepted": [
+        "There's something wrong here.",
+        "Is there something wrong with that?"
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2064669",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2064796",
+      "ru": "Тут что-то не то.",
+      "en_main": "There's something wrong here.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2064796",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2077336",
+      "ru": "Что нового?",
+      "en_main": "Is there anything new?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2077336",
+      "attribution": "Eldad"
+    },
+    {
+      "id": "s_2091132",
+      "ru": "Здесь никого нет.",
+      "en_main": "There's no one here.",
+      "en_accepted": [
+        "There's nobody here.",
+        "There isn't anybody here."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2091132",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2091132b",
+      "ru": "Здесь никого.",
+      "en_main": "There's no one here.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2091132",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2091133",
+      "ru": "Никого не осталось.",
+      "en_main": "There's no one left.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2091133",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2091133b",
+      "ru": "Больше никого нет.",
+      "en_main": "There's no one left.",
+      "en_accepted": [
+        "There's nobody else.",
+        "There isn't anybody else."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2091133",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2093057",
+      "ru": "Никого нет дома.",
+      "en_main": "There's nobody home.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2093057",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2093057b",
+      "ru": "Дома никого нет.",
+      "en_main": "There's nobody home.",
+      "en_accepted": [
+        "There's no one home.",
+        "There's no one at home."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2093057",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2196904",
+      "ru": "Сколько их там ещё?",
+      "en_main": "How many more are there?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2196904",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2210283",
+      "ru": "Это двойные стандарты.",
+      "en_main": "There's a double standard.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2210283",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_2217696",
+      "ru": "Горячей воды нет.",
+      "en_main": "There's no hot water.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2217696",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_2244905",
+      "ru": "Дети есть?",
+      "en_main": "Are there kids?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244905",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2247285",
+      "ru": "Простых ответов не существует.",
+      "en_main": "There are no easy answers.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2247285",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_2248502",
+      "ru": "Ещё есть?",
+      "en_main": "Is there more?",
+      "en_accepted": [
+        "Is there any left?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248502",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248503",
+      "ru": "Время есть?",
+      "en_main": "Is there time?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248503",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252610",
+      "ru": "Есть риски.",
+      "en_main": "There are risks.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252610",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252611",
+      "ru": "Есть правила.",
+      "en_main": "There are rules.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252611",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252611b",
+      "ru": "Существуют правила.",
+      "en_main": "There are rules.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252611",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252615",
+      "ru": "Надежда есть.",
+      "en_main": "There is hope.",
+      "en_accepted": [
+        "Is there any hope?"
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252615",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252617",
+      "ru": "Ничего нет.",
+      "en_main": "There is nothing.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252617",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252635",
+      "ru": "Есть разница.",
+      "en_main": "There's a difference.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252635",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252638",
+      "ru": "Есть проблема.",
+      "en_main": "There's a problem.",
+      "en_accepted": [
+        "There's the problem.",
+        "There is a problem."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252638",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252639",
+      "ru": "Есть риск.",
+      "en_main": "There's a risk.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252639",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252640",
+      "ru": "Есть стол.",
+      "en_main": "There's a table.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252640",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252642",
+      "ru": "Надежда есть всегда.",
+      "en_main": "There's always hope.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252642",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252642b",
+      "ru": "Надежда всегда есть.",
+      "en_main": "There's always hope.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252642",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252643",
+      "ru": "Время всегда есть.",
+      "en_main": "There's always time.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252643",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252646",
+      "ru": "Есть другая причина.",
+      "en_main": "There's another reason.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252646",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252646b",
+      "ru": "Есть ещё одна причина.",
+      "en_main": "There's another reason.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252646",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252647",
+      "ru": "Есть ещё один способ.",
+      "en_main": "There's another way.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252647",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252648",
+      "ru": "Есть бесплатная еда.",
+      "en_main": "There's free food.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252648",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252648b",
+      "ru": "Есть бесплатная пища.",
+      "en_main": "There's free food.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252648",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252651",
+      "ru": "Выбора нет.",
+      "en_main": "There's no choice.",
+      "en_accepted": [
+        "There is no choice."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252651",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252654",
+      "ru": "Нет никакой разницы.",
+      "en_main": "There's no difference.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252654",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252654b",
+      "ru": "Разницы нет.",
+      "en_main": "There's no difference.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252654",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252655",
+      "ru": "Двери нет.",
+      "en_main": "There's no door.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252655",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252658",
+      "ru": "Еды нет.",
+      "en_main": "There's no food.",
+      "en_accepted": [
+        "There is no food."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252658",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252659",
+      "ru": "Золота нет.",
+      "en_main": "There's no gold.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252659",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252663",
+      "ru": "Времени нет.",
+      "en_main": "There's no time.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252663",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252673",
+      "ru": "Осталось одно.",
+      "en_main": "There's one left.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252673",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252673b",
+      "ru": "Остался один.",
+      "en_main": "There's one left.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252673",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252674",
+      "ru": "Есть ещё одна.",
+      "en_main": "There's one more.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252674",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252674b",
+      "ru": "Есть ещё один.",
+      "en_main": "There's one more.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252674",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252688",
+      "ru": "Надежда ещё есть.",
+      "en_main": "There's still hope.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252688",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2259509",
+      "ru": "А вот и ваш друг.",
+      "en_main": "There's your friend.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2259509",
+      "attribution": "_undertoad"
+    },
+    {
+      "id": "s_2337390",
+      "ru": "Примеров нет.",
+      "en_main": "There are no examples.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2337390",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_242804",
+      "ru": "Сегодня нет занятий в школе.",
+      "en_main": "There is no school today.",
+      "en_accepted": [
+        "There's no school today."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:242804",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_242804b",
+      "ru": "Сегодня нет занятий.",
+      "en_main": "There is no school today.",
+      "en_accepted": [
+        "There are no classes today.",
+        "There's no school today."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:242804",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2464841",
+      "ru": "Остался один день.",
+      "en_main": "There's a day left.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2464841",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_265412",
+      "ru": "Машина приближается.",
+      "en_main": "There's a car coming.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:265412",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_265412b",
+      "ru": "Едет машина.",
+      "en_main": "There's a car coming.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:265412",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_267183",
+      "ru": "Возможна ли какая-нибудь помощь?",
+      "en_main": "Is there any help available?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:267183",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_268221",
+      "ru": "Доказательств нет.",
+      "en_main": "There's no evidence.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:268221",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_268221b",
+      "ru": "Этому нет доказательств.",
+      "en_main": "There's no evidence.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:268221",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_270745",
+      "ru": "Нет воды.",
+      "en_main": "There is no water.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:270745",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2713478",
+      "ru": "Мы сегодня не учимся.",
+      "en_main": "There's no school today.",
+      "en_accepted": [
+        "There is no school today."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2713478",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2713546",
+      "ru": "Не хватает одной страницы.",
+      "en_main": "There's a page missing.",
+      "en_accepted": [
+        "There is a page missing."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2713546",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2713546b",
+      "ru": "Одной страницы не хватает.",
+      "en_main": "There's a page missing.",
+      "en_accepted": [
+        "There is a page missing."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2713546",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2713635",
+      "ru": "Еды не осталось.",
+      "en_main": "There's no food left.",
+      "en_accepted": [
+        "There isn't any food left."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2713635",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_272636",
+      "ru": "Нет никакого сомнения.",
+      "en_main": "There is no doubt.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:272636",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2819581",
+      "ru": "Простого ответа не существует.",
+      "en_main": "There is no easy answer.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2819581",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_2891451",
+      "ru": "Есть сообщение?",
+      "en_main": "Is there a message?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2891451",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2891454",
+      "ru": "Есть ли лечение?",
+      "en_main": "Is there a treatment?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2891454",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2891454b",
+      "ru": "Существует ли лечение?",
+      "en_main": "Is there a treatment?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2891454",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2892125",
+      "ru": "Что-то не так.",
+      "en_main": "There is something wrong.",
+      "en_accepted": [
+        "There's something wrong.",
+        "Is there anything wrong?"
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2892125",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2901207",
+      "ru": "Денег нет.",
+      "en_main": "There's no money.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2901207",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_3142683",
+      "ru": "Вопросы всегда бывают.",
+      "en_main": "There are always questions.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3142683",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3142683b",
+      "ru": "Вопросы есть всегда.",
+      "en_main": "There are always questions.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3142683",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3374777",
+      "ru": "Здесь есть врач.",
+      "en_main": "There's the doctor.",
+      "en_accepted": [
+        "Is there a doctor here?"
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3374777",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3393001",
+      "ru": "Еда есть?",
+      "en_main": "Is there any food?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3393001",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3393001b",
+      "ru": "Еда какая-нибудь есть?",
+      "en_main": "Is there any food?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3393001",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3393243",
+      "ru": "Ещё остались?",
+      "en_main": "Is there any left?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3393243",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3393243b",
+      "ru": "Ещё осталось?",
+      "en_main": "Is there any left?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3393243",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3410783",
+      "ru": "Ответа нет.",
+      "en_main": "There's no response.",
+      "en_accepted": [
+        "There's no answer."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3410783",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3730033",
+      "ru": "Их так много.",
+      "en_main": "There are so many.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3730033",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_3821120",
+      "ru": "Риска нет.",
+      "en_main": "There's no risk.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3821120",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3825092",
+      "ru": "Есть какие-то сомнения?",
+      "en_main": "Is there any doubt?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3825092",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4442296",
+      "ru": "Сообщений нет.",
+      "en_main": "There is no message.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4442296",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4494246",
+      "ru": "Выбор всегда есть.",
+      "en_main": "There are always choices.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4494246",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4494394",
+      "ru": "Людей достаточно?",
+      "en_main": "Are there enough people?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4494394",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4494589",
+      "ru": "Есть много других.",
+      "en_main": "There are many others.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4494589",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4494718",
+      "ru": "Комнат много.",
+      "en_main": "There are many rooms.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4494718",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4495004",
+      "ru": "Есть проблемы.",
+      "en_main": "There are problems.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4495004",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4672727",
+      "ru": "Есть какие-либо риски?",
+      "en_main": "Are there any risks?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4672727",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_5203933",
+      "ru": "Есть несколько причин.",
+      "en_main": "There are several reasons.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:5203933",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_5203933b",
+      "ru": "Причин несколько.",
+      "en_main": "There are several reasons.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:5203933",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_5358170",
+      "ru": "Есть некоторые различия.",
+      "en_main": "There are some differences.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:5358170",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_5748387",
+      "ru": "Есть другая дверь?",
+      "en_main": "Is there another door?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:5748387",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_5752398",
+      "ru": "Завтра не существует.",
+      "en_main": "There is no tomorrow.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:5752398",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_773344",
+      "ru": "Горячая вода есть?",
+      "en_main": "Is there hot water?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:773344",
+      "attribution": "marloncori"
+    },
+    {
+      "id": "s_871554",
+      "ru": "Кто там?",
+      "en_main": "Who is there?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:871554",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_9501211",
+      "ru": "Осталось три штуки.",
+      "en_main": "There are three left.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:9501211",
+      "attribution": "CK"
+    }
+  ]
+}

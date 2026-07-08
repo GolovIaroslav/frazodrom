@@ -1,0 +1,1815 @@
+{
+  "schema_version": 1,
+  "skill": {
+    "id": "a1_be_neg_quest",
+    "cefr": "A1",
+    "module": "a1_m1",
+    "module_title_ru": "Быть и указывать",
+    "title_ru": "to be: вопросы и отрицания",
+    "pattern": "Am/Is/Are + подлежащее…? / подлежащее + am not / isn't / aren't …",
+    "theory_ru": "Чтобы задать вопрос с to be, глагол выходит на первое место: **Are you** at home? Для отрицания добавляется **not** сразу после глагола: **is not** = **isn't**, **are not** = **aren't** (для I обычно просто **I'm not**, форма ~amn't~ не используется). Никакого do/does здесь не нужно — это особенность именно to be.",
+    "common_errors": [
+      {
+        "tag": "do_support_extra",
+        "ru": "Лишний do: ~Do you at home?~ → **Are** you at home?"
+      },
+      {
+        "tag": "neg_missing_not",
+        "ru": "Пропуск not: ~He isn~ → He **isn't**."
+      },
+      {
+        "tag": "amnt",
+        "ru": "Несуществующая форма ~amn't~ → **I'm not**."
+      }
+    ],
+    "probe_item_ids": [
+      "s_10004697",
+      "s_10004697",
+      "s_10004697"
+    ],
+    "youglish_query": "are you at home"
+  },
+  "items": [
+    {
+      "id": "s_10004697",
+      "ru": "Это не интересно.",
+      "en_main": "That isn't interesting.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10004697",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_10005840",
+      "ru": "Это не новость.",
+      "en_main": "That isn't news.",
+      "en_accepted": [
+        "This isn't news.",
+        "That's not news."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10005840",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_10032228",
+      "ru": "Это не любовь.",
+      "en_main": "That isn't love.",
+      "en_accepted": [
+        "This isn't love.",
+        "That's not love."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10032228",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_10037990",
+      "ru": "Ты никогда не бываешь права.",
+      "en_main": "You're never right.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10037990",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_10037990b",
+      "ru": "Ты никогда не бываешь прав.",
+      "en_main": "You're never right.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10037990",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_10043328",
+      "ru": "Это не плохо.",
+      "en_main": "That isn't bad.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10043328",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_10060513",
+      "ru": "Мы не молоды.",
+      "en_main": "We aren't young.",
+      "en_accepted": [
+        "We're not young."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10060513",
+      "attribution": "carlosalberto"
+    },
+    {
+      "id": "s_10060513b",
+      "ru": "Мы немолоды.",
+      "en_main": "We aren't young.",
+      "en_accepted": [
+        "We're not young."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10060513",
+      "attribution": "carlosalberto"
+    },
+    {
+      "id": "s_10144479",
+      "ru": "Это не французский.",
+      "en_main": "That's not French.",
+      "en_accepted": [
+        "That isn't French.",
+        "This isn't French."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10144479",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_10144479b",
+      "ru": "Это не французский язык.",
+      "en_main": "That's not French.",
+      "en_accepted": [
+        "That isn't French."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10144479",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_10156534",
+      "ru": "Я не человек.",
+      "en_main": "I'm not human.",
+      "en_accepted": [
+        "I'm not a human.",
+        "I'm not a human being."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10156534",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_1039379",
+      "ru": "Это не смешно.",
+      "en_main": "That's not funny.",
+      "en_accepted": [
+        "It's not funny.",
+        "That isn't funny."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1039379",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_10447323",
+      "ru": "Не всё возможно.",
+      "en_main": "Not everything is possible.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10447323",
+      "attribution": "Adelpa"
+    },
+    {
+      "id": "s_1048420",
+      "ru": "Это не деньги.",
+      "en_main": "This isn't money.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1048420",
+      "attribution": "Brian255"
+    },
+    {
+      "id": "s_10735835",
+      "ru": "Это не улика.",
+      "en_main": "That's not evidence.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10735835",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10757182",
+      "ru": "Это неправда.",
+      "en_main": "It ain't true.",
+      "en_accepted": [
+        "That's not true.",
+        "That isn't true."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10757182",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_11056329",
+      "ru": "Я не опоздал.",
+      "en_main": "I'm not late.",
+      "en_accepted": [
+        "Am I on time?"
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11056329",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_11062949",
+      "ru": "Они острые?",
+      "en_main": "Are they hot?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11062949",
+      "attribution": "shekitten"
+    },
+    {
+      "id": "s_11062949b",
+      "ru": "Они горячие?",
+      "en_main": "Are they hot?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11062949",
+      "attribution": "shekitten"
+    },
+    {
+      "id": "s_1108343",
+      "ru": "Мнения не есть факты.",
+      "en_main": "Opinions are not facts.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1108343",
+      "attribution": "Leedihuzur"
+    },
+    {
+      "id": "s_1108790",
+      "ru": "Я не тупой.",
+      "en_main": "I'm not stupid.",
+      "en_accepted": [
+        "I am not stupid."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1108790",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1110080",
+      "ru": "Это ненормально.",
+      "en_main": "This isn't normal.",
+      "en_accepted": [
+        "That's not normal.",
+        "This is not normal."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1110080",
+      "attribution": "Scott"
+    },
+    {
+      "id": "s_1117732",
+      "ru": "Ты мёртв?",
+      "en_main": "Are you dead?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1117732",
+      "attribution": "Scott"
+    },
+    {
+      "id": "s_1117732b",
+      "ru": "Ты умер?",
+      "en_main": "Are you dead?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1117732",
+      "attribution": "Scott"
+    },
+    {
+      "id": "s_11187154",
+      "ru": "Я не под кайфом.",
+      "en_main": "I'm not high.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11187154",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1120776",
+      "ru": "Вот как?",
+      "en_main": "Is that so?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1120776",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_1120776b",
+      "ru": "Это так?",
+      "en_main": "Is that so?",
+      "en_accepted": [
+        "Is that right?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1120776",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_1126543",
+      "ru": "Вы дома?",
+      "en_main": "Are you home?",
+      "en_accepted": [
+        "Are you at home?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1126543",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_11275379",
+      "ru": "Плохи мои дела.",
+      "en_main": "Things aren't good.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11275379",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_1130691",
+      "ru": "Жизнь несправедлива.",
+      "en_main": "Life isn't fair.",
+      "en_accepted": [
+        "Life is not fair."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1130691",
+      "attribution": "Scott"
+    },
+    {
+      "id": "s_1139052",
+      "ru": "Я не серьёзно.",
+      "en_main": "I'm not serious.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1139052",
+      "attribution": "soj4l"
+    },
+    {
+      "id": "s_11629899",
+      "ru": "Я не популярен.",
+      "en_main": "I'm not popular.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11629899",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_11629899b",
+      "ru": "Я не популярна.",
+      "en_main": "I'm not popular.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11629899",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_11651974",
+      "ru": "Я следующий?",
+      "en_main": "Am I next?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11651974",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_11651974b",
+      "ru": "Я следующая?",
+      "en_main": "Am I next?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11651974",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_11764469",
+      "ru": "Мы никогда не ошибаемся.",
+      "en_main": "We're never wrong.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11764469",
+      "attribution": "Fenrir"
+    },
+    {
+      "id": "s_11764469b",
+      "ru": "Мы никогда не бываем не правы.",
+      "en_main": "We're never wrong.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11764469",
+      "attribution": "Fenrir"
+    },
+    {
+      "id": "s_11884181",
+      "ru": "Вы люди?",
+      "en_main": "Are you humans?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11884181",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_11935892",
+      "ru": "Вы дети?",
+      "en_main": "Are you children?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11935892",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1213514",
+      "ru": "Это здесь?",
+      "en_main": "Is it here?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1213514",
+      "attribution": "alec"
+    },
+    {
+      "id": "s_1213514b",
+      "ru": "Он здесь?",
+      "en_main": "Is it here?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1213514",
+      "attribution": "alec"
+    },
+    {
+      "id": "s_1259560",
+      "ru": "Это ты?",
+      "en_main": "Is it you?",
+      "en_accepted": [
+        "Is that you?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1259560",
+      "attribution": "Scott"
+    },
+    {
+      "id": "s_1310853",
+      "ru": "Он не дома.",
+      "en_main": "He's not home.",
+      "en_accepted": [
+        "He's not at home."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1310853",
+      "attribution": "donkirkby"
+    },
+    {
+      "id": "s_1310853b",
+      "ru": "Дома его нет.",
+      "en_main": "He's not home.",
+      "en_accepted": [
+        "He's not at home.",
+        "He isn't at home."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1310853",
+      "attribution": "donkirkby"
+    },
+    {
+      "id": "s_13208293",
+      "ru": "Это официально?",
+      "en_main": "Is that official?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:13208293",
+      "attribution": "araneo"
+    },
+    {
+      "id": "s_13216012",
+      "ru": "Это не вода.",
+      "en_main": "This isn't water.",
+      "en_accepted": [
+        "That's not water."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:13216012",
+      "attribution": "frpzzd"
+    },
+    {
+      "id": "s_13219920",
+      "ru": "Это круто?",
+      "en_main": "Is that cool?",
+      "en_accepted": [
+        "Is this cool?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:13219920",
+      "attribution": "glossboss"
+    },
+    {
+      "id": "s_1326",
+      "ru": "Уверен?",
+      "en_main": "Are you sure?",
+      "en_accepted": [
+        "Are you certain?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1326",
+      "attribution": "brauliobezerra"
+    },
+    {
+      "id": "s_1326b",
+      "ru": "Ты уверен?",
+      "en_main": "Are you sure?",
+      "en_accepted": [
+        "Are you certain?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1326",
+      "attribution": "brauliobezerra"
+    },
+    {
+      "id": "s_1341555",
+      "ru": "Этого недостаточно.",
+      "en_main": "That isn't enough.",
+      "en_accepted": [
+        "That's not enough.",
+        "This isn't enough."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1341555",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1356753",
+      "ru": "Вы уверены?",
+      "en_main": "Are you certain?",
+      "en_accepted": [
+        "Are you sure?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1356753",
+      "attribution": "sacredceltic"
+    },
+    {
+      "id": "s_1392351",
+      "ru": "Наелся?",
+      "en_main": "Are you full?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1392351",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1392351b",
+      "ru": "Наелась?",
+      "en_main": "Are you full?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1392351",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1436332",
+      "ru": "Это ваше?",
+      "en_main": "Is this yours?",
+      "en_accepted": [
+        "Is that yours?",
+        "Is it yours?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1436332",
+      "attribution": "marcelostockle"
+    },
+    {
+      "id": "s_1436332b",
+      "ru": "Это твоё?",
+      "en_main": "Is this yours?",
+      "en_accepted": [
+        "Is that yours?",
+        "Is it yours?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1436332",
+      "attribution": "marcelostockle"
+    },
+    {
+      "id": "s_1474222",
+      "ru": "Мне нехорошо.",
+      "en_main": "I'm not well.",
+      "en_accepted": [
+        "I'm not quite well."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1474222",
+      "attribution": "al_ex_an_der"
+    },
+    {
+      "id": "s_1550036",
+      "ru": "Жизнь - непростая штука.",
+      "en_main": "Life isn't easy.",
+      "en_accepted": [
+        "Life ain't easy."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1550036",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1568769",
+      "ru": "Я не уверен.",
+      "en_main": "I'm not sure.",
+      "en_accepted": [
+        "I am not sure.",
+        "I'm not certain."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1568769",
+      "attribution": "Sharaf78"
+    },
+    {
+      "id": "s_1614914",
+      "ru": "Я не уверена.",
+      "en_main": "I am not sure.",
+      "en_accepted": [
+        "I'm not certain."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1614914",
+      "attribution": "jose76c"
+    },
+    {
+      "id": "s_16164",
+      "ru": "Довольны?",
+      "en_main": "Are you happy?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:16164",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_16164b",
+      "ru": "Ты счастлив?",
+      "en_main": "Are you happy?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:16164",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1623505",
+      "ru": "Это возможно?",
+      "en_main": "Is it possible?",
+      "en_accepted": [
+        "Is that possible?",
+        "Is this possible?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1623505",
+      "attribution": "shanghainese"
+    },
+    {
+      "id": "s_1665",
+      "ru": "Это плохо?",
+      "en_main": "Is it bad?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1665",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1682863",
+      "ru": "Это законно?",
+      "en_main": "Is this legal?",
+      "en_accepted": [
+        "Is it legal?",
+        "Is that legal?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1682863",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1737356",
+      "ru": "Девочкам там не рады.",
+      "en_main": "Girls aren't welcome.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1737356",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1737356b",
+      "ru": "Девочкам тут не рады.",
+      "en_main": "Girls aren't welcome.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1737356",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1745557",
+      "ru": "Она не ошибается.",
+      "en_main": "She is not wrong.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1745557",
+      "attribution": "belgavox"
+    },
+    {
+      "id": "s_1754729",
+      "ru": "Я не готов.",
+      "en_main": "I'm not ready.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1754729",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1754729b",
+      "ru": "Я не готова.",
+      "en_main": "I'm not ready.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1754729",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1765127",
+      "ru": "Это нехорошо.",
+      "en_main": "This isn't good.",
+      "en_accepted": [
+        "It's not good.",
+        "That's not a good thing."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1765127",
+      "attribution": "alec"
+    },
+    {
+      "id": "s_1774788",
+      "ru": "Он немолод.",
+      "en_main": "He is not young.",
+      "en_accepted": [
+        "He isn't young."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1774788",
+      "attribution": "jandrade"
+    },
+    {
+      "id": "s_1792649",
+      "ru": "Я не умер.",
+      "en_main": "I'm not dead.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1792649",
+      "attribution": "BraveSentry"
+    },
+    {
+      "id": "s_1792649b",
+      "ru": "Я не мёртв.",
+      "en_main": "I'm not dead.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1792649",
+      "attribution": "BraveSentry"
+    },
+    {
+      "id": "s_1806067",
+      "ru": "Мы не одни.",
+      "en_main": "We're not alone.",
+      "en_accepted": [
+        "We aren't alone."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1806067",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1806271",
+      "ru": "Это важно?",
+      "en_main": "Is it important?",
+      "en_accepted": [
+        "Is that important?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1806271",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1841261",
+      "ru": "Это не естественно.",
+      "en_main": "It's not natural.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1841261",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1841625",
+      "ru": "Я не женат.",
+      "en_main": "I'm not married.",
+      "en_accepted": [
+        "I am not married."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1841625",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1841625b",
+      "ru": "Я не замужем.",
+      "en_main": "I'm not married.",
+      "en_accepted": [
+        "I am not married."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1841625",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1857913",
+      "ru": "Это искусство?",
+      "en_main": "Is this art?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1857913",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_18634",
+      "ru": "Деньги - это не главное в жизни.",
+      "en_main": "Money is not everything.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:18634",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1871847",
+      "ru": "Мне неинтересно.",
+      "en_main": "I'm not interested.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1871847",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1886327",
+      "ru": "Ты популярен?",
+      "en_main": "Are you popular?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1886327",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1886327b",
+      "ru": "Вы популярны?",
+      "en_main": "Are you popular?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1886327",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1886362",
+      "ru": "Мы друзья?",
+      "en_main": "Are we friends?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1886362",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1886362b",
+      "ru": "Мы подруги?",
+      "en_main": "Are we friends?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1886362",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1886907",
+      "ru": "Так лучше?",
+      "en_main": "Is that better?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1886907",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1886924",
+      "ru": "Все в порядке?",
+      "en_main": "Is everybody OK?",
+      "en_accepted": [
+        "Is everyone OK?",
+        "Is everybody okay?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1886924",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1886924b",
+      "ru": "У всех всё в порядке?",
+      "en_main": "Is everybody OK?",
+      "en_accepted": [
+        "Is everybody okay?",
+        "Is everybody all right?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1886924",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1891049",
+      "ru": "Я не рада.",
+      "en_main": "I'm not happy.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1891049",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1891049b",
+      "ru": "Я не рад.",
+      "en_main": "I'm not happy.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1891049",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1893632",
+      "ru": "Мы не женаты.",
+      "en_main": "We're not married.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1893632",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1893632b",
+      "ru": "Мы не замужем.",
+      "en_main": "We're not married.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1893632",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1894572",
+      "ru": "Это невозможно.",
+      "en_main": "It's not possible.",
+      "en_accepted": [
+        "Isn't it possible?",
+        "That isn't possible."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1894572",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1910886",
+      "ru": "Он новый?",
+      "en_main": "Is it new?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1910886",
+      "attribution": "Zaghawa"
+    },
+    {
+      "id": "s_1910886b",
+      "ru": "Она новая?",
+      "en_main": "Is it new?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1910886",
+      "attribution": "Zaghawa"
+    },
+    {
+      "id": "s_1934796",
+      "ru": "Я прав?",
+      "en_main": "Am I right?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1934796",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1934796b",
+      "ru": "Я права?",
+      "en_main": "Am I right?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1934796",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_2020893",
+      "ru": "Это безопасно?",
+      "en_main": "Is it safe?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2020893",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_20379",
+      "ru": "Вы с ума сошли?",
+      "en_main": "Are you crazy?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:20379",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_20379b",
+      "ru": "Ты ненормальный?",
+      "en_main": "Are you crazy?",
+      "en_accepted": [
+        "You're not normal."
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:20379",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2044437",
+      "ru": "Все довольны?",
+      "en_main": "Is everybody happy?",
+      "en_accepted": [
+        "Is everyone happy?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2044437",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2064646",
+      "ru": "Что-то по-другому?",
+      "en_main": "Is something different?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2064646",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2064646b",
+      "ru": "Что-то изменилось?",
+      "en_main": "Is something different?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2064646",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2094790",
+      "ru": "Все готовы?",
+      "en_main": "Is everybody ready?",
+      "en_accepted": [
+        "Is everyone ready?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2094790",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2096096",
+      "ru": "Этого хватит?",
+      "en_main": "Is this enough?",
+      "en_accepted": [
+        "Is that enough?",
+        "Is it enough?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2096096",
+      "attribution": "gleki"
+    },
+    {
+      "id": "s_2096096b",
+      "ru": "Этого достаточно?",
+      "en_main": "Is this enough?",
+      "en_accepted": [
+        "Is it enough?",
+        "Is that enough?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2096096",
+      "attribution": "gleki"
+    },
+    {
+      "id": "s_2176362",
+      "ru": "Он сладкий?",
+      "en_main": "Is that sweet?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2176362",
+      "attribution": "dafp"
+    },
+    {
+      "id": "s_2221210",
+      "ru": "Это нормально?",
+      "en_main": "Is this normal?",
+      "en_accepted": [
+        "Is that normal?",
+        "Is this OK?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2221210",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_2244884",
+      "ru": "Я ясно выражаюсь?",
+      "en_main": "Am I clear?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244884",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2244884b",
+      "ru": "Я ясно выразился?",
+      "en_main": "Am I clear?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244884",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2244887",
+      "ru": "Я рано?",
+      "en_main": "Am I early?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244887",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2244889",
+      "ru": "Я первая?",
+      "en_main": "Am I first?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244889",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2244889b",
+      "ru": "Я первый?",
+      "en_main": "Am I first?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244889",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2244916",
+      "ru": "Они мёртвые?",
+      "en_main": "Are they dead?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244916",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2244916b",
+      "ru": "Они умерли?",
+      "en_main": "Are they dead?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244916",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2244922",
+      "ru": "Эти ваши?",
+      "en_main": "Are those yours?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244922",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2244922b",
+      "ru": "Эти твои?",
+      "en_main": "Are those yours?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244922",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2244923",
+      "ru": "Мы одни?",
+      "en_main": "Are we alone?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244923",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2244927",
+      "ru": "Мы готовы?",
+      "en_main": "Are we ready?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244927",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2244928",
+      "ru": "Мы в безопасности?",
+      "en_main": "Are we safe?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244928",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2244934",
+      "ru": "Вы братья?",
+      "en_main": "Are you brothers?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244934",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2244935",
+      "ru": "Ты замёрз?",
+      "en_main": "Are you cold?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244935",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2244935b",
+      "ru": "Замёрзла?",
+      "en_main": "Are you cold?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244935",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2244940",
+      "ru": "Вы врачи?",
+      "en_main": "Are you doctors?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244940",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2244949",
+      "ru": "Вам жарко?",
+      "en_main": "Are you hot?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244949",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2244949b",
+      "ru": "Тебе жарко?",
+      "en_main": "Are you hot?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244949",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2244951",
+      "ru": "Ты заинтересован?",
+      "en_main": "Are you interested?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244951",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2244951b",
+      "ru": "Тебе интересно?",
+      "en_main": "Are you interested?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244951",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2244965",
+      "ru": "Вы сёстры?",
+      "en_main": "Are you sisters?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2244965",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248433",
+      "ru": "Что-то не так?",
+      "en_main": "Is anything wrong?",
+      "en_accepted": [
+        "Is something wrong?",
+        "Something is not right."
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248433",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248433b",
+      "ru": "Что-нибудь не так?",
+      "en_main": "Is anything wrong?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248433",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248442",
+      "ru": "Она синяя?",
+      "en_main": "Is it blue?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248442",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248442b",
+      "ru": "Он синий?",
+      "en_main": "Is it blue?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248442",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248444",
+      "ru": "Это рак?",
+      "en_main": "Is it cancer?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248444",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248445",
+      "ru": "Она чистая?",
+      "en_main": "Is it clean?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248445",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248445b",
+      "ru": "Это чистое?",
+      "en_main": "Is it clean?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248445",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248446",
+      "ru": "Это ясно?",
+      "en_main": "Is it clear?",
+      "en_accepted": [
+        "Is that clear?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248446",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248446b",
+      "ru": "Ясно?",
+      "en_main": "Is it clear?",
+      "en_accepted": [
+        "Is that clear?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248446",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248461",
+      "ru": "Это трудно?",
+      "en_main": "Is it hard?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248461",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248468",
+      "ru": "Оно готово?",
+      "en_main": "Is it ready?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248468",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248468b",
+      "ru": "Он готов?",
+      "en_main": "Is it ready?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248468",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248473",
+      "ru": "Пора?",
+      "en_main": "Is it time?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248473",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248473b",
+      "ru": "Ну что, пора?",
+      "en_main": "Is it time?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248473",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248484",
+      "ru": "Это справедливо?",
+      "en_main": "Is that fair?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248484",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248484b",
+      "ru": "Справедливо ли это?",
+      "en_main": "Is that fair?",
+      "en_accepted": [
+        "Is it fair?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248484",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248487",
+      "ru": "Это моё?",
+      "en_main": "Is that mine?",
+      "en_accepted": [
+        "Is this mine?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248487",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248487b",
+      "ru": "Это мой?",
+      "en_main": "Is that mine?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248487",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248488",
+      "ru": "Это необходимо?",
+      "en_main": "Is that necessary?",
+      "en_accepted": [
+        "Is it necessary?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248488",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248489",
+      "ru": "Это новое?",
+      "en_main": "Is that new?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248489",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2248491",
+      "ru": "Так нормально?",
+      "en_main": "Is that OK?",
+      "en_accepted": [
+        "Is that okay?",
+        "Is this OK?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2248491",
+      "attribution": "CK"
+    }
+  ]
+}

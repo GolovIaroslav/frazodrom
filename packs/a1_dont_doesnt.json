@@ -1,0 +1,1729 @@
+{
+  "schema_version": 1,
+  "skill": {
+    "id": "a1_dont_doesnt",
+    "cefr": "A1",
+    "module": "a1_m2",
+    "module_title_ru": "Настоящее простое",
+    "title_ru": "Отрицание: don't / doesn't",
+    "pattern": "I/you/we/they + don't + V1; he/she/it + doesn't + V1",
+    "theory_ru": "Отрицание в Present Simple образуется с помощью **do not (don't)** для I/you/we/they и **does not (doesn't)** для he/she/it — глагол после них всегда в базовой форме: **I don't eat meat**, **She doesn't like coffee** (не ~doesn't likes~).",
+    "common_errors": [
+      {
+        "tag": "double_negative_ending",
+        "ru": "Окончание после doesn't: ~doesn't likes~ → doesn't **like**."
+      },
+      {
+        "tag": "dont_doesnt_confusion",
+        "ru": "Путаница форм: ~She don't~ → She **doesn't**."
+      },
+      {
+        "tag": "no_instead_of_dont",
+        "ru": "Русское «нет» дословно: ~I no eat meat~ → I **don't** eat meat."
+      }
+    ],
+    "probe_item_ids": [
+      "s_1042624",
+      "s_1042624",
+      "s_1042624"
+    ],
+    "youglish_query": "I don't eat meat"
+  },
+  "items": [
+    {
+      "id": "s_1042624",
+      "ru": "Не верю.",
+      "en_main": "I don't buy that.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1042624",
+      "attribution": "Eldad"
+    },
+    {
+      "id": "s_1042624b",
+      "ru": "Мели, Емеля, твоя неделя.",
+      "en_main": "I don't buy that.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1042624",
+      "attribution": "Eldad"
+    },
+    {
+      "id": "s_1051695",
+      "ru": "Я не прочь пройтись пешком.",
+      "en_main": "I don't mind walking.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1051695",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1051695b",
+      "ru": "Я не против пройтись.",
+      "en_main": "I don't mind walking.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1051695",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_10544513",
+      "ru": "Что-то тут не стыкуется.",
+      "en_main": "Something doesn't fit here.",
+      "en_accepted": [
+        "Something here doesn't fit."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10544513",
+      "attribution": "AlanF_US"
+    },
+    {
+      "id": "s_10666656",
+      "ru": "Это не всегда срабатывает.",
+      "en_main": "That doesn't always work.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10666656",
+      "attribution": "shekitten"
+    },
+    {
+      "id": "s_10740564",
+      "ru": "Я мало путешествую.",
+      "en_main": "I don't travel much.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10740564",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10744958",
+      "ru": "У них нет детей.",
+      "en_main": "They don't have children.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10744958",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10744958b",
+      "ru": "Детей у них нет.",
+      "en_main": "They don't have children.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10744958",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_1084197",
+      "ru": "Я с ними не знаком.",
+      "en_main": "I don't know them.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1084197",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1084698",
+      "ru": "Я телевизор не смотрю.",
+      "en_main": "I don't watch TV.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1084698",
+      "attribution": "Katheriinne"
+    },
+    {
+      "id": "s_1084698b",
+      "ru": "Я не смотрю телевизор.",
+      "en_main": "I don't watch TV.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1084698",
+      "attribution": "Katheriinne"
+    },
+    {
+      "id": "s_10861397",
+      "ru": "Жизнь не стоит на месте.",
+      "en_main": "Life doesn't stand still.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10861397",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_10901759",
+      "ru": "Нет, не больно.",
+      "en_main": "No, it doesn't hurt.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10901759",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_11038736",
+      "ru": "Этого просто не происходит.",
+      "en_main": "It just doesn't happen.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11038736",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_11038755",
+      "ru": "Мы не так много спим.",
+      "en_main": "We don't sleep much.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11038755",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_1105889",
+      "ru": "Он не любит драться.",
+      "en_main": "He doesn't like fighting.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1105889",
+      "attribution": "megamanenm"
+    },
+    {
+      "id": "s_11104045",
+      "ru": "Мы больше не разговариваем.",
+      "en_main": "We don't talk anymore.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11104045",
+      "attribution": "doemaar14"
+    },
+    {
+      "id": "s_1111459",
+      "ru": "Я не боюсь смерти.",
+      "en_main": "I don't fear death.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1111459",
+      "attribution": "Scott"
+    },
+    {
+      "id": "s_1121360",
+      "ru": "Мне это не нравится.",
+      "en_main": "I don't like that.",
+      "en_accepted": [
+        "I don't like this.",
+        "I don't like it."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1121360",
+      "attribution": "cntrational"
+    },
+    {
+      "id": "s_1137711",
+      "ru": "Мы не забываем.",
+      "en_main": "We don't forget.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1137711",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_11381700",
+      "ru": "Ты нас не любишь.",
+      "en_main": "You don't love us.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11381700",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_11381700b",
+      "ru": "Вы нас не любите.",
+      "en_main": "You don't love us.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11381700",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_11505280",
+      "ru": "Поезда туда не ходят.",
+      "en_main": "Trains don't go there.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11505280",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_11505280b",
+      "ru": "Туда поезда не ходят.",
+      "en_main": "Trains don't go there.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11505280",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_1157050",
+      "ru": "Я этого не позволяю.",
+      "en_main": "I don't allow it.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1157050",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_11603159",
+      "ru": "Люди не любят перемен.",
+      "en_main": "People don't like change.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11603159",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_11603159b",
+      "ru": "Люди не любят перемены.",
+      "en_main": "People don't like change.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11603159",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_12041384",
+      "ru": "Вы никому не доверяете.",
+      "en_main": "You don't trust anyone.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12041384",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_12041384b",
+      "ru": "Ты никому не доверяешь.",
+      "en_main": "You don't trust anyone.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12041384",
+      "attribution": "ddnktr"
+    },
+    {
+      "id": "s_1213414",
+      "ru": "Я тебя не люблю.",
+      "en_main": "I don't love you.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1213414",
+      "attribution": "alec"
+    },
+    {
+      "id": "s_1213414b",
+      "ru": "Я Вас не люблю.",
+      "en_main": "I don't love you.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1213414",
+      "attribution": "alec"
+    },
+    {
+      "id": "s_12201507",
+      "ru": "Нам много не надо.",
+      "en_main": "We don't need much.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12201507",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_12201508",
+      "ru": "Мне много не надо.",
+      "en_main": "I don't need much.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12201508",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_12401896",
+      "ru": "Я этим не пользуюсь.",
+      "en_main": "I don't use that.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12401896",
+      "attribution": "Miktsoanit"
+    },
+    {
+      "id": "s_1273059",
+      "ru": "Вам удача не нужна.",
+      "en_main": "You don't need luck.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1273059",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1273059b",
+      "ru": "Тебе не нужна удача.",
+      "en_main": "You don't need luck.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1273059",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1303026",
+      "ru": "Они это не продают.",
+      "en_main": "They don't sell it.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1303026",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1303026b",
+      "ru": "Это не продается.",
+      "en_main": "They don't sell it.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1303026",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1308463",
+      "ru": "У меня нет сдачи.",
+      "en_main": "I don't have change.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1308463",
+      "attribution": "enteka"
+    },
+    {
+      "id": "s_1334408",
+      "ru": "Я ничего не хочу.",
+      "en_main": "I don't want anything.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1334408",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1359165",
+      "ru": "Я уже не помню.",
+      "en_main": "I don't remember anymore.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1359165",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_13622310",
+      "ru": "Я не чувствую себя готовой.",
+      "en_main": "I don't feel ready.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:13622310",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_13622310b",
+      "ru": "Я не чувствую себя готовым.",
+      "en_main": "I don't feel ready.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:13622310",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1395715",
+      "ru": "Машина не заводится.",
+      "en_main": "The car doesn't start.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1395715",
+      "attribution": "sacredceltic"
+    },
+    {
+      "id": "s_1396955",
+      "ru": "Эта часть не подходит.",
+      "en_main": "This piece doesn't match.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1396955",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1410602",
+      "ru": "Я больше не сплю.",
+      "en_main": "I don't sleep anymore.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1410602",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1410602b",
+      "ru": "Я перестал спать.",
+      "en_main": "I don't sleep anymore.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1410602",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1483933",
+      "ru": "Я не ем.",
+      "en_main": "I don't eat.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1483933",
+      "attribution": "rkqb"
+    },
+    {
+      "id": "s_1569130",
+      "ru": "Это совершенно бессмысленно.",
+      "en_main": "That doesn't make sense.",
+      "en_accepted": [
+        "It doesn't make any sense."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1569130",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1671798",
+      "ru": "Что-то не сходится.",
+      "en_main": "That doesn't add up.",
+      "en_accepted": [
+        "It doesn't add up."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1671798",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1717",
+      "ru": "Я плохо себя чувствую.",
+      "en_main": "I don't feel well.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1717",
+      "attribution": "Swift"
+    },
+    {
+      "id": "s_1717b",
+      "ru": "Я чувствую себя нехорошо.",
+      "en_main": "I don't feel well.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1717",
+      "attribution": "Swift"
+    },
+    {
+      "id": "s_1723833",
+      "ru": "Не заводи меня.",
+      "en_main": "Don't get me started.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1723833",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1723833b",
+      "ru": "Лучше не начинай!",
+      "en_main": "Don't get me started.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1723833",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1780084",
+      "ru": "Я тебе не верю.",
+      "en_main": "I don't believe you.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1780084",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1780084b",
+      "ru": "Я вам не верю.",
+      "en_main": "I don't believe you.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1780084",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_18073",
+      "ru": "Вы не понимаете.",
+      "en_main": "You don't understand.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:18073",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_18073b",
+      "ru": "Ты не понимаешь.",
+      "en_main": "You don't understand.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:18073",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1839484",
+      "ru": "Я в это не верю.",
+      "en_main": "I don't believe that.",
+      "en_accepted": [
+        "I don't believe it!",
+        "I don't believe this."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1839484",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1855053",
+      "ru": "Я не хочу детей.",
+      "en_main": "I don't want kids.",
+      "en_accepted": [
+        "I don't want children."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1855053",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1855054",
+      "ru": "Он не хочет детей.",
+      "en_main": "He doesn't want kids.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1855054",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1872366",
+      "ru": "Это ничего не меняет.",
+      "en_main": "That doesn't change anything.",
+      "en_accepted": [
+        "This doesn't change anything.",
+        "It doesn't make a difference."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1872366",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1887274",
+      "ru": "Я не доверяю никому.",
+      "en_main": "I don't trust anyone.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1887274",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1887274b",
+      "ru": "Я никому не доверяю.",
+      "en_main": "I don't trust anyone.",
+      "en_accepted": [
+        "I don't trust anybody."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1887274",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1887277",
+      "ru": "Я это не хочу.",
+      "en_main": "I don't want this.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1887277",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1893873",
+      "ru": "Не знаем.",
+      "en_main": "We don't know.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1893873",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1893873b",
+      "ru": "Мы не знаем.",
+      "en_main": "We don't know.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1893873",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1897751",
+      "ru": "Это ничего не значит.",
+      "en_main": "That doesn't mean anything.",
+      "en_accepted": [
+        "It doesn't mean anything."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1897751",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1898118",
+      "ru": "Это не имеет смысла.",
+      "en_main": "This doesn't make sense.",
+      "en_accepted": [
+        "It doesn't make any sense."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1898118",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1916147",
+      "ru": "Я не помню ничего.",
+      "en_main": "I don't remember anything.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1916147",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1916147b",
+      "ru": "Я ничего не помню.",
+      "en_main": "I don't remember anything.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1916147",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1920819",
+      "ru": "Я не пью.",
+      "en_main": "I don't drink.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1920819",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_2006401",
+      "ru": "Я больше не пью.",
+      "en_main": "I don't drink anymore.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2006401",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_2028496",
+      "ru": "Он не выглядит счастливым.",
+      "en_main": "He doesn't look happy.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2028496",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2044480",
+      "ru": "Не похоже, чтобы ты была рада.",
+      "en_main": "You don't seem happy.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2044480",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2044480b",
+      "ru": "Не похоже, чтобы вы были рады.",
+      "en_main": "You don't seem happy.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2044480",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2044495",
+      "ru": "Они не выглядят счастливыми.",
+      "en_main": "They don't seem happy.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2044495",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2044495b",
+      "ru": "Они не кажутся счастливыми.",
+      "en_main": "They don't seem happy.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2044495",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2050556",
+      "ru": "Я не играю в карты.",
+      "en_main": "I don't play cards.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2050556",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2050557",
+      "ru": "Я в игры не играю.",
+      "en_main": "I don't play games.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2050557",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2059938",
+      "ru": "Вы неважно выглядите.",
+      "en_main": "You don't look well.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2059938",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_2059938b",
+      "ru": "Ты неважно выглядишь.",
+      "en_main": "You don't look well.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2059938",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_2092586",
+      "ru": "У меня никого нет.",
+      "en_main": "I don't have anybody.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2092586",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2168722",
+      "ru": "Я даже не голосую.",
+      "en_main": "I don't even vote.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2168722",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_2241081",
+      "ru": "Нам всё равно.",
+      "en_main": "We don't care.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241081",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2243101",
+      "ru": "Им всё равно.",
+      "en_main": "They don't care.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2243101",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2243102",
+      "ru": "Они не помогают.",
+      "en_main": "They don't help.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2243102",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2243103",
+      "ru": "Они не слушают.",
+      "en_main": "They don't listen.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2243103",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2243104",
+      "ru": "Они не понимают.",
+      "en_main": "They don't understand.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2243104",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245716",
+      "ru": "Я не танцую.",
+      "en_main": "I don't dance.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245716",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245717",
+      "ru": "Я ни с кем не встречаюсь.",
+      "en_main": "I don't date.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245717",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2250105",
+      "ru": "Этого не происходит.",
+      "en_main": "That doesn't happen.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2250105",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2250105b",
+      "ru": "Такого не бывает.",
+      "en_main": "That doesn't happen.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2250105",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2250106",
+      "ru": "Это не помогает.",
+      "en_main": "That doesn't help.",
+      "en_accepted": [
+        "It doesn't help.",
+        "This doesn't help."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2250106",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2250107",
+      "ru": "Это не работает.",
+      "en_main": "That doesn't work.",
+      "en_accepted": [
+        "It doesn't work.",
+        "This doesn't work!"
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2250107",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2252713",
+      "ru": "Эти не подходят.",
+      "en_main": "These don't match.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2252713",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2254983",
+      "ru": "Ты не слушаешь.",
+      "en_main": "You don't listen.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2254983",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2254983b",
+      "ru": "Вы не слушаете.",
+      "en_main": "You don't listen.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2254983",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2259697",
+      "ru": "Это покрытие не подходит.",
+      "en_main": "This cover doesn't fit.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2259697",
+      "attribution": "_undertoad"
+    },
+    {
+      "id": "s_2270464",
+      "ru": "Не отпускай его.",
+      "en_main": "Don't let it go.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2270464",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2270465",
+      "ru": "Не дай мне умереть!",
+      "en_main": "Don't let me die.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2270465",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2270465b",
+      "ru": "Не дайте мне умереть!",
+      "en_main": "Don't let me die.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2270465",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2270466",
+      "ru": "Не допусти этого.",
+      "en_main": "Don't let that happen.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2270466",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2270495",
+      "ru": "Не усугубляйте.",
+      "en_main": "Don't make it worse.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2270495",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2270495b",
+      "ru": "Не усугубляй.",
+      "en_main": "Don't make it worse.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2270495",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2271374",
+      "ru": "Не вздумай об этом забыть!",
+      "en_main": "Don't you forget that.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2271374",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2271374b",
+      "ru": "Не забывай этого!",
+      "en_main": "Don't you forget that.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2271374",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2271830",
+      "ru": "Я ничего не делаю.",
+      "en_main": "I don't do anything.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2271830",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2271833",
+      "ru": "Я этого не делаю.",
+      "en_main": "I don't do that.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2271833",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2271836",
+      "ru": "Я не сомневаюсь в тебе.",
+      "en_main": "I don't doubt you.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2271836",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2271840",
+      "ru": "Я их не боюсь.",
+      "en_main": "I don't fear them.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2271840",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2271845",
+      "ru": "Я за вами не хожу.",
+      "en_main": "I don't follow you.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2271845",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2271845b",
+      "ru": "Я за тобой не иду.",
+      "en_main": "I don't follow you.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2271845",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2271851",
+      "ru": "Я тебя не понимаю.",
+      "en_main": "I don't get you.",
+      "en_accepted": [
+        "I don't understand you."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2271851",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2271851b",
+      "ru": "Я вас не понимаю.",
+      "en_main": "I don't get you.",
+      "en_accepted": [
+        "I don't understand you."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2271851",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2271854",
+      "ru": "Я ничего не ненавижу.",
+      "en_main": "I don't hate anything.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2271854",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2271855",
+      "ru": "Я не испытываю к себе ненависти.",
+      "en_main": "I don't hate myself.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2271855",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2271858",
+      "ru": "Я тебя не ненавижу.",
+      "en_main": "I don't hate you.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2271858",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2271858b",
+      "ru": "Я вас не ненавижу.",
+      "en_main": "I don't hate you.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2271858",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2271864",
+      "ru": "Я ничего не слышу.",
+      "en_main": "I don't hear anything.",
+      "en_accepted": [
+        "I don't hear a thing."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2271864",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2271883",
+      "ru": "Я здесь не живу.",
+      "en_main": "I don't live here.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2271883",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2271883b",
+      "ru": "Я тут не живу.",
+      "en_main": "I don't live here.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2271883",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2271914",
+      "ru": "Я никого не вижу.",
+      "en_main": "I don't see anybody.",
+      "en_accepted": [
+        "I don't see anyone."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2271914",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2271916",
+      "ru": "Не понимаю почему.",
+      "en_main": "I don't see why.",
+      "en_accepted": [
+        "I don't understand why."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2271916",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2323",
+      "ru": "Мне безразлично.",
+      "en_main": "I don't care.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2323",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2323b",
+      "ru": "Меня не колышет.",
+      "en_main": "I don't care.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2323",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2431663",
+      "ru": "Он не спит.",
+      "en_main": "He doesn't sleep.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2431663",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2431666",
+      "ru": "Он не бегает.",
+      "en_main": "He doesn't run.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2431666",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_257396",
+      "ru": "Я ничего не имею против.",
+      "en_main": "I don't mind.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:257396",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_257396b",
+      "ru": "Я не против.",
+      "en_main": "I don't mind.",
+      "en_accepted": [
+        "I don't mind it."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:257396",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_28233",
+      "ru": "Да ты что!",
+      "en_main": "You don't say.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:28233",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_28233b",
+      "ru": "Да неужели?",
+      "en_main": "You don't say.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:28233",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_349064",
+      "ru": "Я не в курсе.",
+      "en_main": "I don't know.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:349064",
+      "attribution": "fatih"
+    },
+    {
+      "id": "s_376611",
+      "ru": "Не понимаю.",
+      "en_main": "I don't understand.",
+      "en_accepted": [
+        "I don't get it."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:376611",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_37894",
+      "ru": "Не имеет значения.",
+      "en_main": "It doesn't matter.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:37894",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_37894b",
+      "ru": "Это не имеет значения.",
+      "en_main": "It doesn't matter.",
+      "en_accepted": [
+        "That doesn't matter."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:37894",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3825367",
+      "ru": "Любовь не умирает.",
+      "en_main": "Love doesn't die.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3825367",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_41226",
+      "ru": "Это неважно.",
+      "en_main": "That doesn't matter.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:41226",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_51104",
+      "ru": "Я не согласен.",
+      "en_main": "I don't agree.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:51104",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_51104b",
+      "ru": "Я не согласна.",
+      "en_main": "I don't agree.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:51104",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_5175143",
+      "ru": "Я не читаю.",
+      "en_main": "I don't read.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:5175143",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_5303594",
+      "ru": "Я не учусь.",
+      "en_main": "I don't study.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:5303594",
+      "attribution": "3040403"
+    },
+    {
+      "id": "s_550248",
+      "ru": "Я не помню.",
+      "en_main": "I don't remember.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:550248",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_55724",
+      "ru": "Не подходит.",
+      "en_main": "This doesn't fit.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:55724",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_572260",
+      "ru": "Он не работает.",
+      "en_main": "It doesn't work.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:572260",
+      "attribution": "gnomebubble"
+    },
+    {
+      "id": "s_572260b",
+      "ru": "Оно не работает.",
+      "en_main": "It doesn't work.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:572260",
+      "attribution": "gnomebubble"
+    },
+    {
+      "id": "s_627049",
+      "ru": "Не болит.",
+      "en_main": "It doesn't hurt.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:627049",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_9163113",
+      "ru": "Возраст не имеет значения.",
+      "en_main": "Age doesn't matter.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:9163113",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_9194404",
+      "ru": "Люди не меняются.",
+      "en_main": "People don't change.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:9194404",
+      "attribution": "CK"
+    }
+  ]
+}

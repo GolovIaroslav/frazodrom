@@ -1,0 +1,1731 @@
+{
+  "schema_version": 1,
+  "skill": {
+    "id": "a1_freq_adverbs",
+    "cefr": "A1",
+    "module": "a1_m2",
+    "module_title_ru": "Настоящее простое",
+    "title_ru": "Наречия частотности: usually / never",
+    "pattern": "подлежащее + always/usually/often/sometimes/rarely/never + V1",
+    "theory_ru": "Наречия частоты (**always, usually, often, sometimes, rarely, never**) обычно стоят ПЕРЕД смысловым глаголом, но ПОСЛЕ to be: **He usually gets up early**, но **He is usually tired**. В русском такое наречие может стоять где угодно в предложении — это не работает в английском.",
+    "common_errors": [
+      {
+        "tag": "adverb_position",
+        "ru": "Наречие после глагола: ~He gets usually up~ → He **usually** gets up."
+      },
+      {
+        "tag": "adverb_before_be",
+        "ru": "Наречие перед be: ~He usually is~ → He **is usually**."
+      },
+      {
+        "tag": "double_negative",
+        "ru": "Never + doesn't вместе: ~He doesn't never~ → He **never** works late."
+      }
+    ],
+    "probe_item_ids": [
+      "s_10901946",
+      "s_12267734",
+      "s_16762"
+    ],
+    "youglish_query": "he usually gets up early"
+  },
+  "items": [
+    {
+      "id": "s_10708179",
+      "ru": "Ты всегда встаёшь рано?",
+      "en_main": "Do you always get up early?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10708179",
+      "attribution": "sundown"
+    },
+    {
+      "id": "s_10901946",
+      "ru": "Мы часто разговаривали.",
+      "en_main": "We spoke often.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10901946",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_10948864",
+      "ru": "Ты часто читаешь в постели?",
+      "en_main": "Do you often read in bed?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10948864",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_10962844",
+      "ru": "Так всегда было.",
+      "en_main": "It was always so.",
+      "en_accepted": [
+        "It was always like that.",
+        "Has it always been this way?"
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:10962844",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1135716",
+      "ru": "Мама всегда права.",
+      "en_main": "Mom is always right.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1135716",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1138316",
+      "ru": "Мне никогда не снятся сны. Это нормально?",
+      "en_main": "I never dream. Is that normal?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1138316",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_11473337",
+      "ru": "Я иногда хожу туда.",
+      "en_main": "I go there sometimes.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11473337",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_11764518",
+      "ru": "Я всегда не прав.",
+      "en_main": "I'm always wrong.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11764518",
+      "attribution": "Fenrir"
+    },
+    {
+      "id": "s_11764518b",
+      "ru": "Я всегда не права.",
+      "en_main": "I'm always wrong.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11764518",
+      "attribution": "Fenrir"
+    },
+    {
+      "id": "s_11890804",
+      "ru": "Ты часто рискуешь?",
+      "en_main": "Do you often take risks?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:11890804",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_12189467",
+      "ru": "Том всегда жил в Бостоне?",
+      "en_main": "Has Tom always lived in Boston?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12189467",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_12235267",
+      "ru": "Я часто об этом забываю.",
+      "en_main": "I often forget that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12235267",
+      "attribution": "Miktsoanit"
+    },
+    {
+      "id": "s_12267734",
+      "ru": "От работы ещё никто не умирал, но зачем рисковать?",
+      "en_main": "Working never killed anyone, but why risk it?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 4,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12267734",
+      "attribution": "Miktsoanit"
+    },
+    {
+      "id": "s_12267734b",
+      "ru": "Работа ещё никого не убивала, но зачем рисковать?",
+      "en_main": "Working never killed anyone, but why risk it?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 4,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12267734",
+      "attribution": "Miktsoanit"
+    },
+    {
+      "id": "s_12270059",
+      "ru": "Я часто путешествую один.",
+      "en_main": "I often travel alone.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12270059",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_12270059b",
+      "ru": "Я часто путешествую одна.",
+      "en_main": "I often travel alone.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12270059",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_12884291",
+      "ru": "Почему вы никогда не слушаете?",
+      "en_main": "Why do you never listen?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12884291",
+      "attribution": "Josephlingo"
+    },
+    {
+      "id": "s_12884291b",
+      "ru": "Почему ты никогда не слушаешь?",
+      "en_main": "Why do you never listen?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:12884291",
+      "attribution": "Josephlingo"
+    },
+    {
+      "id": "s_1355398",
+      "ru": "Я вообще не пью.",
+      "en_main": "I never drink.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1355398",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1389720",
+      "ru": "Кто знает.",
+      "en_main": "You never know.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1389720",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1389720b",
+      "ru": "Мало ли.",
+      "en_main": "You never know.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1389720",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_1476456b",
+      "ru": "Такое иногда бывает.",
+      "en_main": "That happens sometimes.",
+      "en_accepted": [
+        "Sometimes that happens."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1476456",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1479371",
+      "ru": "Этого никогда не было.",
+      "en_main": "It never happened.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1479371",
+      "attribution": "AsliAbbasi"
+    },
+    {
+      "id": "s_1479371b",
+      "ru": "Этого так и не случилось.",
+      "en_main": "It never happened.",
+      "en_accepted": [
+        "This never happened."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1479371",
+      "attribution": "AsliAbbasi"
+    },
+    {
+      "id": "s_1486385b",
+      "ru": "Этого так и не произошло.",
+      "en_main": "This never happened.",
+      "en_accepted": [
+        "That never happened.",
+        "It never happened."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1486385",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1503453b",
+      "ru": "Я часто читаю.",
+      "en_main": "I often read.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1503453",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1522185b",
+      "ru": "Это всегда помогает.",
+      "en_main": "That always helps.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1522185",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1633481b",
+      "ru": "Она всегда говорит нет.",
+      "en_main": "She always says no.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1633481",
+      "attribution": "GeeZ"
+    },
+    {
+      "id": "s_16762",
+      "ru": "Тебе нравится меня запутывать, да?",
+      "en_main": "You always like to trip me up, don't you?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 5,
+      "cefr_lex": "A1",
+      "source": "tatoeba:16762",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1836150",
+      "ru": "Почему вы двое всегда ссоритесь?",
+      "en_main": "Why are you two always fighting?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1836150",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1836150b",
+      "ru": "Почему вы оба постоянно дерётесь?",
+      "en_main": "Why are you two always fighting?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1836150",
+      "attribution": "Spamster"
+    },
+    {
+      "id": "s_1886373",
+      "ru": "Ты никогда обо мне не слышал, не так ли?",
+      "en_main": "You've never heard of me, have you?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 4,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1886373",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1887082",
+      "ru": "Я всегда вам верю.",
+      "en_main": "I always believe you.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1887082",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1887082b",
+      "ru": "Я всегда тебе верю.",
+      "en_main": "I always believe you.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1887082",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1895827",
+      "ru": "Ты всегда так говоришь.",
+      "en_main": "You always say that.",
+      "en_accepted": [
+        "You're always saying that.",
+        "That's what you always say."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1895827",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_1895827b",
+      "ru": "Вы всегда так говорите.",
+      "en_main": "You always say that.",
+      "en_accepted": [
+        "You're always saying that."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:1895827",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2044537",
+      "ru": "Я обычно выгляжу счастливым?",
+      "en_main": "Do I usually seem happy?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2044537",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2049767",
+      "ru": "Ты всегда хотел стать полицейским?",
+      "en_main": "Have you always wanted to be a police officer?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 4,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2049767",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241429",
+      "ru": "Мы никогда не забываем.",
+      "en_main": "We never forget.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241429",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241430",
+      "ru": "Мы никогда не проигрываем.",
+      "en_main": "We never lose.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241430",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2241431",
+      "ru": "Мы никогда не разговариваем.",
+      "en_main": "We never talk.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2241431",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2243277",
+      "ru": "Они так и не пришли.",
+      "en_main": "They never came.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2243277",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2243277b",
+      "ru": "Они так и не появились.",
+      "en_main": "They never came.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2243277",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2243279",
+      "ru": "Они никогда не останавливались.",
+      "en_main": "They never stopped.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2243279",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2243589",
+      "ru": "Они всегда ссорятся.",
+      "en_main": "They're always fighting.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2243589",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2243589b",
+      "ru": "Они постоянно ругаются.",
+      "en_main": "They're always fighting.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2243589",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2245607b",
+      "ru": "Я всегда пытаюсь.",
+      "en_main": "I always try.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2245607",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2246031",
+      "ru": "Я никогда не замечал.",
+      "en_main": "I never noticed.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2246031",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2246032",
+      "ru": "Я никогда не выигрываю.",
+      "en_main": "I never win.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2246032",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2250129",
+      "ru": "Это никогда не изменится.",
+      "en_main": "That never changes.",
+      "en_accepted": [
+        "It'll never change.",
+        "This will never change."
+      ],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2250129",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2250129b",
+      "ru": "Это никогда не меняется.",
+      "en_main": "That never changes.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2250129",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2250132",
+      "ru": "Это никогда не работало.",
+      "en_main": "That never worked.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2250132",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2255178",
+      "ru": "Ты никогда не спрашиваешь.",
+      "en_main": "You never ask.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2255178",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2291827",
+      "ru": "Я всегда так делаю.",
+      "en_main": "I always do that.",
+      "en_accepted": [
+        "That's what I always do."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2291827",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2291827b",
+      "ru": "Я всегда это делаю.",
+      "en_main": "I always do that.",
+      "en_accepted": [
+        "I always do this."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2291827",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2291849",
+      "ru": "Я всегда делаю заметки.",
+      "en_main": "I always take notes.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2291849",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2308007",
+      "ru": "Я часто сюда прихожу.",
+      "en_main": "I come here often.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2308007",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2315141",
+      "ru": "Я иногда это делаю.",
+      "en_main": "I do that sometimes.",
+      "en_accepted": [
+        "I sometimes do that.",
+        "Sometimes I do that."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2315141",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2315141b",
+      "ru": "Я делаю так иногда.",
+      "en_main": "I do that sometimes.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2315141",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_243833",
+      "ru": "Мы часто туда ходим.",
+      "en_main": "We go there often.",
+      "en_accepted": [
+        "We often go there."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:243833",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_243833b",
+      "ru": "Мы часто туда ездим.",
+      "en_main": "We go there often.",
+      "en_accepted": [
+        "We often go there."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:243833",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_24827",
+      "ru": "Иногда всё идёт не так.",
+      "en_main": "Sometimes everything goes wrong.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:24827",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_252359",
+      "ru": "Я обычно ем вне дома.",
+      "en_main": "I usually eat out.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:252359",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2547633",
+      "ru": "Они всегда так говорят.",
+      "en_main": "They always say that.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2547633",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2549731",
+      "ru": "Я всё время проигрываю.",
+      "en_main": "I always lose.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2549731",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2549731b",
+      "ru": "Я всегда проигрываю.",
+      "en_main": "I always lose.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2549731",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_272379",
+      "ru": "Малыши часто падают.",
+      "en_main": "Babies often fall down.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:272379",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_2743228",
+      "ru": "Я тебе никогда не нравилась, так ведь?",
+      "en_main": "You've never liked me, have you?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 4,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2743228",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_277768",
+      "ru": "Когда вы обычно встаёте?",
+      "en_main": "When do you usually get up?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:277768",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_277768b",
+      "ru": "Когда ты обычно встаёшь?",
+      "en_main": "When do you usually get up?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:277768",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2784512",
+      "ru": "Как часто ходят поезда?",
+      "en_main": "How often do trains run?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2784512",
+      "attribution": "sharptoothed"
+    },
+    {
+      "id": "s_2797441",
+      "ru": "Я часто его вижу.",
+      "en_main": "I see him often.",
+      "en_accepted": [
+        "I often see him."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2797441",
+      "attribution": "Deerhound"
+    },
+    {
+      "id": "s_2797441b",
+      "ru": "Мы часто с ним видимся.",
+      "en_main": "I see him often.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2797441",
+      "attribution": "Deerhound"
+    },
+    {
+      "id": "s_283323",
+      "ru": "Вы часто получаете от него известия?",
+      "en_main": "Do you often hear from him?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:283323",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_289076",
+      "ru": "Он всегда хорошо играет.",
+      "en_main": "He always plays well.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:289076",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_289087",
+      "ru": "Он всегда много работает.",
+      "en_main": "He always works hard.",
+      "en_accepted": [
+        "He always works a lot."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:289087",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_289196",
+      "ru": "Он всё время читает.",
+      "en_main": "He is always reading.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:289196",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_2967823",
+      "ru": "Мы никогда не встречались.",
+      "en_main": "We never met.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:2967823",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_298391",
+      "ru": "Он иногда смотрит телевизор.",
+      "en_main": "He sometimes watches TV.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:298391",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_301849",
+      "ru": "Он часто опаздывает.",
+      "en_main": "He often comes late.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:301849",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3064280",
+      "ru": "Иногда я сама себя ненавижу.",
+      "en_main": "I hate myself sometimes.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3064280",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_3064280b",
+      "ru": "Иногда я сам себя ненавижу.",
+      "en_main": "I hate myself sometimes.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3064280",
+      "attribution": "Hybrid"
+    },
+    {
+      "id": "s_310399",
+      "ru": "Она всегда работает с усердием.",
+      "en_main": "She always works hard.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:310399",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_310416",
+      "ru": "Она всегда выглядела счастливой.",
+      "en_main": "She always looked happy.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:310416",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_310418",
+      "ru": "Она всегда выглядит счастливой.",
+      "en_main": "She always looks happy.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:310418",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3131485",
+      "ru": "Этого ведь раньше не случалось, так?",
+      "en_main": "This has never happened before, right?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3131485",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3154828",
+      "ru": "Я здесь часто ем.",
+      "en_main": "I often eat here.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3154828",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3204141",
+      "ru": "Я вам разве не говорил никогда мне сюда не звонить?",
+      "en_main": "Haven't I told you never to call me here?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 5,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3204141",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3204141b",
+      "ru": "Я тебе разве не говорил никогда мне сюда не звонить?",
+      "en_main": "Haven't I told you never to call me here?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 5,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3204141",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3272630",
+      "ru": "Она вообще не читает.",
+      "en_main": "She never reads.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3272630",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_3396573",
+      "ru": "Вы всегда встаёте до шести?",
+      "en_main": "Do you always get up before six?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 4,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3396573",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3737728",
+      "ru": "Почему мне не говорили?",
+      "en_main": "Why was I never told?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3737728",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3737970",
+      "ru": "Мы никогда не узнаем, не правда ли?",
+      "en_main": "We'll never know, will we?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3737970",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3738103",
+      "ru": "Вы часто ездите на машине на работу?",
+      "en_main": "Do you often drive your car to work?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 4,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3738103",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3818535",
+      "ru": "Я всегда выигрываю.",
+      "en_main": "I always win.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3818535",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3818659",
+      "ru": "Что ты обычно носишь?",
+      "en_main": "What do you usually wear?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3818659",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3818659b",
+      "ru": "Что вы обычно носите?",
+      "en_main": "What do you usually wear?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3818659",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3818776",
+      "ru": "Мы никогда не голосовали.",
+      "en_main": "We never voted.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3818776",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3820730",
+      "ru": "Я всегда так думал.",
+      "en_main": "I always thought so.",
+      "en_accepted": [
+        "I've always thought that."
+      ],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3820730",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3822940",
+      "ru": "Я никогда не проигрываю.",
+      "en_main": "I never lose.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3822940",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3825802",
+      "ru": "Ты никогда не меняешься.",
+      "en_main": "You never change.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3825802",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_3902430",
+      "ru": "Они нам иногда помогают.",
+      "en_main": "They sometimes help us.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:3902430",
+      "attribution": "felvideki"
+    },
+    {
+      "id": "s_398875",
+      "ru": "Он часто помогает другим.",
+      "en_main": "He often helps others.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:398875",
+      "attribution": "CM"
+    },
+    {
+      "id": "s_398889",
+      "ru": "Я всегда хожу пешком.",
+      "en_main": "I always walk.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:398889",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_400279",
+      "ru": "Мы их иногда видим.",
+      "en_main": "We sometimes see them.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:400279",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_400279b",
+      "ru": "Иногда мы видимся с ними.",
+      "en_main": "We sometimes see them.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:400279",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_400280",
+      "ru": "Мы их встречаем время от времени.",
+      "en_main": "We sometimes meet them.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:400280",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_400280b",
+      "ru": "Мы их время от времени встречаем.",
+      "en_main": "We sometimes meet them.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:400280",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4011520",
+      "ru": "Ты часто разговариваешь сам с собой?",
+      "en_main": "Do you often talk to yourself?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4011520",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4011520b",
+      "ru": "Вы часто разговариваете сами с собой?",
+      "en_main": "Do you often talk to yourself?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4011520",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4016120",
+      "ru": "Как часто ты пьёшь?",
+      "en_main": "How often do you drink?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4016120",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4016120b",
+      "ru": "Как часто вы пьёте?",
+      "en_main": "How often do you drink?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4016120",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_41158",
+      "ru": "Обычно я иду пешком.",
+      "en_main": "I usually walk.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:41158",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_41158b",
+      "ru": "Я обычно хожу пешком.",
+      "en_main": "I usually walk.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:41158",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4490402",
+      "ru": "Обычно я дома не ем.",
+      "en_main": "I usually eat outside.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4490402",
+      "attribution": "Joseph"
+    },
+    {
+      "id": "s_4490402b",
+      "ru": "Обычно я ем вне дома.",
+      "en_main": "I usually eat outside.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4490402",
+      "attribution": "Joseph"
+    },
+    {
+      "id": "s_4498755",
+      "ru": "Иногда мы забываем вещи.",
+      "en_main": "Sometimes we forget things.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4498755",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_4499302",
+      "ru": "Каждому иногда нужна помощь.",
+      "en_main": "Everybody needs help sometimes.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:4499302",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_465027",
+      "ru": "Вы часто его встречаете?",
+      "en_main": "Do you meet him often?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:465027",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_5479693",
+      "ru": "Где ты обычно паркуешься?",
+      "en_main": "Where do you usually park?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:5479693",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_5479693b",
+      "ru": "Ты где обычно паркуешься?",
+      "en_main": "Where do you usually park?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:5479693",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_594716",
+      "ru": "Вы часто отправляетесь в командировки?",
+      "en_main": "Do you often take business trips?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:594716",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_5975659",
+      "ru": "Ты никогда не слушаешь.",
+      "en_main": "You never listen.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:5975659",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_5975659b",
+      "ru": "Вы никогда не слушаете.",
+      "en_main": "You never listen.",
+      "en_accepted": [],
+      "sub": "neg",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:5975659",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_6266883",
+      "ru": "Вы всегда говорите по-французски?",
+      "en_main": "Do you always speak French?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6266883",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_6266883b",
+      "ru": "Ты всегда говоришь по-французски?",
+      "en_main": "Do you always speak French?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6266883",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_6352665",
+      "ru": "Часто вам приходится это делать?",
+      "en_main": "Do you often have to do that?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 4,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6352665",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_6352665b",
+      "ru": "Часто тебе приходится это делать?",
+      "en_main": "Do you often have to do that?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 4,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6352665",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_6353502",
+      "ru": "Где вы обычно занимаетесь?",
+      "en_main": "Where do you usually study?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6353502",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_6353502b",
+      "ru": "Где ты обычно занимаешься?",
+      "en_main": "Where do you usually study?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6353502",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_6532473",
+      "ru": "Ты всегда здесь жила?",
+      "en_main": "Have you always lived here?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6532473",
+      "attribution": "sejb"
+    },
+    {
+      "id": "s_6532473b",
+      "ru": "Вы всегда тут жили?",
+      "en_main": "Have you always lived here?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6532473",
+      "attribution": "sejb"
+    },
+    {
+      "id": "s_6718066",
+      "ru": "Вы всегда так много говорите?",
+      "en_main": "Do you always talk this much?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:6718066",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_703097",
+      "ru": "У Вас часто болит голова?",
+      "en_main": "Does your head hurt often?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:703097",
+      "attribution": "papabear"
+    },
+    {
+      "id": "s_703097b",
+      "ru": "У тебя часто болит голова?",
+      "en_main": "Does your head hurt often?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:703097",
+      "attribution": "papabear"
+    },
+    {
+      "id": "s_7513494",
+      "ru": "Вы не знали, что я никогда этого раньше не делал?",
+      "en_main": "Didn't you know I'd never done that before?",
+      "en_accepted": [
+        "Didn't you know that I'd never done that before?"
+      ],
+      "sub": "question",
+      "difficulty": 5,
+      "cefr_lex": "A1",
+      "source": "tatoeba:7513494",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_7513494b",
+      "ru": "Ты не знал, что я никогда этого раньше не делал?",
+      "en_main": "Didn't you know I'd never done that before?",
+      "en_accepted": [
+        "Didn't you know that I'd never done that before?"
+      ],
+      "sub": "question",
+      "difficulty": 5,
+      "cefr_lex": "A1",
+      "source": "tatoeba:7513494",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_778797",
+      "ru": "Что обычно вызывает боль?",
+      "en_main": "What usually causes the pain?",
+      "en_accepted": [],
+      "sub": "wh",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:778797",
+      "attribution": "Eldad"
+    },
+    {
+      "id": "s_8509152",
+      "ru": "Думаете, надо всегда говорить правду?",
+      "en_main": "Do you think you should always tell the truth?",
+      "en_accepted": [
+        "Do you think that you should always tell the truth?"
+      ],
+      "sub": "question",
+      "difficulty": 4,
+      "cefr_lex": "A1",
+      "source": "tatoeba:8509152",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_8509152b",
+      "ru": "Думаешь, надо всегда говорить правду?",
+      "en_main": "Do you think you should always tell the truth?",
+      "en_accepted": [
+        "Do you think that you should always tell the truth?"
+      ],
+      "sub": "question",
+      "difficulty": 4,
+      "cefr_lex": "A1",
+      "source": "tatoeba:8509152",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_8595136",
+      "ru": "Я часто выигрываю.",
+      "en_main": "I often win.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:8595136",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_8595136b",
+      "ru": "Я часто побеждаю.",
+      "en_main": "I often win.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:8595136",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_8824386",
+      "ru": "Том часто ходит домой пешком?",
+      "en_main": "Does Tom walk home often?",
+      "en_accepted": [
+        "Does Tom often walk home?"
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:8824386",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_9392897",
+      "ru": "Это иногда помогает.",
+      "en_main": "That helps sometimes.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:9392897",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_9407990",
+      "ru": "Том всегда так себя ведёт?",
+      "en_main": "Does Tom always act like this?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 3,
+      "cefr_lex": "A1",
+      "source": "tatoeba:9407990",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_9493617",
+      "ru": "Это никогда не кончится?",
+      "en_main": "Will this never end?",
+      "en_accepted": [
+        "This is never going to end."
+      ],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:9493617",
+      "attribution": "DJ_Saidez"
+    },
+    {
+      "id": "s_9493617b",
+      "ru": "Это никогда не закончится?",
+      "en_main": "Will this never end?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:9493617",
+      "attribution": "DJ_Saidez"
+    },
+    {
+      "id": "s_992031",
+      "ru": "Я путешествую часто.",
+      "en_main": "I often travel.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:992031",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_992031b",
+      "ru": "Я часто путешествую.",
+      "en_main": "I often travel.",
+      "en_accepted": [],
+      "sub": "affirm",
+      "difficulty": 2,
+      "cefr_lex": "A1",
+      "source": "tatoeba:992031",
+      "attribution": "CK"
+    },
+    {
+      "id": "s_9935493",
+      "ru": "В каком возрасте дети обычно начинают ходить?",
+      "en_main": "At what age do children usually start to walk?",
+      "en_accepted": [],
+      "sub": "question",
+      "difficulty": 4,
+      "cefr_lex": "A1",
+      "source": "tatoeba:9935493",
+      "attribution": "ddnktr"
+    }
+  ]
+}
