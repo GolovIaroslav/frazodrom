@@ -1,6 +1,9 @@
 # deps / build
 node_modules/
 dist/
+app/test-results/
+app/playwright-report/
+app/blob-report/
 .venv/
 __pycache__/
 *.pyc

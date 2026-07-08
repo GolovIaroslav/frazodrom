@@ -3,6 +3,7 @@ import { NavBar } from './components/NavBar';
 import { HomeScreen } from './screens/HomeScreen';
 import { CourseMapScreen } from './screens/CourseMapScreen';
 import { SettingsScreen } from './screens/SettingsScreen';
+import { DrillScreen } from './screens/DrillScreen';
 
 function App(): React.ReactElement {
   return (
@@ -11,6 +12,7 @@ function App(): React.ReactElement {
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/course-map" element={<CourseMapScreen />} />
+        <Route path="/drill/:skillId" element={<DrillScreen />} />
         <Route path="/settings" element={<SettingsScreen />} />
       </Routes>
     </div>

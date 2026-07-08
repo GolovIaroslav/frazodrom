@@ -189,6 +189,156 @@ describe('wrong answers (no partial credit without a judge)', () => {
   });
 });
 
+describe('tier 1: additional contraction forms not covered above', () => {
+  it.each([
+    ["She wasn't ready.", 'She was not ready.'],
+    ["They weren't home.", 'They were not home.'],
+    ["We haven't finished.", 'We have not finished.'],
+    ["He hasn't called.", 'He has not called.'],
+    ["I hadn't noticed.", 'I had not noticed.'],
+    ["You wouldn't like it.", 'You would not like it.'],
+    ["She shouldn't worry.", 'She should not worry.'],
+    ["I couldn't hear you.", 'I could not hear you.'],
+    ["He mustn't forget.", 'He must not forget.'],
+    ["You'll see.", 'You will see.'],
+    ["He'll come.", 'He will come.'],
+    ["She'll help.", 'She will help.'],
+    ["We'll wait.", 'We will wait.'],
+    ["They'll agree.", 'They will agree.'],
+    ["It'll work.", 'It will work.'],
+    ["You've got it.", 'You have got it.'],
+    ["We've tried.", 'We have tried.'],
+    ["They've left.", 'They have left.'],
+    ["What's wrong?", 'What is wrong?'],
+    ["What's happened?", 'What has happened?'],
+    ["Here's your coffee.", 'Here is your coffee.'],
+    ["Who's calling?", 'Who is calling?'],
+    ["Who's arrived?", 'Who has arrived?'],
+    ["You'd better go.", 'You would better go.'],
+    ["You'd already gone.", 'You had already gone.'],
+    ["We'd love that.", 'We would love that.'],
+    ["We'd forgotten.", 'We had forgotten.'],
+    ["They'd agree.", 'They would agree.'],
+    ["They'd arrived.", 'They had arrived.'],
+  ])('%j <-> %j', (input, enMain) => {
+    const result = correct(input, enMain);
+    expect(result.verdict).toBe('correct');
+    expect(result.tier).toBe(1);
+  });
+});
+
+describe('tier 1: additional BrE/AmE pairs not covered above', () => {
+  it.each([
+    ['He realised his mistake.', 'He realized his mistake.'],
+    ['She recognised the song.', 'She recognized the song.'],
+    ['I analysed the data.', 'I analyzed the data.'],
+    ['They criticised the plan.', 'They criticized the plan.'],
+    ['She is a good traveller.', 'She is a good traveler.'],
+    ['The event was cancelled.', 'The event was canceled.'],
+    ['We are modelling the risk.', 'We are modeling the risk.'],
+    ['Check the jewellery box.', 'Check the jewelry box.'],
+    ['My mum is here.', 'My mom is here.'],
+    ['There is mould on it.', 'There is mold on it.'],
+    ['He ploughs the field.', 'He plows the field.'],
+    ['I felt a draught.', 'I felt a draft.'],
+    ['Write me a cheque.', 'Write me a check.'],
+    ['I am sceptical.', "I'm sceptical."],
+    ['It is made of aluminium.', 'It is made of aluminum.'],
+    ['New tyres cost a lot.', 'New tires cost a lot.'],
+    ['Mind the kerb.', 'Mind the curb.'],
+    ['She flew the aeroplane.', 'She flew the airplane.'],
+    ['That is a good catalogue.', 'That is a good catalog.'],
+    ['Read the dialogue.', 'Read the dialog.'],
+    ['He needs a licence.', 'He needs a license.'],
+    ['Practise every day.', 'Practice every day.'],
+  ])('%j <-> %j', (input, enMain) => {
+    const result = correct(input, enMain);
+    expect(result.verdict).toBe('correct');
+    expect(result.tier).toBe(1);
+  });
+});
+
+describe('tier 1: additional number words <-> digits', () => {
+  it.each([
+    ['I have three apples.', 'I have 3 apples.'],
+    ['I have 3 apples.', 'I have three apples.'],
+    ['She has four cats.', 'She has 4 cats.'],
+    ['We waited five minutes.', 'We waited 5 minutes.'],
+    ['He has six brothers.', 'He has 6 brothers.'],
+    ['I need seven days.', 'I need 7 days.'],
+    ['There are eight of us.', 'There are 8 of us.'],
+    ['She is eleven.', 'She is 11.'],
+    ['He is twelve.', 'He is 12.'],
+    ['I have thirteen books.', 'I have 13 books.'],
+    ['We need thirty minutes.', 'We need 30 minutes.'],
+    ['He is forty.', 'He is 40.'],
+    ['She has fifty dollars.', 'She has 50 dollars.'],
+    ['It costs sixty dollars.', 'It costs 60 dollars.'],
+    ['I have seventy pages.', 'I have 70 pages.'],
+    ['She is eighty.', 'She is 80.'],
+    ['I have one hundred books.', 'I have 100 books.'],
+  ])('%j <-> %j', (input, enMain) => {
+    const result = correct(input, enMain);
+    expect(result.verdict).toBe('correct');
+    expect(result.tier).toBe(1);
+  });
+});
+
+describe('tier 2: additional typo-tolerance cases', () => {
+  it.each([
+    ['I lvoe you.', 'I love you.'],
+    ['She is verry tired.', 'She is very tired.'],
+    ['We need som help.', 'We need some help.'],
+    ['He is a docter.', 'He is a doctor.'],
+    ['I recieved the letter.', 'I received the letter.'],
+  ])('%j is a tier-2 typo-corrected match for %j', (input, enMain) => {
+    const result = correct(input, enMain);
+    expect(result.verdict).toBe('correct');
+    expect(result.tier).toBe(2);
+    expect(result.tag).toBe('spelling');
+  });
+});
+
+describe('tier 2 guard: additional real-word confusions are not typos', () => {
+  it.each([
+    ['I saw a snake.', 'I saw a stake.'],
+    ['The dog is here.', 'The dog is hare.'],
+    ['I need a break.', 'I need a bread.'],
+    ['She has a plan.', 'She has a plane.'],
+  ])('%j vs %j: both are real words, not typo-corrected', (input, enMain) => {
+    const result = correct(input, enMain);
+    expect(result.verdict).toBe('wrong');
+  });
+});
+
+describe('tier 0: additional pre-check cases', () => {
+  it.each([
+    ['ничего не понимаю', 'I am a student.'],
+    ['Привет, как дела?', 'Hello, how are you?'],
+    ['\n\t  \n', 'I am a student.'],
+  ])('rejects %j without spending a cascade tier', (input, enMain) => {
+    const result = correct(input, enMain);
+    expect(result.tier).toBe(0);
+    expect(result.verdict).toBe('wrong');
+  });
+});
+
+describe('tier 1: cache-hit variants', () => {
+  it.each([
+    ['You forget names a lot, right?', 'Do you often forget names?', ['You forget names a lot, right?']],
+    ['You seem to forget names.', 'Do you often forget names?', ['You seem to forget names.']],
+  ])('%j matches an accepted-cache entry for %j', (input, enMain, cache) => {
+    const result = checkAnswer({
+      userInput: input,
+      ruStimulus: RU_STIMULUS,
+      enMain,
+      acceptedCache: cache,
+    });
+    expect(result.verdict).toBe('correct');
+    expect(result.tier).toBe(1);
+  });
+});
+
 describe('normalize(): set semantics', () => {
   it('returns both branches for an ambiguous contraction', () => {
     const result = normalize("he's tired");
