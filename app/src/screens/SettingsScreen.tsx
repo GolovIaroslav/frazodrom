@@ -282,15 +282,14 @@ function AiModelsSettings(): React.ReactElement {
 }
 
 export function SettingsScreen(): React.ReactElement {
-  const { t, locale, setLocale } = useI18nStore((s) => ({
-    t: s.t,
-    locale: s.locale,
-    setLocale: s.setLocale,
-  }));
-  const { theme, toggleTheme } = useThemeStore((s) => ({
-    theme: s.theme,
-    toggleTheme: s.toggleTheme,
-  }));
+  // Separate selectors, not one object-returning selector — see the same
+  // fix's comment in DrillScreen.tsx for why that pattern can spiral into
+  // "Maximum update depth exceeded".
+  const t = useI18nStore((s) => s.t);
+  const locale = useI18nStore((s) => s.locale);
+  const setLocale = useI18nStore((s) => s.setLocale);
+  const theme = useThemeStore((s) => s.theme);
+  const toggleTheme = useThemeStore((s) => s.toggleTheme);
 
   return (
     <div className="p-6">

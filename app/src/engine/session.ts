@@ -38,7 +38,7 @@ export class DrillEngine {
   private revealed = false;
   private references: string[] = [];
   private rewriteFailStreak = 0;
-  private hadWrongAttempt = false;
+  private hadWrongAttempt_ = false;
   private pendingAdvance = false;
   readonly stats: SessionStats = { total: 0, correct: 0 };
 
@@ -70,6 +70,17 @@ export class DrillEngine {
     return this.pendingAdvance;
   }
 
+  /**
+   * True if the current item has had a wrong/given-up attempt this cycle
+   * that hasn't since been overturned by a correct/acceptable escalation
+   * (§7.2). Read this BEFORE calling `advance()`/`submitRewrite()` — both
+   * reset it once the cycle actually ends (§10 session bookkeeping uses this
+   * to decide per-item accuracy for FSRS/leech purposes).
+   */
+  get hadWrongAttempt(): boolean {
+    return this.hadWrongAttempt_;
+  }
+
   /** Moves to the next item once a correct answer's feedback has been shown. */
   advance(): void {
     if (!this.pendingAdvance) return;
@@ -89,7 +100,7 @@ export class DrillEngine {
     this.revealed = true;
     this.phase = 'rewrite';
     this.rewriteFailStreak = 0;
-    this.hadWrongAttempt = true;
+    this.hadWrongAttempt_ = true;
     return this.references;
   }
 
@@ -134,7 +145,7 @@ export class DrillEngine {
       return { verdict: 'minor_error', mustRewrite: true };
     }
 
-    this.hadWrongAttempt = true;
+    this.hadWrongAttempt_ = true;
     return { verdict: 'wrong', mustRewrite: false };
   }
 
@@ -155,7 +166,7 @@ export class DrillEngine {
       this.stats.total += 1;
       this.stats.correct += 1;
       this.pendingAdvance = true;
-      this.hadWrongAttempt = false;
+      this.hadWrongAttempt_ = false;
       return { verdict: 'correct', mustRewrite: false };
     }
 
@@ -169,7 +180,7 @@ export class DrillEngine {
       return { verdict: 'minor_error', mustRewrite: true };
     }
 
-    this.hadWrongAttempt = true;
+    this.hadWrongAttempt_ = true;
     return { verdict: 'wrong', mustRewrite: false };
   }
 
@@ -207,11 +218,11 @@ export class DrillEngine {
   }
 
   private advanceToNext(): void {
-    const failedItem = this.hadWrongAttempt ? this.currentItem : undefined;
+    const failedItem = this.hadWrongAttempt_ ? this.currentItem : undefined;
     this.hintLevel = 0;
     this.revealed = false;
     this.references = [];
-    this.hadWrongAttempt = false;
+    this.hadWrongAttempt_ = false;
 
     if (failedItem) {
       this.queue = requeueItem(this.queue, this.index, failedItem);

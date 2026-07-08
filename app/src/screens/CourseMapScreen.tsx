@@ -3,11 +3,14 @@ import { Link } from 'react-router-dom';
 import { useI18nStore } from '../i18n/store';
 import { loadPacksIndex } from '../engine/packs';
 import type { PacksIndex } from '../engine/types';
+import { db } from '../db/db';
+import { memoryTier, retrievability, type MemoryTier } from '../srs/fsrs';
 
 export function CourseMapScreen(): React.ReactElement {
   const t = useI18nStore((s) => s.t);
   const [index, setIndex] = useState<PacksIndex | null>(null);
   const [error, setError] = useState(false);
+  const [memoryBySkill, setMemoryBySkill] = useState<Map<string, { pct: number; tier: MemoryTier }>>(new Map());
 
   useEffect(() => {
     let cancelled = false;
@@ -18,6 +21,18 @@ export function CourseMapScreen(): React.ReactElement {
       .catch(() => {
         if (!cancelled) setError(true);
       });
+    void db.skillState.toArray().then((states) => {
+      if (cancelled) return;
+      const now = new Date();
+      const map = new Map<string, { pct: number; tier: MemoryTier }>();
+      for (const state of states) {
+        const r = retrievability(state, now);
+        if (r === undefined) continue;
+        const pct = Math.round(r * 100);
+        map.set(state.skillId, { pct, tier: memoryTier(pct) });
+      }
+      setMemoryBySkill(map);
+    });
     return () => {
       cancelled = true;
     };
@@ -62,6 +77,15 @@ export function CourseMapScreen(): React.ReactElement {
                             <div className="text-xs text-neutral-500 dark:text-neutral-500">
                               {skill.count} {t('courseMap.sentenceCount')}
                             </div>
+                            {(() => {
+                              const memory = memoryBySkill.get(skill.id);
+                              if (!memory) return null;
+                              return (
+                                <div className="text-xs text-neutral-500 dark:text-neutral-500">
+                                  {t(`courseMap.memoryTier.${memory.tier}`).replace('{PCT}', String(memory.pct))}
+                                </div>
+                              );
+                            })()}
                           </div>
                           <Link
                             to={`/drill/${skill.id}`}

@@ -15,6 +15,7 @@ function App(): React.ReactElement {
         <Route path="/" element={<HomeScreen />} />
         <Route path="/course-map" element={<CourseMapScreen />} />
         <Route path="/drill/:skillId" element={<DrillScreen />} />
+        <Route path="/session" element={<DrillScreen />} />
         <Route path="/settings" element={<SettingsScreen />} />
         <Route path="/free-talk" element={<FreeTalkScreen />} />
       </Routes>

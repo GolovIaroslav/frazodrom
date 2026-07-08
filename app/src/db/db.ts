@@ -17,26 +17,34 @@ export interface PackRecord {
 
 export type SkillStatus = 'locked' | 'available' | 'in_progress' | 'passed';
 
-export interface SkillStateRecord {
+// FSRS-6 (ts-fsrs) card fields, flattened onto the Dexie record (§10.1). Kept
+// as a mixin so skillState/itemState declare the exact same field set — see
+// `srs/fsrs.ts`'s `FsrsFields` (mirrors this shape; converts to/from `Card`).
+export interface FsrsCardFields {
+  due?: number;
+  stability?: number;
+  difficulty?: number;
+  scheduledDays?: number;
+  learningSteps?: number;
+  reps?: number;
+  lapses?: number;
+  state?: number;
+  lastReview?: number;
+}
+
+export interface SkillStateRecord extends FsrsCardFields {
   skillId: string;
   status: SkillStatus;
   accuracy: number;
   attemptCount: number;
   correctCount: number;
-  // FSRS fields for the skill-level card (populated from Ф4 on).
-  due?: number;
-  stability?: number;
-  difficulty?: number;
 }
 
-export interface ItemStateRecord {
+export interface ItemStateRecord extends FsrsCardFields {
   itemId: string;
   seenCount: number;
   failCount: number;
   isLeech: boolean;
-  due?: number;
-  stability?: number;
-  difficulty?: number;
 }
 
 export type VerdictSource = 'local' | 'cache' | 'llm' | 'self';
@@ -51,6 +59,8 @@ export interface AttemptRecord {
   errorTags?: string[];
   /** Which model judged this attempt (§8.8) — undefined for local/cache tiers. */
   model?: string;
+  /** Session this attempt belongs to (Ф4) — used to detect leeches failed across DIFFERENT sessions (§10.3). */
+  sessionId?: number;
 }
 
 export interface AcceptedCacheRecord {
@@ -64,9 +74,18 @@ export interface ErrorProfileRecord {
   lastSeen: number;
 }
 
+/** PLAN.md §6.3 — session types the engine can build a queue for. */
+export type SessionType =
+  | 'drill'
+  | 'review'
+  | 'fluencySprint'
+  | 'contrastDuel'
+  | 'errorHunt'
+  | 'freeTalk';
+
 export interface SessionRecord {
   id?: number;
-  type: string;
+  type: SessionType;
   skillIds: string[];
   startedAt: number;
   finishedAt?: number;
