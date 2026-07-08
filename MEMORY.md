@@ -29,6 +29,8 @@ Format: `## Topic → where to look | one-line gist`.
 
 ## ACTIVE CONTEXT
 
-- 2026-07-08: PLAN.md v1.3 — 260-question audit applied (~45 fixes) + research results №11–14 folded in (§8.2 provider chain incl. GigaChat/Yandex; §14.4 generated-content license; §4.5 CEFR-SP/ReadMe++ ground truth; §3.4 B1-5 chunk methodology). See session log at the bottom of PLAN.md. No code yet.
+- 2026-07-08: PLAN.md v1.3 — 260-question audit applied (~45 fixes) + research results №11–14 folded in (§8.2 provider chain incl. GigaChat/Yandex; §14.4 generated-content license; §4.5 CEFR-SP/ReadMe++ ground truth; §3.4 B1-5 chunk methodology). See session log at the bottom of PLAN.md. Ф3 is split into Ф3а/Ф3б/Ф3в.
 - User to confirm agent-drafted defaults in §1.1: positioning paragraph, success criteria, distribution mini-plan.
-- Next step — Ф0 (scaffold): session command in PLAN.md §16. Ф3 is split into Ф3а/Ф3б/Ф3в.
+- 2026-07-08: Ф0 done (app/ + pipeline/ scaffold, CI). Agent decisions/deviations logged in implementation-notes.md (local, gitignored).
+- 2026-07-08: user asked the agent to run phases autonomously back-to-back (via ScheduleWakeup self-pacing) instead of the human restarting a session per phase — accepted as an operating-mode override of "one phase = one session"; the phase-by-phase implement→verify→log discipline itself is unchanged. Phases with hard human-only steps (manual proofreading Ф1/Ф6, live user testing Ф8, §17.2/17.3 provider-fact confirmation) still stop and go to BLOCKERS.md.
+- Next step — Ф1 (pipeline MVP → A1 packs, PLAN.md §16).
