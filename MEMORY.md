@@ -1,30 +1,34 @@
-# MEMORY.md — рабочая память проекта
+# MEMORY.md — project working memory
 
-Читается агентом в начале каждой сессии (см. AGENTS.md). Держать до 200 строк: указатели и решения, не данные.
-Формат: `## Тема → где смотреть | суть одной строкой`.
+Read by the agent at the start of every session (see AGENTS.md). Keep it under 200 lines: pointers and decisions, not data.
+Format: `## Topic → where to look | one-line gist`.
 
 ---
 
-## Обзор
+## Overview
 
-«Фразодром» — открытый некоммерческий тренажёр английского RU→EN по паттернам (A1–C1): дриллы перевода, FSRS-повторения, listening/speaking, экзамены, ИИ-репетитор по BYOK-ключу. Веб-PWA без бэкенда, хостинг GitHub Pages, корпус Tatoeba (CC-BY).
+"Frazodrom" — an open, non-commercial English trainer, RU→EN by pattern (A1–C1): translation drills, FSRS reviews, listening/speaking, exams, a BYOK AI tutor. Backend-less web PWA, hosted on GitHub Pages, corpus from Tatoeba (CC-BY).
 
-## Указатели
+## Pointers
 
-- План (нормативный) → PLAN.md | §0 правила, §16 фазы Ф0–Ф9 с acceptance-критериями
-- Карта навыков → PLAN.md §3.4 | ~75 навыков, id стабильные
-- Пайплайн данных → PLAN.md §4 | manythings/Tatoeba → паки JSON, CLI `etr`
-- Каскад проверки ответа → PLAN.md §7 | normalize → accepted-set → LLM-judge → self-check
-- AI-слой и промпты → PLAN.md §8 | BYOK, роутинг ролей, бюджеты, локальные модели §8.7, переключатель §8.8
-- Проверенные внешние факты → PLAN.md §17.2 | лимиты API и версии на 2026-07-07
-- Запросы для ресёрча (пользователь гоняет сам) → PLAN.md §17.3
+- Plan (normative) → PLAN.md | §0 rules, §16 phases Ф0–Ф9 with acceptance criteria
+- Skill map → PLAN.md §3.4 | ~75 skills, stable ids
+- Data pipeline → PLAN.md §4 | manythings/Tatoeba → JSON packs, CLI `etr`
+- Answer-checking cascade → PLAN.md §7 | normalize → accepted-set → LLM judge → self-check
+- AI layer and prompts → PLAN.md §8 | BYOK, role routing, budgets, local models §8.7, model switcher §8.8
+- Verified external facts → PLAN.md §17.2 | API limits and versions as of 2026-07-07
+- Research queries (user runs these themselves) → PLAN.md §17.3
 
-## Ключевые решения пользователя
+## Key user decisions
 
-- 2026-07-07: платформа — веб-PWA; публичный бесплатный сайт; название «Фразодром»; хостинг GitHub Pages; проект открытый, некоммерческий; UI двуязычный ru+en; локальные модели (Ollama/LM Studio/llama.cpp) — доп. возможность, приоритет у облачных API; ключ пользователя — только localStorage, без аккаунтов.
-- Механика REWRITE обязательна: после показа верного ответа юзер пишет перевод заново с чистого поля (PLAN.md §6.1).
-- Внешний ресёрч делает пользователь по готовым запросам (§17.3) — агенты сами не гуглят.
+- 2026-07-07: platform — web PWA; public free site; name "Frazodrom"; hosting GitHub Pages; project is open, non-commercial; bilingual UI ru+en; local models (Ollama/LM Studio/llama.cpp) — a bonus option, cloud APIs take priority; user's key — localStorage only, no accounts.
+- REWRITE mechanic is mandatory: after the correct answer is shown, the user retypes the translation from a blank field (PLAN.md §6.1).
+- The user runs external research themselves using ready-made queries (§17.3) for time-sensitive facts (§17.2: provider pricing/limits/versions). Amended 2026-07-08: agents MAY search the web on their own for ordinary implementation questions (library syntax, API shape, how a tool works) — only §17.2-style facts still route through the user.
+- 2026-07-08: AGENTS.md merged into CLAUDE.md (single file, English); user maintains their own AGENTS.md separately for Codex. Added: decision-making-under-uncertainty rules and a standing `implementation-notes.md` convention (see CLAUDE.md).
+- 2026-07-08: the project is **international** — no country-specific framing anywhere in docs/UI. Regional unavailability of any LLM provider is handled architecturally: as many adapters as possible (incl. GigaChat, Yandex AI Studio) + routing chain + local models; never region-targeted defaults or wording.
 
 ## ACTIVE CONTEXT
 
-- 2026-07-07: PLAN.md v1.1 готов и запушен. Кода нет. Следующий шаг — Ф0 (каркас): команда для сессии в PLAN.md §16.
+- 2026-07-08: PLAN.md v1.3 — 260-question audit applied (~45 fixes) + research results №11–14 folded in (§8.2 provider chain incl. GigaChat/Yandex; §14.4 generated-content license; §4.5 CEFR-SP/ReadMe++ ground truth; §3.4 B1-5 chunk methodology). See session log at the bottom of PLAN.md. No code yet.
+- User to confirm agent-drafted defaults in §1.1: positioning paragraph, success criteria, distribution mini-plan.
+- Next step — Ф0 (scaffold): session command in PLAN.md §16. Ф3 is split into Ф3а/Ф3б/Ф3в.
