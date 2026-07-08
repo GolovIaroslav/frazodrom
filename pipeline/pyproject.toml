@@ -1,0 +1,46 @@
+[project]
+name = "etr"
+version = "0.1.0"
+description = "Frazodrom data pipeline (fetch, clean, tag, level, curate, gapfill, enrich, emit, validate)"
+readme = "README.md"
+authors = [
+    { name = "Jaroslav", email = "mr.golov2014@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "google-genai>=2.10.0",
+    "polars>=1.42.1",
+    "spacy>=3.8.14",
+    "typer>=0.26.8",
+    "wordfreq>=3.1.1",
+]
+
+[project.scripts]
+etr = "etr.cli:app"
+
+[build-system]
+requires = ["uv_build>=0.11.26,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+files = ["src", "tests"]
+
+[[tool.mypy.overrides]]
+module = ["spacy.*", "wordfreq.*", "google.genai.*"]
+ignore_missing_imports = true
+
+[dependency-groups]
+dev = [
+    "mypy>=2.2.0",
+    "pytest>=9.1.1",
+    "ruff>=0.15.20",
+]
