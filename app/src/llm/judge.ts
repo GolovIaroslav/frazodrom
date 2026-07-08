@@ -74,7 +74,7 @@ export interface JudgeCaseInput {
 
 const CYRILLIC_RE = /[а-яёА-ЯЁ]/;
 
-function buildUserMessage(input: JudgeCaseInput): string {
+export function buildUserMessage(input: JudgeCaseInput): string {
   return [
     `RU: "${input.ru}"`,
     `USER: "${input.userAnswer}"`,

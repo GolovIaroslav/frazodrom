@@ -10,6 +10,8 @@ import { ensureStoragePersisted, checkStorageQuota } from '../db/storage';
 import { runJudgeTier3, type JudgeVerdict } from '../llm/judge';
 import { addToAcceptedCache, removeFromAcceptedCache } from '../llm/acceptedCache';
 import { db } from '../db/db';
+import { TutorPanel } from '../components/TutorPanel';
+import { TutorChat } from '../components/TutorChat';
 
 type EscalationPhase = 'none' | 'pending' | 'self';
 
@@ -247,6 +249,14 @@ export function DrillScreen(): React.ReactElement {
     resetEscalationUi();
     rerender();
   }, [engine, rerender, resetEscalationUi]);
+
+  // «Ошибки»/«Разбор» reveal the correct sentence — forces REWRITE, same as give up (§6.1/§8.5).
+  const handleTutorRevealed = useCallback(() => {
+    if (!engine) return;
+    if (!engine.isReferenceVisible) engine.revealViaTutorAction();
+    setInput('');
+    rerender();
+  }, [engine, rerender]);
 
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
@@ -499,6 +509,36 @@ export function DrillScreen(): React.ReactElement {
           {verdict === 'wrong' ? '✗' : verdict === 'correct' ? '✓' : '~'}{' '}
           {t(`drill.verdict.${verdict}`)}
         </p>
+      )}
+
+      {verdict === 'wrong' && !isRewrite && escalation === 'none' && (
+        <>
+          <TutorPanel
+            key={item.id}
+            input={{
+              itemId: item.id,
+              ru: item.ru,
+              userAnswer: input,
+              refs: [item.en_main, ...item.en_accepted],
+              verdict: judgeResult?.verdict.verdict ?? 'wrong',
+              tags: judgeResult?.verdict.error_tags ?? [],
+              pattern: pack.skill.pattern,
+              level: pack.skill.cefr,
+            }}
+            onRevealed={handleTutorRevealed}
+          />
+          <TutorChat
+            key={`chat-${item.id}`}
+            ctx={{
+              level: pack.skill.cefr,
+              pattern: pack.skill.pattern,
+              ru: item.ru,
+              userAnswer: input,
+              ref: item.en_main,
+              tags: judgeResult?.verdict.error_tags ?? [],
+            }}
+          />
+        </>
       )}
 
       <div role="status" aria-live="polite" className="sr-only">

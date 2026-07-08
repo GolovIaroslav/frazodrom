@@ -45,6 +45,7 @@ const KV = {
   judgeAutoSelfCheck: 'llm.judge.autoFallbackToSelf',
   manualOverride: 'llm.manualOverride',
   promptOverride: (name: string) => `llm.prompt.${name}`,
+  promptOverrideDefaultHash: (name: string) => `llm.prompt.${name}.defaultHash`,
 } as const;
 
 async function getKv<T>(key: string, fallback: T): Promise<T> {
@@ -126,4 +127,19 @@ export async function setPromptOverride(name: string, prompt: string): Promise<v
 
 export async function clearPromptOverride(name: string): Promise<void> {
   await db.kv.delete(KV.promptOverride(name));
+  await db.kv.delete(KV.promptOverrideDefaultHash(name));
+}
+
+/**
+ * Hash of the shipped default prompt text captured at the moment an override
+ * was saved (§8.5 "дефолт обновился"). Compared against the current default's
+ * hash by the prompt editor — a mismatch means the app shipped a new default
+ * while the user still runs a custom override.
+ */
+export async function getPromptOverrideDefaultHash(name: string): Promise<string | undefined> {
+  return getKv<string | undefined>(KV.promptOverrideDefaultHash(name), undefined);
+}
+
+export async function setPromptOverrideDefaultHash(name: string, hash: string): Promise<void> {
+  await setKv(KV.promptOverrideDefaultHash(name), hash);
 }

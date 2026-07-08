@@ -93,6 +93,16 @@ export class DrillEngine {
     return this.references;
   }
 
+  /**
+   * Reveals the reference after a tutor action that shows the correct
+   * sentence («Ошибки»/«Разбор», §6.1/§8.5) — forces REWRITE, identical
+   * effect to give up. «Варианты»/«Нюансы» do NOT call this (§6.1 lists
+   * only give-up/Ошибки/Разбор/judge's corrected-natural as reveal points).
+   */
+  revealViaTutorAction(): string[] {
+    return this.giveUp();
+  }
+
   submitAnswer(userInput: string): AnswerResult {
     const item = this.requireItem();
     if (this.phase !== 'answer') {

@@ -78,6 +78,14 @@ describe('DrillEngine — REWRITE cycle', () => {
     expect(engine.isReferenceVisible).toBe(true);
   });
 
+  it('revealViaTutorAction (Ошибки/Разбор) reveals the reference and forces REWRITE, same as give up', () => {
+    const engine = new DrillEngine([item()]);
+    const refs = engine.revealViaTutorAction();
+    expect(refs).toEqual(['He is a student.', "He's a student."]);
+    expect(engine.phase).toBe('rewrite');
+    expect(engine.isReferenceVisible).toBe(true);
+  });
+
   it('a minor spelling error is scored correct but still forces a REWRITE', () => {
     const engine = new DrillEngine([item({ en_main: 'He likes tea.', en_accepted: [] })]);
     const result = engine.submitAnswer('He likes tae.');

@@ -11,6 +11,7 @@ import {
   setLocalOpenAIProfiles,
 } from '../llm/settings';
 import { GeminiProvider } from '../llm/providers/gemini';
+import { PromptEditor } from '../components/PromptEditor';
 
 type KeyValidationState = 'idle' | 'checking' | 'valid' | 'invalid';
 
@@ -129,6 +130,8 @@ function AiModelsSettings(): React.ReactElement {
         <input type="checkbox" checked={autoSelfCheck} onChange={() => void handleToggleAutoSelfCheck()} />
         {t('settings.ai.judgeAutoSelfCheck')}
       </label>
+
+      <PromptEditor />
     </div>
   );
 }

@@ -100,6 +100,21 @@ export interface JudgeDisputeRecord {
   ts: number;
 }
 
+/**
+ * PLAN.md §8.5 — tutor action-button cache. `key` is a composite string built
+ * by `llm/tutorActions.ts`: item-only actions (Варианты/Нюансы) key on
+ * `itemId + action + promptHash`; answer-dependent actions (Ошибки/Разбор)
+ * additionally fold in a hash of the normalized user answer. Either way, a
+ * prompt edit changes promptHash and transparently invalidates old entries.
+ */
+export interface TutorActionCacheRecord {
+  key: string;
+  action: string;
+  itemId: string;
+  response: string;
+  ts: number;
+}
+
 export class FrazodromDB extends Dexie {
   kv!: EntityTable<KvRecord, 'key'>;
   packs!: EntityTable<PackRecord, 'skillId'>;
@@ -112,6 +127,7 @@ export class FrazodromDB extends Dexie {
   exams!: EntityTable<ExamRecord, 'id'>;
   providerBudget!: EntityTable<ProviderBudgetRecord, 'key'>;
   judgeDisputes!: EntityTable<JudgeDisputeRecord, 'id'>;
+  tutorActionCache!: EntityTable<TutorActionCacheRecord, 'key'>;
 
   constructor() {
     super('frazodrom');
@@ -132,6 +148,9 @@ export class FrazodromDB extends Dexie {
     });
     this.version(3).stores({
       judgeDisputes: '++id, itemId, ts',
+    });
+    this.version(4).stores({
+      tutorActionCache: 'key, itemId',
     });
   }
 }
