@@ -1,0 +1,88 @@
+// BrE -> AmE spelling map (PLAN.md §7.1.4). Both normalize() call sites
+// (user input and reference sentences) run through this, so either spelling
+// on either side still matches. No suffix heuristics (false positives like
+// "hour") — explicit word list only.
+const SPELLING_PAIRS: readonly [string, string][] = [
+  ['colour', 'color'],
+  ['colours', 'colors'],
+  ['favour', 'favor'],
+  ['favourite', 'favorite'],
+  ['favourites', 'favorites'],
+  ['honour', 'honor'],
+  ['honours', 'honors'],
+  ['humour', 'humor'],
+  ['labour', 'labor'],
+  ['neighbour', 'neighbor'],
+  ['neighbours', 'neighbors'],
+  ['behaviour', 'behavior'],
+  ['centre', 'center'],
+  ['centres', 'centers'],
+  ['theatre', 'theater'],
+  ['theatres', 'theaters'],
+  ['metre', 'meter'],
+  ['metres', 'meters'],
+  ['litre', 'liter'],
+  ['litres', 'liters'],
+  ['fibre', 'fiber'],
+  ['organise', 'organize'],
+  ['organised', 'organized'],
+  ['organising', 'organizing'],
+  ['realise', 'realize'],
+  ['realised', 'realized'],
+  ['realising', 'realizing'],
+  ['recognise', 'recognize'],
+  ['apologise', 'apologize'],
+  ['analyse', 'analyze'],
+  ['analysed', 'analyzed'],
+  ['criticise', 'criticize'],
+  ['travelling', 'traveling'],
+  ['travelled', 'traveled'],
+  ['traveller', 'traveler'],
+  ['cancelled', 'canceled'],
+  ['cancelling', 'canceling'],
+  ['modelling', 'modeling'],
+  ['labelled', 'labeled'],
+  ['jewellery', 'jewelry'],
+  ['grey', 'gray'],
+  ['programme', 'program'],
+  ['catalogue', 'catalog'],
+  ['dialogue', 'dialog'],
+  ['defence', 'defense'],
+  ['offence', 'offense'],
+  ['licence', 'license'],
+  ['practise', 'practice'],
+  ['tyre', 'tire'],
+  ['tyres', 'tires'],
+  ['kerb', 'curb'],
+  ['aeroplane', 'airplane'],
+  ['mum', 'mom'],
+  ['mould', 'mold'],
+  ['plough', 'plow'],
+  ['draught', 'draft'],
+  ['cheque', 'check'],
+  ['sceptical', 'skeptical'],
+  ['aluminium', 'aluminum'],
+];
+
+// Morphological (irregular past tense) BrE/AmE pairs (§7.1.4, ~10 words).
+const MORPHOLOGICAL_PAIRS: readonly [string, string][] = [
+  ['learnt', 'learned'],
+  ['spelt', 'spelled'],
+  ['burnt', 'burned'],
+  ['dreamt', 'dreamed'],
+  ['spoilt', 'spoiled'],
+  ['leant', 'leaned'],
+  ['gotten', 'got'],
+  ['smelt', 'smelled'],
+  ['spilt', 'spilled'],
+  ['knelt', 'kneeled'],
+];
+
+const BRITISH_TO_AMERICAN: Record<string, string> = Object.fromEntries([
+  ...SPELLING_PAIRS,
+  ...MORPHOLOGICAL_PAIRS,
+]);
+
+export function toAmerican(word: string): string {
+  return BRITISH_TO_AMERICAN[word] ?? word;
+}
