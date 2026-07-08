@@ -33,4 +33,5 @@ Format: `## Topic → where to look | one-line gist`.
 - User to confirm agent-drafted defaults in §1.1: positioning paragraph, success criteria, distribution mini-plan.
 - 2026-07-08: Ф0 done (app/ + pipeline/ scaffold, CI). Agent decisions/deviations logged in implementation-notes.md (local, gitignored).
 - 2026-07-08: user asked the agent to run phases autonomously back-to-back (via ScheduleWakeup self-pacing) instead of the human restarting a session per phase — accepted as an operating-mode override of "one phase = one session"; the phase-by-phase implement→verify→log discipline itself is unchanged. Phases with hard human-only steps (manual proofreading Ф1/Ф6, live user testing Ф8, §17.2/17.3 provider-fact confirmation) still stop and go to BLOCKERS.md.
-- Next step — Ф1 (pipeline MVP → A1 packs, PLAN.md §16).
+- 2026-07-08: Ф1 done — full no-LLM pipeline (fetch→clean→tag→level→curate→emit→validate), 11 A1-1/A1-2 skills, `etr validate` 0 problems. CEFR calibration run once against CEFR-SP (HF), thresholds left as-is — flagged for your manual spot-check. 100-sentence review sample is in implementation-notes.md, not a PR.
+- Next step — Ф2 (drill engine core, PLAN.md §16).
