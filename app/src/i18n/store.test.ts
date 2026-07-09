@@ -4,7 +4,7 @@ import { useI18nStore } from './store';
 describe('useI18nStore', () => {
   beforeEach(() => {
     window.localStorage.clear();
-    useI18nStore.setState({ locale: 'ru' });
+    useI18nStore.getState().setLocale('ru');
   });
 
   it('translates a key in the default locale (ru)', () => {

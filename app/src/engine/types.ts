@@ -39,6 +39,7 @@ export interface SkillPack {
 export interface IndexSkillEntry {
   id: string;
   title_ru: string;
+  title_en?: string;
   cefr: string;
   count: number;
   checksum: string;
@@ -47,6 +48,7 @@ export interface IndexSkillEntry {
 export interface IndexModule {
   id: string;
   title_ru: string;
+  title_en?: string;
   skills: IndexSkillEntry[];
 }
 

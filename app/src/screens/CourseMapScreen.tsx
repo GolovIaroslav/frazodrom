@@ -8,6 +8,7 @@ import { memoryTier, retrievability, type MemoryTier } from '../srs/fsrs';
 
 export function CourseMapScreen(): React.ReactElement {
   const t = useI18nStore((s) => s.t);
+  const locale = useI18nStore((s) => s.locale);
   const [index, setIndex] = useState<PacksIndex | null>(null);
   const [error, setError] = useState(false);
   const [memoryBySkill, setMemoryBySkill] = useState<Map<string, { pct: number; tier: MemoryTier }>>(new Map());
@@ -38,6 +39,11 @@ export function CourseMapScreen(): React.ReactElement {
     };
   }, []);
 
+  const localize = (ru: string, en?: string): string => {
+    if (locale === 'en') return en ?? ru;
+    return ru;
+  };
+
   return (
     <div className="p-6">
       <h1 className="text-2xl font-semibold text-neutral-900 dark:text-neutral-100">
@@ -62,7 +68,7 @@ export function CourseMapScreen(): React.ReactElement {
                 {level.modules.map((module) => (
                   <div key={module.id}>
                     <h3 className="text-sm font-medium text-neutral-600 dark:text-neutral-400">
-                      {module.title_ru}
+                      {localize(module.title_ru, module.title_en)}
                     </h3>
                     <ul className="mt-2 grid gap-2 sm:grid-cols-2">
                       {module.skills.map((skill) => (
@@ -72,7 +78,7 @@ export function CourseMapScreen(): React.ReactElement {
                         >
                           <div>
                             <div className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
-                              {skill.title_ru}
+                              {localize(skill.title_ru, skill.title_en)}
                             </div>
                             <div className="text-xs text-neutral-500 dark:text-neutral-500">
                               {skill.count} {t('courseMap.sentenceCount')}

@@ -7,10 +7,12 @@
         {
           "id": "a1_m1",
           "title_ru": "Быть и указывать",
+          "title_en": "To Be and Reference Words",
           "skills": [
             {
               "id": "a1_be_affirm",
               "title_ru": "Глагол to be: I am / he is / they are",
+              "title_en": "Verb to be: I am / he is / they are",
               "cefr": "A1",
               "module": "a1_m1",
               "count": 150,
@@ -19,6 +21,7 @@
             {
               "id": "a1_be_neg_quest",
               "title_ru": "to be: вопросы и отрицания",
+              "title_en": "to be: questions and negatives",
               "cefr": "A1",
               "module": "a1_m1",
               "count": 150,
@@ -27,6 +30,7 @@
             {
               "id": "a1_pronouns_poss",
               "title_ru": "Притяжательные местоимения: my / your / his / her",
+              "title_en": "Possessive pronouns: my / your / his / her",
               "cefr": "A1",
               "module": "a1_m1",
               "count": 150,
@@ -35,6 +39,7 @@
             {
               "id": "a1_this_that",
               "title_ru": "this / that / these / those",
+              "title_en": "this / that / these / those",
               "cefr": "A1",
               "module": "a1_m1",
               "count": 150,
@@ -43,6 +48,7 @@
             {
               "id": "a1_there_is",
               "title_ru": "There is / There are",
+              "title_en": "There is / There are",
               "cefr": "A1",
               "module": "a1_m1",
               "count": 150,
@@ -53,10 +59,12 @@
         {
           "id": "a1_m2",
           "title_ru": "Настоящее простое",
+          "title_en": "Present Simple",
           "skills": [
             {
               "id": "a1_pres_simple_i",
               "title_ru": "Present Simple: I / you / we / they + V1",
+              "title_en": "Present Simple: I / you / we / they + V1",
               "cefr": "A1",
               "module": "a1_m2",
               "count": 150,
@@ -65,6 +73,7 @@
             {
               "id": "a1_pres_simple_3rd",
               "title_ru": "Present Simple: he / she + V-s",
+              "title_en": "Present Simple: he / she + V-s",
               "cefr": "A1",
               "module": "a1_m2",
               "count": 150,
@@ -73,6 +82,7 @@
             {
               "id": "a1_do_questions",
               "title_ru": "Вопросы с Do you…?",
+              "title_en": "Questions with Do you…?",
               "cefr": "A1",
               "module": "a1_m2",
               "count": 150,
@@ -81,6 +91,7 @@
             {
               "id": "a1_does_questions",
               "title_ru": "Вопросы с Does he/she…?",
+              "title_en": "Questions with Does he/she…?",
               "cefr": "A1",
               "module": "a1_m2",
               "count": 131,
@@ -89,6 +100,7 @@
             {
               "id": "a1_dont_doesnt",
               "title_ru": "Отрицание: don't / doesn't",
+              "title_en": "Negation: don't / doesn't",
               "cefr": "A1",
               "module": "a1_m2",
               "count": 150,
@@ -97,6 +109,7 @@
             {
               "id": "a1_freq_adverbs",
               "title_ru": "Наречия частотности: usually / never",
+              "title_en": "Frequency adverbs: usually / never",
               "cefr": "A1",
               "module": "a1_m2",
               "count": 150,

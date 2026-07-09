@@ -306,7 +306,7 @@ export function SettingsScreen(): React.ReactElement {
           onClick={toggleTheme}
           className="mt-1 rounded border border-neutral-300 px-3 py-1.5 text-sm text-neutral-900 hover:bg-neutral-100 dark:border-neutral-700 dark:text-neutral-100 dark:hover:bg-neutral-800"
         >
-          {theme === 'dark' ? t('settings.theme.dark') : t('settings.theme.light')}
+          {theme === 'dark' ? t('settings.theme.switchToLight') : t('settings.theme.switchToDark')}
         </button>
       </div>
 

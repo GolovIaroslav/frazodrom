@@ -3,6 +3,10 @@ import { dictionaries, type DictKey, type Locale } from './dictionaries';
 
 const STORAGE_KEY = 'frazodrom.locale';
 
+function createTranslator(locale: Locale): (key: DictKey) => string {
+  return (key) => dictionaries[locale][key];
+}
+
 function readStoredLocale(): Locale {
   if (typeof window === 'undefined') return 'ru';
   const stored = window.localStorage.getItem(STORAGE_KEY);
@@ -15,13 +19,18 @@ interface I18nState {
   t: (key: DictKey) => string;
 }
 
-export const useI18nStore = create<I18nState>((set, get) => ({
-  locale: readStoredLocale(),
+const initialLocale = readStoredLocale();
+
+export const useI18nStore = create<I18nState>((set) => ({
+  locale: initialLocale,
   setLocale: (locale) => {
     if (typeof window !== 'undefined') {
       window.localStorage.setItem(STORAGE_KEY, locale);
     }
-    set({ locale });
+    set({
+      locale,
+      t: createTranslator(locale),
+    });
   },
-  t: (key) => dictionaries[get().locale][key],
+  t: createTranslator(initialLocale),
 }));
