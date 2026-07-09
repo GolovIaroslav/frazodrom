@@ -10,7 +10,7 @@ import { peekPendingSession, clearPendingSession } from '../engine/sessionLaunch
 import { ensureStoragePersisted, checkStorageQuota } from '../db/storage';
 import { runJudgeTier3, type JudgeVerdict } from '../llm/judge';
 import { addToAcceptedCache, removeFromAcceptedCache } from '../llm/acceptedCache';
-import { db } from '../db/db';
+import { db, type AttemptRecord } from '../db/db';
 import { TutorPanel } from '../components/TutorPanel';
 import { TutorChat } from '../components/TutorChat';
 import { startSession, finishSession, type ItemOutcome } from '../srs/sessionBookkeeping';
@@ -20,6 +20,12 @@ type EscalationPhase = 'none' | 'pending' | 'self';
 interface JudgeUiState {
   verdict: JudgeVerdict;
   providerId: string;
+}
+
+interface PendingLocalWrongAttempt {
+  itemId: string;
+  userInput: string;
+  ts: number;
 }
 
 function wordDiff(userInput: string, reference: string): { text: string; mismatch: boolean }[] {
@@ -73,6 +79,7 @@ export function DrillScreen(): React.ReactElement {
   const [flagged, setFlagged] = useState(false);
   const [cacheRemoved, setCacheRemoved] = useState(false);
   const abortRef = useRef<AbortController | null>(null);
+  const pendingLocalWrongRef = useRef<PendingLocalWrongAttempt | null>(null);
 
   // §10 session bookkeeping — a fresh SessionRecord per skill-drill, and the
   // per-item outcomes it needs at the end to update skillState's FSRS card
@@ -147,6 +154,51 @@ export function DrillScreen(): React.ReactElement {
     setCacheRemoved(false);
   }, []);
 
+  const writeAttempt = useCallback(async (attempt: Omit<AttemptRecord, 'id'>): Promise<void> => {
+    await db.attempts.add(attempt);
+  }, []);
+
+  const writeLocalAttempt = useCallback(
+    async (
+      itemId: string,
+      userInput: string,
+      verdict: AttemptRecord['verdict'],
+      ts = Date.now(),
+    ): Promise<void> => {
+      await writeAttempt({
+        itemId,
+        ts,
+        userInput,
+        verdict,
+        verdictSource: 'local',
+        sessionId: sessionIdRef.current ?? undefined,
+      });
+    },
+    [writeAttempt],
+  );
+
+  const setPendingLocalWrong = useCallback((itemId: string, userInput: string): void => {
+    pendingLocalWrongRef.current = { itemId, userInput, ts: Date.now() };
+  }, []);
+
+  const clearPendingLocalWrong = useCallback((itemId?: string): void => {
+    const pending = pendingLocalWrongRef.current;
+    if (!pending) return;
+    if (itemId && pending.itemId !== itemId) return;
+    pendingLocalWrongRef.current = null;
+  }, []);
+
+  const flushPendingLocalWrong = useCallback(
+    async (itemId?: string): Promise<void> => {
+      const pending = pendingLocalWrongRef.current;
+      if (!pending) return;
+      if (itemId && pending.itemId !== itemId) return;
+      pendingLocalWrongRef.current = null;
+      await writeLocalAttempt(pending.itemId, pending.userInput, 'wrong', pending.ts);
+    },
+    [writeLocalAttempt],
+  );
+
   const runEscalation = useCallback(
     async (userInput: string) => {
       if (!engine || !packsById) return;
@@ -176,6 +228,7 @@ export function DrillScreen(): React.ReactElement {
         return;
       }
 
+      clearPendingLocalWrong(item.id);
       setJudgeResult({ verdict: result.verdict, providerId: result.providerId });
       if (result.verdict.add_to_accepted) {
         await addToAcceptedCache(item.ru, userInput, result.providerId);
@@ -203,7 +256,7 @@ export function DrillScreen(): React.ReactElement {
       setInput(outcome.mustRewrite ? '' : input);
       rerender();
     },
-    [engine, packsById, itemSkillMap, locale, t, rerender, input],
+    [clearPendingLocalWrong, engine, packsById, itemSkillMap, locale, t, rerender, input],
   );
 
   const handleDontWait = useCallback(() => {
@@ -215,6 +268,7 @@ export function DrillScreen(): React.ReactElement {
       if (!engine) return;
       const item = engine.currentItem;
       if (item) {
+        clearPendingLocalWrong(item.id);
         await db.attempts.add({
           itemId: item.id,
           ts: Date.now(),
@@ -231,7 +285,7 @@ export function DrillScreen(): React.ReactElement {
       if (!outcome.mustRewrite) setInput('');
       rerender();
     },
-    [engine, input, rerender, t, resetEscalationUi],
+    [clearPendingLocalWrong, engine, input, rerender, t, resetEscalationUi],
   );
 
   const handleFlagVerdict = useCallback(async () => {
@@ -257,7 +311,7 @@ export function DrillScreen(): React.ReactElement {
     setCacheRemoved(true);
   }, [engine, input]);
 
-  const handleCheck = useCallback(() => {
+  const handleCheck = useCallback(async () => {
     if (!engine || !packsById) return;
     if (engine.phase === 'answer') {
       if (engine.isPendingAdvance) {
@@ -274,13 +328,20 @@ export function DrillScreen(): React.ReactElement {
         rerender();
         return;
       }
+      const item = engine.currentItem;
+      if (!item) return;
       const result = engine.submitAnswer(input);
       if (result.verdict === 'wrong') {
+        setPendingLocalWrong(item.id, input);
         setVerdict(null);
+        resetEscalationUi();
         void runEscalation(input);
         rerender();
         return;
       }
+      await flushPendingLocalWrong(item.id);
+      await writeLocalAttempt(item.id, input, result.verdict);
+      resetEscalationUi();
       setVerdict(result.verdict);
       setAnnouncement(t(`drill.verdict.${result.verdict}`));
       rerender();
@@ -288,6 +349,10 @@ export function DrillScreen(): React.ReactElement {
       const finishedItem = engine.currentItem;
       const wasWrong = engine.hadWrongAttempt;
       const result = engine.submitRewrite(input);
+      if (finishedItem) {
+        await flushPendingLocalWrong(finishedItem.id);
+        await writeLocalAttempt(finishedItem.id, input, result.success ? 'correct' : 'wrong');
+      }
       setVerdict(result.success ? 'correct' : 'wrong');
       setAnnouncement(t(`drill.verdict.${result.success ? 'correct' : 'wrong'}`));
       setInput('');
@@ -301,7 +366,19 @@ export function DrillScreen(): React.ReactElement {
       }
       rerender();
     }
-  }, [engine, packsById, itemSkillMap, input, rerender, t, resetEscalationUi, runEscalation]);
+  }, [
+    engine,
+    packsById,
+    itemSkillMap,
+    input,
+    rerender,
+    t,
+    resetEscalationUi,
+    runEscalation,
+    flushPendingLocalWrong,
+    setPendingLocalWrong,
+    writeLocalAttempt,
+  ]);
 
   const handleHint = useCallback(() => {
     if (!engine || !packsById) return;
@@ -309,34 +386,45 @@ export function DrillScreen(): React.ReactElement {
     rerender();
   }, [engine, packsById, rerender]);
 
-  const handleGiveUp = useCallback(() => {
+  const handleGiveUp = useCallback(async () => {
     if (!engine) return;
+    abortRef.current?.abort();
+    const item = engine.currentItem;
+    if (item) {
+      if (pendingLocalWrongRef.current?.itemId === item.id) {
+        await flushPendingLocalWrong(item.id);
+      } else if (!judgeResult) {
+        await writeLocalAttempt(item.id, input, 'wrong');
+      }
+    }
     engine.giveUp();
     setInput('');
     setVerdict(null);
     resetEscalationUi();
     rerender();
-  }, [engine, rerender, resetEscalationUi]);
+  }, [engine, rerender, resetEscalationUi, flushPendingLocalWrong, input, judgeResult, writeLocalAttempt]);
 
   // «Ошибки»/«Разбор» reveal the correct sentence — forces REWRITE, same as give up (§6.1/§8.5).
-  const handleTutorRevealed = useCallback(() => {
+  const handleTutorRevealed = useCallback(async () => {
     if (!engine) return;
+    const item = engine.currentItem;
+    if (item) await flushPendingLocalWrong(item.id);
     if (!engine.isReferenceVisible) engine.revealViaTutorAction();
     setInput('');
     rerender();
-  }, [engine, rerender]);
+  }, [engine, rerender, flushPendingLocalWrong]);
 
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
       if (e.key === 'Enter') {
         e.preventDefault();
-        handleCheck();
+        void handleCheck();
       } else if (e.ctrlKey && e.key.toLowerCase() === 'h') {
         e.preventDefault();
         handleHint();
       } else if (e.ctrlKey && e.key.toLowerCase() === 'g') {
         e.preventDefault();
-        handleGiveUp();
+        void handleGiveUp();
       }
     }
     window.addEventListener('keydown', onKeyDown);
