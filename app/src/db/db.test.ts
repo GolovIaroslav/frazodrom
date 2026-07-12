@@ -11,8 +11,8 @@ afterEach(async () => {
   db.close();
 });
 
-describe('FrazodromDB — schema v5 (PLAN.md §5.3/§7.5/§8.5/§8.9)', () => {
-  it('declares every table from §5.3 plus judgeDisputes (§7.5), tutorActionCache (§8.5), and freeTalkSessions (§8.9)', () => {
+describe('FrazodromDB — schema v6 (PLAN.md §5.3/§7.5/§8.5/§8.9/§9.1)', () => {
+  it('declares every table from §5.3 plus judgeDisputes (§7.5), tutorActionCache (§8.5), freeTalkSessions (§8.9), and ttsCache (§9.1)', () => {
     const tableNames = db.tables.map((t) => t.name).sort();
     expect(tableNames).toEqual(
       [
@@ -28,6 +28,7 @@ describe('FrazodromDB — schema v5 (PLAN.md §5.3/§7.5/§8.5/§8.9)', () => {
         'providerBudget',
         'sessions',
         'skillState',
+        'ttsCache',
         'tutorActionCache',
       ].sort(),
     );

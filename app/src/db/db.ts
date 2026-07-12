@@ -81,7 +81,8 @@ export type SessionType =
   | 'fluencySprint'
   | 'contrastDuel'
   | 'errorHunt'
-  | 'freeTalk';
+  | 'freeTalk'
+  | 'listening';
 
 export interface SessionRecord {
   id?: number;
@@ -157,6 +158,20 @@ export interface FreeTalkSessionRecord {
   recurringTags?: string[];
 }
 
+/**
+ * PLAN.md §9.1 — cached kokoro-js synthesis output. `key` is a hash of
+ * (text, voice, speed) — see `tts/cache.ts`. A spaced-repetition app replays
+ * the same sentences constantly (§10), so caching the synthesized Blob makes
+ * every repeat instant regardless of device speed, even though kokoro-js's
+ * WASM backend is well below real-time on typical hardware (Ф5 perf spike,
+ * implementation-notes.md).
+ */
+export interface TtsCacheRecord {
+  key: string;
+  blob: Blob;
+  ts: number;
+}
+
 export class FrazodromDB extends Dexie {
   kv!: EntityTable<KvRecord, 'key'>;
   packs!: EntityTable<PackRecord, 'skillId'>;
@@ -171,6 +186,7 @@ export class FrazodromDB extends Dexie {
   judgeDisputes!: EntityTable<JudgeDisputeRecord, 'id'>;
   tutorActionCache!: EntityTable<TutorActionCacheRecord, 'key'>;
   freeTalkSessions!: EntityTable<FreeTalkSessionRecord, 'id'>;
+  ttsCache!: EntityTable<TtsCacheRecord, 'key'>;
 
   constructor() {
     super('frazodrom');
@@ -197,6 +213,9 @@ export class FrazodromDB extends Dexie {
     });
     this.version(5).stores({
       freeTalkSessions: '++id, finished, startedAt',
+    });
+    this.version(6).stores({
+      ttsCache: 'key, ts',
     });
   }
 }
