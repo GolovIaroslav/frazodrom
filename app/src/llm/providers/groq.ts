@@ -27,7 +27,7 @@ export class GroqProvider implements LLMProvider {
     this.model = model;
     this.id = `groq:${model}`;
     this.label = `Groq ${model}`;
-    this.fetchImpl = fetchImpl;
+    this.fetchImpl = (input, init) => fetchImpl(input, init);
   }
 
   async isConfigured(): Promise<boolean> {

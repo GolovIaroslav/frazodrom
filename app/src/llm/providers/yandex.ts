@@ -45,7 +45,7 @@ export class YandexProvider implements LLMProvider {
     this.model = model;
     this.id = `yandex:${model}`;
     this.label = `Yandex ${model}`;
-    this.fetchImpl = fetchImpl;
+    this.fetchImpl = (input, init) => fetchImpl(input, init);
   }
 
   async isConfigured(): Promise<boolean> {

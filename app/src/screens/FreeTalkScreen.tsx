@@ -56,8 +56,8 @@ export function FreeTalkScreen(): React.ReactElement {
 
   async function handleFinishOld() {
     if (!unfinished || unfinished.id === undefined) return;
-    await handleFinishSession(unfinished);
-    setUnfinished(undefined);
+    const finished = await handleFinishSession(unfinished);
+    if (finished) setUnfinished(undefined);
   }
 
   async function handleStart(topic: string) {
@@ -89,28 +89,33 @@ export function FreeTalkScreen(): React.ReactElement {
     setSession((s) => (s ? { ...s, messages: [...s.messages, ...newMessages] } : s));
   }
 
-  async function handleFinishSession(target: FreeTalkSessionRecord) {
-    if (target.id === undefined) return;
+  async function handleFinishSession(target: FreeTalkSessionRecord): Promise<boolean> {
+    if (target.id === undefined) return false;
     if (target.messages.length === 0) {
       await finishFreeTalkSession(target.id);
-      return;
+      return true;
     }
     const result = await generateFreeTalkSummary(target.messages, target.level);
     if (!result) {
       setSummaryFailed(true);
-      await finishFreeTalkSession(target.id);
-      return;
+      setUnfinished(target);
+      return false;
     }
     await finishFreeTalkSession(target.id, result.summary);
     if (result.summary.recurring_tags.length > 0) {
       await upsertErrorProfileTags(result.summary.recurring_tags);
     }
     setSummary(result.summary);
+    return true;
   }
 
   async function handleFinish() {
     if (!session) return;
-    await handleFinishSession(session);
+    const finished = await handleFinishSession(session);
+    if (!finished) {
+      setSession(undefined);
+      return;
+    }
     setSession(undefined);
   }
 

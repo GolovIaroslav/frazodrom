@@ -147,6 +147,7 @@ export async function sendFreeTalkMessage(
           toLabel: next?.label,
           reason: err instanceof LLMRateLimitError ? 'rateLimit' : 'authError',
         });
+        continue;
       }
       // try next provider in the chain
     }
@@ -167,11 +168,44 @@ function transcriptText(messages: readonly FreeTalkMessage[]): string {
   return messages.map((m) => `${m.role === 'user' ? 'LEARNER' : 'TUTOR'}: ${m.content}`).join('\n');
 }
 
+function parseFreeTalkSummary(raw: string): FreeTalkSummary | undefined {
+  const candidates = [raw.trim()];
+
+  const fenced = raw.match(/```(?:json)?\s*([\s\S]*?)\s*```/i)?.[1]?.trim();
+  if (fenced) candidates.push(fenced);
+
+  const firstBrace = raw.indexOf('{');
+  const lastBrace = raw.lastIndexOf('}');
+  if (firstBrace !== -1 && lastBrace !== -1 && lastBrace > firstBrace) {
+    candidates.push(raw.slice(firstBrace, lastBrace + 1).trim());
+  }
+
+  for (const candidate of candidates) {
+    try {
+      const parsed = FreeTalkSummarySchema.safeParse(JSON.parse(candidate));
+      if (parsed.success) return parsed.data;
+    } catch {
+      // try the next candidate
+    }
+  }
+
+  const plainText = raw.replace(/```(?:json)?/gi, '').replace(/```/g, '').trim();
+  const fallback = FreeTalkSummarySchema.safeParse({
+    summary_ru: plainText.slice(0, 600),
+    recurring_tags: [],
+  });
+  return fallback.success && plainText ? fallback.data : undefined;
+}
+
+function plainTextSummaryPrompt(system: string): string {
+  return `${system}\nIf valid JSON does not work, return only the Russian summary text with no markdown or code fences.`;
+}
+
 /**
  * One-shot summary call on "Закончить" (§8.9). Parses/validates the JSON
  * contract with zod (JudgeVerdictSchema's sibling); returns undefined if the
- * whole chain failed or produced unparseable JSON — caller should still mark
- * the session finished (the transcript itself isn't lost) but show no summary.
+ * whole chain failed. The caller keeps the session unfinished so the learner
+ * can retry generating the summary later.
  */
 export async function generateFreeTalkSummary(
   messages: readonly FreeTalkMessage[],
@@ -196,6 +230,11 @@ export async function generateFreeTalkSummary(
     json: true,
     temperature: 0,
   };
+  const plainTextReq: ChatRequest = {
+    system: plainTextSummaryPrompt(system),
+    messages: [{ role: 'user', content: transcriptText(messages) }],
+    temperature: 0,
+  };
 
   for (let i = 0; i < providers.length; i += 1) {
     const provider = providers[i];
@@ -206,9 +245,12 @@ export async function generateFreeTalkSummary(
     if (!ok) continue;
     try {
       const raw = await provider.chat(req, signal);
-      const parsed = FreeTalkSummarySchema.safeParse(JSON.parse(raw));
-      if (!parsed.success) continue;
-      return { summary: parsed.data, providerId: provider.id };
+      const parsed = parseFreeTalkSummary(raw);
+      if (parsed) return { summary: parsed, providerId: provider.id };
+
+      const plainTextRaw = await provider.chat(plainTextReq, signal);
+      const plainTextParsed = parseFreeTalkSummary(plainTextRaw);
+      if (plainTextParsed) return { summary: plainTextParsed, providerId: provider.id };
     } catch (err) {
       if (err instanceof LLMRateLimitError || err instanceof LLMAuthError) {
         const next = providers[i + 1];

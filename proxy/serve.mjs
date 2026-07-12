@@ -14,6 +14,8 @@
 //   GIGACHAT_AUTH_KEY=...          (Sber's pre-base64'd "Authorization key")
 //   YANDEX_API_KEY=...
 //   PROXY_PORT=8787                (optional, defaults to 8787)
+//   PROXY_HOST=127.0.0.1           (optional; changing this exposes the proxy)
+//   PROXY_ALLOWED_ORIGINS=         (comma-separated deployed app origins)
 //
 // In the app's Settings → Models, set "Proxy URL" to http://localhost:8787
 // and the Groq/OpenRouter/GigaChat/Yandex adapters will route through it.
@@ -25,6 +27,8 @@
 //   /gigachat-oauth   -> https://ngw.devices.sberbank.ru:9443/api/v2/oauth (Basic)
 //   /gigachat/*       -> https://gigachat.devices.sberbank.ru/api/*        (Bearer, token passed through)
 //   /yandex/*         -> https://llm.api.cloud.yandex.net/*        (Api-Key, x-folder-id passed through)
+//   /local/*          -> user-supplied local OpenAI-compatible base URL from
+//                        x-local-base-url (Authorization passed through)
 //
 // GigaChat TLS note: Sber's endpoints chain to a Minsvyaz root CA that Node's
 // default trust store does not recognize (§8.2 "⚠️VERIFY... TLS-сертификат").
@@ -59,6 +63,53 @@ function loadDotEnv() {
 loadDotEnv();
 
 const PORT = Number(process.env.PROXY_PORT) || 8787;
+const HOST = process.env.PROXY_HOST?.trim() || '127.0.0.1';
+const EXTRA_ALLOWED_ORIGINS = new Set(
+  (process.env.PROXY_ALLOWED_ORIGINS ?? '')
+    .split(',')
+    .map((origin) => origin.trim().replace(/\/$/, ''))
+    .filter(Boolean),
+);
+
+function isLoopbackHostname(hostname) {
+  const host = hostname.toLowerCase().replace(/^\[|\]$/g, '');
+  if (host === 'localhost' || host === '::1') return true;
+  if (!/^127(?:\.\d{1,3}){3}$/.test(host)) return false;
+  return host.split('.').every((part) => Number(part) <= 255);
+}
+
+function isPrivateIpv4(hostname) {
+  const parts = hostname.split('.').map(Number);
+  if (parts.length !== 4 || parts.some((part) => !Number.isInteger(part) || part < 0 || part > 255)) return false;
+  return (
+    parts[0] === 10 ||
+    (parts[0] === 172 && parts[1] >= 16 && parts[1] <= 31) ||
+    (parts[0] === 192 && parts[1] === 168)
+  );
+}
+
+function normalizeLocalBaseUrl(raw) {
+  if (typeof raw !== 'string' || !raw.trim()) throw new Error('Missing x-local-base-url header');
+  const url = new URL(raw.trim());
+  if (url.protocol !== 'http:' && url.protocol !== 'https:') throw new Error('Only HTTP(S) local model URLs are allowed');
+  if (url.username || url.password || url.search || url.hash) throw new Error('Credentials, query, and hash are not allowed');
+  if (!isLoopbackHostname(url.hostname) && !isPrivateIpv4(url.hostname)) {
+    throw new Error('Local model URL must use localhost, loopback, or a private IPv4 address');
+  }
+  return url.toString().replace(/\/$/, '');
+}
+
+function isAllowedBrowserOrigin(raw) {
+  if (!raw) return true;
+  const origin = raw.replace(/\/$/, '');
+  if (EXTRA_ALLOWED_ORIGINS.has(origin)) return true;
+  try {
+    const url = new URL(origin);
+    return (url.protocol === 'http:' || url.protocol === 'https:') && isLoopbackHostname(url.hostname);
+  } catch {
+    return false;
+  }
+}
 
 const ROUTES = [
   {
@@ -89,6 +140,15 @@ const ROUTES = [
     // Api-Key + x-folder-id are the user's own Yandex credentials — pass through.
     authHeader: undefined,
   },
+  {
+    prefix: '/local/',
+    target: (path, req) => {
+      const raw = req.headers['x-local-base-url'];
+      const baseUrl = Array.isArray(raw) ? raw[0] : raw;
+      return `${normalizeLocalBaseUrl(baseUrl)}/${path}`;
+    },
+    authHeader: undefined,
+  },
 ];
 
 function matchRoute(url) {
@@ -102,10 +162,20 @@ function matchRoute(url) {
 }
 
 const server = createServer(async (req, res) => {
-  // Minimal CORS: the browser app calls this from its own origin during dev/local use.
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  const rawOrigin = Array.isArray(req.headers.origin) ? req.headers.origin[0] : req.headers.origin;
+  if (!isAllowedBrowserOrigin(rawOrigin)) {
+    res.writeHead(403, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ error: 'Origin is not allowed by the local proxy' }));
+    return;
+  }
+
+  if (rawOrigin) {
+    res.setHeader('Access-Control-Allow-Origin', rawOrigin);
+    res.setHeader('Vary', 'Origin');
+  }
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, RqUID, x-folder-id');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, RqUID, x-folder-id, x-local-base-url');
+  res.setHeader('Access-Control-Allow-Private-Network', 'true');
   if (req.method === 'OPTIONS') {
     res.writeHead(204);
     res.end();
@@ -123,7 +193,14 @@ const server = createServer(async (req, res) => {
   for await (const chunk of req) chunks.push(chunk);
   const body = chunks.length ? Buffer.concat(chunks) : undefined;
 
-  const targetUrl = match.route.target(match.rest);
+  let targetUrl;
+  try {
+    targetUrl = match.route.target(match.rest, req);
+  } catch (err) {
+    res.writeHead(400, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ error: 'Invalid proxy request', detail: String(err) }));
+    return;
+  }
   const headers = { 'Content-Type': req.headers['content-type'] ?? 'application/json' };
   const injectedAuth = match.route.authHeader?.();
   if (injectedAuth) headers.Authorization = injectedAuth;
@@ -147,7 +224,7 @@ const server = createServer(async (req, res) => {
   }
 });
 
-server.listen(PORT, () => {
+server.listen(PORT, HOST, () => {
   // eslint-disable-next-line no-console
-  console.log(`Frazodrom CORS proxy listening on http://localhost:${PORT}`);
+  console.log(`Frazodrom CORS proxy listening on http://${HOST}:${PORT}`);
 });

@@ -181,4 +181,60 @@ describe('generateFreeTalkSummary → errorProfile end-to-end (§16 Ф3в AC)', 
     const row = await db.errorProfile.get('article');
     expect(row?.count30d).toBe(1);
   });
+
+  it('accepts a plain-text fallback summary when a local model ignores the JSON contract', async () => {
+    const { resolveChain } = await import('./registry');
+    const { generateFreeTalkSummary } = await import('./freeTalk');
+    const { setRoutingConfig } = await import('./settings');
+
+    const provider = {
+      id: 'ollama:default',
+      label: 'qwen3.5-4b (localhost:1234)',
+      isConfigured: () => true,
+      chat: vi.fn().mockResolvedValue('Ты часто пропускаешь артикли и иногда путаешь форму глагола.'),
+    };
+    vi.mocked(resolveChain).mockResolvedValue([provider]);
+    await setRoutingConfig({ judge: [], tutor: ['ollama:default'], generator: [] });
+
+    const result = await generateFreeTalkSummary(
+      [
+        { role: 'user', content: 'I go to office yesterday.', ts: 1 },
+        { role: 'assistant', content: 'Nice — I went to the office yesterday too.', ts: 2 },
+      ],
+      'A2',
+    );
+
+    expect(result?.summary.summary_ru).toContain('артик');
+    expect(result?.summary.recurring_tags).toEqual([]);
+  });
+
+  it('extracts valid JSON from markdown fences when the provider wraps it', async () => {
+    const { resolveChain } = await import('./registry');
+    const { generateFreeTalkSummary } = await import('./freeTalk');
+    const { setRoutingConfig } = await import('./settings');
+
+    const provider = {
+      id: 'gemini:flash',
+      label: 'Gemini flash',
+      isConfigured: () => true,
+      chat: vi
+        .fn()
+        .mockResolvedValue(
+          '```json\n{"summary_ru":"Ты хорошо держал тему разговора.","recurring_tags":[]}\n```',
+        ),
+    };
+    vi.mocked(resolveChain).mockResolvedValue([provider]);
+    await setRoutingConfig({ judge: [], tutor: ['gemini:flash'], generator: [] });
+
+    const result = await generateFreeTalkSummary(
+      [
+        { role: 'user', content: 'I work in support.', ts: 1 },
+        { role: 'assistant', content: 'That sounds interesting.', ts: 2 },
+      ],
+      'A2',
+    );
+
+    expect(result?.summary.summary_ru).toContain('тему разговора');
+    expect(result?.summary.recurring_tags).toEqual([]);
+  });
 });

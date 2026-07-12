@@ -26,7 +26,7 @@ export class OpenRouterProvider implements LLMProvider {
     this.model = model;
     this.id = `openrouter:${model}`;
     this.label = `OpenRouter ${model}`;
-    this.fetchImpl = fetchImpl;
+    this.fetchImpl = (input, init) => fetchImpl(input, init);
   }
 
   async isConfigured(): Promise<boolean> {

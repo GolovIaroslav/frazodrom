@@ -2,6 +2,7 @@ import { describe, expect, it, vi } from 'vitest';
 import { LocalOpenAIProvider } from './localOpenai';
 import { LLMAuthError, LLMRateLimitError } from '../types';
 import type { LocalOpenAIProfile } from '../settings';
+import * as settings from '../settings';
 
 const profile: LocalOpenAIProfile = {
   id: 'ollama:default',
@@ -16,7 +17,7 @@ describe('LocalOpenAIProvider', () => {
     expect(new LocalOpenAIProvider({ ...profile, model: '' }).isConfigured()).toBe(false);
   });
 
-  it('POSTs to /chat/completions with system + messages + json mode', async () => {
+  it('POSTs to /chat/completions without a vendor-specific JSON response format', async () => {
     const fetchImpl = vi.fn().mockResolvedValue({
       ok: true,
       json: async () => ({ choices: [{ message: { content: 'hello back' } }] }),
@@ -38,7 +39,7 @@ describe('LocalOpenAIProvider', () => {
     const body = JSON.parse(fetchImpl.mock.calls[0][1].body);
     expect(body.model).toBe('llama3');
     expect(body.temperature).toBe(0);
-    expect(body.response_format).toEqual({ type: 'json_object' });
+    expect(body.response_format).toBeUndefined();
     expect(body.messages[0]).toEqual({ role: 'system', content: 'sys' });
     expect(body.messages[1]).toEqual({ role: 'user', content: 'hi' });
   });
@@ -69,5 +70,29 @@ describe('LocalOpenAIProvider', () => {
     );
 
     await expect(provider.chat({ system: 's', messages: [] })).rejects.toThrow();
+  });
+
+  it('retries through the local proxy when the direct browser-style request fails', async () => {
+    vi.spyOn(settings, 'getProxyUrl').mockResolvedValue('http://localhost:8787');
+    const fetchImpl = vi
+      .fn()
+      .mockRejectedValueOnce(new TypeError('Failed to fetch'))
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({ choices: [{ message: { content: 'hello through proxy' } }] }),
+      });
+
+    const provider = new LocalOpenAIProvider(profile, fetchImpl as unknown as typeof fetch);
+    const result = await provider.chat({
+      system: 'sys',
+      messages: [{ role: 'user', content: 'hi' }],
+    });
+
+    expect(result).toBe('hello through proxy');
+    expect(fetchImpl.mock.calls[0][0]).toBe('http://localhost:11434/v1/chat/completions');
+    expect(fetchImpl.mock.calls[1][0]).toBe('http://localhost:8787/local/chat/completions');
+    expect(fetchImpl.mock.calls[1][1].headers).toMatchObject({
+      'x-local-base-url': 'http://localhost:11434/v1',
+    });
   });
 });

@@ -1,32 +1,51 @@
-# React + TypeScript + Vite
+# App package
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This folder contains the browser app for Frazodrom: drills, review sessions,
+Free Talk, local persistence, and the BYOK AI layer.
 
-Currently, two official plugins are available:
+## Development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- `npm run dev` starts the local app
+- `npm run build` builds the production bundle
+- `npm run lint` runs ESLint
+- `npm run test` runs the Vitest suite
 
-## React Compiler
+## AI model setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The app separates AI into three roles:
 
-## Expanding the Oxlint configuration
+- `Judge` checks ambiguous drill answers
+- `Tutor` powers help actions, explanations, and chat
+- `Generator` powers generated content and personalized exercises
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+Each role uses its own routing chain. The app tries the first configured model
+in the chain, then falls back to the next one if the current provider is
+unavailable or out of budget.
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+Supported provider types in the app today:
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+- Gemini
+- Groq
+- OpenRouter
+- GigaChat
+- Yandex AI Studio
+- local OpenAI-compatible endpoints such as Ollama, LM Studio, or llama.cpp
+
+If a local OpenAI-compatible server works from the terminal but fails from the
+browser, it is usually missing CORS headers. In that case, run
+`proxy/serve.mjs`, set `Proxy URL` to `http://localhost:8787`, and let the app
+route the browser request through that proxy.
+
+The proxy binds to `127.0.0.1` and allows local app origins by default. For a
+deployed app, add its exact origin to `PROXY_ALLOWED_ORIGINS` in `proxy/.env`.
+The `/local` route intentionally accepts only loopback and private IPv4 model
+servers.
+
+## Important note about Judge
+
+`Judge` is intentionally empty by default. This matches the project plan:
+until a real benchmark is run against live user-owned keys, no model should
+quietly become the default drill judge.
+
+If you want AI checking in drills, open Settings and add at least one model to
+the `Judge` chain yourself.

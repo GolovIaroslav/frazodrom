@@ -58,7 +58,7 @@ export class GigaChatProvider implements LLMProvider {
     this.model = model;
     this.id = `gigachat:${model}`;
     this.label = `GigaChat ${model}`;
-    this.fetchImpl = fetchImpl;
+    this.fetchImpl = (input, init) => fetchImpl(input, init);
   }
 
   async isConfigured(): Promise<boolean> {
