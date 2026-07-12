@@ -16,6 +16,8 @@ export interface SessionLaunchRequest {
   itemSkillMap: Record<string, string>;
   /** Fluency-sprint round time limits in minutes, e.g. [4, 3, 2] (§6.3). */
   roundLimitMinutes?: readonly number[];
+  /** §9.2 — which of the 3 listening modes, only set when `type === 'listening'`. */
+  listeningMode?: 'dictation' | 'comprehension' | 'dictogloss';
 }
 
 let pending: SessionLaunchRequest | undefined;
