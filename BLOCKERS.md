@@ -40,3 +40,29 @@ treat both as best-effort/unverified — Gemini + local-openai + Groq + OpenRout
 adapters with any real confidence behind them (Groq/OpenRouter endpoint shapes were verified
 against current public docs, also not against a live key, but their OpenAI-compatible shape
 is much more standardized and lower-risk).
+
+## Ф5 — wh-question intonation needs a human ear-check (2026-07-12)
+
+PLAN.md §16 Ф5's own acceptance criteria literally says "wh-questions on the
+default voices sound with question intonation (check by ear when picking
+voices)" — this is a perceptual judgment call I cannot make; I have no way to
+listen to synthesized audio. Everything else in Ф5 is built and verified live
+in a real browser (Playwright driving the system chromium, both `npm run dev`
+and a production `npm run preview` build): all 3 listening modes play end to
+end with no console errors, kokoro-js works fully offline after the first
+model download (verified with true CDP `setOffline` against a fresh,
+never-before-synthesized sentence — zero external requests, only an unrelated
+favicon 404), and live voice switching (US/female → UK/male) works without
+reload. Only this one ear-check is unverified, so Ф5's checkbox is left
+unticked pending it.
+
+**What I need from you:** open Settings → "Включить качественный голос" →
+"🔊 Проверить голос" (or just play a few wh-question sentences from any
+skill pack, e.g. "Where did you put the keys?" / "What time is it?"), on a
+couple of the default voices (`af_heart` US female, `bm_george`/`bm_daniel`
+UK male — the current per-accent+gender defaults, see `tts/voices.ts`), and
+tell me if the question intonation sounds natural/acceptable. If a specific
+voice sounds flat or robotic on wh-questions, say which one and I'll swap the
+default (`defaultVoiceFor()` in `app/src/tts/voices.ts` is a one-line change
+per accent+gender group — the full 28-voice catalog with quality grades is
+already there to pick a replacement from).
