@@ -352,7 +352,7 @@ export function ListeningScreen(): React.ReactElement {
           {mode === 'comprehension' && ruNormalizedHint && (
             <p className="mt-1 text-xs text-green-700 dark:text-green-400">{t('listening.looksMatching')}</p>
           )}
-          <p className="mt-1">{t('drill.selfCheckPrompt')}</p>
+          <p className="mt-1">{t('listening.selfCheckPrompt')}</p>
           <div className="mt-2 flex gap-2">
             <button
               type="button"
