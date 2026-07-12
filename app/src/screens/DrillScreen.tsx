@@ -13,6 +13,7 @@ import { addToAcceptedCache, removeFromAcceptedCache } from '../llm/acceptedCach
 import { db, type AttemptRecord } from '../db/db';
 import { TutorPanel } from '../components/TutorPanel';
 import { TutorChat } from '../components/TutorChat';
+import { SpeakingPractice } from '../components/SpeakingPractice';
 import { startSession, finishSession, type ItemOutcome } from '../srs/sessionBookkeeping';
 import { wordDiff } from '../checker/wordDiff';
 import { speak } from '../tts/speak';
@@ -514,6 +515,8 @@ export function DrillScreen(): React.ReactElement {
           {t('drill.reference')}: <span className="font-medium">{item.en_main}</span>
         </p>
       )}
+
+      {verdict === 'correct' && <SpeakingPractice reference={item.en_main} />}
 
       {hintText && !isRewrite && (
         <p className="mt-2 rounded bg-blue-50 p-2 text-sm text-blue-900 dark:bg-blue-950 dark:text-blue-200">

@@ -66,3 +66,21 @@ voice sounds flat or robotic on wh-questions, say which one and I'll swap the
 default (`defaultVoiceFor()` in `app/src/tts/voices.ts` is a one-line change
 per accent+gender group — the full 28-voice catalog with quality grades is
 already there to pick a replacement from).
+
+## Ф6/Ф7 — execution environment prevents required live verification (2026-07-13)
+
+`pipeline/.env` contains a Gemini key, but this environment cannot resolve
+external DNS (Gemini and the existing package host both fail before a request
+is made). Therefore the required real structured-output tagger pass and the
+100+100 golden-set confusion matrices cannot be run here. It also refuses a
+local listening socket (`EPERM` on Vite's 127.0.0.1 port), so Playwright/live
+browser verification of placement, exams, STT and YouGlish is unavailable.
+
+The Git metadata is mounted read-only too: `git commit` fails creating
+`.git/index.lock`. No key was printed or staged; `pipeline/.env` remains
+ignored. This blocks the requested local commits as well as the live ACs.
+
+**What is needed:** rerun in a workspace with outbound DNS/API access, a local
+loopback listener, and writable `.git`. Then run `etr tag --llm`, execute the
+golden-set evaluation, complete and proofread the A1–B1 packs, and exercise
+the browser flows before ticking either phase.

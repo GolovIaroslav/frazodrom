@@ -56,6 +56,7 @@ import {
   upsertLocalProfile,
 } from '../llm/settingsUi';
 import type { Role } from '../llm/types';
+import { getLanguageToolSettings, setLanguageToolSettings } from '../languagetool/settings';
 
 type ChainStatusMap = Record<Role, ChipInfo[]>;
 type SaveActionKey = 'local' | 'proxy' | 'groq' | 'openrouter' | 'gigachat' | 'yandex' | 'routingDefaults';
@@ -316,6 +317,39 @@ function TtsSettings(): React.ReactElement {
         )}
       </div>
     </div>
+  );
+}
+
+function LanguageToolSettings(): React.ReactElement {
+  const t = useI18nStore((s) => s.t);
+  const [enabled, setEnabled] = useState(false);
+  const [url, setUrl] = useState('http://localhost:8010');
+
+  useEffect(() => {
+    void getLanguageToolSettings().then((settings) => {
+      setEnabled(settings.enabled);
+      setUrl(settings.url);
+    });
+  }, []);
+
+  const save = async (next: boolean, nextUrl = url): Promise<void> => {
+    setEnabled(next);
+    await setLanguageToolSettings({ enabled: next, url: nextUrl.trim() });
+  };
+
+  return (
+    <section className="mt-6 rounded-lg border border-neutral-200 p-4 dark:border-neutral-800">
+      <h2 className="text-lg font-medium text-neutral-900 dark:text-neutral-100">{t('settings.languagetool.title')}</h2>
+      <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">{t('settings.languagetool.hint')}</p>
+      <label className="mt-3 flex items-center gap-2 text-sm">
+        <input type="checkbox" checked={enabled} onChange={() => void save(!enabled)} />
+        {t('settings.languagetool.enable')}
+      </label>
+      <label className="mt-3 block text-sm">
+        {t('settings.languagetool.url')}
+        <input value={url} onChange={(event) => setUrl(event.target.value)} onBlur={() => void save(enabled)} className="mt-1 w-full rounded border border-neutral-300 p-2 dark:border-neutral-700 dark:bg-neutral-900" />
+      </label>
+    </section>
   );
 }
 
@@ -999,6 +1033,7 @@ export function SettingsScreen(): React.ReactElement {
       </div>
 
       <TtsSettings />
+      <LanguageToolSettings />
       <AiModelsSettings />
     </div>
   );

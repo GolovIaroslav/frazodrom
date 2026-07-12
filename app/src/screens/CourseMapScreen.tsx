@@ -62,6 +62,13 @@ export function CourseMapScreen(): React.ReactElement {
     navigate('/sprint');
   };
 
+  const openContextTool = async (skillId: string, tool: 'youglish' | 'reverso'): Promise<void> => {
+    const pack = await loadPack(skillId);
+    const query = tool === 'youglish' ? pack.skill.youglish_query : pack.skill.pattern;
+    const base = tool === 'youglish' ? 'https://youglish.com/pronounce/' : 'https://context.reverso.net/translation/english-russian/';
+    window.open(`${base}${encodeURIComponent(query)}${tool === 'youglish' ? '/english' : ''}`, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <div className="p-6">
       <h1 className="text-2xl font-semibold text-neutral-900 dark:text-neutral-100">
@@ -112,6 +119,20 @@ export function CourseMapScreen(): React.ReactElement {
                             })()}
                           </div>
                           <div className="flex shrink-0 gap-2">
+                            <button
+                              type="button"
+                              onClick={() => void openContextTool(skill.id, 'youglish')}
+                              className="rounded border border-neutral-300 px-3 py-1.5 text-sm text-neutral-900 hover:bg-neutral-100 dark:border-neutral-700 dark:text-neutral-100 dark:hover:bg-neutral-900"
+                            >
+                              {t('courseMap.youglish')}
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => void openContextTool(skill.id, 'reverso')}
+                              className="rounded border border-neutral-300 px-3 py-1.5 text-sm text-neutral-900 hover:bg-neutral-100 dark:border-neutral-700 dark:text-neutral-100 dark:hover:bg-neutral-900"
+                            >
+                              {t('courseMap.reverso')}
+                            </button>
                             {sprintEligible.has(skill.id) && (
                               <button
                                 type="button"
