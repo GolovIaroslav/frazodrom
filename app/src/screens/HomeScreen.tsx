@@ -5,7 +5,8 @@ import { db } from '../db/db';
 import { loadPack, loadPacksIndex } from '../engine/packs';
 import { buildReviewQueue, pickReviewItems, type SkillPull } from '../engine/reviewQueue';
 import { availableContrastDuels, buildContrastDuelQueue } from '../engine/contrastDuel';
-import { setPendingSession } from '../engine/sessionLaunch';
+import { buildListeningQueue } from '../engine/listeningQueue';
+import { setPendingSession, type SessionLaunchRequest } from '../engine/sessionLaunch';
 import type { PackItem, PacksIndex } from '../engine/types';
 import { buildDailyPlan, type DailyPlan } from '../srs/dailyPlan';
 import { getActiveLeechItemIds } from '../srs/leech';
@@ -85,6 +86,34 @@ async function buildDuelQueue(
   return { items, itemSkillMap };
 }
 
+const LISTENING_ITEM_CAP = 10;
+
+/** §9.2 — listening pulls from skills the learner has already attempted at least once. */
+async function buildListeningSessionQueue(): Promise<{
+  skillIds: string[];
+  items: PackItem[];
+  itemSkillMap: Record<string, string>;
+} | null> {
+  const skillStates = await db.skillState.toArray();
+  const skillIds = skillStates.map((s) => s.skillId);
+  if (skillIds.length === 0) return null;
+
+  const [packs, attempts] = await Promise.all([
+    Promise.all(skillIds.map((id) => loadPack(id))),
+    db.attempts.toArray(),
+  ]);
+  const lastAttemptByItemId = new Map<string, number>();
+  for (const a of attempts) {
+    const prev = lastAttemptByItemId.get(a.itemId);
+    if (prev === undefined || a.ts > prev) lastAttemptByItemId.set(a.itemId, a.ts);
+  }
+
+  const pulls = packs.map((pack, i) => ({ skillId: skillIds[i] as string, items: pack.items }));
+  const { items, itemSkillMap } = buildListeningQueue(pulls, lastAttemptByItemId, LISTENING_ITEM_CAP);
+  if (items.length === 0) return null;
+  return { skillIds, items, itemSkillMap };
+}
+
 function skillTitle(packsIndex: PacksIndex | undefined, skillId: string, locale: 'ru' | 'en'): string {
   if (!packsIndex) return skillId;
   for (const level of packsIndex.levels) {
@@ -126,6 +155,19 @@ export function HomeScreen(): React.ReactElement {
     if (items.length === 0) return;
     setPendingSession({ type: 'contrastDuel', skillIds: [skillA, skillB], items, itemSkillMap });
     navigate('/session');
+  };
+
+  const startListening = async (mode: NonNullable<SessionLaunchRequest['listeningMode']>) => {
+    const built = await buildListeningSessionQueue();
+    if (!built) return;
+    setPendingSession({
+      type: 'listening',
+      skillIds: built.skillIds,
+      items: built.items,
+      itemSkillMap: built.itemSkillMap,
+      listeningMode: mode,
+    });
+    navigate('/listening');
   };
 
   const memoryTierLabel = (tier: MemoryTier | 'new', pct: number | undefined): string => {
@@ -253,6 +295,35 @@ export function HomeScreen(): React.ReactElement {
               </ul>
             </section>
           )}
+
+          <section>
+            <h2 className="text-sm font-semibold text-neutral-700 dark:text-neutral-300">
+              {t('home.listeningSectionTitle')}
+            </h2>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <button
+                type="button"
+                onClick={() => void startListening('dictation')}
+                className="rounded border border-neutral-300 px-3 py-1.5 text-sm text-neutral-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 dark:border-neutral-700 dark:text-neutral-100"
+              >
+                {t('listening.mode.dictation')}
+              </button>
+              <button
+                type="button"
+                onClick={() => void startListening('comprehension')}
+                className="rounded border border-neutral-300 px-3 py-1.5 text-sm text-neutral-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 dark:border-neutral-700 dark:text-neutral-100"
+              >
+                {t('listening.mode.comprehension')}
+              </button>
+              <button
+                type="button"
+                onClick={() => void startListening('dictogloss')}
+                className="rounded border border-neutral-300 px-3 py-1.5 text-sm text-neutral-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 dark:border-neutral-700 dark:text-neutral-100"
+              >
+                {t('listening.mode.dictogloss')}
+              </button>
+            </div>
+          </section>
 
           {data.plan.continueSkillId && (
             <section>

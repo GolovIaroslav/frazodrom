@@ -14,6 +14,9 @@ import { db, type AttemptRecord } from '../db/db';
 import { TutorPanel } from '../components/TutorPanel';
 import { TutorChat } from '../components/TutorChat';
 import { startSession, finishSession, type ItemOutcome } from '../srs/sessionBookkeeping';
+import { wordDiff } from '../checker/wordDiff';
+import { speak } from '../tts/speak';
+import { getAutoPlay } from '../tts/settings';
 
 type EscalationPhase = 'none' | 'pending' | 'self';
 
@@ -26,20 +29,6 @@ interface PendingLocalWrongAttempt {
   itemId: string;
   userInput: string;
   ts: number;
-}
-
-function wordDiff(userInput: string, reference: string): { text: string; mismatch: boolean }[] {
-  const userTokens = userInput.trim().split(/\s+/).filter(Boolean);
-  const refTokens = reference.trim().split(/\s+/).filter(Boolean);
-  const len = Math.max(userTokens.length, refTokens.length);
-  const out: { text: string; mismatch: boolean }[] = [];
-  for (let i = 0; i < len; i += 1) {
-    const u = userTokens[i];
-    const r = refTokens[i];
-    if (u === undefined) continue;
-    out.push({ text: u, mismatch: u.toLowerCase() !== (r ?? '').toLowerCase() });
-  }
-  return out;
 }
 
 export function DrillScreen(): React.ReactElement {
@@ -199,6 +188,14 @@ export function DrillScreen(): React.ReactElement {
     [writeLocalAttempt],
   );
 
+  // §9.1 — auto-play the reference sentence's audio once a correct answer is
+  // confirmed (default on, toggle in Settings). Errors are swallowed: TTS
+  // failing must never block the drill flow.
+  const maybeAutoPlay = useCallback(async (text: string): Promise<void> => {
+    if (!(await getAutoPlay())) return;
+    await speak(text).catch(() => undefined);
+  }, []);
+
   const runEscalation = useCallback(
     async (userInput: string) => {
       if (!engine || !packsById) return;
@@ -254,9 +251,10 @@ export function DrillScreen(): React.ReactElement {
       setVerdict(outcome.verdict);
       setAnnouncement(t(`drill.verdict.${outcome.verdict}`));
       setInput(outcome.mustRewrite ? '' : input);
+      if (outcome.verdict === 'correct') void maybeAutoPlay(item.en_main);
       rerender();
     },
-    [clearPendingLocalWrong, engine, packsById, itemSkillMap, locale, t, rerender, input],
+    [clearPendingLocalWrong, engine, packsById, itemSkillMap, locale, t, rerender, input, maybeAutoPlay],
   );
 
   const handleDontWait = useCallback(() => {
@@ -344,6 +342,7 @@ export function DrillScreen(): React.ReactElement {
       resetEscalationUi();
       setVerdict(result.verdict);
       setAnnouncement(t(`drill.verdict.${result.verdict}`));
+      if (result.verdict === 'correct') void maybeAutoPlay(item.en_main);
       rerender();
     } else if (engine.phase === 'rewrite') {
       const finishedItem = engine.currentItem;
@@ -357,6 +356,7 @@ export function DrillScreen(): React.ReactElement {
       setAnnouncement(t(`drill.verdict.${result.success ? 'correct' : 'wrong'}`));
       setInput('');
       if (result.success) {
+        if (finishedItem) void maybeAutoPlay(finishedItem.en_main);
         setVerdict(null);
         resetEscalationUi();
         if (finishedItem) {
@@ -378,6 +378,7 @@ export function DrillScreen(): React.ReactElement {
     flushPendingLocalWrong,
     setPendingLocalWrong,
     writeLocalAttempt,
+    maybeAutoPlay,
   ]);
 
   const handleHint = useCallback(() => {

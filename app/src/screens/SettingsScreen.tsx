@@ -30,6 +30,21 @@ import { validateProviderConnection, type ProviderValidationState } from '../llm
 import { resolveProviderById } from '../llm/registry';
 import { getChainStatus, type ChipInfo } from '../llm/status';
 import { PromptEditor } from '../components/PromptEditor';
+import { AudioButton } from '../components/AudioButton';
+import {
+  getAccent,
+  getAutoPlay,
+  getGender,
+  getKokoroEnabled,
+  getRate,
+  setAccent,
+  setAutoPlay,
+  setGender,
+  setKokoroEnabled,
+  setRate,
+} from '../tts/settings';
+import type { ModelLoadProgress } from '../tts/kokoro';
+import { SPEECH_RATES, type Accent, type Gender, type SpeechRate } from '../tts/voices';
 import {
   LOCAL_PROVIDER_ID,
   ROLE_ORDER,
@@ -114,6 +129,194 @@ function actionButtonClass(variant: 'primary' | 'secondary' = 'secondary'): stri
       ? 'bg-neutral-900 font-medium text-white dark:bg-neutral-100 dark:text-neutral-900'
       : 'border border-neutral-300 dark:border-neutral-700',
   ].join(' ');
+}
+
+const VOICE_PREVIEW_TEXT = 'Where did you put the keys to the car?';
+
+type KokoroLoadState = 'idle' | 'loading' | 'ready' | 'error';
+
+function TtsSettings(): React.ReactElement {
+  const t = useI18nStore((s) => s.t);
+
+  const [accent, setAccentState] = useState<Accent>('US');
+  const [gender, setGenderState] = useState<Gender>('f');
+  const [rate, setRateState] = useState<SpeechRate>(1.0);
+  const [autoPlay, setAutoPlayState] = useState(true);
+  const [kokoroEnabled, setKokoroEnabledState] = useState(false);
+  const [loadState, setLoadState] = useState<KokoroLoadState>('idle');
+  const [loadProgress, setLoadProgress] = useState<ModelLoadProgress | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    void Promise.all([getAccent(), getGender(), getRate(), getAutoPlay(), getKokoroEnabled()]).then(
+      ([a, g, r, ap, ke]) => {
+        if (cancelled) return;
+        setAccentState(a);
+        setGenderState(g);
+        setRateState(r);
+        setAutoPlayState(ap);
+        setKokoroEnabledState(ke);
+        if (ke) setLoadState('ready');
+      },
+    );
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  async function handleAccentChange(next: Accent) {
+    setAccentState(next);
+    await setAccent(next);
+  }
+
+  async function handleGenderChange(next: Gender) {
+    setGenderState(next);
+    await setGender(next);
+  }
+
+  async function handleRateChange(next: SpeechRate) {
+    setRateState(next);
+    await setRate(next);
+  }
+
+  async function handleAutoPlayToggle() {
+    const next = !autoPlay;
+    setAutoPlayState(next);
+    await setAutoPlay(next);
+  }
+
+  async function handleEnableKokoro() {
+    setLoadState('loading');
+    setLoadProgress(null);
+    try {
+      const { loadKokoroModel } = await import('../tts/kokoro');
+      await loadKokoroModel((p) => setLoadProgress(p));
+      await setKokoroEnabled(true);
+      setKokoroEnabledState(true);
+      setLoadState('ready');
+    } catch {
+      setLoadState('error');
+    }
+  }
+
+  async function handleDisableKokoro() {
+    await setKokoroEnabled(false);
+    setKokoroEnabledState(false);
+    setLoadState('idle');
+  }
+
+  return (
+    <div className="mt-6">
+      <h2 className="text-lg font-medium text-neutral-900 dark:text-neutral-100">{t('settings.tts.title')}</h2>
+      <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">{t('settings.tts.intro')}</p>
+
+      <div className="mt-4 flex flex-wrap gap-4">
+        <div>
+          <div className="text-sm font-medium text-neutral-700 dark:text-neutral-300">{t('settings.tts.accent')}</div>
+          <div className="mt-1 flex gap-2">
+            {(['US', 'UK'] as Accent[]).map((a) => (
+              <button
+                key={a}
+                type="button"
+                aria-pressed={accent === a}
+                onClick={() => void handleAccentChange(a)}
+                className={
+                  accent === a
+                    ? 'rounded bg-neutral-900 px-3 py-1.5 text-sm font-medium text-white dark:bg-neutral-100 dark:text-neutral-900'
+                    : 'rounded border border-neutral-300 px-3 py-1.5 text-sm text-neutral-900 dark:border-neutral-700 dark:text-neutral-100'
+                }
+              >
+                {a}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <div className="text-sm font-medium text-neutral-700 dark:text-neutral-300">{t('settings.tts.gender')}</div>
+          <div className="mt-1 flex gap-2">
+            {(['f', 'm'] as Gender[]).map((g) => (
+              <button
+                key={g}
+                type="button"
+                aria-pressed={gender === g}
+                onClick={() => void handleGenderChange(g)}
+                className={
+                  gender === g
+                    ? 'rounded bg-neutral-900 px-3 py-1.5 text-sm font-medium text-white dark:bg-neutral-100 dark:text-neutral-900'
+                    : 'rounded border border-neutral-300 px-3 py-1.5 text-sm text-neutral-900 dark:border-neutral-700 dark:text-neutral-100'
+                }
+              >
+                {t(`settings.tts.gender.${g}`)}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <div className="text-sm font-medium text-neutral-700 dark:text-neutral-300">{t('settings.tts.speed')}</div>
+          <div className="mt-1 flex gap-2">
+            {SPEECH_RATES.map((r) => (
+              <button
+                key={r}
+                type="button"
+                aria-pressed={rate === r}
+                onClick={() => void handleRateChange(r)}
+                className={
+                  rate === r
+                    ? 'rounded bg-neutral-900 px-3 py-1.5 text-sm font-medium text-white dark:bg-neutral-100 dark:text-neutral-900'
+                    : 'rounded border border-neutral-300 px-3 py-1.5 text-sm text-neutral-900 dark:border-neutral-700 dark:text-neutral-100'
+                }
+              >
+                {r}×
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <label className="mt-4 flex items-center gap-2 text-sm text-neutral-700 dark:text-neutral-300">
+        <input type="checkbox" checked={autoPlay} onChange={() => void handleAutoPlayToggle()} />
+        {t('settings.tts.autoPlay')}
+      </label>
+
+      <div className="mt-4 rounded-lg border border-neutral-200 p-4 dark:border-neutral-800">
+        <div className="text-sm font-medium text-neutral-700 dark:text-neutral-300">{t('settings.tts.kokoroTitle')}</div>
+        <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">{t('settings.tts.kokoroHint')}</p>
+
+        <div className="mt-2 flex flex-wrap items-center gap-2">
+          {!kokoroEnabled ? (
+            <button
+              type="button"
+              onClick={() => void handleEnableKokoro()}
+              disabled={loadState === 'loading'}
+              className={actionButtonClass('primary')}
+            >
+              {loadState === 'loading' ? t('settings.tts.kokoroLoading') : t('settings.tts.kokoroEnable')}
+            </button>
+          ) : (
+            <button type="button" onClick={() => void handleDisableKokoro()} className={actionButtonClass()}>
+              {t('settings.tts.kokoroDisable')}
+            </button>
+          )}
+          <AudioButton text={VOICE_PREVIEW_TEXT} label={t('settings.tts.preview')} className={actionButtonClass()} />
+        </div>
+
+        {loadState === 'loading' && loadProgress && (
+          <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
+            {loadProgress.status}
+            {typeof loadProgress.progress === 'number' ? ` — ${Math.round(loadProgress.progress)}%` : ''}
+          </p>
+        )}
+        {loadState === 'ready' && kokoroEnabled && (
+          <p className="mt-2 text-xs text-green-700 dark:text-green-400">{t('settings.tts.kokoroReady')}</p>
+        )}
+        {loadState === 'error' && (
+          <p className="mt-2 text-xs text-red-700 dark:text-red-400">{t('settings.tts.kokoroError')}</p>
+        )}
+      </div>
+    </div>
+  );
 }
 
 function AiModelsSettings(): React.ReactElement {
@@ -795,6 +998,7 @@ export function SettingsScreen(): React.ReactElement {
         </div>
       </div>
 
+      <TtsSettings />
       <AiModelsSettings />
     </div>
   );
