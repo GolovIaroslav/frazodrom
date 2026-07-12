@@ -1,17 +1,21 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useI18nStore } from '../i18n/store';
-import { loadPacksIndex } from '../engine/packs';
+import { loadPack, loadPacksIndex } from '../engine/packs';
 import type { PacksIndex } from '../engine/types';
 import { db } from '../db/db';
 import { memoryTier, retrievability, type MemoryTier } from '../srs/fsrs';
+import { canStartFluencySprint } from '../engine/fluencySprint';
+import { setPendingSession } from '../engine/sessionLaunch';
 
 export function CourseMapScreen(): React.ReactElement {
   const t = useI18nStore((s) => s.t);
   const locale = useI18nStore((s) => s.locale);
+  const navigate = useNavigate();
   const [index, setIndex] = useState<PacksIndex | null>(null);
   const [error, setError] = useState(false);
   const [memoryBySkill, setMemoryBySkill] = useState<Map<string, { pct: number; tier: MemoryTier }>>(new Map());
+  const [sprintEligible, setSprintEligible] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     let cancelled = false;
@@ -26,13 +30,16 @@ export function CourseMapScreen(): React.ReactElement {
       if (cancelled) return;
       const now = new Date();
       const map = new Map<string, { pct: number; tier: MemoryTier }>();
+      const eligible = new Set<string>();
       for (const state of states) {
+        if (canStartFluencySprint(state.accuracy)) eligible.add(state.skillId);
         const r = retrievability(state, now);
         if (r === undefined) continue;
         const pct = Math.round(r * 100);
         map.set(state.skillId, { pct, tier: memoryTier(pct) });
       }
       setMemoryBySkill(map);
+      setSprintEligible(eligible);
     });
     return () => {
       cancelled = true;
@@ -42,6 +49,17 @@ export function CourseMapScreen(): React.ReactElement {
   const localize = (ru: string, en?: string): string => {
     if (locale === 'en') return en ?? ru;
     return ru;
+  };
+
+  const startSprint = async (skillId: string): Promise<void> => {
+    const pack = await loadPack(skillId);
+    setPendingSession({
+      type: 'fluencySprint',
+      skillIds: [skillId],
+      items: pack.items,
+      itemSkillMap: Object.fromEntries(pack.items.map((it) => [it.id, skillId])),
+    });
+    navigate('/sprint');
   };
 
   return (
@@ -93,12 +111,23 @@ export function CourseMapScreen(): React.ReactElement {
                               );
                             })()}
                           </div>
-                          <Link
-                            to={`/drill/${skill.id}`}
-                            className="rounded bg-neutral-900 px-3 py-1.5 text-sm font-medium text-white hover:bg-neutral-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-300 dark:focus-visible:outline-neutral-100"
-                          >
-                            {t('courseMap.startDrill')}
-                          </Link>
+                          <div className="flex shrink-0 gap-2">
+                            {sprintEligible.has(skill.id) && (
+                              <button
+                                type="button"
+                                onClick={() => void startSprint(skill.id)}
+                                className="rounded border border-neutral-300 px-3 py-1.5 text-sm text-neutral-900 hover:bg-neutral-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 dark:border-neutral-700 dark:text-neutral-100 dark:hover:bg-neutral-900"
+                              >
+                                {t('courseMap.startSprint')}
+                              </button>
+                            )}
+                            <Link
+                              to={`/drill/${skill.id}`}
+                              className="rounded bg-neutral-900 px-3 py-1.5 text-sm font-medium text-white hover:bg-neutral-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-300 dark:focus-visible:outline-neutral-100"
+                            >
+                              {t('courseMap.startDrill')}
+                            </Link>
+                          </div>
                         </li>
                       ))}
                     </ul>

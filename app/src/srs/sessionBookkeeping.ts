@@ -15,6 +15,15 @@ export interface ItemOutcome {
   correct: boolean;
 }
 
+// §6.3's contrast-duels want a real "skill passed" set ("предлагается, когда
+// оба навыка пройдены") but §11's exam-based passing doesn't exist yet — a
+// documented accuracy-threshold proxy, same bar as the fluency-sprint gate
+// (§16 Ф4 AC, `canStartFluencySprint`), over a minimum sample so a single
+// lucky short session can't flip it. Once real exams land (§11), this should
+// be replaced or gated further by an exam pass, not removed outright.
+export const SKILL_PASS_ACCURACY_THRESHOLD = 0.9;
+export const SKILL_PASS_MIN_ATTEMPTS = 10;
+
 export async function startSession(type: SessionType, skillIds: string[], now = Date.now()): Promise<number> {
   const id = await db.sessions.add({ type, skillIds, startedAt: now, stats: { total: 0, correct: 0 } });
   return id as number;
@@ -48,12 +57,22 @@ export async function finishSession(
     const existing = await db.skillState.get(skillId);
     const rating = ratingFromAccuracy(accuracy);
     const fsrsFields = scheduleReview(existing ?? {}, rating, new Date(now));
+    const attemptCount = (existing?.attemptCount ?? 0) + items.length;
+    const correctCount = (existing?.correctCount ?? 0) + skillCorrect;
+    const lifetimeAccuracy = attemptCount > 0 ? correctCount / attemptCount : 0;
+    // Sticky once passed — a single weak session shouldn't un-pass a skill
+    // that's otherwise solid; see the constants' doc comment above.
+    const status: SkillStateRecord['status'] =
+      existing?.status === 'passed' ||
+      (attemptCount >= SKILL_PASS_MIN_ATTEMPTS && lifetimeAccuracy > SKILL_PASS_ACCURACY_THRESHOLD)
+        ? 'passed'
+        : (existing?.status ?? 'in_progress');
     const record: SkillStateRecord = {
       skillId,
-      status: existing?.status ?? 'in_progress',
+      status,
       accuracy,
-      attemptCount: (existing?.attemptCount ?? 0) + items.length,
-      correctCount: (existing?.correctCount ?? 0) + skillCorrect,
+      attemptCount,
+      correctCount,
       ...fsrsFields,
     };
     await db.skillState.put(record);

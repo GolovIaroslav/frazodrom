@@ -4,6 +4,7 @@ import { useI18nStore } from '../i18n/store';
 import { db } from '../db/db';
 import { loadPack, loadPacksIndex } from '../engine/packs';
 import { buildReviewQueue, pickReviewItems, type SkillPull } from '../engine/reviewQueue';
+import { availableContrastDuels, buildContrastDuelQueue } from '../engine/contrastDuel';
 import { setPendingSession } from '../engine/sessionLaunch';
 import type { PackItem, PacksIndex } from '../engine/types';
 import { buildDailyPlan, type DailyPlan } from '../srs/dailyPlan';
@@ -14,6 +15,8 @@ import type { MemoryTier } from '../srs/fsrs';
 interface TodayData {
   plan: DailyPlan;
   errorHunt: ErrorHuntSuggestion | undefined;
+  duels: [string, string][];
+  packsIndex: PacksIndex | undefined;
 }
 
 async function loadTodayData(): Promise<TodayData> {
@@ -30,12 +33,20 @@ async function loadTodayData(): Promise<TodayData> {
     packsIndex,
     now: new Date(),
   });
-  return { plan, errorHunt };
+  const passedSkillIds = new Set(skillStates.filter((s) => s.status === 'passed').map((s) => s.skillId));
+  const duels = availableContrastDuels(passedSkillIds);
+  return { plan, errorHunt, duels, packsIndex };
 }
+
+/** §6.3 duration presets at session start: 5 min (~10 sentences, "no time" — streak-saving), 15 (standard), 25 (full). */
+const SESSION_LENGTH_PRESETS = [5, 15, 25] as const;
+type SessionLengthMinutes = (typeof SESSION_LENGTH_PRESETS)[number];
+const PRESET_ITEM_CAP: Record<SessionLengthMinutes, number> = { 5: 10, 15: 30, 25: 50 };
 
 /** Builds a mixed multi-skill queue (§10.1 pull selection + §10 round-robin interleave) for review/error-hunt sessions. */
 async function buildMultiSkillQueue(
   skillIds: readonly string[],
+  itemCap: number,
 ): Promise<{ items: PackItem[]; itemSkillMap: Record<string, string> }> {
   const packs = await Promise.all(skillIds.map((id) => loadPack(id)));
   const attempts = await db.attempts.toArray();
@@ -49,7 +60,7 @@ async function buildMultiSkillQueue(
     skillId: skillIds[i] as string,
     items: pickReviewItems(pack.items, lastAttemptByItemId),
   }));
-  const items = buildReviewQueue(pulls);
+  const items = buildReviewQueue(pulls).slice(0, itemCap);
   const itemSkillMap: Record<string, string> = {};
   for (const pull of pulls) {
     for (const item of pull.items) itemSkillMap[item.id] = pull.skillId;
@@ -57,10 +68,41 @@ async function buildMultiSkillQueue(
   return { items, itemSkillMap };
 }
 
+/** Contrast duels stay short by design (§6.3 mixes forms, isn't a full pack drill) — 10 items per skill, same scale as a fluency-sprint round. */
+const DUEL_ITEMS_PER_SKILL = 10;
+
+async function buildDuelQueue(
+  skillA: string,
+  skillB: string,
+): Promise<{ items: PackItem[]; itemSkillMap: Record<string, string> }> {
+  const [packA, packB] = await Promise.all([loadPack(skillA), loadPack(skillB)]);
+  const itemsA = packA.items.slice(0, DUEL_ITEMS_PER_SKILL);
+  const itemsB = packB.items.slice(0, DUEL_ITEMS_PER_SKILL);
+  const items = buildContrastDuelQueue(itemsA, itemsB);
+  const itemSkillMap: Record<string, string> = {};
+  for (const it of itemsA) itemSkillMap[it.id] = skillA;
+  for (const it of itemsB) itemSkillMap[it.id] = skillB;
+  return { items, itemSkillMap };
+}
+
+function skillTitle(packsIndex: PacksIndex | undefined, skillId: string, locale: 'ru' | 'en'): string {
+  if (!packsIndex) return skillId;
+  for (const level of packsIndex.levels) {
+    for (const module of level.modules) {
+      for (const skill of module.skills) {
+        if (skill.id === skillId) return locale === 'en' ? (skill.title_en ?? skill.title_ru) : skill.title_ru;
+      }
+    }
+  }
+  return skillId;
+}
+
 export function HomeScreen(): React.ReactElement {
   const t = useI18nStore((s) => s.t);
+  const locale = useI18nStore((s) => s.locale);
   const navigate = useNavigate();
   const [data, setData] = useState<TodayData | null>(null);
+  const [sessionLength, setSessionLength] = useState<SessionLengthMinutes>(15);
 
   useEffect(() => {
     let cancelled = false;
@@ -73,9 +115,16 @@ export function HomeScreen(): React.ReactElement {
   }, []);
 
   const startReview = async (skillIds: readonly string[], type: 'review' | 'errorHunt') => {
-    const { items, itemSkillMap } = await buildMultiSkillQueue(skillIds);
+    const { items, itemSkillMap } = await buildMultiSkillQueue(skillIds, PRESET_ITEM_CAP[sessionLength]);
     if (items.length === 0) return;
     setPendingSession({ type, skillIds: [...skillIds], items, itemSkillMap });
+    navigate('/session');
+  };
+
+  const startDuel = async (skillA: string, skillB: string) => {
+    const { items, itemSkillMap } = await buildDuelQueue(skillA, skillB);
+    if (items.length === 0) return;
+    setPendingSession({ type: 'contrastDuel', skillIds: [skillA, skillB], items, itemSkillMap });
     navigate('/session');
   };
 
@@ -97,6 +146,30 @@ export function HomeScreen(): React.ReactElement {
 
       {data && (
         <div className="mt-6 space-y-6">
+          <section>
+            <h2 className="text-sm font-semibold text-neutral-700 dark:text-neutral-300">
+              {t('home.sessionLengthTitle')}
+            </h2>
+            <div className="mt-2 flex gap-2" role="radiogroup" aria-label={t('home.sessionLengthTitle')}>
+              {SESSION_LENGTH_PRESETS.map((minutes) => (
+                <button
+                  key={minutes}
+                  type="button"
+                  role="radio"
+                  aria-checked={sessionLength === minutes}
+                  onClick={() => setSessionLength(minutes)}
+                  className={
+                    sessionLength === minutes
+                      ? 'rounded bg-neutral-900 px-3 py-1.5 text-sm font-medium text-white dark:bg-neutral-100 dark:text-neutral-900'
+                      : 'rounded border border-neutral-300 px-3 py-1.5 text-sm text-neutral-900 dark:border-neutral-700 dark:text-neutral-100'
+                  }
+                >
+                  {t('home.sessionLengthMinutes').replace('{N}', String(minutes))}
+                </button>
+              ))}
+            </div>
+          </section>
+
           <section>
             <h2 className="text-sm font-semibold text-neutral-700 dark:text-neutral-300">
               {t('home.dueSectionTitle')}
@@ -154,6 +227,30 @@ export function HomeScreen(): React.ReactElement {
               >
                 {t('home.errorHuntButton')}
               </button>
+            </section>
+          )}
+
+          {data.duels.length > 0 && (
+            <section>
+              <h2 className="text-sm font-semibold text-neutral-700 dark:text-neutral-300">
+                {t('home.duelSectionTitle')}
+              </h2>
+              <ul className="mt-2 space-y-2">
+                {data.duels.map(([a, b]) => (
+                  <li key={`${a}-${b}`} className="flex items-center justify-between">
+                    <span className="text-sm text-neutral-800 dark:text-neutral-200">
+                      {skillTitle(data.packsIndex, a, locale)} ↔ {skillTitle(data.packsIndex, b, locale)}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => void startDuel(a, b)}
+                      className="rounded border border-neutral-300 px-3 py-1.5 text-sm text-neutral-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 dark:border-neutral-700 dark:text-neutral-100"
+                    >
+                      {t('home.duelButton')}
+                    </button>
+                  </li>
+                ))}
+              </ul>
             </section>
           )}
 

@@ -91,3 +91,61 @@ describe('startSession/finishSession (§10)', () => {
     expect(item?.isLeech).toBe(true);
   });
 });
+
+describe('skill "passed" status (§6.3 contrast-duel gate)', () => {
+  it('stays in_progress below the minimum attempt count even at 100% accuracy', async () => {
+    const id = await startSession('drill', ['s1'], 1000);
+    await finishSession(
+      id,
+      Array.from({ length: 5 }, (_, i) => ({ itemId: `i${i}`, skillId: 's1', correct: true })),
+      2000,
+    );
+    const state = await db.skillState.get('s1');
+    expect(state?.status).toBe('in_progress');
+  });
+
+  it('stays in_progress at exactly 90% lifetime accuracy (strict >, matches the fluency-sprint gate)', async () => {
+    await db.skillState.put({
+      skillId: 's1',
+      status: 'in_progress',
+      accuracy: 0.9,
+      attemptCount: 9,
+      correctCount: 9,
+    });
+    const id = await startSession('drill', ['s1'], 1000);
+    // 9 correct out of existing 9 + 1 new wrong = 9/10 = exactly 90% lifetime accuracy.
+    await finishSession(id, [{ itemId: 'i10', skillId: 's1', correct: false }], 2000);
+    const state = await db.skillState.get('s1');
+    expect(state?.attemptCount).toBe(10);
+    expect(state?.status).toBe('in_progress');
+  });
+
+  it('flips to passed once attempts ≥ 10 and lifetime accuracy > 90%', async () => {
+    await db.skillState.put({
+      skillId: 's1',
+      status: 'in_progress',
+      accuracy: 1,
+      attemptCount: 9,
+      correctCount: 9,
+    });
+    const id = await startSession('drill', ['s1'], 1000);
+    await finishSession(id, [{ itemId: 'i10', skillId: 's1', correct: true }], 2000);
+    const state = await db.skillState.get('s1');
+    expect(state?.attemptCount).toBe(10);
+    expect(state?.status).toBe('passed');
+  });
+
+  it('stays passed even after a later weak session (sticky, avoids flapping)', async () => {
+    await db.skillState.put({
+      skillId: 's1',
+      status: 'passed',
+      accuracy: 1,
+      attemptCount: 10,
+      correctCount: 10,
+    });
+    const id = await startSession('drill', ['s1'], 1000);
+    await finishSession(id, [{ itemId: 'i11', skillId: 's1', correct: false }], 2000);
+    const state = await db.skillState.get('s1');
+    expect(state?.status).toBe('passed');
+  });
+});
