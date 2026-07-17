@@ -62,6 +62,7 @@ export interface CheckResult {
   verdict: CheckVerdict;
   tag?: 'spelling';
   matchedReference?: string;
+  precheck?: 'english_required';
 }
 
 export interface CheckAnswerInput {
@@ -100,10 +101,10 @@ export function checkAnswer(input: CheckAnswerInput): CheckResult {
   const trimmed = input.userInput.trim();
 
   // tier 0: pre-check, no cascade/LLM spend.
-  if (trimmed === '') return { tier: 0, verdict: 'wrong' };
-  if (CYRILLIC_RE.test(trimmed)) return { tier: 0, verdict: 'wrong' };
+  if (trimmed === '') return { tier: 0, verdict: 'wrong', precheck: 'english_required' };
+  if (CYRILLIC_RE.test(trimmed)) return { tier: 0, verdict: 'wrong', precheck: 'english_required' };
   if (trimmed.toLowerCase() === input.ruStimulus.trim().toLowerCase()) {
-    return { tier: 0, verdict: 'wrong' };
+    return { tier: 0, verdict: 'wrong', precheck: 'english_required' };
   }
 
   const references = [input.enMain, ...(input.enAccepted ?? []), ...(input.acceptedCache ?? [])];

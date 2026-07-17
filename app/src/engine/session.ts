@@ -10,6 +10,8 @@ export interface AnswerResult {
   verdict: Verdict;
   /** True once the reference has been shown and a REWRITE cycle is required. */
   mustRewrite: boolean;
+  /** Tier 0 rejected a non-English answer before any AI escalation. */
+  precheck?: 'english_required';
 }
 
 export interface RewriteResult {
@@ -114,7 +116,7 @@ export class DrillEngine {
     return this.giveUp();
   }
 
-  submitAnswer(userInput: string): AnswerResult {
+  submitAnswer(userInput: string, acceptedCache: readonly string[] = []): AnswerResult {
     const item = this.requireItem();
     if (this.phase !== 'answer') {
       throw new Error('submitAnswer called outside the answer phase');
@@ -125,6 +127,7 @@ export class DrillEngine {
       ruStimulus: item.ru,
       enMain: item.en_main,
       enAccepted: item.en_accepted,
+      acceptedCache,
     });
 
     if (result.verdict === 'correct' && !result.tag) {
@@ -146,7 +149,11 @@ export class DrillEngine {
     }
 
     this.hadWrongAttempt_ = true;
-    return { verdict: 'wrong', mustRewrite: false };
+    return {
+      verdict: 'wrong',
+      mustRewrite: false,
+      ...(result.precheck ? { precheck: result.precheck } : {}),
+    };
   }
 
   /**

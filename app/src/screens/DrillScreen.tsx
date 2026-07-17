@@ -9,7 +9,7 @@ import type { SkillPack } from '../engine/types';
 import { peekPendingSession, clearPendingSession } from '../engine/sessionLaunch';
 import { ensureStoragePersisted, checkStorageQuota } from '../db/storage';
 import { runJudgeTier3, type JudgeVerdict } from '../llm/judge';
-import { addToAcceptedCache, removeFromAcceptedCache } from '../llm/acceptedCache';
+import { addToAcceptedCache, getAcceptedCacheEntries, removeFromAcceptedCache } from '../llm/acceptedCache';
 import { db, type AttemptRecord } from '../db/db';
 import { TutorPanel } from '../components/TutorPanel';
 import { TutorChat } from '../components/TutorChat';
@@ -62,6 +62,7 @@ export function DrillScreen(): React.ReactElement {
   const [input, setInput] = useState('');
   const [verdict, setVerdict] = useState<Verdict | null>(null);
   const [announcement, setAnnouncement] = useState('');
+  const [showEnglishPrecheck, setShowEnglishPrecheck] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const [escalation, setEscalation] = useState<EscalationPhase>('none');
@@ -142,6 +143,7 @@ export function DrillScreen(): React.ReactElement {
     setJudgeResult(null);
     setFlagged(false);
     setCacheRemoved(false);
+    setShowEnglishPrecheck(false);
   }, []);
 
   const writeAttempt = useCallback(async (attempt: Omit<AttemptRecord, 'id'>): Promise<void> => {
@@ -328,7 +330,18 @@ export function DrillScreen(): React.ReactElement {
       }
       const item = engine.currentItem;
       if (!item) return;
-      const result = engine.submitAnswer(input);
+      const acceptedCache = await getAcceptedCacheEntries(item.ru);
+      const result = engine.submitAnswer(input, acceptedCache);
+      if (result.precheck === 'english_required') {
+        await flushPendingLocalWrong(item.id);
+        await writeLocalAttempt(item.id, input, 'wrong');
+        resetEscalationUi();
+        setShowEnglishPrecheck(true);
+        setVerdict('wrong');
+        setAnnouncement(t('drill.englishRequired'));
+        rerender();
+        return;
+      }
       if (result.verdict === 'wrong') {
         setPendingLocalWrong(item.id, input);
         setVerdict(null);
@@ -673,6 +686,12 @@ export function DrillScreen(): React.ReactElement {
         >
           {verdict === 'wrong' ? '✗' : verdict === 'correct' ? '✓' : '~'}{' '}
           {t(`drill.verdict.${verdict}`)}
+        </p>
+      )}
+
+      {showEnglishPrecheck && (
+        <p role="alert" className="mt-2 text-sm font-medium text-red-700 dark:text-red-400">
+          {t('drill.englishRequired')}
         </p>
       )}
 

@@ -68,3 +68,35 @@ test('empty Judge configuration is an explicit self-check state', async ({ page 
   await page.getByRole('button', { name: 'Проверить' }).click();
   await expect(page.getByRole('paragraph').filter({ hasText: /Ключ ИИ не настроен или бюджет исчерпан/ })).toBeVisible();
 });
+
+test('accepted cache avoids a second judge call for the same answer', async ({ page }) => {
+  const calls: string[] = [];
+  const acceptedResponse = JSON.stringify({
+    verdict: 'correct',
+    error_tags: [],
+    explanation_ru: 'Принято моковым судьёй.',
+    corrected: 'A love.',
+    natural: 'A love.',
+    add_to_accepted: true,
+  });
+  await seedAiRouting(page);
+  await mockAiProviders(page, {
+    primary: { kind: 'success', body: acceptedResponse },
+    secondary: { kind: 'success', body: acceptedResponse },
+  });
+  page.on('request', (request) => {
+    if (request.url().includes('mock-primary')) calls.push(request.url());
+  });
+
+  await page.goto('/drill/a1_be_affirm');
+  await page.getByRole('textbox', { name: 'Переведи на английский' }).fill('A love.');
+  await page.getByRole('button', { name: 'Проверить' }).click();
+  await expect(page.getByText('✓ Верно')).toBeVisible();
+  await expect(page.getByTestId('drill-screen').getByText('mock-primary', { exact: true })).toBeVisible();
+
+  await page.goto('/drill/a1_be_affirm');
+  await page.getByRole('textbox', { name: 'Переведи на английский' }).fill('A love.');
+  await page.getByRole('button', { name: 'Проверить' }).click();
+  await expect(page.getByText('✓ Верно')).toBeVisible();
+  expect(calls).toHaveLength(1);
+});

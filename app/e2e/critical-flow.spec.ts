@@ -7,6 +7,21 @@ async function openDrill(page: Page): Promise<void> {
   await expect(page.getByRole('textbox', { name: 'Переведи на английский' })).toBeFocused();
 }
 
+test('critical flow: tier 0 rejects empty and Russian answers locally', async ({ page }) => {
+  await openDrill(page);
+  const answer = page.getByRole('textbox', { name: 'Переведи на английский' });
+  const check = page.getByRole('button', { name: 'Проверить' });
+
+  await check.click();
+  await expect(page.getByRole('alert')).toHaveText('Ответ должен быть по-английски.');
+  await expect(page.getByText('Ключ ИИ не настроен или бюджет исчерпан')).toHaveCount(0);
+
+  await answer.fill('Это любовь');
+  await check.click();
+  await expect(page.getByRole('alert')).toHaveText('Ответ должен быть по-английски.');
+  await expect(page.getByText('Ключ ИИ не настроен или бюджет исчерпан')).toHaveCount(0);
+});
+
 test('critical flow: correct answer, feedback, next sentence and persisted attempt', async ({ page }) => {
   await openDrill(page);
   const answer = page.getByRole('textbox', { name: 'Переведи на английский' });
