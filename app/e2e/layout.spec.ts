@@ -1,4 +1,4 @@
-import { expect, test } from './fixtures';
+import { expect, seedAiRouting, test } from './fixtures';
 
 const viewports = [
   { width: 390, height: 844 },
@@ -42,3 +42,16 @@ for (const viewport of viewports) {
     }
   });
 }
+
+test('configured Settings stays within a narrow viewport @layout', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await seedAiRouting(page);
+  await page.goto('/settings');
+  await expect(page.getByTestId('settings-screen')).toBeVisible();
+
+  const metrics = await page.evaluate(() => ({
+    clientWidth: document.documentElement.clientWidth,
+    scrollWidth: document.documentElement.scrollWidth,
+  }));
+  expect(metrics.scrollWidth, 'configured Settings has horizontal overflow').toBeLessThanOrEqual(metrics.clientWidth);
+});

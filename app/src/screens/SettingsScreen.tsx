@@ -867,7 +867,7 @@ function AiModelsSettings(): React.ReactElement {
 
           <div className="mt-3 grid gap-4 xl:grid-cols-3">
             {ROLE_ORDER.map((role) => (
-              <div key={role} className="rounded-lg border border-neutral-200 p-3 dark:border-neutral-800">
+              <div key={role} className="min-w-0 rounded-lg border border-neutral-200 p-3 dark:border-neutral-800">
                 <div className="font-medium text-neutral-900 dark:text-neutral-100">{t(`settings.ai.role.${role}`)}</div>
                 <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">{t(`settings.ai.role.${role}Hint`)}</p>
                 {role === 'judge' && (
@@ -976,7 +976,7 @@ function AiModelsSettings(): React.ReactElement {
             return (
               <div
                 key={role}
-                className={`rounded-lg border p-3 ${boxToneClass(readiness.tone)} bg-white dark:bg-neutral-950`}
+                className={`min-w-0 rounded-lg border p-3 ${boxToneClass(readiness.tone)} bg-white dark:bg-neutral-950`}
               >
                 <div className="flex items-center justify-between gap-3">
                   <div>
