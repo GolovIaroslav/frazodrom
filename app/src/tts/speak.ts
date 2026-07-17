@@ -4,13 +4,22 @@
 // rather than calling `tts/kokoro.ts` / `tts/webSpeech.ts` directly.
 
 import { buildTtsCacheKey, getCachedAudio, putCachedAudio } from './cache';
+import { synthesizeWithGemini } from './gemini';
 import type { ModelLoadProgress } from './kokoro';
 import { cancelWebSpeech, isWebSpeechAvailable, pickWebSpeechVoice, speakWebSpeech } from './webSpeech';
 import { defaultVoiceFor } from './voices';
-import { getAccent, getGender, getKokoroEnabled, getRate, incrementSystemPlayCount, shouldShowKokoroPrompt } from './settings';
+import {
+  getAccent,
+  getGender,
+  getGeminiEnabled,
+  getKokoroEnabled,
+  getRate,
+  incrementSystemPlayCount,
+  shouldShowKokoroPrompt,
+} from './settings';
 import { emitKokoroPrompt } from './kokoroPromptNotifier';
 
-export type SpeakEngine = 'kokoro' | 'webSpeech';
+export type SpeakEngine = 'gemini' | 'kokoro' | 'webSpeech';
 
 export interface SpeakResult {
   engine: SpeakEngine;
@@ -60,6 +69,19 @@ export async function ensureKokoroAudio(text: string): Promise<Blob> {
   return blob;
 }
 
+/** Synthesizes with Gemini TTS or returns the cached audio without playing it. */
+export async function ensureGeminiAudio(text: string, rateOverride?: number): Promise<Blob> {
+  const [accent, gender, defaultRate] = await Promise.all([getAccent(), getGender(), getRate()]);
+  const rate = rateOverride ?? defaultRate;
+  const voice = gender === 'f' ? 'Kore' : 'Puck';
+  const key = await buildTtsCacheKey(text, `gemini:${accent}:${voice}`, rate);
+  const cached = await getCachedAudio(key);
+  if (cached) return cached;
+  const blob = await synthesizeWithGemini(text, { accent, gender, rate });
+  await putCachedAudio(key, blob);
+  return blob;
+}
+
 /** Background prefetch — no-op if kokoro isn't enabled; swallows errors otherwise (best-effort warm-up). */
 export function prefetchKokoro(text: string): void {
   void getKokoroEnabled().then((enabled) => {
@@ -68,6 +90,8 @@ export function prefetchKokoro(text: string): void {
 }
 
 export interface SpeakOptions {
+  /** Prevent automatic flows from using local speech when cloud speech is unavailable. */
+  allowLocalFallback?: boolean;
   /** Called once if kokoro needs to synthesize (cache miss) — screens can show a spinner. */
   onSynthesisStart?: () => void;
   /** Forwarded to `loadKokoroModel` the very first time the model itself has to download. */
@@ -83,7 +107,22 @@ export interface SpeakOptions {
  */
 export async function speak(text: string, opts: SpeakOptions = {}): Promise<SpeakResult> {
   stopSpeaking();
-  const kokoroEnabled = await getKokoroEnabled();
+  const [geminiEnabled, kokoroEnabled] = await Promise.all([getGeminiEnabled(), getKokoroEnabled()]);
+
+  if (geminiEnabled) {
+    try {
+      const blob = await ensureGeminiAudio(text, opts.rateOverride);
+      await playBlob(blob);
+      return { engine: 'gemini' };
+    } catch {
+      // Do not silently switch to a different voice when cloud speech is selected.
+      throw new Error('Gemini TTS is unavailable; local speech fallback is disabled');
+    }
+  }
+
+  if (opts.allowLocalFallback === false) {
+    throw new Error('Cloud TTS is not configured; local speech fallback is disabled');
+  }
 
   if (kokoroEnabled) {
     try {

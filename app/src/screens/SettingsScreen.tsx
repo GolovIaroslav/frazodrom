@@ -35,11 +35,13 @@ import {
   getAccent,
   getAutoPlay,
   getGender,
+  getGeminiEnabled,
   getKokoroEnabled,
   getRate,
   setAccent,
   setAutoPlay,
   setGender,
+  setGeminiEnabled,
   setKokoroEnabled,
   setRate,
 } from '../tts/settings';
@@ -144,19 +146,21 @@ function TtsSettings(): React.ReactElement {
   const [gender, setGenderState] = useState<Gender>('f');
   const [rate, setRateState] = useState<SpeechRate>(1.0);
   const [autoPlay, setAutoPlayState] = useState(true);
+  const [geminiEnabled, setGeminiEnabledState] = useState(false);
   const [kokoroEnabled, setKokoroEnabledState] = useState(false);
   const [loadState, setLoadState] = useState<KokoroLoadState>('idle');
   const [loadProgress, setLoadProgress] = useState<ModelLoadProgress | null>(null);
 
   useEffect(() => {
     let cancelled = false;
-    void Promise.all([getAccent(), getGender(), getRate(), getAutoPlay(), getKokoroEnabled()]).then(
-      ([a, g, r, ap, ke]) => {
+    void Promise.all([getAccent(), getGender(), getRate(), getAutoPlay(), getGeminiEnabled(), getKokoroEnabled()]).then(
+      ([a, g, r, ap, ge, ke]) => {
         if (cancelled) return;
         setAccentState(a);
         setGenderState(g);
         setRateState(r);
         setAutoPlayState(ap);
+        setGeminiEnabledState(ge);
         setKokoroEnabledState(ke);
         if (ke) setLoadState('ready');
       },
@@ -185,6 +189,12 @@ function TtsSettings(): React.ReactElement {
     const next = !autoPlay;
     setAutoPlayState(next);
     await setAutoPlay(next);
+  }
+
+  async function handleGeminiToggle() {
+    const next = !geminiEnabled;
+    setGeminiEnabledState(next);
+    await setGeminiEnabled(next);
   }
 
   async function handleEnableKokoro() {
@@ -281,6 +291,12 @@ function TtsSettings(): React.ReactElement {
         <input type="checkbox" checked={autoPlay} onChange={() => void handleAutoPlayToggle()} />
         {t('settings.tts.autoPlay')}
       </label>
+
+      <label className="mt-3 flex items-center gap-2 text-sm text-neutral-700 dark:text-neutral-300">
+        <input type="checkbox" checked={geminiEnabled} onChange={() => void handleGeminiToggle()} />
+        {t('settings.tts.geminiEnabled')}
+      </label>
+      <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">{t('settings.tts.geminiHint')}</p>
 
       <div className="mt-4 rounded-lg border border-neutral-200 p-4 dark:border-neutral-800">
         <div className="text-sm font-medium text-neutral-700 dark:text-neutral-300">{t('settings.tts.kokoroTitle')}</div>

@@ -189,12 +189,11 @@ export function DrillScreen(): React.ReactElement {
     [writeLocalAttempt],
   );
 
-  // §9.1 — auto-play the reference sentence's audio once a correct answer is
-  // confirmed (default on, toggle in Settings). Errors are swallowed: TTS
-  // failing must never block the drill flow.
+  // Auto-play follows Settings, but automatic flows never use local speech.
+  // Errors are swallowed: TTS failing must never block the drill flow.
   const maybeAutoPlay = useCallback(async (text: string): Promise<void> => {
     if (!(await getAutoPlay())) return;
-    await speak(text).catch(() => undefined);
+    await speak(text, { allowLocalFallback: false }).catch(() => undefined);
   }, []);
 
   const runEscalation = useCallback(

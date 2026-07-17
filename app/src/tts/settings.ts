@@ -2,6 +2,7 @@
 // `llm/settings.ts`.
 
 import { db } from '../db/db';
+import { getGeminiApiKey } from '../llm/settings';
 import type { Accent, Gender, SpeechRate } from './voices';
 
 const KV = {
@@ -9,6 +10,7 @@ const KV = {
   gender: 'tts.gender',
   rate: 'tts.rate',
   autoPlay: 'tts.autoPlay',
+  geminiEnabled: 'tts.geminiEnabled',
   kokoroEnabled: 'tts.kokoroEnabled',
   systemPlayCount: 'tts.systemPlayCount',
   kokoroPromptDismissed: 'tts.kokoroPromptDismissed',
@@ -54,6 +56,16 @@ export async function getAutoPlay(): Promise<boolean> {
 
 export async function setAutoPlay(value: boolean): Promise<void> {
   await setKv(KV.autoPlay, value);
+}
+
+export async function getGeminiEnabled(): Promise<boolean> {
+  const saved = await db.kv.get(KV.geminiEnabled);
+  if (saved) return saved.value as boolean;
+  return Boolean((await getGeminiApiKey())?.trim());
+}
+
+export async function setGeminiEnabled(value: boolean): Promise<void> {
+  await setKv(KV.geminiEnabled, value);
 }
 
 export async function getKokoroEnabled(): Promise<boolean> {

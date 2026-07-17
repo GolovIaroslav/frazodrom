@@ -363,7 +363,7 @@
 
 ### 8.2 TTS settings
 
-- [x] Проверить default US/female/1×/auto-play on.
+- [x] Проверить default US/female/1×/auto-play on; automatic flows never use local fallback without Gemini.
 - [x] Сменить accent.
 - [x] Сменить gender.
 - [x] Сменить speed.
@@ -669,3 +669,14 @@ auth/CORS и бесплатные ограничения; в тестах всё
 - [ ] Old backup import against a future Dexie migration is not yet covered; current schema is v6.
 - [!] Computer Use connector is unavailable in the current environment, so the final physical-user smoke cannot be honestly marked complete.
 - [ ] External provider live calls and real TTS audio quality remain intentionally untested; all QA uses mocks or local browser speech.
+
+## 20. TTS research and implementation note — 2026-07-17
+
+- [x] Official Gemini TTS documentation checked: Interactions API, exact-text audio output, voice selection, accent and pace prompting.
+- [x] Official Gemini pricing checked: `gemini-3.1-flash-tts-preview` currently lists free input/output on the free tier; Preview limits and policy may change.
+- [x] Google Cloud TTS, Azure Speech, and ElevenLabs checked as alternatives. They require account credentials and have different quotas or billing constraints; none is silently enabled.
+- [x] Implemented Gemini TTS as explicit BYOK opt-in in Settings. The key is read from existing local settings, never committed, and never included in error text.
+- [x] Added local audio caching and fallback chain: Gemini -> Kokoro when enabled -> browser Web Speech when cloud speech is not selected.
+- [x] Deterministic unit coverage added with mocked fetch and a fake API key; no live provider call is allowed in automated QA.
+- [x] Automatic flows never use local speech fallback. When Gemini is selected, provider errors do not silently switch to system speech.
+- [ ] Human listening check of Gemini voice quality remains open; this environment cannot honestly judge audio by ear.

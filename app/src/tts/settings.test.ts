@@ -6,6 +6,7 @@ import {
   getAccent,
   getAutoPlay,
   getGender,
+  getGeminiEnabled,
   getKokoroEnabled,
   getRate,
   incrementSystemPlayCount,
@@ -28,6 +29,12 @@ describe('tts/settings (§9.1)', () => {
     expect(await getRate()).toBe(1.0);
     expect(await getAutoPlay()).toBe(true);
     expect(await getKokoroEnabled()).toBe(false);
+    expect(await getGeminiEnabled()).toBe(false);
+  });
+
+  it('selects cloud speech automatically when a Gemini key is already stored', async () => {
+    await db.kv.put({ key: 'llm.gemini.apiKey', value: 'test-key' });
+    expect(await getGeminiEnabled()).toBe(true);
   });
 
   it('persists each setting independently', async () => {

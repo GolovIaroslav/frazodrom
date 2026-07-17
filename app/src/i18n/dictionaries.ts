@@ -48,6 +48,9 @@ export const dictionaries = {
     'settings.tts.gender.m': 'Мужской',
     'settings.tts.speed': 'Скорость',
     'settings.tts.autoPlay': 'Озвучивать правильный ответ автоматически',
+    'settings.tts.geminiEnabled': 'Использовать Gemini voice (нужен Gemini API key)',
+    'settings.tts.geminiHint':
+      'Облачная озвучка по твоему ключу Gemini. Текст отправляется Google; аудио кэшируется локально. При ошибке используется локальный fallback.',
     'settings.tts.kokoroTitle': 'Качественный голос (офлайн)',
     'settings.tts.kokoroHint':
       'Скачивает модель озвучки (~86 МБ) один раз, дальше работает офлайн навсегда. На слабых устройствах синтез одной фразы может занимать несколько секунд — повторы того же предложения после первого раза мгновенны.',
@@ -315,6 +318,9 @@ export const dictionaries = {
     'settings.tts.gender.m': 'Male',
     'settings.tts.speed': 'Speed',
     'settings.tts.autoPlay': 'Auto-play the correct answer',
+    'settings.tts.geminiEnabled': 'Use Gemini voice (requires a Gemini API key)',
+    'settings.tts.geminiHint':
+      'Cloud speech using your Gemini key. Text is sent to Google; audio is cached locally. Local fallback is used on errors.',
     'settings.tts.kokoroTitle': 'Quality voice (offline)',
     'settings.tts.kokoroHint':
       "Downloads a voice model (~86 MB) once, then works offline forever. On slower devices, synthesizing a single sentence can take a few seconds — replaying the same sentence after that is instant.",

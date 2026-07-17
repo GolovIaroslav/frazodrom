@@ -82,7 +82,10 @@ export function ListeningScreen(): React.ReactElement {
   // Dictogloss plays exactly once — no replay affordance is rendered for it.
   useEffect(() => {
     if (phase !== 'running' || !item) return;
-    void speak(item.en_main, { rateOverride: mode === 'dictogloss' ? 1.0 : rate }).catch(() => undefined);
+    void speak(item.en_main, {
+      rateOverride: mode === 'dictogloss' ? 1.0 : rate,
+      allowLocalFallback: false,
+    }).catch(() => undefined);
     const next = items[idx + 1];
     if (next) prefetchKokoro(next.en_main);
     // eslint-disable-next-line react-hooks/exhaustive-deps -- only re-run when the item itself changes
