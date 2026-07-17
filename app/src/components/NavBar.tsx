@@ -14,8 +14,8 @@ export function NavBar(): React.ReactElement {
   const t = useI18nStore((s) => s.t);
 
   return (
-    <nav className="flex items-center justify-between gap-2 border-b border-neutral-200 p-3 dark:border-neutral-800">
-      <div className="flex gap-2">
+    <nav className="flex flex-wrap items-center justify-between gap-2 border-b border-neutral-200 p-3 dark:border-neutral-800">
+      <div className="flex min-w-0 flex-1 flex-wrap gap-2">
         <NavLink to="/" end className={linkClass}>
           {t('nav.home')}
         </NavLink>

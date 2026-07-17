@@ -31,8 +31,8 @@ export interface ErrorHuntSuggestion {
  * Reads `errorProfile`, takes the top-3 tags by count30d, keeps only those
  * above the threshold, and maps them (via TAG_TO_SKILLS) to a deduplicated
  * skill list. Returns undefined when nothing crosses the threshold or no
- * top tag maps to a known skill — the "Сегодня" screen simply omits the
- * suggestion in that case (§10.5 point 4: "если какой-то тег > порога").
+ * top tag maps to a known skill — the Today screen simply omits the
+ * suggestion in that case (§10.5 point 4: if a tag exceeds the threshold).
  */
 export async function suggestErrorHunt(threshold = ERROR_HUNT_THRESHOLD): Promise<ErrorHuntSuggestion | undefined> {
   const all = await db.errorProfile.toArray();

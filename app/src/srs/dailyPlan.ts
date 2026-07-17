@@ -1,10 +1,10 @@
-// PLAN.md §10.5 — daily plan for the "Сегодня" screen. Built from what
-// concretely exists after Ф4 (skill FSRS cards, errorProfile, leeches,
+// PLAN.md §10.5 — daily plan for the Today screen. Built from what
+// concretely exists after Phase 4 (skill FSRS cards, errorProfile, leeches,
 // packs/index.json module structure). Deliberately NOT included (see report
-// / PLAN.md §16 note): point 5 ("Про себя" personal examples — needs
+// / PLAN.md §16 note): point 5 (personal examples — needs
 // LESSON_GEN's on-demand AI-lesson feature, §8.4, out of scope here), point
-// 6 (writing-vs-speech balance — needs listening/speaking, Ф5), point 8
-// (level-based activity-mix shift — needs a level system Ф4 doesn't build).
+// 6 (writing-vs-speech balance — needs listening/speaking, Phase 5), point 8
+// (level-based activity-mix shift — needs a level system Phase 4 does not build).
 
 import type { PacksIndex } from '../engine/types';
 import type { SkillStateRecord } from '../db/db';

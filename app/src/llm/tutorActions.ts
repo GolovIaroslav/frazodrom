@@ -51,10 +51,10 @@ export const ACTION_PROMPT_NAMES: Record<TutorActionKind, string> = {
 };
 
 /**
- * §8.5: «Варианты»/«Нюансы» depend only on the sentence — the learner's
+ * §8.5: Variants/Nuances depend only on the sentence — the learner's
  * specific wrong answer is not part of their cache key (and, per §6.1's
  * explicit revealing-actions list, they do not force REWRITE the way
- * «Ошибки»/«Разбор»/give-up do).
+ * Errors/Explain/give-up do).
  */
 export const ACTION_DEPENDS_ON_ANSWER: Record<TutorActionKind, boolean> = {
   errors: true,

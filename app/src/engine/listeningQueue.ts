@@ -1,9 +1,9 @@
 // PLAN.md §9.2 — listening sessions pull from already-covered skills
-// ("те же паки предложения пройденных навыков"). "Covered" here means the
+// (the same sentence packs from covered skills). "Covered" here means the
 // learner has attempted the skill at least once (skillState exists) —
 // mirrors the review queue's own selection logic (`pickReviewItems`) rather
 // than requiring `status === 'passed'`, since that status is itself only a
-// proxy gate (§11 exams don't exist yet, see Ф4's report).
+// proxy gate (§11 exams don't exist yet, see the Phase 4 report).
 
 import type { PackItem } from './types';
 import { pickReviewItems } from './reviewQueue';

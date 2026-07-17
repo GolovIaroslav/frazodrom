@@ -1,12 +1,12 @@
 // PLAN.md §6.3 — fluency sprint (Nation's 4/3/2): the SAME ~10-item set,
 // already-mastered material (accuracy >90%, gated before launch), replayed
-// across 3 rounds with shrinking time limits. "Ошибки не штрафуются" — no
+// across 3 rounds with shrinking time limits. Errors do not penalize FSRS — no
 // hint ladder, no REWRITE, no judge escalation, no requeue: this is tempo
 // practice on material the learner already knows, not a correctness test.
 // A round ends either when its items run out or its timer hits zero,
 // whichever comes first; the reference DrillEngine state machine (built for
 // REWRITE/escalation) doesn't fit this shape, so this screen manages its own
-// small local state instead of reusing it — see the Ф4 report.
+// small local state instead of reusing it — see the Phase 4 report.
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';

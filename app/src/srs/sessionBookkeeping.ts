@@ -15,10 +15,10 @@ export interface ItemOutcome {
   correct: boolean;
 }
 
-// §6.3's contrast-duels want a real "skill passed" set ("предлагается, когда
-// оба навыка пройдены") but §11's exam-based passing doesn't exist yet — a
+// §6.3's contrast-duels want a real "skill passed" set (offered only when
+// both skills are passed) but §11's exam-based passing doesn't exist yet — a
 // documented accuracy-threshold proxy, same bar as the fluency-sprint gate
-// (§16 Ф4 AC, `canStartFluencySprint`), over a minimum sample so a single
+// (§16 Phase 4 AC, `canStartFluencySprint`), over a minimum sample so a single
 // lucky short session can't flip it. Once real exams land (§11), this should
 // be replaced or gated further by an exam pass, not removed outright.
 export const SKILL_PASS_ACCURACY_THRESHOLD = 0.9;

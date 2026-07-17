@@ -1,5 +1,5 @@
-// PLAN.md §8.5 point 2 ("Спросить репетитора") + §8.6 (TUTOR_SYSTEM, verbatim).
-// History is NOT persisted (§8.5: "экономия и простота") — caller keeps it
+// PLAN.md §8.5 point 2 ("Ask the tutor") + §8.6 (TUTOR_SYSTEM, verbatim).
+// History is NOT persisted (§8.5: keep the implementation simple) — caller keeps it
 // in-memory only for the current drill screen session.
 
 import { resolveChain } from './registry';
@@ -23,7 +23,7 @@ Rules:
 
 export const TUTOR_CHAT_PROMPT_NAME = 'TUTOR_SYSTEM';
 
-/** §8.5: "максимум 6 ходов, потом мягкое «вернёмся к дриллу»" — a turn is one learner message + one reply. */
+/** §8.5: maximum six turns, then gently return to the drill — one turn is one learner message + one reply. */
 export const MAX_TUTOR_CHAT_TURNS = 6;
 
 export interface TutorChatContext {

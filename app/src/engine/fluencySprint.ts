@@ -4,7 +4,7 @@
 
 import type { PackItem } from './types';
 
-/** Ф4 AC: "спринт открывается только на навыках с accuracy >90%". Strict >, per §6.3. */
+/** Phase 4 AC: sprint opens only for skills with accuracy >90%. Strict >, per §6.3. */
 export function canStartFluencySprint(accuracy: number): boolean {
   return accuracy > 0.9;
 }

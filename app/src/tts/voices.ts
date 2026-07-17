@@ -1,5 +1,5 @@
 // PLAN.md §9.1 — voice catalog. Exact ids/genders confirmed from the
-// published `kokoro-js@1.2.1` npm package's `voices/*.bin` file list (Ф5
+// published `kokoro-js@1.2.1` npm package's `voices/*.bin` file list (Phase 5
 // perf spike, implementation-notes.md) — not guessed. Grades are copied from
 // the package README's own quality table, used only to pick sensible
 // defaults (an A/B-grade voice per accent+gender combo), not exposed in the

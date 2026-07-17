@@ -72,7 +72,7 @@ const KV = {
   manualOverride: 'llm.manualOverride',
   promptOverride: (name: string) => `llm.prompt.${name}`,
   promptOverrideDefaultHash: (name: string) => `llm.prompt.${name}.defaultHash`,
-  // §8.2/§8.9 — additional cloud providers + the optional CORS proxy (Ф3в).
+  // §8.2/§8.9 — additional cloud providers + the optional CORS proxy (Phase 3c).
   proxyUrl: 'llm.proxyUrl',
   groqApiKey: 'llm.groq.apiKey',
   openrouterApiKey: 'llm.openrouter.apiKey',
@@ -125,7 +125,7 @@ export async function setBudgetCeilings(ceilings: Record<Role, number>): Promise
   await setKv(KV.budgetCeilings, ceilings);
 }
 
-/** "при недоступности основного судьи — сразу самопроверка" toggle (§8.1). */
+/** "if the primary judge is unavailable, go straight to self-check" toggle (§8.1). */
 export async function getJudgeAutoSelfCheck(): Promise<boolean> {
   return getKv<boolean>(KV.judgeAutoSelfCheck, false);
 }
@@ -136,7 +136,7 @@ export async function setJudgeAutoSelfCheck(value: boolean): Promise<void> {
 
 /**
  * Manual override (§8.8): picking a model in the chip popover forces that
- * provider id first in every role's chain until cleared ("вернуть авто").
+ * provider id first in every role's chain until cleared ("return to auto").
  * Simplification vs. the spec's "until end of day": cleared explicitly only,
  * not on a day boundary — see implementation-notes.md.
  */
@@ -164,7 +164,7 @@ export async function clearPromptOverride(name: string): Promise<void> {
 
 /**
  * Hash of the shipped default prompt text captured at the moment an override
- * was saved (§8.5 "дефолт обновился"). Compared against the current default's
+ * was saved (§8.5 "default updated"). Compared against the current default's
  * hash by the prompt editor — a mismatch means the app shipped a new default
  * while the user still runs a custom override.
  */

@@ -56,7 +56,9 @@ function PromptRow({ name }: { name: (typeof EDITABLE_PROMPT_NAMES)[number] }): 
   return (
     <div className="mt-4 border-t border-neutral-200 pt-3 dark:border-neutral-800">
       <div className="flex items-center justify-between">
-        <span className="text-sm font-medium text-neutral-900 dark:text-neutral-100">{name}</span>
+        <label htmlFor={`prompt-${name}`} className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
+          {name}
+        </label>
         {defaultUpdated && (
           <span className="text-xs text-amber-700 dark:text-amber-400">
             {t('settings.ai.prompts.defaultUpdated')}
@@ -67,6 +69,7 @@ function PromptRow({ name }: { name: (typeof EDITABLE_PROMPT_NAMES)[number] }): 
         <p className="mt-1 text-xs text-amber-700 dark:text-amber-400">{t('settings.ai.prompts.jsonWarning')}</p>
       )}
       <textarea
+        id={`prompt-${name}`}
         value={text}
         onChange={(e) => setText(e.target.value)}
         rows={8}

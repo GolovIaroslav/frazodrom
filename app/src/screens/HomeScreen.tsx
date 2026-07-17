@@ -177,7 +177,7 @@ export function HomeScreen(): React.ReactElement {
   };
 
   return (
-    <div className="mx-auto max-w-xl p-6">
+    <div data-testid="home-screen" className="mx-auto max-w-xl p-6">
       <h1 className="text-2xl font-semibold text-neutral-900 dark:text-neutral-100">
         {t('home.title')}
       </h1>

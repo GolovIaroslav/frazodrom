@@ -44,9 +44,9 @@ Under 120 words in summary_ru.`;
 export const FREETALK_SYSTEM_PROMPT_NAME = 'FREETALK_SYSTEM';
 export const FREETALK_SUMMARY_PROMPT_NAME = 'FREETALK_SUMMARY_SYSTEM';
 
-/** §8.9/§16: "лимит на диалог: 15 реплик юзера ... что раньше". */
+/** §8.9/§16: conversation limit is 15 learner turns, whichever comes first. */
 export const MAX_FREETALK_USER_TURNS = 15;
-/** §8.9: "за 2–3 реплики до лимита — мягкое предупреждение". */
+/** §8.9: show a gentle warning 2–3 turns before the limit. */
 export const FREETALK_WARNING_TURNS_BEFORE_CAP = 3;
 
 export const FreeTalkSummarySchema = z.object({
@@ -60,7 +60,7 @@ export type FreeTalkTopicId = 'travel' | 'work' | 'hobbies' | 'dailyPlans' | 'co
 
 export interface FreeTalkTopicPreset {
   id: FreeTalkTopicId;
-  minLevel: string; // CEFR — e.g. some topics ("спорный вопрос") not offered below A2 (§8.9)
+  minLevel: string; // CEFR — e.g. some topics are not offered below A2 (§8.9)
 }
 
 // §8.9 preset list — labels come from i18n (freeTalk.topic.<id>), not hardcoded strings.
@@ -202,7 +202,7 @@ function plainTextSummaryPrompt(system: string): string {
 }
 
 /**
- * One-shot summary call on "Закончить" (§8.9). Parses/validates the JSON
+ * One-shot summary call on Finish (§8.9). Parses/validates the JSON
  * contract with zod (JudgeVerdictSchema's sibling); returns undefined if the
  * whole chain failed. The caller keeps the session unfinished so the learner
  * can retry generating the summary later.
@@ -269,7 +269,7 @@ export async function generateFreeTalkSummary(
   return undefined;
 }
 
-/** §10.4 — 30-day rolling error-tag counter, written here from Free Talk's recurring_tags (read/consumption UI is Ф4 scope). */
+/** §10.4 — 30-day rolling error-tag counter, written here from Free Talk's recurring_tags (read/consumption UI is Phase 4 scope). */
 export async function upsertErrorProfileTags(tags: readonly string[], now = Date.now()): Promise<void> {
   for (const tag of tags) {
     const existing = await db.errorProfile.get(tag);
@@ -281,7 +281,7 @@ export async function upsertErrorProfileTags(tags: readonly string[], now = Date
   }
 }
 
-// --- Dexie persistence (§8.9: "Транскрипт... хранится в Dexie до явного завершения") ---
+// --- Dexie persistence (§8.9: transcript remains in Dexie until explicitly finished) ---
 
 export async function findUnfinishedFreeTalkSession(): Promise<FreeTalkSessionRecord | undefined> {
   return db.freeTalkSessions.filter((s) => !s.finished).first();

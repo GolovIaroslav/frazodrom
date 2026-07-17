@@ -1,6 +1,6 @@
 // PLAN.md §9.1 — `speechSynthesis` fallback: instant, works everywhere,
 // quality depends on the OS. Always the default until the user opts into
-// kokoro-js ("Включить качественный голос").
+// kokoro-js ("Enable quality voice").
 
 import type { Accent, Gender } from './voices';
 

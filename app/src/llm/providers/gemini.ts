@@ -1,5 +1,5 @@
 // PLAN.md §8.1/§8.2 — Gemini adapter via @google/genai. Retries once on a
-// CORS-shaped network failure or a 503, per §8.2's "ретраи на CORS/503".
+// CORS-shaped network failure or a 503, per §8.2's retry rule.
 
 import { GoogleGenAI } from '@google/genai';
 import type { ChatRequest, LLMProvider } from '../types';

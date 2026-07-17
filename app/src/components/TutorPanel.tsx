@@ -17,7 +17,7 @@ const ACTION_ORDER: TutorActionKind[] = ['errors', 'explain', 'variants', 'nuanc
 
 export interface TutorPanelProps {
   input: TutorActionInput;
-  /** Called once when an answer-revealing action («Ошибки»/«Разбор») returns a result — forces REWRITE (§6.1). */
+  /** Called once when an answer-revealing action (Errors/Explain) returns a result — forces REWRITE (§6.1). */
   onRevealed: () => void;
 }
 

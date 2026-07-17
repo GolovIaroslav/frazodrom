@@ -2,7 +2,7 @@
 // sessions gets its own per-item FSRS card (itemState's placeholder fields),
 // rated by outcome, and is woven into warmups/review until stability > 30
 // days. Voice/STT failures never create leeches (§9.4) — there is no STT in
-// this app yet (Ф5/Ф7), so every attempt recorded today is a text attempt;
+// this app yet (Phases 5/7), so every attempt recorded today is a text attempt;
 // this module simply never special-cases a voice modality, which is the
 // correct no-op for now (there is nothing to guard against yet).
 

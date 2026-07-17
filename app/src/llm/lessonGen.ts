@@ -2,7 +2,7 @@
 // "5 personalized generator sentences with WEAK_TAGS". Only the generator
 // call itself is built here, mirroring judge.ts's chain-walking + zod
 // pattern: the full AI-lesson-on-demand feature (§8.4, TOPIC-driven, save as
-// custom_* pack) is explicitly out of scope for Ф4 — this reuses the same
+// custom_* pack) is explicitly out of scope for Phase 4 — this reuses the same
 // prompt/contract with N=5 and a fixed WEAK_TAGS bias for error-hunt use.
 
 import { z } from 'zod';

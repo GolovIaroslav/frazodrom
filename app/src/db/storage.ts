@@ -40,7 +40,7 @@ export async function checkStorageQuota(): Promise<StorageWarning> {
 const TAB_LOCK_NAME = 'frazodrom-single-tab';
 
 /**
- * Multi-tab guard (§14.6 д): tries to hold a Web Lock for the app's
+ * Multi-tab guard (§14.6d): tries to hold a Web Lock for the app's
  * lifetime; `onLostLock` fires if another tab already holds it (lock
  * acquisition never resolves the callback in that case, so a short
  * `navigator.locks.request(..., {ifAvailable:true})` probe is used first).

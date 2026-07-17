@@ -70,7 +70,7 @@ export function CourseMapScreen(): React.ReactElement {
   };
 
   return (
-    <div className="p-6">
+    <div data-testid="course-map-screen" className="p-6">
       <h1 className="text-2xl font-semibold text-neutral-900 dark:text-neutral-100">
         {t('courseMap.title')}
       </h1>
@@ -99,9 +99,9 @@ export function CourseMapScreen(): React.ReactElement {
                       {module.skills.map((skill) => (
                         <li
                           key={skill.id}
-                          className="flex items-center justify-between rounded border border-neutral-200 p-3 dark:border-neutral-800"
+                          className="flex flex-wrap items-center gap-3 rounded border border-neutral-200 p-3 dark:border-neutral-800"
                         >
-                          <div>
+                          <div className="min-w-0 flex-1">
                             <div className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
                               {localize(skill.title_ru, skill.title_en)}
                             </div>
@@ -118,7 +118,7 @@ export function CourseMapScreen(): React.ReactElement {
                               );
                             })()}
                           </div>
-                          <div className="flex shrink-0 gap-2">
+                          <div className="flex w-full shrink-0 flex-wrap gap-2 sm:w-auto">
                             <button
                               type="button"
                               onClick={() => void openContextTool(skill.id, 'youglish')}

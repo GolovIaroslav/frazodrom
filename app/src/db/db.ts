@@ -59,7 +59,7 @@ export interface AttemptRecord {
   errorTags?: string[];
   /** Which model judged this attempt (§8.8) — undefined for local/cache tiers. */
   model?: string;
-  /** Session this attempt belongs to (Ф4) — used to detect leeches failed across DIFFERENT sessions (§10.3). */
+  /** Session this attempt belongs to (Phase 4) — used to detect leeches failed across DIFFERENT sessions (§10.3). */
   sessionId?: number;
 }
 
@@ -122,8 +122,8 @@ export interface JudgeDisputeRecord {
 
 /**
  * PLAN.md §8.5 — tutor action-button cache. `key` is a composite string built
- * by `llm/tutorActions.ts`: item-only actions (Варианты/Нюансы) key on
- * `itemId + action + promptHash`; answer-dependent actions (Ошибки/Разбор)
+ * by `llm/tutorActions.ts`: item-only actions (Variants/Nuances) key on
+ * `itemId + action + promptHash`; answer-dependent actions (Errors/Explain)
  * additionally fold in a hash of the normalized user answer. Either way, a
  * prompt edit changes promptHash and transparently invalidates old entries.
  */
@@ -145,7 +145,7 @@ export interface FreeTalkMessage {
  * PLAN.md §8.9 — Free Talk session transcript, persisted until explicitly
  * finished so a closed tab doesn't lose the conversation (or its eventual
  * summary/recurring_tags). `finished=false` + no `summaryRu` means the
- * screen should offer "завершить вчерашний разговор?" on next entry.
+ * screen should offer a resume prompt on next entry.
  */
 export interface FreeTalkSessionRecord {
   id?: number;
@@ -163,7 +163,7 @@ export interface FreeTalkSessionRecord {
  * (text, voice, speed) — see `tts/cache.ts`. A spaced-repetition app replays
  * the same sentences constantly (§10), so caching the synthesized Blob makes
  * every repeat instant regardless of device speed, even though kokoro-js's
- * WASM backend is well below real-time on typical hardware (Ф5 perf spike,
+ * WASM backend is well below real-time on typical hardware (Phase 5 perf spike,
  * implementation-notes.md).
  */
 export interface TtsCacheRecord {

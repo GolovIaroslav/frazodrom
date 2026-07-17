@@ -1,4 +1,4 @@
-// PLAN.md §8.2 — GigaChat adapter (⚠️VERIFY CORS/TLS из браузера, §8.2/§16).
+// PLAN.md §8.2 — GigaChat adapter (⚠️ verify browser CORS/TLS, §8.2/§16).
 //
 // Auth: OAuth client-credentials exchange — POST to
 // https://ngw.devices.sberbank.ru:9443/api/v2/oauth with `Authorization: Basic

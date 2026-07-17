@@ -1,5 +1,5 @@
 // PLAN.md §8.2 — Yandex AI Studio (YandexGPT + open-model catalog) adapter
-// (⚠️VERIFY CORS из браузера, §8.2/§16).
+// (⚠️ verify browser CORS, §8.2/§16).
 //
 // Endpoint: POST https://llm.api.cloud.yandex.net/foundationModels/v1/completion
 // with `Authorization: Api-Key <apiKey>` and body
@@ -9,8 +9,8 @@
 // `/chat/completions`, message field is `text` not `content`, response is
 // `{ result: { alternatives: [{ message, status }] } }`).
 //
-// Routed through `proxy/serve.mjs` by default (§8.2's "если напрямую нельзя,
-// через proxy/").
+// Routed through `proxy/serve.mjs` by default (§8.2: use the proxy when direct
+// browser requests are not possible).
 //
 // UNTESTABLE IN THIS SANDBOX: no live Yandex Cloud API key/folder id was
 // available to exercise this against the real endpoint — see the report /

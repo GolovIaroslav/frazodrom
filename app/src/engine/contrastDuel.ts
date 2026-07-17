@@ -1,7 +1,7 @@
 // PLAN.md §6.3 — contrast-duels: mixed pairs of two skills learners commonly
 // confuse, offered only once both are passed; mixes items from both without
 // warning. Static table, concrete pairs from the CURRENT A1 skillset only
-// (packs/index.json as of Ф4) — do not invent pairs for skills that don't
+// (packs/index.json as of Phase 4) — do not invent pairs for skills that don't
 // exist yet; extend this table as later modules land.
 
 import type { PackItem } from './types';

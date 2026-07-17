@@ -4,6 +4,8 @@ dist/
 app/test-results/
 app/playwright-report/
 app/blob-report/
+.playwright-mcp/
+qa-baseline-settings.png
 .venv/
 __pycache__/
 *.pyc

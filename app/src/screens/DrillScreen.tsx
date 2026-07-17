@@ -38,11 +38,11 @@ export function DrillScreen(): React.ReactElement {
   // that allocates a new object every call makes useSyncExternalStore think
   // the snapshot changed on every render, which can spiral into React's
   // "Maximum update depth exceeded" (reproduced live via the run skill while
-  // testing this phase; pre-existing since Ф3б, not introduced by Ф4).
+  // testing this phase; pre-existing since Phase 3b, not introduced by Phase 4).
   const t = useI18nStore((s) => s.t);
   const locale = useI18nStore((s) => s.locale);
 
-  // §16 Ф4 — the same screen runs a plain single-skill drill (/drill/:skillId)
+  // §16 Phase 4 — the same screen runs a plain single-skill drill (/drill/:skillId)
   // and a multi-skill session (/session, review/contrastDuel/errorHunt: a
   // pre-built queue handed off via engine/sessionLaunch). `packsById` +
   // `itemSkillMap` let per-item skill metadata (pattern/cefr for hints, the
@@ -406,7 +406,7 @@ export function DrillScreen(): React.ReactElement {
     rerender();
   }, [engine, rerender, resetEscalationUi, flushPendingLocalWrong, input, judgeResult, writeLocalAttempt]);
 
-  // «Ошибки»/«Разбор» reveal the correct sentence — forces REWRITE, same as give up (§6.1/§8.5).
+  // Errors/Explain reveal the correct sentence — forces REWRITE, same as give up (§6.1/§8.5).
   const handleTutorRevealed = useCallback(async () => {
     if (!engine) return;
     const item = engine.currentItem;
@@ -486,7 +486,7 @@ export function DrillScreen(): React.ReactElement {
   const diff = verdict === 'wrong' && !isRewrite ? wordDiff(input, item.en_main) : null;
 
   return (
-    <div className="mx-auto max-w-xl p-6">
+    <div data-testid="drill-screen" className="mx-auto max-w-xl p-6">
       {privateModeWarning && (
         <p
           role="alert"

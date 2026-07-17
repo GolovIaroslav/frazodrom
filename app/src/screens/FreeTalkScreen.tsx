@@ -1,6 +1,6 @@
 // PLAN.md §8.9 — Free Talk MVP: topic picker → chat (tutor role) → persisted
-// transcript survives a closed tab → "Закончить" gives a one-shot summary and
-// writes recurring_tags to errorProfile (§10.4, consumption UI is Ф4 scope).
+// transcript survives a closed tab → Finish gives a one-shot summary and
+// writes recurring_tags to errorProfile (§10.4, consumption UI is Phase 4 scope).
 
 import { useEffect, useState } from 'react';
 import { useI18nStore } from '../i18n/store';
@@ -22,9 +22,9 @@ import {
 import type { FreeTalkMessage, FreeTalkSessionRecord } from '../db/db';
 import type { Msg } from '../llm/types';
 
-// No SRS/user-level tracking exists yet (Ф4 scope, §10) — Free Talk uses a
+// No SRS/user-level tracking exists yet (Phase 4 scope, §10) — Free Talk uses a
 // fixed comfort-level default and an honest hint instead of inventing one.
-// See the Ф3в report for this call.
+// See the Phase 3c report for this call.
 const DEFAULT_LEVEL = 'A2';
 
 function toHistory(messages: readonly FreeTalkMessage[]): Msg[] {

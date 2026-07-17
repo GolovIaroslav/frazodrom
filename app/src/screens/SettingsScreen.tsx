@@ -658,7 +658,11 @@ function AiModelsSettings(): React.ReactElement {
           <div className="text-sm font-medium text-neutral-700 dark:text-neutral-300">{t('settings.ai.localProviderName')}</div>
           <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">{t('settings.ai.localProviderHint')}</p>
           <div className="mt-2 flex flex-wrap gap-2">
+            <label htmlFor="local-base-url" className="sr-only">
+              {t('settings.ai.localBaseUrl')}
+            </label>
             <input
+              id="local-base-url"
               value={localBaseUrl}
               onChange={(e) => setLocalBaseUrl(e.target.value)}
               className="rounded border border-neutral-300 p-2 text-sm dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100"
@@ -996,7 +1000,7 @@ export function SettingsScreen(): React.ReactElement {
   const toggleTheme = useThemeStore((s) => s.toggleTheme);
 
   return (
-    <div className="p-6">
+    <div data-testid="settings-screen" className="p-6">
       <h1 className="text-2xl font-semibold text-neutral-900 dark:text-neutral-100">{t('settings.title')}</h1>
 
       <div className="mt-4">

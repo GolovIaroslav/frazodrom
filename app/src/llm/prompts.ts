@@ -1,5 +1,5 @@
-// PLAN.md §8.5 — registry of the runtime prompts shown in Settings → "Модели
-// ИИ" prompt editor. Only the six documented there for Ф3б; FREETALK_SYSTEM /
+// PLAN.md §8.5 — registry of the runtime prompts shown in Settings → AI model
+// prompt editor. Only the six documented there for Phase 3b; FREETALK_SYSTEM /
 // FREETALK_SUMMARY_SYSTEM / LESSON_GEN_SYSTEM are later phases (§8.9/§8.4) and
 // intentionally excluded.
 

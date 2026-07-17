@@ -1,5 +1,5 @@
 // Hands a pre-built queue (review/fluency-sprint/contrast-duel/error-hunt,
-// §6.3/§10) from the screen that assembled it (e.g. the "Сегодня" screen) to
+// §6.3/§10) from the screen that assembled it (e.g. the Today screen) to
 // the generic SessionScreen that runs it. A plain module-level slot is
 // simplest here: these sessions are launched by an in-app button click and
 // consumed on the very next navigation, so there is nothing to persist

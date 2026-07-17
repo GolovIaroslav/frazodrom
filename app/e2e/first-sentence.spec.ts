@@ -1,10 +1,10 @@
 import { test, expect } from '@playwright/test';
 
-// PLAN.md §12 / Ф2 AC: "<60s from cold start to the first sentence being
+// PLAN.md §12 / Phase 2 AC: "<60s from cold start to the first sentence being
 // answerable". No dedicated onboarding screen exists yet (later phase), so
 // the realistic cold-start path today is: course map -> pick a skill's
 // drill -> input focused and ready to type.
-test('cold start (Fast 3G, empty cache) to first answerable sentence is under 60s', async ({
+test('cold start (Fast 3G, empty cache) to first answerable sentence is under 60s @chromium-cdp', async ({
   page,
   context,
 }) => {

@@ -1,7 +1,7 @@
 // PLAN.md §10.1/§16 — review-session queue builder. A review session pulls
 // 6-10 fresh-or-long-unseen sentences per due skill and interleaves ACROSS
 // skills (unlike a plain skill drill, which only interleaves in previously
-// passed material — §6.2). Ф4 AC: "review мешает ≥2 навыка".
+// passed material — §6.2). Phase 4 AC: review mixes at least two skills.
 
 import type { PackItem } from './types';
 
@@ -22,7 +22,7 @@ export interface SkillPull {
  * silently drops the tail when merging same-sized or larger sets, which a
  * review session's due-skill pulls typically are. A plain round-robin merge
  * is the simplest thing that actually guarantees every due skill is
- * represented (Ф4 AC: "review мешает ≥2 навыка") — judgment call, see report.
+ * represented (Phase 4 AC: review mixes at least two skills) — judgment call, see report.
  */
 export function buildReviewQueue(pulls: readonly SkillPull[]): PackItem[] {
   const queues = pulls.filter((p) => p.items.length > 0).map((p) => [...p.items]);

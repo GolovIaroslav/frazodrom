@@ -6,7 +6,7 @@ on:
   pull_request:
 
 jobs:
-  app:
+  app-functional:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -19,12 +19,66 @@ jobs:
           cache: npm
           cache-dependency-path: app/package-lock.json
       - run: npm ci
-      - run: npx eslint .
-      - run: npx tsc --noEmit
-      - run: npx vitest run
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run test
       - run: npm run build
-      - run: npx playwright install --with-deps chromium
-      - run: npx playwright test
+      - run: npx playwright install --with-deps chromium firefox webkit
+      - name: Cross-browser functional tests
+        run: npx playwright test --project=chromium --project=firefox --project=webkit --project=mobile-chromium --project=mobile-webkit --grep-invert '@visual|@layout|@chromium-cdp'
+      - name: Chromium CDP smoke
+        run: npx playwright test --project=chromium --grep '@chromium-cdp'
+      - name: Canonical layout tests
+        run: npx playwright test --project=chromium --grep '@layout'
+      - name: Canonical visual regression
+        run: npx playwright test --project=chromium --grep '@visual'
+      - name: Upload Playwright diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-diagnostics-functional
+          path: |
+            app/playwright-report
+            app/test-results
+          if-no-files-found: ignore
+          retention-days: 14
+
+  app-os-smoke:
+    name: App smoke (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest, macos-latest]
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - run: npm ci
+      - name: Install Chromium on Linux
+        if: runner.os == 'Linux'
+        run: npx playwright install --with-deps chromium
+      - name: Install Chromium on Windows and macOS
+        if: runner.os != 'Linux'
+        run: npx playwright install chromium
+      - name: Run short app smoke
+        run: npx playwright test --project=chromium --grep 'app shell loads|primary routes open directly|free talk and empty direct session'
+      - name: Upload Playwright diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-diagnostics-${{ matrix.os }}
+          path: |
+            app/playwright-report
+            app/test-results
+          if-no-files-found: ignore
+          retention-days: 14
 
   pipeline:
     runs-on: ubuntu-latest
@@ -33,10 +87,10 @@ jobs:
         working-directory: pipeline
     steps:
       - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v3
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - uses: astral-sh/setup-uv@v5
       - run: uv sync
       - run: uv run ruff check .
       - run: uv run mypy .

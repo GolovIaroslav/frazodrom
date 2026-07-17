@@ -1,5 +1,5 @@
-// PLAN.md §8.8 — "при 429/quota-ошибке провайдера... тост «Gemini: лимит на
-// сегодня → переключился на Groq»". The chain-walking loops in judge.ts /
+// PLAN.md §8.8 — provider-switch toast on 429/quota errors. The chain-walking
+// loops in judge.ts /
 // tutorActions.ts / tutorChat.ts already skip a provider that throws
 // LLMRateLimitError and try the next one; this module is the tiny event bus
 // that lets a UI toast (components/Toast.tsx) observe that skip happening,

@@ -1,4 +1,4 @@
-// PLAN.md §8.8 — "тост «Gemini: лимит на сегодня → переключился на Groq»"
+// PLAN.md §8.8 — provider-switch toast for Gemini quota fallback to Groq.
 // when the provider chain auto-switches on 429/auth error. Subscribes to
 // llm/switchNotifier's tiny event bus; self-dismisses after a few seconds.
 

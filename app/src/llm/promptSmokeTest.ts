@@ -1,6 +1,5 @@
-// PLAN.md §8.5 — "сохранение кастомного промпта JSON-роли запускает smoke-тест:
-// один тестовый вызов + zod-валидация → «промпт рабочий» / «ответ не парсится —
-// исправь или сбрось»". JUDGE_SYSTEM is the only JSON role among the six
+// PLAN.md §8.5 — saving a custom JSON-role prompt runs a smoke test:
+// one test call + zod validation. JUDGE_SYSTEM is the only JSON role among the six
 // editable runtime prompts (§8.5's own list — TUTOR_SYSTEM/ACTION_* are plain
 // text tutor replies, not JSON).
 
@@ -10,7 +9,7 @@ import { getBudgetCeilings, getManualOverride, getRoutingConfig } from './settin
 import { tryConsumeBudget } from './budget';
 import type { ChatRequest, Role } from './types';
 
-/** Fixed, real-shaped test case (§8.5: "один тестовый вызов") — not user data. */
+/** Fixed, real-shaped test case (§8.5: one test call) — not user data. */
 export const SMOKE_TEST_CASE: JudgeCaseInput = {
   ru: 'Я вижу кошку.',
   userAnswer: 'I see a cat.',

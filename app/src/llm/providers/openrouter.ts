@@ -1,6 +1,6 @@
 // PLAN.md §8.2 — OpenRouter adapter, OpenAI-compatible at
 // https://openrouter.ai/api/v1/chat/completions (verified via docs, 2026-07).
-// §8.2: "⚠️VERIFY CORS на Ф3; иначе proxy" → same proxy-by-default treatment
+// §8.2: "⚠️ verify CORS in Phase 3; otherwise use the proxy" → same proxy-by-default treatment
 // as Groq (routes through `proxy/serve.mjs` when a proxy URL is configured,
 // otherwise calls OpenRouter directly).
 
