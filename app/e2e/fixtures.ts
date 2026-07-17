@@ -242,6 +242,7 @@ export const test = base.extend<{ diagnostics: BrowserDiagnostics }>({
     await page.goto('/');
     await clearBrowserState(page);
     await page.reload();
+    await expect(page.getByTestId('home-screen')).toBeVisible();
     await waitForStablePage(page);
     await yieldFixture(page);
 

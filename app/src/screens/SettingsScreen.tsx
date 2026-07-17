@@ -57,6 +57,7 @@ import {
 } from '../llm/settingsUi';
 import type { Role } from '../llm/types';
 import { getLanguageToolSettings, setLanguageToolSettings } from '../languagetool/settings';
+import { DataBackup } from '../components/DataBackup';
 
 type ChainStatusMap = Record<Role, ChipInfo[]>;
 type SaveActionKey = 'local' | 'proxy' | 'groq' | 'openrouter' | 'gigachat' | 'yandex' | 'routingDefaults';
@@ -1039,6 +1040,7 @@ export function SettingsScreen(): React.ReactElement {
       <TtsSettings />
       <LanguageToolSettings />
       <AiModelsSettings />
+      <DataBackup />
     </div>
   );
 }

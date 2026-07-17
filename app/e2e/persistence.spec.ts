@@ -1,4 +1,4 @@
-import { expect, readStore, test } from './fixtures';
+import { expect, readStore, seedKv, seedProgress, test } from './fixtures';
 
 test('language setting persists after reload and a fresh context is empty', async ({ page, browser }) => {
   await page.goto('/settings');
@@ -32,4 +32,27 @@ test('IndexedDB progress survives a reload', async ({ page }) => {
   expect(attempts).toEqual([
     expect.objectContaining({ userInput: "It's love.", verdict: 'correct' }),
   ]);
+});
+
+test('Settings can export a backup and reset local data', async ({ page }) => {
+  await seedProgress(page, { accuracy: 0.8, attemptCount: 5, correctCount: 4 });
+  await seedKv(page, [{ key: 'llm.gemini.apiKey', value: 'fake-key-for-test' }]);
+  await page.goto('/settings');
+
+  const downloadPromise = page.waitForEvent('download');
+  await page.getByTestId('backup-export').click();
+  const download = await downloadPromise;
+  expect(download.suggestedFilename()).toMatch(/^frazodrom-backup-.*\.json$/);
+
+  page.once('dialog', (dialog) => void dialog.accept());
+  const resetButton = page.getByTestId('backup-reset');
+  await resetButton.scrollIntoViewIfNeeded();
+  await Promise.all([
+    page.waitForNavigation({ waitUntil: 'domcontentloaded' }),
+    resetButton.click(),
+  ]);
+  await expect(page.getByTestId('settings-screen')).toBeVisible();
+  expect(await readStore(page, 'skillState')).toEqual([]);
+  expect(await readStore(page, 'attempts')).toEqual([]);
+  expect(await readStore(page, 'kv')).toEqual([]);
 });
