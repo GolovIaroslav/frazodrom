@@ -30,8 +30,6 @@ jobs:
         run: npx playwright test --project=chromium --grep '@chromium-cdp'
       - name: Canonical layout tests
         run: npx playwright test --project=chromium --grep '@layout'
-      - name: Canonical visual regression
-        run: npx playwright test --project=chromium --grep '@visual'
       - name: Upload Playwright diagnostics
         if: failure()
         uses: actions/upload-artifact@v4
@@ -69,6 +67,9 @@ jobs:
         run: npx playwright install chromium
       - name: Run short app smoke
         run: npx playwright test --project=chromium --grep 'app shell loads|primary routes open directly|free talk and empty direct session'
+      - name: Canonical visual regression (Windows only)
+        if: matrix.os == 'windows-latest'
+        run: npx playwright test --project=chromium --grep '@visual'
       - name: Upload Playwright diagnostics
         if: failure()
         uses: actions/upload-artifact@v4
