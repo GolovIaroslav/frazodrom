@@ -649,7 +649,7 @@ auth/CORS и бесплатные ограничения; в тестах всё
 - [x] Persistence/isolation — clean browser state fixture, fresh context, IndexedDB reload persistence, language persistence, backup download/import and reset passed.
 - [x] Python: `uv sync` exit code 0; Ruff passed; mypy passed for 18 files; pytest 50/50 passed. In a fresh PowerShell session, use the installed user-level `uv.exe` path if `uv` is not on PATH.
 - [x] Playwright failure artifacts are configured under `app/playwright-report/` and `app/test-results/`; the pre-fix layout regression produced a trace, screenshot and video before the final green run cleaned transient results.
-- [x] GitHub Actions run #10 on `6bffeb2` succeeded: app functional, Chromium CDP, layout, Windows canonical visual, Windows/Ubuntu/macOS smoke and Python pipeline all passed.
+- [x] GitHub Actions run #12 on `b89f2f2` succeeded: app-functional (including cross-browser, Chromium CDP and layout), Windows canonical visual, Windows/Ubuntu/macOS smoke and Python pipeline all passed.
 
 ### Исправления, подтверждённые тестами
 
