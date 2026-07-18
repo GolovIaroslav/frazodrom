@@ -504,8 +504,8 @@ viewport. Перед baseline: animations disabled, fonts ready, caret hidden,
 - [x] Review screenshot inspected.
 - [x] Settings screenshot inspected.
 - [x] Mobile layout screenshot inspected.
-- [ ] При diff сначала изучить defect, не повышать threshold.
-- [ ] Snapshots не обновлять без ручного просмотра diff.
+- [x] При diff сначала изучить defect, не повышать threshold.
+- [x] Snapshots не обновлять без ручного просмотра diff.
 
 ## 12. Offline/PWA
 
