@@ -78,6 +78,7 @@ export function DrillScreen(): React.ReactElement {
   const sessionIdRef = useRef<number | null>(null);
   const outcomesRef = useRef<ItemOutcome[]>([]);
   const bookkeptRef = useRef(false);
+  const [sessionStats, setSessionStats] = useState<{ total: number; correct: number } | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -122,9 +123,14 @@ export function DrillScreen(): React.ReactElement {
   }, [skillId]);
 
   useEffect(() => {
-    if (engine?.phase !== 'finished' || bookkeptRef.current || sessionIdRef.current === null) return;
+    if (engine?.phase !== 'finished' || bookkeptRef.current) return;
     bookkeptRef.current = true;
-    void finishSession(sessionIdRef.current, outcomesRef.current);
+    const stats = {
+      total: outcomesRef.current.length,
+      correct: outcomesRef.current.filter((outcome) => outcome.correct).length,
+    };
+    setSessionStats(stats);
+    if (sessionIdRef.current !== null) void finishSession(sessionIdRef.current, outcomesRef.current);
   }, [engine?.phase]);
 
   useEffect(() => {
@@ -481,6 +487,13 @@ export function DrillScreen(): React.ReactElement {
         <p className="mt-2 text-neutral-600 dark:text-neutral-400">
           {t(skillId ? 'drill.finishedBody' : 'session.finishedBody')}
         </p>
+        {!skillId && sessionStats && (
+          <p className="mt-2 text-neutral-600 dark:text-neutral-400">
+            {t('session.finishedStats')
+              .replace('{CORRECT}', String(sessionStats.correct))
+              .replace('{TOTAL}', String(sessionStats.total))}
+          </p>
+        )}
         <Link
           to={skillId ? '/course-map' : '/'}
           className="mt-4 inline-block rounded bg-neutral-900 px-4 py-2 text-sm font-medium text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 dark:bg-neutral-100 dark:text-neutral-900"

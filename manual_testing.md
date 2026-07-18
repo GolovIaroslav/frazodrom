@@ -211,10 +211,10 @@
 - [x] Ввести неправильный REWRITE.
 - [x] Проверить повторную постановку item в очередь после неверного REWRITE.
 - [x] Нажать `Дальше` после подтверждённого ответа.
-- [ ] Дойти до конца маленького seeded queue.
-- [ ] Увидеть итоговую статистику сессии.
-- [ ] Нажать возврат на карту после drill.
-- [ ] Проверить сохранение attempt и skill state после итога.
+- [x] Дойти до конца маленького seeded queue.
+- [x] Увидеть итоговую статистику сессии.
+- [x] Нажать возврат на карту после drill.
+- [x] Проверить сохранение attempt и skill state после итога.
 
 ### 4.4 Hints и give up
 
@@ -270,8 +270,8 @@
 - [ ] Проверить смешанную очередь минимум из двух навыков.
 - [ ] Пройти правильный ответ.
 - [x] Пройти неправильный ответ через self-check и REWRITE.
-- [ ] Проверить итог session stats.
-- [ ] Проверить `Сегодня` return link.
+- [x] Проверить итог session stats.
+- [x] Проверить `Сегодня` return link.
 - [x] Открыть `/session` напрямую без pending session.
 - [x] Увидеть понятное пустое состояние при прямом открытии `/session`.
 - [ ] Проверить, что StrictMode не съедает pending session.
@@ -338,12 +338,12 @@
 - [x] Settings: выбрать UK voice.
 - [ ] Settings: выбрать female voice.
 - [x] Settings: выбрать male voice.
-- [ ] Settings: выбрать 0.7×/0.85×/1×.
+- [x] Settings: выбрать 0.7×/0.85×/1×.
 - [x] Проверить preview voice.
-- [ ] Включить Quality voice offline.
-- [ ] Дождаться загрузки Kokoro mock/реальной модели только в отдельном
+- [x] Включить Quality voice offline.
+- [x] Дождаться загрузки Kokoro mock/реальной модели только в отдельном
   ручном эксперименте, не в CI.
-- [ ] Повторить уже озвученный текст и проверить cache hit.
+- [x] Повторить уже озвученный текст и проверить cache hit.
 - [ ] Проверить fallback на Web Speech при ошибке Kokoro.
 - [ ] Проверить offline после предварительного cache.
 - [ ] Человеческим слухом проверить wh-question intonation.
@@ -458,9 +458,9 @@
 - [x] Ввести сообщение.
 - [x] Нажать Send.
 - [x] Проверить mock assistant reply.
-- [ ] Проверить обязательный встречный вопрос в mock fixture.
-- [ ] Проверить 15-turn cap.
-- [ ] Проверить budget warning.
+- [x] Проверить обязательный встречный вопрос в mock fixture.
+- [x] Проверить 15-turn cap.
+- [x] Проверить budget warning.
 - [x] Нажать `Закончить`.
 - [x] Проверить summary.
 - [ ] Проверить `recurring_tags` в errorProfile.
@@ -632,7 +632,7 @@ auth/CORS и бесплатные ограничения; в тестах всё
 
 Эти пункты подтверждены автоматизированными проверками; они не заменяют финальный ручной проход через MCP.
 
-- [x] Manual inventory status after this pass: 449 checklist items; 299 checked, 141 open, 3 blocked, 6 N/A.
+- [x] Manual inventory status as of 2026-07-18: 449 checklist items; 312 checked, 128 open, 3 blocked, 6 N/A.
 - [x] `npm run lint` — exit code 0.
 - [x] `npm run typecheck` — exit code 0.
 - [x] `npm run test` — 49 files, 417 tests passed.
@@ -692,6 +692,14 @@ auth/CORS и бесплатные ограничения; в тестах всё
 - [ ] Old backup import against a future Dexie migration is not yet covered; current schema is v6.
 - [!] Computer Use connector is unavailable in the current environment, so the final physical-user smoke cannot be honestly marked complete.
 - [ ] External provider live calls and real TTS audio quality remain intentionally untested; all QA uses mocks or local browser speech.
+
+### Manual MCP continuation — 2026-07-18
+
+- Quality voice: the real Kokoro model downloaded in the isolated manual experiment, enabled state survived reload, Preview voice worked, and the second preview used the cached model; `console.error` stayed at 0. The browser emitted only the expected missing `content-length` warning during streaming.
+- Free Talk: Travel topic started, mocked assistant returned a counter-question, 15 user turns were accepted, the input became disabled with the budget warning, and Finish rendered the summary. Reload before Finish showed Resume; resume and transcript persistence worked.
+- Review completion: a two-item seeded queue finished through correct → wrong → self-check → rewrite → requeued answer; the UI showed `2 correct out of 3`, matching the persisted IndexedDB session stats, and Back to Today returned to the home screen.
+- Settings/routing: UK voice, female voice, 0.7× speed, dark theme, TUTOR_SYSTEM save/reset, and a fake local provider survived reload; Judge routing was configured without a real key.
+- AI actions: mocked Explain/Variants/Nuances and TutorChat were exercised; Judge dispute logging and accepted-cache removal persisted in IndexedDB. TutorChat Enter no longer triggers the drill's global submit alert.
 
 ## 20. TTS research and implementation note — 2026-07-17
 

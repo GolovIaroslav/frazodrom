@@ -91,6 +91,7 @@ export function TutorChat({ ctx }: TutorChatProps): React.ReactElement {
           onKeyDown={(e) => {
             if (e.key === 'Enter') {
               e.preventDefault();
+              e.stopPropagation();
               void handleSend();
             }
           }}

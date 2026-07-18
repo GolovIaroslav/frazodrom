@@ -34,6 +34,91 @@ test('IndexedDB progress survives a reload', async ({ page }) => {
   ]);
 });
 
+test('review completion shows final session stats', async ({ page }) => {
+  await page.goto('/drill/a1_be_affirm');
+  await expect(page.getByRole('heading', { name: 'Это любовь.' })).toBeVisible();
+
+  await page.evaluate(async () => {
+    const request = indexedDB.open('frazodrom');
+    const database = await new Promise<IDBDatabase>((resolve, reject) => {
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => reject(request.error);
+    });
+    const pack = await new Promise<{ data: { items: unknown[] } }>((resolve, reject) => {
+      const get = database.transaction('packs', 'readonly').objectStore('packs').get('a1_be_affirm');
+      get.onsuccess = () => resolve(get.result);
+      get.onerror = () => reject(get.error);
+    });
+    pack.data.items = pack.data.items.slice(0, 2);
+    await new Promise<void>((resolve, reject) => {
+      const transaction = database.transaction(['packs', 'sessions', 'attempts', 'skillState'], 'readwrite');
+      transaction.objectStore('packs').put(pack);
+      transaction.objectStore('sessions').clear();
+      transaction.objectStore('attempts').clear();
+      transaction.objectStore('skillState').put({
+        skillId: 'a1_be_affirm',
+        status: 'in_progress',
+        accuracy: 0.7,
+        attemptCount: 5,
+        correctCount: 3,
+        due: Date.now() - 60_000,
+        stability: 1,
+        difficulty: 6,
+        reps: 5,
+        lapses: 1,
+        state: 2,
+        lastReview: Date.now() - 86_400_000,
+      });
+      transaction.oncomplete = () => resolve();
+      transaction.onerror = () => reject(transaction.error);
+    });
+    database.close();
+  });
+
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Начать повторение' }).click();
+  const answer = page.getByRole('textbox', { name: 'Переведи на английский' });
+  await answer.fill("It's love.");
+  await answer.press('Enter');
+  await page.getByRole('button', { name: 'Дальше' }).click();
+  await answer.fill('It love.');
+  await answer.press('Enter');
+  await page.getByRole('button', { name: 'Ошибся' }).click();
+  await answer.fill('Mine are worse.');
+  await answer.press('Enter');
+  await page.getByRole('button', { name: 'Дальше' }).click();
+  await answer.fill('Mine are worse.');
+  await answer.press('Enter');
+  await page.getByRole('button', { name: 'Дальше' }).click();
+
+  await expect(page.getByRole('heading', { name: 'Сессия завершена!' })).toBeVisible();
+  await expect
+    .poll(async () => {
+      const sessions = await readStore<{ finishedAt?: number; stats: { total: number; correct: number } }>(page, 'sessions');
+      return sessions.find((session) => session.finishedAt)?.stats;
+    })
+    .toEqual({ total: 3, correct: 2 });
+  await expect(page.getByText('Верно 2 из 3.')).toBeVisible();
+  await expect(page.getByRole('link', { name: 'К разделу «Сегодня»' })).toBeVisible();
+});
+
+test('TutorChat Enter does not submit the drill answer', async ({ page }) => {
+  await page.goto('/drill/a1_be_affirm');
+  const answer = page.getByRole('textbox', { name: 'Переведи на английский' });
+  await answer.fill('It love.');
+  await answer.press('Enter');
+  await expect(page.getByRole('button', { name: 'Ошибся' })).toBeVisible();
+  await page.getByRole('button', { name: 'Ошибся' }).click();
+  await page.getByRole('button', { name: 'Спросить репетитора' }).click();
+
+  const chat = page.getByRole('textbox', { name: 'Спроси что-нибудь об этом предложении…' });
+  await chat.fill('Почему это неверно?');
+  await chat.press('Enter');
+
+  await expect(page.getByText('Репетитор сейчас недоступен — нет ключа, бюджет исчерпан или сервер недоступен.')).toBeVisible();
+  await expect(page.getByText('Ответ должен быть по-английски.')).not.toBeVisible();
+});
+
 test('Settings can export a backup and reset local data', async ({ page }) => {
   await seedProgress(page, { accuracy: 0.8, attemptCount: 5, correctCount: 4 });
   await seedKv(page, [{ key: 'llm.gemini.apiKey', value: 'fake-key-for-test' }]);
