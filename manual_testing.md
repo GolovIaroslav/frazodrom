@@ -368,8 +368,7 @@
 - [x] Сменить speed.
 - [x] Отключить auto-play.
 - [x] Reload и проверить persistence каждой настройки.
-- [x] Нажать `Включить качественный голос`.
-- [x] Проверить loading/progress state.
+- [-] Model-based quality voice and its loading state were retired on 2026-07-18 because of CPU impact; browser-native speech is now the only supported path.
 - [x] Нажать `Проверить голос`.
 - [ ] Проверить graceful error при недоступном speech API.
 
@@ -379,8 +378,8 @@
 - [x] Изменить server URL.
 - [x] Reload и проверить persistence.
 - [x] Проверить, что public `languagetool.org` не вызывается.
-- [ ] Замокать network error self-hosted server.
-- [ ] Проверить graceful fallback.
+- [x] Замокать network error self-hosted server.
+- [x] Проверить graceful fallback to Judge/self-check.
 
 ### 8.4 AI provider credentials
 
@@ -711,6 +710,8 @@ auth/CORS и бесплатные ограничения; в тестах всё
 - Settings prompts and preferences: valid and invalid Judge prompts, all five save/reset editors, US/female/0.7×/0.85×/1×, light-theme reload, LanguageTool URL persistence, routing reload, and self-check toggle were inspected; no public LanguageTool request occurred.
 
 ## 20. TTS research and implementation note — 2026-07-17
+
+- 2026-07-19 (manual QA continuation): found that the LanguageTool toggle persisted but was not connected to the answer cascade, despite PLAN §7.2 tier 2.5 and §13.3. Added self-hosted-only `/v2/check` candidate detection: a grammar-clean same-word-bag answer still requires Judge confirmation; an invalid endpoint, response, or 503 falls through without blocking the drill. MCP production replay confirmed both mocked 200→Judge and 503→Judge paths; no public LanguageTool request or application `pageerror` occurred.
 
 > Superseded on 2026-07-18: all model and cloud TTS paths were removed after a CPU-impact report. The app now uses only browser-native Web Speech; the retained manual check is whether the selected system voice is acceptable by ear.
 

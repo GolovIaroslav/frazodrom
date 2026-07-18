@@ -16,8 +16,9 @@ import { TutorChat } from '../components/TutorChat';
 import { SpeakingPractice } from '../components/SpeakingPractice';
 import { startSession, finishSession, type ItemOutcome } from '../srs/sessionBookkeeping';
 import { wordDiff } from '../checker/wordDiff';
+import { isLanguageToolCandidate } from '../languagetool/check';
 import { speak } from '../tts/speak';
-import { getAutoPlay } from '../tts/settings';
+import { getAccent, getAutoPlay } from '../tts/settings';
 
 type EscalationPhase = 'none' | 'pending' | 'self';
 
@@ -215,6 +216,13 @@ export function DrillScreen(): React.ReactElement {
       setEscalation('pending');
       const controller = new AbortController();
       abortRef.current = controller;
+
+      await isLanguageToolCandidate({
+        userInput,
+        references: [item.en_main, ...item.en_accepted],
+        language: (await getAccent()) === 'UK' ? 'en-GB' : 'en-US',
+        signal: controller.signal,
+      });
 
       const result = await runJudgeTier3({
         ru: item.ru,

@@ -2,6 +2,7 @@ import {
   expect,
   mockAiProviders,
   seedAiRouting,
+  seedKv,
   test,
   VALID_JUDGE_RESPONSE,
 } from './fixtures';
@@ -67,6 +68,64 @@ test('empty Judge configuration is an explicit self-check state', async ({ page 
   await page.getByRole('textbox', { name: 'Переведи на английский' }).fill('wrong answer');
   await page.getByRole('button', { name: 'Проверить' }).click();
   await expect(page.getByRole('paragraph').filter({ hasText: /Ключ ИИ не настроен или бюджет исчерпан/ })).toBeVisible();
+});
+
+test('self-hosted LanguageTool candidates are confirmed by the mocked Judge', async ({ page }) => {
+  const languageToolCalls: string[] = [];
+  const acceptedResponse = JSON.stringify({
+    verdict: 'acceptable',
+    error_tags: [],
+    explanation_ru: 'Порядок слов допустим.',
+    corrected: "It's love.",
+    natural: "It's love.",
+    add_to_accepted: false,
+  });
+
+  await seedKv(page, [{ key: 'languagetool.settings', value: { enabled: true, url: 'https://mock-lt.invalid' } }]);
+  await seedAiRouting(page);
+  await mockAiProviders(page, {
+    primary: { kind: 'success', body: acceptedResponse },
+    secondary: { kind: 'success', body: acceptedResponse },
+  });
+  await page.route('https://mock-lt.invalid/v2/check', async (route) => {
+    languageToolCalls.push(route.request().postData() ?? '');
+    await route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ matches: [] }) });
+  });
+
+  await page.goto('/drill/a1_be_affirm');
+  await page.getByRole('textbox', { name: 'Переведи на английский' }).fill("love It's.");
+  await page.getByRole('button', { name: 'Проверить' }).click();
+
+  await expect(page.getByText('✓ Верно')).toBeVisible();
+  await expect(page.getByTestId('drill-screen').getByText('mock-primary', { exact: true })).toBeVisible();
+  expect(languageToolCalls).toHaveLength(1);
+  expect(languageToolCalls[0]).toContain('language=en-US');
+  expect(languageToolCalls[0]).toContain('text=love+It%27s.');
+});
+
+test('a failed self-hosted LanguageTool check falls through to the mocked Judge', async ({ page, diagnostics }) => {
+  let languageToolCalls = 0;
+  await seedKv(page, [{ key: 'languagetool.settings', value: { enabled: true, url: 'https://mock-lt.invalid' } }]);
+  await seedAiRouting(page);
+  await mockAiProviders(page, {
+    primary: { kind: 'success', body: VALID_JUDGE_RESPONSE },
+    secondary: { kind: 'success', body: VALID_JUDGE_RESPONSE },
+  });
+  await page.route('https://mock-lt.invalid/v2/check', (route) => {
+    languageToolCalls += 1;
+    return route.fulfill({ status: 503, contentType: 'text/plain', body: 'mock unavailable' });
+  });
+
+  await page.goto('/drill/a1_be_affirm');
+  await page.getByRole('textbox', { name: 'Переведи на английский' }).fill("love It's.");
+  await page.getByRole('button', { name: 'Проверить' }).click();
+
+  await expect(page.getByTestId('drill-screen').getByText('mock-primary', { exact: true })).toBeVisible();
+  await expect(page.getByText('✓ Верно')).toHaveCount(0);
+  await expect(page.getByText('✗ Неверно')).toBeVisible();
+  expect(languageToolCalls).toBe(1);
+  expect(diagnostics.consoleErrors.every((message) => message.includes('503'))).toBe(true);
+  diagnostics.consoleErrors.length = 0;
 });
 
 test('accepted cache avoids a second judge call for the same answer', async ({ page }) => {
