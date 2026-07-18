@@ -461,7 +461,7 @@
 - [x] Проверить budget warning.
 - [x] Нажать `Закончить`.
 - [x] Проверить summary.
-- [ ] Проверить `recurring_tags` в errorProfile.
+- [x] Проверить `recurring_tags` в errorProfile.
 
 ### 9.3 Resume
 
@@ -711,6 +711,7 @@ auth/CORS и бесплатные ограничения; в тестах всё
 
 ## 20. TTS research and implementation note — 2026-07-17
 
+- 2026-07-19 (manual QA continuation): production MCP Free Talk with a mocked local provider persisted the completed summary and wrote `recurring_tags: ['article']` to IndexedDB `errorProfile` as `{ count30d: 1 }`. The two provider requests were mock-only; console errors and page errors stayed at zero.
 - 2026-07-19 (manual QA continuation): found that the LanguageTool toggle persisted but was not connected to the answer cascade, despite PLAN §7.2 tier 2.5 and §13.3. Added self-hosted-only `/v2/check` candidate detection: a grammar-clean same-word-bag answer still requires Judge confirmation; an invalid endpoint, response, or 503 falls through without blocking the drill. MCP production replay confirmed both mocked 200→Judge and 503→Judge paths; no public LanguageTool request or application `pageerror` occurred.
 
 > Superseded on 2026-07-18: all model and cloud TTS paths were removed after a CPU-impact report. The app now uses only browser-native Web Speech; the retained manual check is whether the selected system voice is acceptable by ear.
