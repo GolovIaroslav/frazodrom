@@ -159,12 +159,8 @@ export interface FreeTalkSessionRecord {
 }
 
 /**
- * PLAN.md §9.1 — cached kokoro-js synthesis output. `key` is a hash of
- * (text, voice, speed) — see `tts/cache.ts`. A spaced-repetition app replays
- * the same sentences constantly (§10), so caching the synthesized Blob makes
- * every repeat instant regardless of device speed, even though kokoro-js's
- * WASM backend is well below real-time on typical hardware (Phase 5 perf spike,
- * implementation-notes.md).
+ * Retired local-TTS cache kept in the schema so old databases and backups
+ * remain readable. `clearRetiredTtsData()` removes its rows on app start.
  */
 export interface TtsCacheRecord {
   key: string;

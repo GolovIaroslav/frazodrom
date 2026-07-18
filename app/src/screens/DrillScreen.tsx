@@ -197,11 +197,11 @@ export function DrillScreen(): React.ReactElement {
     [writeLocalAttempt],
   );
 
-  // Auto-play follows Settings, but automatic flows never use local speech.
+  // Auto-play follows Settings and uses the configured TTS fallback chain.
   // Errors are swallowed: TTS failing must never block the drill flow.
   const maybeAutoPlay = useCallback(async (text: string): Promise<void> => {
     if (!(await getAutoPlay())) return;
-    await speak(text, { allowLocalFallback: false }).catch(() => undefined);
+    await speak(text).catch(() => undefined);
   }, []);
 
   const runEscalation = useCallback(

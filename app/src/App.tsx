@@ -1,7 +1,6 @@
 import { Link, Route, Routes } from 'react-router-dom';
 import { NavBar } from './components/NavBar';
 import { Toast } from './components/Toast';
-import { KokoroPromptBanner } from './components/KokoroPromptBanner';
 import { HomeScreen } from './screens/HomeScreen';
 import { CourseMapScreen } from './screens/CourseMapScreen';
 import { SettingsScreen } from './screens/SettingsScreen';
@@ -10,6 +9,8 @@ import { FreeTalkScreen } from './screens/FreeTalkScreen';
 import { FluencySprintScreen } from './screens/FluencySprintScreen';
 import { ListeningScreen } from './screens/ListeningScreen';
 import { useI18nStore } from './i18n/store';
+import { clearRetiredTtsData } from './tts/settings';
+import { useEffect } from 'react';
 
 function NotFoundScreen(): React.ReactElement {
   const t = useI18nStore((s) => s.t);
@@ -26,6 +27,10 @@ function NotFoundScreen(): React.ReactElement {
 }
 
 function App(): React.ReactElement {
+  useEffect(() => {
+    void clearRetiredTtsData().catch(() => undefined);
+  }, []);
+
   return (
     <div className="min-h-full bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100">
       <NavBar />
@@ -43,7 +48,6 @@ function App(): React.ReactElement {
         </Routes>
       </main>
       <Toast />
-      <KokoroPromptBanner />
     </div>
   );
 }

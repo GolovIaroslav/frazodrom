@@ -1,6 +1,5 @@
-// PLAN.md §9.1 — `speechSynthesis` fallback: instant, works everywhere,
-// quality depends on the OS. Always the default until the user opts into
-// kokoro-js ("Enable quality voice").
+// PLAN.md §9.1 — browser-native `speechSynthesis`. Voice quality and
+// availability depend on the browser and operating system.
 
 import type { Accent, Gender } from './voices';
 

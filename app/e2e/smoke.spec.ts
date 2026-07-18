@@ -8,6 +8,14 @@ test('app shell loads without browser errors', async ({ page }) => {
   await expect(page.getByRole('link', { name: 'Настройки' })).toBeEnabled();
 });
 
+test('voice settings use browser speech without a model download or cloud TTS switch', async ({ page }) => {
+  await page.goto('/settings');
+
+  await expect(page.getByRole('button', { name: '🔊 Проверить голос' })).toBeVisible();
+  await expect(page.getByText('Включить качественный голос')).toHaveCount(0);
+  await expect(page.getByText('Использовать Gemini voice (нужен Gemini API key)')).toHaveCount(0);
+});
+
 test('primary routes open directly and browser history works', async ({ page }) => {
   const routes = [
     { path: '/', marker: 'home-screen' },

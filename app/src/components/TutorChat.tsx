@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useI18nStore } from '../i18n/store';
 import { sendTutorChatMessage, type TutorChatContext } from '../llm/tutorChat';
 import type { Msg } from '../llm/types';
@@ -20,6 +20,15 @@ export function TutorChat({ ctx }: TutorChatProps): React.ReactElement {
   const [draft, setDraft] = useState('');
   const [pending, setPending] = useState(false);
   const [failed, setFailed] = useState(false);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const wasOpenRef = useRef(false);
+
+  useEffect(() => {
+    if (open) inputRef.current?.focus();
+    else if (wasOpenRef.current) triggerRef.current?.focus();
+    wasOpenRef.current = open;
+  }, [open]);
 
   const handleSend = useCallback(async () => {
     const message = draft.trim();
@@ -39,6 +48,7 @@ export function TutorChat({ ctx }: TutorChatProps): React.ReactElement {
   if (!open) {
     return (
       <button
+        ref={triggerRef}
         type="button"
         onClick={() => setOpen(true)}
         className="mt-3 rounded border border-neutral-300 px-3 py-1.5 text-sm text-neutral-900 dark:border-neutral-700 dark:text-neutral-100"
@@ -49,9 +59,13 @@ export function TutorChat({ ctx }: TutorChatProps): React.ReactElement {
   }
 
   return (
-    <div className="mt-3 rounded border border-neutral-300 p-2 dark:border-neutral-700">
+    <section
+      role="region"
+      aria-labelledby="tutor-chat-title"
+      className="mt-3 rounded border border-neutral-300 p-2 dark:border-neutral-700"
+    >
       <div className="flex items-center justify-between">
-        <span className="text-xs font-medium text-neutral-500 dark:text-neutral-400">
+        <span id="tutor-chat-title" className="text-xs font-medium text-neutral-500 dark:text-neutral-400">
           {t('tutor.chat.open')}
         </span>
         <button
@@ -86,6 +100,7 @@ export function TutorChat({ ctx }: TutorChatProps): React.ReactElement {
         </label>
         <input
           id="tutor-chat-input"
+          ref={inputRef}
           value={draft}
           onChange={(e) => setDraft(e.target.value)}
           onKeyDown={(e) => {
@@ -108,6 +123,6 @@ export function TutorChat({ ctx }: TutorChatProps): React.ReactElement {
           {t('tutor.chat.send')}
         </button>
       </div>
-    </div>
+    </section>
   );
 }

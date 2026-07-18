@@ -13,7 +13,7 @@ import { wordDiff } from '../checker/wordDiff';
 import { peekPendingSession, clearPendingSession, type SessionLaunchRequest } from '../engine/sessionLaunch';
 import { startSession, finishSession, type ItemOutcome } from '../srs/sessionBookkeeping';
 import { db } from '../db/db';
-import { speak, stopSpeaking, prefetchKokoro } from '../tts/speak';
+import { speak, stopSpeaking } from '../tts/speak';
 import { SPEECH_RATES, type SpeechRate } from '../tts/voices';
 
 type Phase = 'loading' | 'error' | 'running' | 'finished';
@@ -84,10 +84,7 @@ export function ListeningScreen(): React.ReactElement {
     if (phase !== 'running' || !item) return;
     void speak(item.en_main, {
       rateOverride: mode === 'dictogloss' ? 1.0 : rate,
-      allowLocalFallback: false,
     }).catch(() => undefined);
-    const next = items[idx + 1];
-    if (next) prefetchKokoro(next.en_main);
     // eslint-disable-next-line react-hooks/exhaustive-deps -- only re-run when the item itself changes
   }, [phase, item?.id]);
 

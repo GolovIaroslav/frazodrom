@@ -35,17 +35,12 @@ import {
   getAccent,
   getAutoPlay,
   getGender,
-  getGeminiEnabled,
-  getKokoroEnabled,
   getRate,
   setAccent,
   setAutoPlay,
   setGender,
-  setGeminiEnabled,
-  setKokoroEnabled,
   setRate,
 } from '../tts/settings';
-import type { ModelLoadProgress } from '../tts/kokoro';
 import { SPEECH_RATES, type Accent, type Gender, type SpeechRate } from '../tts/voices';
 import {
   LOCAL_PROVIDER_ID,
@@ -137,8 +132,6 @@ function actionButtonClass(variant: 'primary' | 'secondary' = 'secondary'): stri
 
 const VOICE_PREVIEW_TEXT = 'Where did you put the keys to the car?';
 
-type KokoroLoadState = 'idle' | 'loading' | 'ready' | 'error';
-
 function TtsSettings(): React.ReactElement {
   const t = useI18nStore((s) => s.t);
 
@@ -146,23 +139,16 @@ function TtsSettings(): React.ReactElement {
   const [gender, setGenderState] = useState<Gender>('f');
   const [rate, setRateState] = useState<SpeechRate>(1.0);
   const [autoPlay, setAutoPlayState] = useState(true);
-  const [geminiEnabled, setGeminiEnabledState] = useState(false);
-  const [kokoroEnabled, setKokoroEnabledState] = useState(false);
-  const [loadState, setLoadState] = useState<KokoroLoadState>('idle');
-  const [loadProgress, setLoadProgress] = useState<ModelLoadProgress | null>(null);
 
   useEffect(() => {
     let cancelled = false;
-    void Promise.all([getAccent(), getGender(), getRate(), getAutoPlay(), getGeminiEnabled(), getKokoroEnabled()]).then(
-      ([a, g, r, ap, ge, ke]) => {
+    void Promise.all([getAccent(), getGender(), getRate(), getAutoPlay()]).then(
+      ([a, g, r, ap]) => {
         if (cancelled) return;
         setAccentState(a);
         setGenderState(g);
         setRateState(r);
         setAutoPlayState(ap);
-        setGeminiEnabledState(ge);
-        setKokoroEnabledState(ke);
-        if (ke) setLoadState('ready');
       },
     );
     return () => {
@@ -189,32 +175,6 @@ function TtsSettings(): React.ReactElement {
     const next = !autoPlay;
     setAutoPlayState(next);
     await setAutoPlay(next);
-  }
-
-  async function handleGeminiToggle() {
-    const next = !geminiEnabled;
-    setGeminiEnabledState(next);
-    await setGeminiEnabled(next);
-  }
-
-  async function handleEnableKokoro() {
-    setLoadState('loading');
-    setLoadProgress(null);
-    try {
-      const { loadKokoroModel } = await import('../tts/kokoro');
-      await loadKokoroModel((p) => setLoadProgress(p));
-      await setKokoroEnabled(true);
-      setKokoroEnabledState(true);
-      setLoadState('ready');
-    } catch {
-      setLoadState('error');
-    }
-  }
-
-  async function handleDisableKokoro() {
-    await setKokoroEnabled(false);
-    setKokoroEnabledState(false);
-    setLoadState('idle');
   }
 
   return (
@@ -292,46 +252,11 @@ function TtsSettings(): React.ReactElement {
         {t('settings.tts.autoPlay')}
       </label>
 
-      <label className="mt-3 flex items-center gap-2 text-sm text-neutral-700 dark:text-neutral-300">
-        <input type="checkbox" checked={geminiEnabled} onChange={() => void handleGeminiToggle()} />
-        {t('settings.tts.geminiEnabled')}
-      </label>
-      <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">{t('settings.tts.geminiHint')}</p>
-
       <div className="mt-4 rounded-lg border border-neutral-200 p-4 dark:border-neutral-800">
-        <div className="text-sm font-medium text-neutral-700 dark:text-neutral-300">{t('settings.tts.kokoroTitle')}</div>
-        <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">{t('settings.tts.kokoroHint')}</p>
-
-        <div className="mt-2 flex flex-wrap items-center gap-2">
-          {!kokoroEnabled ? (
-            <button
-              type="button"
-              onClick={() => void handleEnableKokoro()}
-              disabled={loadState === 'loading'}
-              className={actionButtonClass('primary')}
-            >
-              {loadState === 'loading' ? t('settings.tts.kokoroLoading') : t('settings.tts.kokoroEnable')}
-            </button>
-          ) : (
-            <button type="button" onClick={() => void handleDisableKokoro()} className={actionButtonClass()}>
-              {t('settings.tts.kokoroDisable')}
-            </button>
-          )}
+        <p className="text-xs text-neutral-500 dark:text-neutral-400">{t('settings.tts.browserSpeechHint')}</p>
+        <div className="mt-2">
           <AudioButton text={VOICE_PREVIEW_TEXT} label={t('settings.tts.preview')} className={actionButtonClass()} />
         </div>
-
-        {loadState === 'loading' && loadProgress && (
-          <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
-            {loadProgress.status}
-            {typeof loadProgress.progress === 'number' ? ` — ${Math.round(loadProgress.progress)}%` : ''}
-          </p>
-        )}
-        {loadState === 'ready' && kokoroEnabled && (
-          <p className="mt-2 text-xs text-green-700 dark:text-green-400">{t('settings.tts.kokoroReady')}</p>
-        )}
-        {loadState === 'error' && (
-          <p className="mt-2 text-xs text-red-700 dark:text-red-400">{t('settings.tts.kokoroError')}</p>
-        )}
       </div>
     </div>
   );
