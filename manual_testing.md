@@ -370,7 +370,7 @@
 - [x] Reload и проверить persistence каждой настройки.
 - [-] Model-based quality voice and its loading state were retired on 2026-07-18 because of CPU impact; browser-native speech is now the only supported path.
 - [x] Нажать `Проверить голос`.
-- [ ] Проверить graceful error при недоступном speech API.
+- [x] Проверить graceful error при недоступном speech API.
 
 ### 8.3 LanguageTool
 
@@ -711,6 +711,7 @@ auth/CORS и бесплатные ограничения; в тестах всё
 
 ## 20. TTS research and implementation note — 2026-07-17
 
+- 2026-07-19 (manual QA continuation): with `speechSynthesis` deliberately unavailable in the production MCP page, Voice preview returned to an enabled state without console errors or page errors. Audio remains supplementary and does not block the Settings screen or drills.
 - 2026-07-19 (manual QA continuation): production MCP Free Talk with a mocked local provider persisted the completed summary and wrote `recurring_tags: ['article']` to IndexedDB `errorProfile` as `{ count30d: 1 }`. The two provider requests were mock-only; console errors and page errors stayed at zero.
 - 2026-07-19 (manual QA continuation): found that the LanguageTool toggle persisted but was not connected to the answer cascade, despite PLAN §7.2 tier 2.5 and §13.3. Added self-hosted-only `/v2/check` candidate detection: a grammar-clean same-word-bag answer still requires Judge confirmation; an invalid endpoint, response, or 503 falls through without blocking the drill. MCP production replay confirmed both mocked 200→Judge and 503→Judge paths; no public LanguageTool request or application `pageerror` occurred.
 
