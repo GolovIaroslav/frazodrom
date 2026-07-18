@@ -540,9 +540,9 @@ Service worker и PWA offline относятся к незавершённой �
 - [x] Each Playwright test starts with clean sessionStorage.
 - [x] New browser context starts clean.
 - [x] Correct attempt persists after reload.
-- [ ] Wrong + rewrite attempts persist after reload.
+- [x] Wrong + rewrite attempts persist after reload.
 - [x] Settings persist after reload.
-- [ ] Review FSRS fields persist after session finish.
+- [x] Review FSRS fields persist after session finish.
 - [x] Different tests do not see each other's progress.
 - [ ] Fixed-time tests use deterministic clock only where required.
 - [ ] No arbitrary sleeps used to stabilize tests.

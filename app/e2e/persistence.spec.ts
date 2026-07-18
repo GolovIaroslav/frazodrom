@@ -34,6 +34,24 @@ test('IndexedDB progress survives a reload', async ({ page }) => {
   ]);
 });
 
+test('wrong and rewrite attempts survive a reload', async ({ page }) => {
+  await page.goto('/drill/a1_be_affirm');
+  const answer = page.getByRole('textbox', { name: 'Переведи на английский' });
+  await answer.fill('It love.');
+  await page.getByRole('button', { name: 'Проверить' }).click();
+  await page.getByRole('button', { name: 'Ошибся' }).click();
+  await answer.fill("It's love.");
+  await page.getByRole('button', { name: 'Проверить' }).click();
+  await expect(page.getByText('✓ Верно')).toBeVisible();
+
+  await page.reload();
+  const attempts = await readStore<{ userInput: string; verdict: string }>(page, 'attempts');
+  expect(attempts).toEqual([
+    expect.objectContaining({ userInput: 'It love.', verdict: 'wrong' }),
+    expect.objectContaining({ userInput: "It's love.", verdict: 'correct' }),
+  ]);
+});
+
 test('review completion shows final session stats', async ({ page }) => {
   await page.goto('/drill/a1_be_affirm');
   await expect(page.getByRole('heading', { name: 'Это любовь.' })).toBeVisible();
@@ -98,6 +116,26 @@ test('review completion shows final session stats', async ({ page }) => {
       return sessions.find((session) => session.finishedAt)?.stats;
     })
     .toEqual({ total: 3, correct: 2 });
+  const skillState = await readStore<{
+    skillId: string;
+    reps: number;
+    due: number;
+    stability: number;
+    difficulty: number;
+    state: number;
+    lastReview: number;
+  }>(page, 'skillState');
+  const reviewedSkill = skillState.find((record) => record.skillId === 'a1_be_affirm');
+  expect(reviewedSkill).toEqual(expect.objectContaining({
+    reps: expect.any(Number),
+    due: expect.any(Number),
+    stability: expect.any(Number),
+    difficulty: expect.any(Number),
+    state: expect.any(Number),
+    lastReview: expect.any(Number),
+  }));
+  expect(reviewedSkill?.reps).toBeGreaterThan(5);
+  expect(reviewedSkill?.lastReview).toBeGreaterThan(Date.now() - 60_000);
   await expect(page.getByText('Верно 2 из 3.')).toBeVisible();
   await expect(page.getByRole('link', { name: 'К разделу «Сегодня»' })).toBeVisible();
 });
