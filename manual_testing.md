@@ -520,30 +520,30 @@ Service worker и PWA offline относятся к незавершённой �
 
 ## 13. Accessibility
 
-- [ ] Axe check Today.
-- [ ] Axe check Course Map.
-- [ ] Axe check Drill.
+- [x] Axe check Today.
+- [x] Axe check Course Map.
+- [x] Axe check Drill.
 - [ ] Axe check Review.
-- [ ] Axe check Settings.
+- [x] Axe check Settings.
 - [x] All buttons have accessible names.
 - [x] All form fields have labels.
 - [x] Keyboard navigation works.
 - [x] Focus is visible.
-- [ ] No serious/critical axe violations.
+- [x] No serious/critical axe violations.
 - [x] Tutor dialogs/panels have correct role when opened.
 - [x] Dialog/panel focus management works when opened and closed.
 
 ## 14. Persistence and isolation
 
-- [ ] Each Playwright test starts with clean IndexedDB.
-- [ ] Each Playwright test starts with clean localStorage.
-- [ ] Each Playwright test starts with clean sessionStorage.
-- [ ] New browser context starts clean.
+- [x] Each Playwright test starts with clean IndexedDB.
+- [x] Each Playwright test starts with clean localStorage.
+- [x] Each Playwright test starts with clean sessionStorage.
+- [x] New browser context starts clean.
 - [x] Correct attempt persists after reload.
 - [ ] Wrong + rewrite attempts persist after reload.
 - [x] Settings persist after reload.
 - [ ] Review FSRS fields persist after session finish.
-- [ ] Different tests do not see each other's progress.
+- [x] Different tests do not see each other's progress.
 - [ ] Fixed-time tests use deterministic clock only where required.
 - [ ] No arbitrary sleeps used to stabilize tests.
 

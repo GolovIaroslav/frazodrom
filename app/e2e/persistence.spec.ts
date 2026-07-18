@@ -139,5 +139,7 @@ test('Settings can export a backup and reset local data', async ({ page }) => {
   await expect(page.getByTestId('settings-screen')).toBeVisible();
   expect(await readStore(page, 'skillState')).toEqual([]);
   expect(await readStore(page, 'attempts')).toEqual([]);
-  expect(await readStore(page, 'kv')).toEqual([]);
+  expect(await readStore(page, 'kv')).toEqual([
+    { key: 'tts.browserOnlyMigration.v1', value: true },
+  ]);
 });
