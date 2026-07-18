@@ -338,7 +338,7 @@
 - [x] Settings: выбрать UK voice.
 - [ ] Settings: выбрать female voice.
 - [x] Settings: выбрать male voice.
-- [x] Settings: выбрать 0.7×/0.85×/1×.
+- [ ] Settings: выбрать 0.7×/0.85×/1×.
 - [x] Проверить preview voice.
 - [x] Включить Quality voice offline.
 - [x] Дождаться загрузки Kokoro mock/реальной модели только в отдельном
@@ -632,7 +632,7 @@ auth/CORS и бесплатные ограничения; в тестах всё
 
 Эти пункты подтверждены автоматизированными проверками; они не заменяют финальный ручной проход через MCP.
 
-- [x] Manual inventory status as of 2026-07-18: 449 checklist items; 312 checked, 128 open, 3 blocked, 6 N/A.
+- [x] Manual inventory status as of 2026-07-18: 449 checklist items; 311 checked, 129 open, 3 blocked, 6 N/A.
 - [x] `npm run lint` — exit code 0.
 - [x] `npm run typecheck` — exit code 0.
 - [x] `npm run test` — 49 files, 417 tests passed.
