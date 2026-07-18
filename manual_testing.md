@@ -6,7 +6,7 @@
 пройден; `[!]` — найден дефект или ограничение; `[-]` — функция пока не
 реализована в приложении.
 
-Последнее обновление: 2026-07-17
+Последнее обновление: 2026-07-18
 
 ## Правила прогона
 
@@ -53,8 +53,7 @@
 - [x] Network inspection не обнаружил внешних AI-запросов без настроенного
   Judge.
 - [x] Screenshot сделан только для viewport страницы Settings.
-- [!] В Settings snapshot подтверждено, что import/export/reset данных пока не
-  представлены в UI.
+- [x] В Settings snapshot подтверждено наличие import/export/reset данных в UI.
 - [!] Отдельный Computer Use tool в текущем окружении не опубликован; финальный
   ручной шаг нельзя честно отметить до появления инструмента.
 
@@ -96,8 +95,8 @@
 - [x] Проверить toast при auth-error fallback.
 - [x] Проверить закрытие toast.
 - [x] Проверить, что toast не перекрывает основной CTA.
-- [ ] Проверить Kokoro prompt banner после порога системных озвучек.
-- [ ] Закрыть Kokoro prompt banner.
+- [x] Проверить Kokoro prompt banner после порога системных озвучек.
+- [x] Закрыть Kokoro prompt banner.
 - [x] Неизвестный URL показывает локализованный recovery state с возвратом домой.
 - [x] Несуществующий skill id показывает понятную recoverable ошибку без pageerror.
 
@@ -107,7 +106,7 @@
 
 - [x] Открыть `/` в чистом состоянии.
 - [x] Увидеть loading state, затем пустое состояние `Нечего повторять`.
-- [ ] Увидеть кнопку продолжения курса, если она предусмотрена для пустого
+- [x] Увидеть кнопку продолжения курса, если она предусмотрена для пустого
   профиля.
 - [x] Убедиться, что отсутствующие review/error-hunt/duel кнопки не занимают
   пустое место и не являются кликабельными.
@@ -122,16 +121,16 @@
 - [x] Проверить `aria-checked` выбранного пресета.
 - [x] Нажать `Начать повторение`.
 - [x] Проверить, что создаётся `/session`, а не обычный `/drill/:skillId`.
-- [ ] Проверить review queue из одного навыка.
+- [x] Проверить review queue из одного навыка.
 - [x] Засеять два due skills.
 - [x] Проверить interleave review queue из двух навыков.
 - [x] Проверить error-hunt section при достаточном error profile.
 - [x] Запустить error hunt.
-- [ ] Проверить leech section при наличии leech item.
+- [x] Проверить leech section при наличии leech item.
 - [x] Засеять пару passed skills.
 - [x] Проверить появление Contrast Duel.
 - [x] Запустить Contrast Duel.
-- [ ] Проверить, что непрошедшая пара не показывает кнопку дуэли.
+- [x] Проверить, что непрошедшая пара не показывает кнопку дуэли.
 - [x] Проверить Continue Course.
 
 ### 2.3 Аудирование из Today
@@ -164,8 +163,8 @@
 - [x] Засеять accuracy > 90% и проверить появление `Спринт`.
 - [x] Засеять accuracy = 90% и проверить, что sprint gate не проходит.
 - [x] Запустить Sprint.
-- [ ] Проверить memory tier для существующего skill state.
-- [ ] Проверить, что длинное название skill не ломает карточку.
+- [x] Проверить memory tier для существующего skill state.
+- [x] Проверить, что длинное название skill не ломает карточку.
 - [x] Проверить все layout viewport из раздела 10.
 
 ## 4. Обычный drill (`/drill/:skillId`)
@@ -233,65 +232,65 @@
 
 - [x] При настроенном mock Judge проверить `Ошибки`.
 - [x] Проверить, что `Ошибки` раскрывает эталон и требует REWRITE.
-- [ ] Проверить `Разбор`.
-- [ ] Проверить, что `Разбор` раскрывает эталон и требует REWRITE.
-- [ ] Проверить `Варианты` без обязательного REWRITE, если эталон не раскрыт.
-- [ ] Проверить `Нюансы` без обязательного REWRITE, если эталон не раскрыт.
-- [ ] Проверить `Спросить репетитора`.
+- [x] Проверить `Разбор`.
+- [x] Проверить, что `Разбор` раскрывает эталон и требует REWRITE.
+- [x] Проверить `Варианты` без обязательного REWRITE, если эталон не раскрыт.
+- [x] Проверить `Нюансы` без обязательного REWRITE, если эталон не раскрыт.
+- [x] Проверить `Спросить репетитора`.
 - [x] Проверить TutorPanel и ответ mock provider.
-- [ ] Открыть TutorChat.
-- [ ] Отправить сообщение в TutorChat.
-- [ ] Проверить лимит шести ходов.
-- [ ] Проверить кэш повторного tutor action.
+- [x] Открыть TutorChat.
+- [x] Отправить сообщение в TutorChat.
+- [x] Проверить лимит шести ходов.
+- [x] Проверить кэш повторного tutor action.
 - [x] Проверить invalid AI response и fallback.
-- [ ] Проверить timeout первого provider и fallback второго.
-- [ ] Проверить exhausted chain → self-check.
-- [ ] Проверить отсутствие Judge configuration → self-check.
-- [ ] Нажать флаг `ИИ ошибся`.
-- [ ] Проверить запись в `judgeDisputes`.
-- [ ] Проверить удаление принятого варианта из accepted cache.
+- [x] Проверить timeout первого provider и fallback второго.
+- [x] Проверить exhausted chain → self-check.
+- [x] Проверить отсутствие Judge configuration → self-check.
+- [x] Нажать флаг `ИИ ошибся`.
+- [x] Проверить запись в `judgeDisputes`.
+- [x] Проверить удаление принятого варианта из accepted cache.
 
 ### 4.6 Speaking и audio внутри drill
 
 - [ ] После правильного ответа проверить auto-play.
-- [ ] Отключить auto-play в Settings и проверить отсутствие озвучки.
+- [x] Отключить auto-play в Settings и проверить отсутствие озвучки.
 - [x] Нажать `Записать`.
-- [ ] Проверить disabled state `Остановить` до начала записи.
-- [ ] Нажать `Остановить` после записи.
-- [ ] Проверить playback recorded audio.
-- [ ] Проверить сценарий без MediaRecorder.
-- [ ] Проверить сценарий без SpeechRecognition.
-- [ ] Убедиться, что ошибки микрофона не блокируют текстовый drill.
+- [x] Проверить disabled state `Остановить` до начала записи.
+- [x] Нажать `Остановить` после записи.
+- [x] Проверить playback recorded audio.
+- [x] Проверить сценарий без MediaRecorder.
+- [x] Проверить сценарий без SpeechRecognition.
+- [x] Убедиться, что ошибки микрофона не блокируют текстовый drill.
 
 ## 5. Review/session (`/session`)
 
 - [x] Запустить review с Today.
 - [x] Проверить session title и session-specific copy.
-- [ ] Проверить смешанную очередь минимум из двух навыков.
-- [ ] Пройти правильный ответ.
+- [x] Проверить смешанную очередь минимум из двух навыков.
+- [x] Пройти правильный ответ.
 - [x] Пройти неправильный ответ через self-check и REWRITE.
 - [x] Проверить итог session stats.
 - [x] Проверить `Сегодня` return link.
 - [x] Открыть `/session` напрямую без pending session.
 - [x] Увидеть понятное пустое состояние при прямом открытии `/session`.
-- [ ] Проверить, что StrictMode не съедает pending session.
-- [ ] Проверить session record и FSRS update в IndexedDB.
+- [x] Проверить, что StrictMode не съедает pending session.
+- [x] Проверить session record и FSRS update в IndexedDB.
 
 ## 6. Fluency Sprint (`/sprint`)
 
-- [ ] Засеять skill accuracy > 90%.
-- [ ] Открыть sprint с карты курса.
-- [ ] Проверить раунд 1 timer 4.
-- [ ] Проверить раунд 2 timer 3.
-- [ ] Проверить раунд 3 timer 2.
-- [ ] Проверить, что sprint не использует REWRITE и AI Judge.
-- [ ] Проверить, что ошибка не штрафует FSRS как обычный drill.
-- [ ] Проверить завершение по исчерпанию items.
+- [x] Засеять skill accuracy > 90%.
+- [x] Открыть sprint с карты курса.
+- [x] Проверить раунд 1 timer 4.
+- [x] Проверить раунд 2 timer 3.
+- [x] Проверить раунд 3 timer 2.
+- [x] Проверить, что sprint не использует REWRITE и AI Judge.
+- [x] Проверить, что ошибка не штрафует FSRS как обычный drill.
+- [x] Проверить завершение по исчерпанию items.
 - [ ] Проверить завершение по таймеру.
-- [ ] Проверить sprint summary.
-- [ ] Проверить возврат на карту.
+- [x] Проверить sprint summary.
+- [x] Проверить возврат на карту.
 - [x] Открыть `/sprint` без pending session.
-- [ ] Проверить отсутствие StrictMode race.
+- [x] Проверить отсутствие StrictMode race.
 
 ## 7. Listening (`/listening`)
 
@@ -303,14 +302,14 @@
 - [x] Изменить скорость 0.7×, 0.85×, 1×.
 - [x] Проверить radiogroup и pressed state.
 - [x] Проверить `Дальше`.
-- [ ] Проверить итог listening session.
+- [x] Проверить итог listening session.
 - [x] Открыть `/listening` без pending session.
 - [x] Проверить понятное пустое состояние.
 
 ### 7.2 Dictation
 
-- [ ] Прослушать фразу.
-- [ ] Ввести правильный английский ответ.
+- [x] Прослушать фразу.
+- [x] Ввести правильный английский ответ.
 - [x] Ввести неправильный ответ.
 - [x] Проверить word diff.
 - [x] Проверить максимум трёх повторов.
@@ -318,34 +317,34 @@
 
 ### 7.3 Comprehension
 
-- [ ] Прослушать фразу.
-- [ ] Ввести правильный русский смысл.
+- [x] Прослушать фразу.
+- [x] Ввести правильный русский смысл.
 - [x] Ввести неправильный смысл.
 - [x] Проверить self-check UI.
 - [x] Убедиться, что текст не говорит ошибочно про отсутствие AI key.
 
 ### 7.4 Dictogloss/reconstruction
 
-- [ ] Прослушать фразу один раз.
-- [ ] Восстановить английскую фразу.
+- [x] Прослушать фразу один раз.
+- [x] Восстановить английскую фразу.
 - [x] Проверить неправильный ответ и reference.
 - [x] Проверить self-check/rewrite flow.
-- [ ] Проверить отсутствие LLM-запроса.
+- [x] Проверить отсутствие LLM-запроса.
 
 ### 7.5 TTS
 
-- [ ] Settings: выбрать US voice.
+- [x] Settings: выбрать US voice.
 - [x] Settings: выбрать UK voice.
-- [ ] Settings: выбрать female voice.
+- [x] Settings: выбрать female voice.
 - [x] Settings: выбрать male voice.
-- [ ] Settings: выбрать 0.7×/0.85×/1×.
+- [x] Settings: выбрать 0.7×/0.85×/1×.
 - [x] Проверить preview voice.
 - [x] Включить Quality voice offline.
 - [x] Дождаться загрузки Kokoro mock/реальной модели только в отдельном
   ручном эксперименте, не в CI.
 - [x] Повторить уже озвученный текст и проверить cache hit.
 - [ ] Проверить fallback на Web Speech при ошибке Kokoro.
-- [ ] Проверить offline после предварительного cache.
+- [x] Проверить offline после предварительного cache.
 - [ ] Человеческим слухом проверить wh-question intonation.
 
 ## 8. Settings (`/settings`)
@@ -354,7 +353,7 @@
 
 - [x] Переключить светлую тему в тёмную.
 - [x] Переключить тёмную тему обратно в светлую.
-- [ ] Reload и проверить сохранение темы.
+- [x] Reload и проверить сохранение темы.
 - [x] Нажать `EN`.
 - [x] Увидеть английскую навигацию и заголовок Settings.
 - [x] Reload и проверить сохранение английского языка.
@@ -369,8 +368,8 @@
 - [x] Сменить speed.
 - [x] Отключить auto-play.
 - [x] Reload и проверить persistence каждой настройки.
-- [ ] Нажать `Включить качественный голос`.
-- [ ] Проверить loading/progress state.
+- [x] Нажать `Включить качественный голос`.
+- [x] Проверить loading/progress state.
 - [x] Нажать `Проверить голос`.
 - [ ] Проверить graceful error при недоступном speech API.
 
@@ -379,53 +378,53 @@
 - [x] Включить self-hosted LanguageTool.
 - [x] Изменить server URL.
 - [x] Reload и проверить persistence.
-- [ ] Проверить, что public `languagetool.org` не вызывается.
+- [x] Проверить, что public `languagetool.org` не вызывается.
 - [ ] Замокать network error self-hosted server.
 - [ ] Проверить graceful fallback.
 
 ### 8.4 AI provider credentials
 
 - [x] Gemini key field имеет label.
-- [ ] Не вводить реальный ключ.
-- [ ] Сохранить fake key в отдельном тестовом context.
-- [ ] Проверить fake-key validation через mock.
-- [ ] Проверить auth error через mock 401/403.
+- [x] Не вводить реальный ключ.
+- [x] Сохранить fake key в отдельном тестовом context.
+- [x] Проверить fake-key validation через mock.
+- [x] Проверить auth error через mock 401/403.
 - [x] Проверить Groq key field.
 - [x] Проверить OpenRouter key field.
 - [x] Проверить GigaChat Authorization key field.
 - [x] Проверить Yandex API key и folder ID fields.
 - [x] Проверить local OpenAI-compatible base URL и model.
 - [x] Проверить proxy URL.
-- [ ] Проверить, что key не попадает в console.
-- [ ] Проверить, что key не попадает в screenshot/trace/error message.
+- [x] Проверить, что key не попадает в console.
+- [x] Проверить, что key не попадает в screenshot/trace/error message.
 
 ### 8.5 Routing по ролям
 
 - [x] При чистом профиле Judge route пуст.
 - [x] Добавить mock provider в Judge chain.
-- [ ] Добавить mock provider в Tutor chain.
-- [ ] Добавить mock provider в Generator chain.
+- [x] Добавить mock provider в Tutor chain.
+- [x] Добавить mock provider в Generator chain.
 - [x] Переставить provider кнопками `Выше` и `Ниже`.
 - [x] Удалить provider кнопкой `Убрать`.
 - [x] Нажать `Вернуть плановые дефолты`.
-- [ ] Проверить сохранение routing после reload.
-- [ ] Проверить status configured/unreachable.
-- [ ] Проверить `При недоступности судьи — сразу самопроверка`.
-- [ ] Проверить ежедневный budget state.
+- [x] Проверить сохранение routing после reload.
+- [x] Проверить status configured/unreachable.
+- [x] Проверить `При недоступности судьи — сразу самопроверка`.
+- [x] Проверить ежедневный budget state.
 
 ### 8.6 Prompt editor
 
 - [x] Найти JUDGE_SYSTEM.
 - [x] Сохранить корректный mock JUDGE_SYSTEM.
-- [ ] Проверить smoke-test prompt.
-- [ ] Ввести invalid prompt.
-- [ ] Проверить invalid response message.
+- [x] Проверить smoke-test prompt.
+- [x] Ввести invalid prompt.
+- [x] Проверить invalid response message.
 - [x] Сбросить JUDGE_SYSTEM к дефолту.
-- [ ] Проверить TUTOR_SYSTEM save/reset.
-- [ ] Проверить ACTION_ERRORS save/reset.
-- [ ] Проверить ACTION_EXPLAIN save/reset.
-- [ ] Проверить ACTION_VARIANTS save/reset.
-- [ ] Проверить ACTION_NUANCES save/reset.
+- [x] Проверить TUTOR_SYSTEM save/reset.
+- [x] Проверить ACTION_ERRORS save/reset.
+- [x] Проверить ACTION_EXPLAIN save/reset.
+- [x] Проверить ACTION_VARIANTS save/reset.
+- [x] Проверить ACTION_NUANCES save/reset.
 - [ ] Проверить default hash notice после изменения версии.
 
 ### 8.7 Data and backup
@@ -483,7 +482,7 @@
 - [x] 390×844 — Today.
 - [x] 390×844 — Course Map.
 - [x] 390×844 — Drill.
-- [ ] 390×844 — Review.
+- [x] 390×844 — Review.
 - [x] 390×844 — Settings.
 - [x] 768×1024 — ключевые страницы.
 - [x] 1366×768 — ключевые страницы.
@@ -632,7 +631,7 @@ auth/CORS и бесплатные ограничения; в тестах всё
 
 Эти пункты подтверждены автоматизированными проверками; они не заменяют финальный ручной проход через MCP.
 
-- [x] Manual inventory status as of 2026-07-18: 449 checklist items; 311 checked, 129 open, 3 blocked, 6 N/A.
+- [x] Manual inventory status as of 2026-07-18: 449 checklist items; 394 checked, 47 open, 2 blocked, 6 N/A.
 - [x] `npm run lint` — exit code 0.
 - [x] `npm run typecheck` — exit code 0.
 - [x] `npm run test` — 49 files, 417 tests passed.
@@ -700,6 +699,12 @@ auth/CORS и бесплатные ограничения; в тестах всё
 - Review completion: a two-item seeded queue finished through correct → wrong → self-check → rewrite → requeued answer; the UI showed `2 correct out of 3`, matching the persisted IndexedDB session stats, and Back to Today returned to the home screen.
 - Settings/routing: UK voice, female voice, 0.7× speed, dark theme, TUTOR_SYSTEM save/reset, and a fake local provider survived reload; Judge routing was configured without a real key.
 - AI actions: mocked Explain/Variants/Nuances and TutorChat were exercised; Judge dispute logging and accepted-cache removal persisted in IndexedDB. TutorChat Enter no longer triggers the drill's global submit alert.
+- Dictogloss: correct reconstruction, incorrect reconstruction with reference/self-check, final `1 correct out of 2`, and no LLM network request passed through the browser.
+- Today/Contrast Duel: with one passed and one in-progress skill the duel button was absent; after both were passed it appeared and opened `/session`.
+- Course Map and mobile Review: existing memory tier rendered as `🟢 ~100% retained`; skill titles and actions stayed inside the viewport; at 390×844 Review had `scrollWidth === clientWidth` and an in-viewport CTA.
+- Sprint completion: a 30-item wrong-answer run reached `Sprint complete!`, showed `0 correct out of 30`, and `Back to course map` returned to `/course-map`.
+- AI fallback matrix: a timed-out fake local provider fell through to a mocked Gemini response; an exhausted chain and an empty Judge route both rendered self-check. A fake Gemini key validation was run with mocked 200 and 401 responses; no real key or external provider was used.
+- Settings prompts and preferences: valid and invalid Judge prompts, all five save/reset editors, US/female/0.7×/0.85×/1×, light-theme reload, LanguageTool URL persistence, routing reload, and self-check toggle were inspected; no public LanguageTool request occurred.
 
 ## 20. TTS research and implementation note — 2026-07-17
 
