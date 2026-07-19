@@ -11,7 +11,7 @@ Format: `## Topic → where to look | one-line gist`.
 
 ## Pointers
 
-- Plan (normative) → PLAN.md | §0 rules, §16 phases Ф0–Ф9 with acceptance criteria
+- Plan (normative) → PLAN.md | v2 Reflex Gym; §0 session rules, §16 phases Ф0–Ф12 with acceptance criteria
 - Skill map → PLAN.md §3.4 | ~75 skills, stable ids
 - Data pipeline → PLAN.md §4 | manythings/Tatoeba → JSON packs, CLI `etr`
 - Answer-checking cascade → PLAN.md §7 | normalize → accepted-set → LLM judge → self-check
@@ -29,10 +29,11 @@ Format: `## Topic → where to look | one-line gist`.
 
 ## ACTIVE CONTEXT
 
+- 2026-07-19: PLAN.md fully replaced by v2.0 after product rethink. Chosen product: A2–B1 «Reflex Gym» for active phrase production; communicative pilot modules, target-level FSRS, bounded 5/12/20-minute sessions, no-AI core, Today/Course/Progress IA, human-reviewed content schema v2, and strangler `/v2` migration preserving legacy. One session now means exactly one phase; next implementation phase is new Ф0.
 - 2026-07-08: PLAN.md v1.3 — 260-question audit applied (~45 fixes) + research results №11–14 folded in (§8.2 provider chain incl. GigaChat/Yandex; §14.4 generated-content license; §4.5 CEFR-SP/ReadMe++ ground truth; §3.4 B1-5 chunk methodology). See session log at the bottom of PLAN.md. Ф3 is split into Ф3а/Ф3б/Ф3в.
-- User to confirm agent-drafted defaults in §1.1: positioning paragraph, success criteria, distribution mini-plan.
+- The former v1.3 confirmation request for §1.1 defaults is superseded by PLAN.md v2.0.
 - 2026-07-08: Ф0 done (app/ + pipeline/ scaffold, CI). Agent decisions/deviations logged in implementation-notes.md (local, gitignored).
-- 2026-07-08: user asked the agent to run phases autonomously back-to-back (via ScheduleWakeup self-pacing) instead of the human restarting a session per phase — accepted as an operating-mode override of "one phase = one session"; the phase-by-phase implement→verify→log discipline itself is unchanged. Phases with hard human-only steps (manual proofreading Ф1/Ф6, live user testing Ф8, §17.2/17.3 provider-fact confirmation) still stop and go to BLOCKERS.md.
+- 2026-07-08 autonomous back-to-back phase override is superseded by the user's 2026-07-19 instruction: one session = exactly one phase. Human-only gates still stop honestly in `BLOCKERS.md`.
 - 2026-07-08: Ф1 done — full no-LLM pipeline (fetch→clean→tag→level→curate→emit→validate), 11 A1-1/A1-2 skills, `etr validate` 0 problems. CEFR calibration run once against CEFR-SP (HF), thresholds left as-is — flagged for your manual spot-check. 100-sentence review sample is in implementation-notes.md, not a PR.
 - 2026-07-08: Ф2 done — checker's 3 outstanding wip-tests fixed (adjacent-letter transposition in editDistance.ts, apologised/apologising, guard cleanup that unblocked short-word typos like "teh"); full Dexie v2 schema (10 tables, §5.3); lazy pack loading from repo-root `packs/` (not duplicated into app/); `DrillEngine` state machine (show→check→REWRITE, hint ladder, requeue) in app/src/engine/; DrillScreen + CourseMapScreen on real pack data; storage protection (persist(), incognito heuristic, Web Locks helper — banner not wired yet); a11y basics (aria-live, color+icon+word, focus-visible, rem). Checker tests 167/167 (AC ≥120 met), app-wide 204/204, Playwright smoke (new, none existed before) measures cold-start→first-sentence at ~1.7s on emulated Fast 3G (local vite preview, not real GH Pages — recheck at Ф8). Not built yet: cross-skill interleave wiring, fluency sprints, contrast duels, SRS field population (all correctly later phases). Judgment calls and full detail in implementation-notes.md.
 - Confirmed for user: level-skipping is already in the plan (§11 — placement, module skip-test anytime, level exams), not missing. A1 sentence brevity (2–18 tokens, ≤12 for A1–A2) is an intentional CEFR-level design choice (§4.3), not an accident; corpus's "textbook-ish" feel is a known limitation with mitigations already planned (LLM naturalness pass in Ф6, per-sentence "⚑ bad sentence" flag button, honest README disclaimer) — no plan change needed, just reassurance.
